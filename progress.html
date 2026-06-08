@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMP 해설집 작업 진행 현황</title>
+<style>
+  :root {
+    --bg: #e6ebf5; --card: #ffffff; --border: #c3cce2; --accent: #3b6fd4; --accent2: #6c5ce7;
+    --correct: #16a34a; --wrong: #dc2626; --warn: #d97706; --text: #1e2433; --muted: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; font-size: 15px; line-height: 1.6; margin: 0; padding: 28px 18px 60px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; font-weight: 700; color: var(--accent); margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 22px; }
+  .subtitle b { color: var(--text); }
+
+  .summary { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 22px; }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; min-width: 130px; flex: 1; }
+  .stat-card .num { font-size: 1.6rem; font-weight: 800; }
+  .stat-card .label { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+  .stat-card.done .num { color: var(--correct); }
+  .stat-card.progress .num { color: var(--warn); }
+  .stat-card.todo .num { color: var(--muted); }
+  .stat-card.total .num { color: var(--accent); }
+
+  .bar-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 26px; }
+  .bar-track { background: #dde5f5; border-radius: 8px; height: 22px; overflow: hidden; display: flex; }
+  .bar-fill { background: linear-gradient(90deg, var(--correct), #22c55e); height: 100%; display: flex; align-items: center; justify-content: flex-end;
+    color: #fff; font-size: 0.72rem; font-weight: 700; padding-right: 8px; transition: width .4s ease; white-space: nowrap; min-width: 36px; }
+  .bar-label { font-size: 0.8rem; color: var(--muted); margin-top: 8px; text-align: right; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+  thead th { background: #dde5f5; text-align: left; font-size: 0.76rem; font-weight: 700; color: var(--accent); padding: 10px 12px; white-space: nowrap; }
+  tbody td { padding: 10px 12px; border-top: 1px solid var(--border); font-size: 0.85rem; vertical-align: middle; }
+  tbody tr:hover { background: rgba(91,141,238,.05); }
+  td.num-col { color: var(--muted); font-size: 0.78rem; width: 36px; text-align: center; }
+  td.session-col { width: 96px; }
+  tr.group-start td { border-top: 2px solid var(--accent2); }
+  tr.row-even { background: rgba(91,141,238,.035); }
+  tr.row-odd  { background: rgba(108,92,231,.035); }
+  tr.row-even:hover, tr.row-odd:hover { background: rgba(91,141,238,.08); }
+  .session-chip { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; white-space: nowrap; color: #fff; }
+  .session-chip.odd  { background: var(--accent); }
+  .session-chip.even { background: var(--accent2); }
+  .session-chip.done-chip { background: var(--correct); }
+  .session-chip-sub { font-size: 0.7rem; color: var(--muted); padding-left: 4px; }
+  td.unit-col { font-weight: 600; }
+  td.unit-col .en { display: block; font-size: 0.78rem; font-weight: 400; color: var(--muted); margin-top: 1px; }
+  td.qcount-col { text-align: center; color: var(--muted); font-size: 0.8rem; width: 64px; }
+  td.note-col { color: var(--muted); font-size: 0.78rem; }
+
+  .step { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 6px;
+    font-size: 0.8rem; font-weight: 700; border: 1.5px solid var(--border); color: var(--muted); background: #f3f5fb; }
+  .step.on { background: rgba(22,163,74,.12); border-color: var(--correct); color: var(--correct); }
+  .steps-cell { display: flex; gap: 5px; }
+
+  .badge { display: inline-block; padding: 4px 11px; border-radius: 20px; font-size: 0.74rem; font-weight: 700; white-space: nowrap; }
+  .badge.done { background: rgba(22,163,74,.12); color: var(--correct); }
+  .badge.progress { background: rgba(217,119,6,.12); color: var(--warn); }
+  .badge.todo { background: rgba(107,114,128,.12); color: var(--muted); }
+
+  .legend { margin-top: 16px; font-size: 0.76rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .legend .step { width: 22px; height: 22px; font-size: 0.72rem; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+
+  footer { margin-top: 22px; font-size: 0.76rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📋 PMP 해설집 — 30개 단원 작업 진행 현황</h1>
+  <p class="subtitle">완료된 단원마다 이 표가 갱신됩니다. 마지막 갱신: <b id="updatedAt"></b> · 기준 단원: <b>Assess and Manage Risks</b> (7단계 워크플로우 동일 적용)<br>표 순서 = <b>작업 계획 순서</b>(문항 수 오름차순). <b>"세션#" = 한 세션(대화) 단위</b> — 같은 세션#으로 묶인 단원들은 한 세션에서 함께 진행하고, 끝나면 새 세션을 열어 다음 세션#으로 진행합니다. 너무 작은 단원 5개(세션#1, 합계 21문항)만 한 세션에 묶었고, 나머지는 단원 1개 = 세션 1개입니다 (총 25개 세션).</p>
+
+  <div class="summary" id="summary"></div>
+
+  <div class="bar-wrap">
+    <div class="bar-track"><div class="bar-fill" id="barFill"></div></div>
+    <div class="bar-label" id="barLabel"></div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>세션#<br><span style="font-weight:400;font-size:0.68rem;">(=한 세션 단위)</span></th>
+        <th>단원명</th>
+        <th>문항 수</th>
+        <th>① 번역+데이터<br>JSON</th>
+        <th>② 해설<br>(선지+원문)</th>
+        <th>③ 개념<br>모듈</th>
+        <th>④ 뷰어<br>등록·검증</th>
+        <th>상태</th>
+        <th>비고</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+  <div class="legend">
+    <div class="legend-item"><span class="step on">✓</span> 완료</div>
+    <div class="legend-item"><span class="step">–</span> 미착수</div>
+    <div class="legend-item"><span class="badge done">완료</span> 4단계 모두 완료, 뷰어에서 정상 동작 확인됨</div>
+    <div class="legend-item"><span class="badge progress">진행중</span> 일부 단계 진행 중</div>
+    <div class="legend-item"><span class="badge todo">대기</span> 아직 시작 전</div>
+    <div class="legend-item"><span class="session-chip odd">세션 #N</span> 새 세션 시작 지점 (보라/파랑 진하게 칠해진 행 = 그 세션의 첫 단원)</div>
+    <div class="legend-item"><span class="session-chip-sub">↳ 같은 세션</span> 바로 위 세션과 한 세션에서 함께 진행되는 단원 (현재 세션#1만 5개 단원 묶음)</div>
+  </div>
+
+  <footer>data 출처: <code>extract_data/txt/[단원명].txt</code> · 작업 기준 문서: <code>~/.claude/.../memory/feedback_pmp_*.md</code> 4종</footer>
+</div>
+
+<script>
+/*
+  ────────────────────────────────────────────────────────────────
+  단원이 하나 끝날 때마다 아래 UNITS 배열의 해당 항목만 수정하면 됩니다.
+  steps: [번역+데이터JSON, 해설(선지+원문), 개념모듈, 뷰어등록·검증] 각 true/false
+  status: 'done' | 'progress' | 'todo'  (보통 steps 4개 모두 true면 'done')
+  note:   짧은 메모 (예: 완료일, 특이사항)
+  ────────────────────────────────────────────────────────────────
+*/
+const UPDATED_AT = '2026-06-08';
+
+const UNITS = [
+  // session: 0 = 이미 완료(기준 단원). 1부터는 "세션 그룹 번호" — 같은 session 번호는 같은 세션(대화)에서 함께 진행, 끝나면 새 세션 열어서 다음 번호로
+  { session: 0,  name: 'Assess and Manage Risks', count: 30, steps: [true, true, true, true], status: 'done', note: '완료 (기준 단원, enrichment 포함)' },
+
+  // ── 세션 #1: 너무 작아서 따로 세션을 열기 비효율적인 5개 단원을 한 세션에서 함께 진행 (합계 21문항) ──
+  { session: 1,  name: 'Establish Project Governance Structure', count: 1, steps: [true,true,true,true], status: 'done', note: '세션#1 묶음 (5개 단원, 합계 21문항) — 최소 단원' },
+  { session: 1,  name: 'Manage Project Artifacts', count: 3, steps: [true,true,true,true], status: 'done', note: '세션#1 묶음' },
+  { session: 1,  name: 'Define Team Ground Rules', count: 5, steps: [true,true,true,true], status: 'done', note: '세션#1 묶음' },
+  { session: 1,  name: 'Ensure Knowledge Transfer for Project Continuity', count: 5, steps: [true,true,true,true], status: 'done', note: '세션#1 묶음' },
+  { session: 1,  name: 'Promote Team Performance Through the Application of Emotional Intelligence', count: 7, steps: [true,true,true,true], status: 'done', note: '세션#1 묶음' },
+
+  // ── 세션 #2~#25: 단원 1개 = 세션 1개 (문항 수 오름차순) ──
+  { session: 2,  name: 'Support Organizational Change', count: 15, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 3,  name: 'Negotiate Project Agreements', count: 16, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 4,  name: 'Plan and Manage Budget and Resources', count: 16, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 5,  name: 'Plan and Manage Scope', count: 16, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 6,  name: 'Integrate Project Planning Activities', count: 18, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 7,  name: 'Plan and Manage Procurement', count: 19, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 8,  name: 'Determine Appropriate Project Methodology/methods and Practices', count: 21, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 9,  name: 'Engage and Support Virtual Teams', count: 21, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 10, name: 'Manage Project Issues', count: 21, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 11, name: 'Evaluate and Address External Business Environment Changes for Impact on Scope', count: 24, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 12, name: 'Plan and Manage Quality of Products/deliverables', count: 24, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 13, name: 'Manage communications', count: 25, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 14, name: 'Engage Stakeholders and Build Shared Understanding', count: 26, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 15, name: 'Plan and Manage Project/phase Closure or Transitions', count: 26, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 16, name: 'Support Team Performance by Providing Adequate Training', count: 27, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 17, name: 'Address and Remove Impediments, Obstacles, and Blockers for the Team', count: 29, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 18, name: 'Empower Team Members and Stakeholders', count: 29, steps: [true,true,true,true], status: 'done', note: '' },
+  { session: 19, name: 'Plan and Manage Schedule', count: 30, steps: [false,false,false,false], status: 'todo', note: '' },
+  { session: 20, name: 'Mentor and Collaborate With Stakeholders', count: 34, steps: [false,false,false,false], status: 'todo', note: '' },
+  { session: 21, name: 'Execute Project With the Urgency Required to Deliver Business Value', count: 40, steps: [false,false,false,false], status: 'todo', note: '' },
+  { session: 22, name: 'Manage Conflict', count: 40, steps: [false,false,false,false], status: 'todo', note: '' },
+  { session: 23, name: 'Plan and Manage Project Compliance', count: 42, steps: [false,false,false,false], status: 'todo', note: '' },
+  { session: 24, name: 'Evaluate and Deliver Project Benefits and Value', count: 48, steps: [false,false,false,false], status: 'todo', note: '' },
+  { session: 25, name: 'Build and Lead a Team', count: 59, steps: [false,false,false,false], status: 'todo', note: '마지막 세션 — 최대 단원(59문항), 워크플로우 숙달 후 진행' },
+];
+
+const STEP_LABELS = ['번역+데이터JSON', '해설(선지+원문)', '개념모듈', '뷰어등록·검증'];
+const STATUS_LABEL = { done: '완료', progress: '진행중', todo: '대기' };
+
+function render() {
+  document.getElementById('updatedAt').textContent = UPDATED_AT;
+
+  const total = UNITS.length;
+  const done = UNITS.filter(u => u.status === 'done').length;
+  const progress = UNITS.filter(u => u.status === 'progress').length;
+  const todo = total - done - progress;
+  const pct = Math.round((done / total) * 100);
+
+  document.getElementById('summary').innerHTML = `
+    <div class="stat-card total"><div class="num">${total}</div><div class="label">전체 단원</div></div>
+    <div class="stat-card done"><div class="num">${done}</div><div class="label">완료</div></div>
+    <div class="stat-card progress"><div class="num">${progress}</div><div class="label">진행중</div></div>
+    <div class="stat-card todo"><div class="num">${todo}</div><div class="label">대기</div></div>
+  `;
+
+  document.getElementById('barFill').style.width = Math.max(pct, 4) + '%';
+  document.getElementById('barFill').textContent = pct > 6 ? pct + '%' : '';
+  document.getElementById('barLabel').textContent = `전체 진행률: ${done} / ${total} 단원 완료 (${pct}%)`;
+
+  document.getElementById('tbody').innerHTML = UNITS.map((u, i) => {
+    const prevSession = i > 0 ? UNITS[i - 1].session : null;
+    const newGroup = u.session !== prevSession;
+    const sessionLabel = u.session === 0 ? '완료' : `#${u.session}`;
+    const sessionCell = newGroup
+      ? `<span class="session-chip ${u.session % 2 === 0 ? 'even' : 'odd'} ${u.session === 0 ? 'done-chip' : ''}">세션 ${sessionLabel}</span>`
+      : `<span class="session-chip-sub">↳ 같은 세션</span>`;
+    return `
+    <tr class="${newGroup ? 'group-start' : ''} ${u.session % 2 === 0 ? 'row-even' : 'row-odd'}">
+      <td class="num-col">${i + 1}</td>
+      <td class="session-col">${sessionCell}</td>
+      <td class="unit-col">${u.name}</td>
+      <td class="qcount-col">${u.count}문항</td>
+      ${u.steps.map((on, si) => `<td><span class="steps-cell"><span class="step ${on ? 'on' : ''}" title="${STEP_LABELS[si]}">${on ? '✓' : '–'}</span></span></td>`).join('')}
+      <td><span class="badge ${u.status}">${STATUS_LABEL[u.status]}</span></td>
+      <td class="note-col">${u.note || ''}</td>
+    </tr>
+  `;
+  }).join('');
+}
+
+render();
+</script>
+</body>
+</html>
