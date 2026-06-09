@@ -36,27 +36,20 @@
   h1 { font-size: 1.3rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
   .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 14px; }
 
-  /* ── 단원명 + 진행률 + 문제 바로가기를 하나로 묶어 스크롤 시 함께 고정 ──
-     (요청: 아래로 스크롤해도 단원명/진행률/문제번호가 모두 화면 상단에 남아 있도록) */
+  /* ── 단원 제목 영역 — 스크롤하면 자연스럽게 올라가는 일반 콘텐츠 ── */
+  .unit-info { padding: 24px 0 16px; }
+  .unit-info h1 { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 4px; }
+  .unit-info .subtitle { font-size: 0.88rem; color: var(--muted); }
+
+  /* ── 진행률 + 점프 인덱스 고정 바 — 항상 compact, 접힘/펼침 없음 ── */
   .sticky-head { position: sticky; top: var(--nav-height, 52px); z-index: 45;
-                 background: var(--bg); padding-top: 22px; padding-bottom: 14px; margin-bottom: 4px;
-                 transition: padding .2s; }
-
-  /* ── 고정 헤더 접힌(compact) 상태 ── */
-  /* 스크롤을 80px 이상 내리면 자동으로 compact 클래스가 붙어 헤더가 접힘 */
-  .sticky-head.compact { padding-top: 6px; padding-bottom: 4px; }
-  .sticky-head.compact h1,
-  .sticky-head.compact .subtitle { display: none; }
-  .sticky-head.compact .progress-wrap { margin-bottom: 6px; font-size: 0.75rem; }
-  .sticky-head.compact .jump-btn { width: 26px; height: 26px; min-width: 26px; font-size: 0.68rem; border-radius: 5px; }
-  .sticky-head.compact .jump-index { padding: 4px 32px; gap: 5px; }
-  .sticky-head.compact .jlabel { display: none; }
-
-  /* 수동 토글 버튼 */
-  .sticky-toggle-btn { margin-left: 6px; background: transparent; border: 1px solid var(--border);
-                       border-radius: 6px; padding: 3px 9px; font-size: 0.7rem; color: var(--muted);
-                       cursor: pointer; transition: .15s; white-space: nowrap; flex: 0 0 auto; }
-  .sticky-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+                 background: var(--bg); padding: 6px 0 0;
+                 border-bottom: 1px solid var(--border);
+                 box-shadow: 0 2px 8px rgba(30,40,80,.07); }
+  .sticky-head .progress-wrap { margin-bottom: 6px; font-size: 0.75rem; }
+  .sticky-head .jump-btn { width: 26px; height: 26px; min-width: 26px; font-size: 0.68rem; border-radius: 5px; }
+  .sticky-head .jump-index { padding: 4px 32px; gap: 5px; }
+  .sticky-head .jlabel { display: none; }
 
   /* 학습 모드 토글 버튼 */
   .study-mode-btn { margin-left: 4px; background: transparent; border: 1px solid var(--border);
@@ -306,10 +299,15 @@
 </nav>
 
 <div class="wrap">
-  <div class="sticky-head" id="stickyHead">
+  <!-- 단원 제목/부제 — 스크롤하면 자연스럽게 올라가는 일반 콘텐츠 영역 -->
+  <div class="unit-info" id="unitInfo">
     <h1 id="unitTitle">⚙️ 불러오는 중…</h1>
     <p class="subtitle" id="unitSubtitle"></p>
-    <!-- 진행률 표시줄 + 문제 바로가기는 JS가 이 안에 동적으로 채움(스크롤 시 함께 고정) -->
+  </div>
+
+  <!-- 진행률 + 문제 바로가기 — 항상 compact로 고정, 접힘/펼침 없음 -->
+  <div class="sticky-head" id="stickyHead">
+    <!-- progress-wrap + jump-index-wrap 은 JS가 동적으로 채움 -->
   </div>
 
   <div id="content">
@@ -760,15 +758,14 @@ function render() {
   const content = document.getElementById('content');
   content.innerHTML = '';
 
-  // 단원명 + 진행률 + 문제 바로가기는 모두 .sticky-head 안에 두어
-  // 스크롤해도 화면 상단에 함께 고정되도록 한다.
-  const stickyHead = document.getElementById('stickyHead');
-  // 이전 렌더링에서 만든 진행률/점프 인덱스만 제거 (제목/부제는 유지)
-  stickyHead.querySelectorAll('.progress-wrap, .jump-index-wrap').forEach(el => el.remove());
-
+  // 단원 제목/부제 → sticky 밖 .unit-info에 세팅 (스크롤하면 자연히 올라감)
   document.getElementById('unitTitle').textContent = `⚙️ ${unitData.unit}`;
   document.getElementById('unitSubtitle').textContent =
     `${unitData.unitIndex ? `단원 ${unitData.unitIndex}/${unitData.totalUnits} · ` : ''}총 ${unitData.questions.length}문항 — 지문을 클릭하면 정답/오답과 해설이 함께 나타납니다`;
+
+  // sticky-head: 이전 렌더링 내용 제거 후 다시 채움
+  const stickyHead = document.getElementById('stickyHead');
+  stickyHead.querySelectorAll('.progress-wrap, .jump-index-wrap').forEach(el => el.remove());
 
   // 진행률 표시줄
   const progressWrap = document.createElement('div');
@@ -778,24 +775,6 @@ function render() {
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <span id="progressText"></span>
     <button class="reset-all-btn" id="resetAllBtn" title="이 단원의 모든 문제 풀이 기록 초기화 후 다시 풀기">↺<span class="btn-text"> 전체 문제 다시 풀기</span></button>`;
-
-  // 수동 접기/펼치기 토글 버튼
-  const toggleBtn = document.createElement('button');
-  toggleBtn.className = 'sticky-toggle-btn';
-  toggleBtn.id = 'stickyToggleBtn';
-  toggleBtn.title = '헤더 접기/펼치기';
-  toggleBtn.textContent = '▲ 접기';
-  toggleBtn.addEventListener('click', () => {
-    const sh = document.getElementById('stickyHead');
-    sh._manualLock = true;   // 수동 조작 시 자동 스크롤 동작을 일시 억제
-    sh.classList.toggle('compact');
-    toggleBtn.textContent = sh.classList.contains('compact') ? '▼ 펼치기' : '▲ 접기';
-    syncNavHeight();
-    // 0.8초 후 자동 동작 재개
-    clearTimeout(sh._lockTimer);
-    sh._lockTimer = setTimeout(() => { sh._manualLock = false; }, 800);
-  });
-  progressWrap.appendChild(toggleBtn);
 
   // 학습 모드 토글 버튼
   const studyBtn = document.createElement('button');
@@ -861,25 +840,8 @@ function render() {
   restoreAllStates();
   updateGlobalProgress();
 
-  // sticky-head의 실제 높이가 단원마다 달라질 수 있으므로 다시 측정해 동기화
+  // sticky-head 높이가 단원마다 달라질 수 있으므로 다시 측정해 동기화
   syncNavHeight();
-
-  // ── 스크롤 시 헤더 자동 접기 ──
-  // 단원이 바뀔 때마다 리스너를 새로 등록하지 않도록 한 번만 등록
-  if (!window._stickyScrollReady) {
-    window._stickyScrollReady = true;
-    window.addEventListener('scroll', () => {
-      const sh = document.getElementById('stickyHead');
-      const btn = document.getElementById('stickyToggleBtn');
-      if (!sh || sh._manualLock) return;
-      const compact = window.scrollY > 80;
-      if (compact !== sh.classList.contains('compact')) {
-        sh.classList.toggle('compact', compact);
-        if (btn) btn.textContent = compact ? '▼ 펼치기' : '▲ 접기';
-        syncNavHeight();
-      }
-    }, { passive: true });
-  }
 }
 
 // ── 문제 카드 생성 ──
