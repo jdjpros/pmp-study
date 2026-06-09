@@ -58,6 +58,23 @@
                        cursor: pointer; transition: .15s; white-space: nowrap; flex: 0 0 auto; }
   .sticky-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
 
+  /* 학습 모드 토글 버튼 */
+  .study-mode-btn { margin-left: 4px; background: transparent; border: 1px solid var(--border);
+                    border-radius: 6px; padding: 3px 9px; font-size: 0.7rem; color: var(--muted);
+                    cursor: pointer; transition: .15s; white-space: nowrap; flex: 0 0 auto; }
+  .study-mode-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  .study-mode-btn.active { background: rgba(108,92,231,.12); border-color: var(--accent2);
+                           color: var(--accent2); font-weight: 700; }
+
+  /* 학습 모드 ON: 개념 모듈을 선지 위(q-body 앞)로 올리기 */
+  body.study-mode .q-card { display: flex; flex-direction: column; }
+  body.study-mode .q-card > .q-header   { order: 0; }
+  body.study-mode .q-card > .concept-module {
+    order: 1; display: block;
+    margin: 0 18px 4px; border-style: solid;
+  }
+  body.study-mode .q-card > .q-body     { order: 2; }
+
   .loading, .error-box { text-align: center; color: var(--muted); padding: 60px 20px; font-size: 0.95rem; }
   .error-box { color: var(--wrong); }
 
@@ -455,6 +472,26 @@ let unitData = null;
 let conceptMap = {};   // conceptId -> concept object
 let stateStore = {};   // qid -> { revealed: [choiceId,...], bookmarked: bool, done: bool }
 
+// ── 학습 모드 (개념을 선지 위에 미리 표시) ──────────────────────────
+let studyMode = localStorage.getItem('pmp_study_mode') === '1';
+
+function applyStudyMode() {
+  document.body.classList.toggle('study-mode', studyMode);
+  const btn = document.getElementById('studyModeBtn');
+  if (!btn) return;
+  btn.classList.toggle('active', studyMode);
+  btn.textContent = studyMode ? '📖 학습 모드 ON' : '✏️ 시험 모드';
+  btn.title = studyMode
+    ? '학습 모드: 개념이 선지 위에 표시됩니다. 클릭하면 시험 모드로 전환'
+    : '시험 모드: 선지를 모두 클릭해야 개념이 보입니다. 클릭하면 학습 모드로 전환';
+}
+
+function toggleStudyMode() {
+  studyMode = !studyMode;
+  localStorage.setItem('pmp_study_mode', studyMode ? '1' : '0');
+  applyStudyMode();
+}
+
 // ── 진입점 ──
 init();
 
@@ -744,8 +781,18 @@ function render() {
   });
   progressWrap.appendChild(toggleBtn);
 
+  // 학습 모드 토글 버튼
+  const studyBtn = document.createElement('button');
+  studyBtn.className = 'study-mode-btn';
+  studyBtn.id = 'studyModeBtn';
+  studyBtn.addEventListener('click', toggleStudyMode);
+  progressWrap.appendChild(studyBtn);
+
   stickyHead.appendChild(progressWrap);
   document.getElementById('resetAllBtn').addEventListener('click', resetAllQuestions);
+
+  // 학습 모드 상태 즉시 반영
+  applyStudyMode();
 
   // F10: 점프 인덱스 — 좌우 끝에 마우스를 올리면 자동으로 스크롤되는 방식
   const jumpWrap = document.createElement('div');
