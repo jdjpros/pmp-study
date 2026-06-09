@@ -232,17 +232,20 @@
   .sync-badge.offline::before { content: '💾 '; }
 
   /* ── 모바일 반응형 ── */
-  /* app-header와 unit-nav가 뷰포트 폭을 초과해 가로 스크롤 여백을 만들지 않도록 */
+  /* app-header가 뷰포트 폭을 초과하지 않도록 */
   .app-header { overflow: hidden; }
   .app-title  { min-width: 0; flex-shrink: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .unit-nav   { overflow: hidden; }
+  /* unit-nav: overflow:hidden 제거 — native <select>를 잘라냄. 대신 select에 min-width:0 적용 */
+  .unit-select { min-width: 0; }
   @media (max-width: 480px) {
     .app-title  { font-size: 0.88rem; }
     .sync-badge { display: none; }                         /* 좁은 화면엔 동기화 배지 숨김 */
     .user-name  { max-width: 60px; }                       /* 이름 더 짧게 */
     .auth-btn   { padding: 5px 10px; font-size: 0.72rem; }
-    .unit-nav   { padding: 8px 12px; gap: 6px; }
-    .unit-select-current { display: none; }                /* (30/30) 텍스트 숨김 */
+    .unit-nav   { padding: 8px 10px; gap: 6px; }
+    .unit-nav .nav-label { display: none; }                /* "📚 단원 이동" 레이블 숨겨 공간 확보 */
+    .unit-select { font-size: 0.8rem; padding: 7px 28px 7px 10px; } /* 좌우 패딩 축소 */
+    .unit-select-current { display: none; }                /* (30/30) 숨김 */
     .wrap       { padding: 16px 12px 80px; }
   }
 </style>
