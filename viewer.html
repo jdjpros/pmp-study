@@ -39,7 +39,24 @@
   /* ── 단원명 + 진행률 + 문제 바로가기를 하나로 묶어 스크롤 시 함께 고정 ──
      (요청: 아래로 스크롤해도 단원명/진행률/문제번호가 모두 화면 상단에 남아 있도록) */
   .sticky-head { position: sticky; top: var(--nav-height, 52px); z-index: 45;
-                 background: var(--bg); padding-top: 22px; padding-bottom: 14px; margin-bottom: 4px; }
+                 background: var(--bg); padding-top: 22px; padding-bottom: 14px; margin-bottom: 4px;
+                 transition: padding .2s; }
+
+  /* ── 고정 헤더 접힌(compact) 상태 ── */
+  /* 스크롤을 80px 이상 내리면 자동으로 compact 클래스가 붙어 헤더가 접힘 */
+  .sticky-head.compact { padding-top: 6px; padding-bottom: 4px; }
+  .sticky-head.compact h1,
+  .sticky-head.compact .subtitle { display: none; }
+  .sticky-head.compact .progress-wrap { margin-bottom: 6px; font-size: 0.75rem; }
+  .sticky-head.compact .jump-btn { width: 26px; height: 26px; min-width: 26px; font-size: 0.68rem; border-radius: 5px; }
+  .sticky-head.compact .jump-index { padding: 4px 32px; gap: 5px; }
+  .sticky-head.compact .jlabel { display: none; }
+
+  /* 수동 토글 버튼 */
+  .sticky-toggle-btn { margin-left: 6px; background: transparent; border: 1px solid var(--border);
+                       border-radius: 6px; padding: 3px 9px; font-size: 0.7rem; color: var(--muted);
+                       cursor: pointer; transition: .15s; white-space: nowrap; flex: 0 0 auto; }
+  .sticky-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   .loading, .error-box { text-align: center; color: var(--muted); padding: 60px 20px; font-size: 0.95rem; }
   .error-box { color: var(--wrong); }
@@ -659,6 +676,25 @@ function render() {
   progressWrap.className = 'progress-wrap';
   progressWrap.innerHTML = `<span>진행률</span><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div><span id="progressText"></span>
     <button class="reset-all-btn" id="resetAllBtn" title="이 단원의 모든 문제 풀이 기록 초기화 후 다시 풀기">↺ 전체 문제 다시 풀기</button>`;
+
+  // 수동 접기/펼치기 토글 버튼
+  const toggleBtn = document.createElement('button');
+  toggleBtn.className = 'sticky-toggle-btn';
+  toggleBtn.id = 'stickyToggleBtn';
+  toggleBtn.title = '헤더 접기/펼치기';
+  toggleBtn.textContent = '▲ 접기';
+  toggleBtn.addEventListener('click', () => {
+    const sh = document.getElementById('stickyHead');
+    sh._manualLock = true;   // 수동 조작 시 자동 스크롤 동작을 일시 억제
+    sh.classList.toggle('compact');
+    toggleBtn.textContent = sh.classList.contains('compact') ? '▼ 펼치기' : '▲ 접기';
+    syncNavHeight();
+    // 0.8초 후 자동 동작 재개
+    clearTimeout(sh._lockTimer);
+    sh._lockTimer = setTimeout(() => { sh._manualLock = false; }, 800);
+  });
+  progressWrap.appendChild(toggleBtn);
+
   stickyHead.appendChild(progressWrap);
   document.getElementById('resetAllBtn').addEventListener('click', resetAllQuestions);
 
@@ -715,6 +751,23 @@ function render() {
 
   // sticky-head의 실제 높이가 단원마다 달라질 수 있으므로 다시 측정해 동기화
   syncNavHeight();
+
+  // ── 스크롤 시 헤더 자동 접기 ──
+  // 단원이 바뀔 때마다 리스너를 새로 등록하지 않도록 한 번만 등록
+  if (!window._stickyScrollReady) {
+    window._stickyScrollReady = true;
+    window.addEventListener('scroll', () => {
+      const sh = document.getElementById('stickyHead');
+      const btn = document.getElementById('stickyToggleBtn');
+      if (!sh || sh._manualLock) return;
+      const compact = window.scrollY > 80;
+      if (compact !== sh.classList.contains('compact')) {
+        sh.classList.toggle('compact', compact);
+        if (btn) btn.textContent = compact ? '▼ 펼치기' : '▲ 접기';
+        syncNavHeight();
+      }
+    }, { passive: true });
+  }
 }
 
 // ── 문제 카드 생성 ──
