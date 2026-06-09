@@ -1,0 +1,3113 @@
+{
+  "unit": "Build and Lead a Team",
+  "questions": [
+    {
+      "id": 1,
+      "question_en": "What is the main goal of a Visionary leadership style?",
+      "question_ko": "비전형 리더십 스타일의 주요 목표는 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "To support the team to self organise and decide a common vision.",
+          "text_ko": "팀이 자기 조직화하고 공동 비전을 결정하도록 지원합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "To champion the adoption of the latest technologies and practices.",
+          "text_ko": "최신 기술과 관행의 채택을 지지합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "To provide long-term direction and engage the team to deliver it.",
+          "text_ko": "장기적 방향을 제공하고 팀이 이를 인도하도록 참여시킵니다."
+        },
+        {
+          "key": "D",
+          "text_en": "To prioritise and assign the tasks that are aligned with the vision.",
+          "text_ko": "비전에 정렬된 작업을 우선순위화하고 배정합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "자기 조직화 지원은 참여형(Participative) 또는 서번트 리더십에 더 가까운 설명입니다. 비전형 리더십은 장기 방향 제시가 핵심입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "최신 기술 채택을 지지하는 것은 비전형 리더십의 주요 목표가 아닙니다. 이는 혁신 지향적 리더에 가까운 설명입니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "비전형 리더십의 핵심은 장기적 방향을 제시하고 팀원들이 그 비전에 참여하고 책임감을 느끼도록 이끄는 것입니다. 리더는 비전을 소통하고 설명하여 팀이 몰입하게 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "작업 우선순위화와 배정은 지시형(Directive) 리더십에 더 가까운 설명입니다. 비전형 리더십은 방향 제시에 초점을 맞춥니다."
+        }
+      },
+      "solution_en": "The Visionary style provides long-term direction and engages the team to deliver it through communication and shared accountability.",
+      "solution_ko": "비전형 스타일은 장기적 방향을 제시하고 소통과 공유된 책임감을 통해 팀이 이를 인도하도록 참여시킵니다.",
+      "source": "https://www.pmi.org/learning/library/styles-leadership-avoid-mistakes-career-6280",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 2,
+      "question_en": "Which leadership style would help people to connect, even when working remotely and never having met each other?",
+      "question_ko": "원격으로 근무하며 서로 만난 적이 없을 때도 사람들을 연결하는 데 도움이 되는 리더십 스타일은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "The participative style",
+          "text_ko": "참여형 스타일"
+        },
+        {
+          "key": "B",
+          "text_en": "The Affiliative style",
+          "text_ko": "친화형 스타일"
+        },
+        {
+          "key": "C",
+          "text_en": "The Pace Setting style",
+          "text_ko": "속도 설정형 스타일"
+        },
+        {
+          "key": "D",
+          "text_en": "The Coaching style",
+          "text_ko": "코칭형 스타일"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "참여형 스타일은 의사 결정에 팀을 참여시키는 데 초점을 맞추지만, 사람들 간의 연결을 구축하는 것이 주요 목표가 아닙니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "친화형 리더십은 정의상 사람들을 하나로 묶는 스타일입니다. 원격으로 작업하고 서로 만난 적이 없는 경우에도 사람들 간의 연결과 조화를 구축하는 데 가장 효과적입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "속도 설정형 스타일은 관계 구축보다 성과와 결과에 초점을 맞추며 사람들을 연결하는 데 적합하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "코칭형 스타일은 개인 개발에 초점을 맞추지만, 원격 팀의 연결 구축을 위한 최선의 접근 방식이 아닙니다."
+        }
+      },
+      "solution_en": "The Affiliative style brings people together by definition — ideal for connecting remote teams who have never met.",
+      "solution_ko": "친화형 스타일은 정의상 사람들을 하나로 묶습니다. 서로 만난 적 없는 원격 팀을 연결하기에 이상적입니다.",
+      "source": "https://www.pmi.org/learning/library/styles-leadership-avoid-mistakes-career-6280",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 3,
+      "question_en": "A new product is being constructed by an agile team, but the team has a limited amount of time to complete it. Due to these circumstances, it is important for the team to sustain collaboration for the duration of the project. To build team solidarity, what should the project leader do?",
+      "question_ko": "애자일 팀이 새 제품을 구성하고 있지만 팀이 완성하는 데 제한된 시간을 가지고 있습니다. 이러한 상황으로 인해 팀이 프로젝트 기간 동안 협업을 유지하는 것이 중요합니다. 팀 결속력을 구축하기 위해 프로젝트 리더는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Institute protocols for handling sprints in a team meeting.",
+          "text_ko": "팀 회의에서 스프린트 처리를 위한 프로토콜을 제정합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Facilitate meetings with each member of the team to comprehend project goals.",
+          "text_ko": "프로젝트 목표를 이해하기 위해 팀 각 구성원과 회의를 퍼실리테이션합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Confer product progress with team members by utilizing a burndown chart.",
+          "text_ko": "번다운 차트를 활용하여 팀원들과 제품 진행 상황을 논의합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Analyze the project map for release of product with team members.",
+          "text_ko": "팀원들과 제품 출시를 위한 프로젝트 맵을 분석합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "스프린트 프로토콜 제정은 프로세스 관리에 초점을 맞추며 팀 결속력이나 협업을 직접 구축하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "제한된 시간 내에 팀 결속력을 구축하려면 소통과 팀원 통합이 중요합니다. 프로젝트 목표를 이해하기 위해 각 구성원과 회의를 퍼실리테이션하는 것은 목표 정렬과 개인적 연결을 동시에 구축합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "번다운 차트를 활용한 진행 상황 논의는 성과 추적 도구이지 팀 결속력 구축 방법이 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "제품 출시 맵 분석은 계획 활동이지 팀 결속력과 협업을 구축하는 활동이 아닙니다."
+        }
+      },
+      "solution_en": "Facilitating individual meetings builds personal connection and shared understanding of project goals, which creates team solidarity.",
+      "solution_ko": "개별 회의 퍼실리테이션은 개인적 연결과 프로젝트 목표에 대한 공유된 이해를 구축하여 팀 결속력을 형성합니다.",
+      "source": "Coaching Agile Teams (Adkins)/2/29-30; Collaboration Explained (Tabaka)/4/32-36",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 4,
+      "question_en": "Project manager B has been assigned to take over a project from Project Manager A. Project Manager A informs Project Manager B that the project is on schedule, only because Project Manager A constantly pushes the team to perform. What is the first action Project Manager B should take as the new project manager?",
+      "question_ko": "프로젝트 관리자 B가 프로젝트 관리자 A로부터 프로젝트를 인수하도록 배정되었습니다. 프로젝트 관리자 A는 프로젝트 관리자 B에게 프로젝트 관리자 A가 팀을 지속적으로 압박했기 때문에 프로젝트가 일정대로 진행 중이라고 알립니다. 새 프로젝트 관리자로서 프로젝트 관리자 B가 취해야 할 첫 번째 조치는 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Check the risk status.",
+          "text_ko": "리스크 상태를 확인합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Check the cost performance.",
+          "text_ko": "비용 성과를 확인합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Determine a management strategy.",
+          "text_ko": "관리 전략을 결정합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Tell the team the new objectives.",
+          "text_ko": "팀에게 새로운 목표를 알립니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "리스크 상태 확인은 중요하지만 첫 번째 조치가 아닙니다. 새 PM은 먼저 어떻게 팀을 관리할지 전략을 수립해야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "비용 성과 확인도 중요하지만, 팀이 지속적 압박 없이도 일정을 유지할 수 있는 방법에 대한 관리 전략 수립이 우선입니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "새 PM은 먼저 관리 전략을 결정해야 합니다. 팀이 지속적인 압박으로만 일정을 유지하고 있다는 정보를 바탕으로, 새 PM은 자신의 리더십 스타일과 팀 동기부여 방법을 결정해야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "팀에게 새 목표를 알리는 것은 관리 전략 결정 후에 해야 할 일입니다. 전략 없이 목표만 제시하면 효과적이지 않습니다."
+        }
+      },
+      "solution_en": "The first action is to determine a management strategy — especially given that the team has been operating under pressure-based management.",
+      "solution_ko": "첫 번째 조치는 관리 전략을 결정하는 것입니다. 특히 팀이 압박 기반 관리 하에 운영되어왔다는 점을 고려할 때 더욱 중요합니다.",
+      "source": "PMP Exam Prep 9th Ed (Mulcahy)/RMC Publications/9/391",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 5,
+      "question_en": "To handle a change in requirements, a project team needs to be motivated and flexible to reprioritize tasks. What leadership style would help the team to perform well in changing and uncertain conditions?",
+      "question_ko": "요구사항 변경을 처리하기 위해 프로젝트 팀은 작업 우선순위를 재조정하는 데 동기부여되고 유연해야 합니다. 어떤 리더십 스타일이 변화하고 불확실한 조건에서 팀이 잘 수행하도록 도울 것입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "A collaborative approach will boost motivation, learning, growth, and innovation around a project vision.",
+          "text_ko": "협력적 접근법이 프로젝트 비전 주변에서 동기부여, 학습, 성장, 혁신을 강화합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "A directive approach will boost team confidence by ensuring that team members only work on the tasks suited to their qualifications.",
+          "text_ko": "지시형 접근법이 팀원이 자격에 맞는 작업만 하도록 보장하여 팀 신뢰를 높입니다."
+        },
+        {
+          "key": "C",
+          "text_en": "A collaborative approach will ensure that project procedures are well-documented and complete enough to cover all situations.",
+          "text_ko": "협력적 접근법이 프로젝트 절차가 모든 상황을 커버하기에 충분히 잘 문서화되고 완성되도록 보장합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "A directive approach will prepare the team for frequent changes by adapting the project vision to new directions.",
+          "text_ko": "지시형 접근법이 프로젝트 비전을 새로운 방향에 맞게 적응시켜 팀이 빈번한 변화에 대비하도록 합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "협력적 리더십은 팀이 새로운 도전에 적응할 수 있도록 학습 문화와 공유된 비전을 통해 팀을 강화합니다. 변화와 불확실성이 높은 환경에서 중앙집중식 지시보다 협력적 의사결정이 더 효과적입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "지시형 접근법은 변화하고 불확실한 환경에서 팀 신뢰를 높이지 않으며 오히려 감소시킬 수 있습니다. 또한 유연성이 제한됩니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "협력적 접근법은 모든 상황을 커버하는 절차 문서화에 초점을 맞추지 않습니다. 이는 예측형 방법론에 더 가까운 설명입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "지시형 접근법은 빈번한 변화 대비보다 안정적 환경에서 효과적이며, 비전을 지속적으로 적응시키는 것도 지시형의 특성이 아닙니다."
+        }
+      },
+      "solution_en": "Collaborative leadership empowers teams to adapt to new challenges through a learning culture and shared vision — essential in uncertain conditions.",
+      "solution_ko": "협력적 리더십은 학습 문화와 공유된 비전을 통해 팀이 새로운 도전에 적응할 수 있도록 강화합니다. 불확실한 조건에서 필수적입니다.",
+      "source": "Agile Practice Guide PMI/Table A1-2; PMI/five-team-leadership-principles-project-success",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 6,
+      "question_en": "A project manager notices schedule performance issues due to the expertise levels of project resources. Some experienced resources check unnecessary details, and some junior-level resources take a long time to complete tasks. What should the project manager do to help the team enhance their performance?",
+      "question_ko": "프로젝트 관리자가 프로젝트 자원의 전문성 수준으로 인한 일정 성과 문제를 발견합니다. 일부 경험 있는 자원은 불필요한 세부 사항을 확인하고, 일부 주니어 수준 자원은 작업 완료에 오랜 시간이 걸립니다. 프로젝트 관리자는 팀 성과 향상을 위해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Identify each individual's knowledge gaps and address those gaps through training.",
+          "text_ko": "각 개인의 지식 격차를 파악하고 훈련을 통해 그 격차를 해소합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Note this in the risk register and address this with the team during a retrospective session.",
+          "text_ko": "이것을 리스크 레지스터에 기록하고 회고 세션에서 팀과 함께 다룹니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Inform the sponsor that the deliverable will not be available on time due to insufficient expertise.",
+          "text_ko": "불충분한 전문성으로 인해 인도물이 정시에 제공되지 않을 것임을 스폰서에게 알립니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Meet with human resources to have them address the individuals that are missing skills.",
+          "text_ko": "인적자원팀과 만나 부족한 기술을 가진 개인들을 다루도록 합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "개인의 지식 격차를 파악하고 훈련을 통해 해소하는 것이 팀 성과 향상을 위한 가장 직접적이고 효과적인 방법입니다. PM은 팀원들이 현재와 미래 프로젝트에서 도움이 될 기술을 개발하도록 적극적으로 지원해야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "리스크 레지스터에 기록하는 것은 좋은 아이디어이지만 충분하지 않습니다. PM은 성과 문제를 해결하기 위한 구체적 조치를 취해야 합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "스폰서에게 늦어질 것을 알리는 것은 근본 원인을 해결하지 않으며 포기에 가깝습니다. PM은 팀 성과 개선에 초점을 맞춰야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "인적자원팀에 위임하는 것은 경우에 따라 필요할 수 있지만, PM이 직접 훈련 기회를 파악하는 것이 더 적절합니다."
+        }
+      },
+      "solution_en": "Identifying knowledge gaps and addressing them through targeted training is the most effective way to improve team performance.",
+      "solution_ko": "지식 격차를 파악하고 맞춤형 훈련으로 해소하는 것이 팀 성과 개선을 위한 가장 효과적인 방법입니다.",
+      "source": "PMBOK 7th Ed/2.2.1.3; AMA Handbook of PM 3rd Ed/12",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 7,
+      "question_en": "A pharmaceutical project in the initiation phase is likely to be impacted by new market regulations. Which stakeholder categories should the project manager assign to the relevant regulatory body?",
+      "question_ko": "착수 단계의 제약 프로젝트가 새로운 시장 규정의 영향을 받을 가능성이 있습니다. 프로젝트 관리자는 관련 규제 기관을 어떤 이해관계자 범주에 배정해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "External with high power/influence",
+          "text_ko": "높은 권력/영향력을 가진 외부"
+        },
+        {
+          "key": "B",
+          "text_en": "Internal with high power/influence",
+          "text_ko": "높은 권력/영향력을 가진 내부"
+        },
+        {
+          "key": "C",
+          "text_en": "Internal with antagonist/resistant support level",
+          "text_ko": "적대적/저항적 지지 수준을 가진 내부"
+        },
+        {
+          "key": "D",
+          "text_en": "External with antagonist/resistant support level",
+          "text_ko": "적대적/저항적 지지 수준을 가진 외부"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "규제 기관은 프로젝트에 직접 참여하지 않더라도 높은 영향력을 미칠 수 있는 외부 조직입니다. 시장 규정이 프로젝트에 영향을 미칠 가능성이 있으므로 높은 권력/영향력을 가진 외부 이해관계자로 분류하는 것이 적절합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "규제 기관은 조직 외부에 있으므로 내부 이해관계자로 분류될 수 없습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "규제 기관은 조직 외부에 있습니다. 또한 적대적/저항적 지지 수준이 반드시 규제 기관의 특성은 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "외부 분류는 맞지만, 적대적/저항적 지지 수준이 규제 기관의 지지 수준을 설명하기에 적절하지 않습니다. 규제 기관은 중립적이거나 때로는 지지적일 수 있습니다."
+        }
+      },
+      "solution_en": "A regulatory body is an external stakeholder with high power/influence — it can significantly impact the project even without direct involvement.",
+      "solution_ko": "규제 기관은 직접 참여 없이도 프로젝트에 큰 영향을 미칠 수 있는 높은 권력/영향력을 가진 외부 이해관계자입니다.",
+      "source": "PMI/stakeholder-management-plan (Forman & Discenza, 2012); PMBOK/1.6",
+      "conceptIds": [
+        "stakeholder-engagement-and-management"
+      ]
+    },
+    {
+      "id": 8,
+      "question_en": "A chief technology officer (CTO) is enthusiastic about an organization's recent adoption of servant leadership practices. The CTO requests that all project managers apply servant leadership practices, but seems to be unsure of the practical applications. Which statement below best represents how the project manager should respond to the CTO's request?",
+      "question_ko": "최고기술책임자(CTO)가 조직의 최근 서번트 리더십 관행 채택에 열정적입니다. CTO는 모든 프로젝트 관리자에게 서번트 리더십 관행을 적용하도록 요청하지만 실용적인 적용에 대해 불확실해 보입니다. 아래 중 프로젝트 관리자가 CTO의 요청에 어떻게 응답해야 하는지를 가장 잘 나타내는 진술은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Explain that servant leadership can be adapted and applied to any project situation.",
+          "text_ko": "서번트 리더십은 어떤 프로젝트 상황에도 적응하고 적용될 수 있다고 설명합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Remind the CTO that servant leadership is more suited for projects using agile methods.",
+          "text_ko": "서번트 리더십은 애자일 방법을 사용하는 프로젝트에 더 적합하다고 CTO에게 상기시킵니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Clarify that servant leadership practices typically focus on the client's preferences.",
+          "text_ko": "서번트 리더십 관행은 일반적으로 고객의 선호도에 초점을 맞춘다고 명확히 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Affirm that servant leadership only works for projects with substantial resources.",
+          "text_ko": "서번트 리더십은 상당한 자원을 가진 프로젝트에만 효과가 있다고 확인합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "서번트 리더십은 팀 구성원의 필요와 개발을 이해하고 해결하는 데 초점을 맞추어 최고의 팀 성과를 가능하게 하는 리더십 실천입니다. 일부 접근법이 서번트 리더십에 더 의존하지만 서번트 리더십 원칙은 어떤 상황에도 적용될 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "서번트 리더십은 애자일 프로젝트에서 두드러지지만 애자일 전용 관행이 아닙니다. 모든 유형의 프로젝트에 적용할 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "서번트 리더십은 고객 선호도가 아닌 팀 구성원의 성장, 개발, 복지에 초점을 맞춥니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "서번트 리더십은 예산이나 자원 규모와 무관하게 어떤 규모의 프로젝트에도 적용할 수 있습니다."
+        }
+      },
+      "solution_en": "Servant leadership focuses on serving team members and can be adapted to any project situation — it is not exclusively agile.",
+      "solution_ko": "서번트 리더십은 팀 구성원을 섬기는 데 초점을 맞추며 어떤 프로젝트 상황에도 적응할 수 있습니다. 애자일 전용이 아닙니다.",
+      "source": "PM: Systems Approach (Kerzner)/5; PMBOK 7th Ed/2.2.1",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 9,
+      "question_en": "After success in a challenging project phase, a project manager reassigned a high-performing team member to a more strategic task. This is an example of what?",
+      "question_ko": "도전적인 프로젝트 단계에서 성공한 후, 프로젝트 관리자가 고성과 팀원을 더 전략적인 작업에 재배정했습니다. 이것은 무엇의 예입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Recognition",
+          "text_ko": "인정"
+        },
+        {
+          "key": "B",
+          "text_en": "Risk acceptance",
+          "text_ko": "리스크 수용"
+        },
+        {
+          "key": "C",
+          "text_en": "Mentorship",
+          "text_ko": "멘토십"
+        },
+        {
+          "key": "D",
+          "text_en": "Scope change",
+          "text_ko": "스코프 변경"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "인정(Recognition)은 개인을 더 많은 만족스러운 작업을 받을 자격이 있는 사람으로 단독 인정하는 것입니다. 고성과 팀원을 더 전략적인 작업에 재배정하는 것은 그들의 공헌을 인정하고 보상하는 내재적 동기부여 방법입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "리스크 수용은 식별된 리스크를 수용하는 것으로, 이 시나리오에는 식별된 리스크가 없습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "멘토십은 경험 많은 사람이 덜 경험 있는 사람에게 지도를 제공하는 것입니다. 재배정 자체는 멘토십이 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "스코프 변경은 프로젝트 스코프의 중요한 변경이 있을 때 발생합니다. 팀원 재배정은 스코프 변경이 아닙니다."
+        }
+      },
+      "solution_en": "Reassigning a high performer to a more strategic task is a form of recognition — an intrinsic motivator that rewards through meaningful work.",
+      "solution_ko": "고성과자를 더 전략적인 작업에 재배정하는 것은 의미 있는 작업을 통해 보상하는 내재적 동기부여 형태인 인정입니다.",
+      "source": "PMI/motivation-project-management-leadership (Schmid & Adams, 2008); PMBOK/9.4.2.5, 9.5",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    },
+    {
+      "id": 10,
+      "question_en": "At which stage in the Tuckman team development model should the project manager put the most focus on increasing team motivation?",
+      "question_ko": "터크만 팀 개발 모델의 어떤 단계에서 프로젝트 관리자가 팀 동기부여 증가에 가장 많은 초점을 두어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Forming",
+          "text_ko": "형성기"
+        },
+        {
+          "key": "B",
+          "text_en": "Storming",
+          "text_ko": "격동기"
+        },
+        {
+          "key": "C",
+          "text_en": "Norming",
+          "text_ko": "규범기"
+        },
+        {
+          "key": "D",
+          "text_en": "Performing",
+          "text_ko": "성과기"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "형성기에 동기부여를 일찍 심어줄수록 팀은 긍정적인 기반 위에 협력하여 구축할 수 있습니다. 형성기는 프로젝트 전체 기간의 분위기를 설정합니다. 연구에 따르면 팀 동기부여는 프로젝트 초기 단계에 PM에 의해 크게 영향받습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "격동기에는 팀원들이 내부 갈등에 바빠 동기부여에 초점을 맞추기 어렵습니다. 형성기에 기반을 잘 닦아야 격동기를 효과적으로 헤쳐나갈 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "규범기에는 갈등이 해결되고 팀원들이 우선순위 작업에 집중합니다. 동기부여 기반은 이미 형성되어 있어야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "성과기에는 팀이 이미 잘 수행하고 있으므로 동기부여 초점이 가장 적게 필요합니다. 초기 단계에서의 기반이 여기에서 결실을 맺습니다."
+        }
+      },
+      "solution_en": "The Forming stage sets the tone — early investment in motivation creates a positive foundation that sustains the team throughout the project.",
+      "solution_ko": "형성기가 분위기를 설정합니다. 동기부여에 일찍 투자하면 팀이 프로젝트 전반에 걸쳐 유지될 긍정적인 기반을 만듭니다.",
+      "source": "PMI/motivation-project-management (Schmid & Adams, 2008); PMBOK/9.4",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 11,
+      "question_en": "At the midway point of a project, the project manager was informed of a market movement that would make the project results useless to the client. This information could cause the project to be cancelled or at least a big change on the scope and desired outcome. What should the project manager do next?",
+      "question_ko": "프로젝트 중간 지점에서 프로젝트 관리자는 프로젝트 결과를 고객에게 쓸모없게 만들 시장 움직임을 알게 됩니다. 이 정보는 프로젝트 취소 또는 최소한 스코프와 원하는 결과에 큰 변경을 일으킬 수 있습니다. 프로젝트 관리자는 다음에 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Prepare all status reports and demos to keep the client focused on the project execution that has been successful.",
+          "text_ko": "성공적이었던 프로젝트 실행에 고객을 집중시키기 위해 모든 상태 보고서와 데모를 준비합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Have a transparent discussion with the project sponsor, offering support on the strategy evaluation if needed.",
+          "text_ko": "필요한 경우 전략 평가 지원을 제공하면서 프로젝트 스폰서와 투명한 논의를 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Continue working on the project execution, as the business strategy is not responsibility of the project manager.",
+          "text_ko": "비즈니스 전략은 프로젝트 관리자의 책임이 아니므로 프로젝트 실행을 계속합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Halt the project immediately, as the project manager knows it will be useless to the client.",
+          "text_ko": "프로젝트 관리자는 고객에게 쓸모없을 것임을 알기 때문에 즉시 프로젝트를 중단합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "이미 성공한 것에 초점을 맞추어 고객을 분산시키는 것은 투명하지 않으며 PM의 비즈니스 렌즈 역할에 반합니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "PM은 비즈니스 렌즈 역할을 해야 합니다. 스폰서와 투명하게 논의하고 필요한 경우 전략 평가를 지원하는 것이 가장 적절한 대응입니다. PM은 프로젝트가 조직의 전략적 목표와 정렬되어 있는지 확인할 책임이 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "비즈니스 전략은 PM의 책임이 아니라는 것은 틀린 생각입니다. 현대 PM은 비즈니스 결과에 대한 책임을 지며 전략적 맥락을 이해해야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "PM이 단독으로 프로젝트를 중단하는 권한을 가지지 않습니다. 스폰서와 논의 후 그 결정은 스폰서가 내려야 합니다."
+        }
+      },
+      "solution_en": "The project manager must act as the business lens — having a transparent discussion with the sponsor about strategic alignment is the right response.",
+      "solution_ko": "PM은 비즈니스 렌즈 역할을 해야 합니다. 전략적 정렬에 대해 스폰서와 투명하게 논의하는 것이 올바른 대응입니다.",
+      "source": "PMI/be-accountable-for-outcomes",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 12,
+      "multi": true,
+      "question_en": "Project managers should wear a leadership face and drive the project team to achieve the expected deliverables. What qualities should a project manager have? (Choose 3).",
+      "question_ko": "프로젝트 관리자는 리더십을 갖추고 프로젝트 팀을 이끌어 기대되는 인도물을 달성해야 합니다. 프로젝트 관리자는 어떤 자질을 가져야 합니까? (3개 선택)",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Lead",
+          "text_ko": "이끌다(Lead)"
+        },
+        {
+          "key": "B",
+          "text_en": "Ethical",
+          "text_ko": "윤리적(Ethical)"
+        },
+        {
+          "key": "C",
+          "text_en": "Adapt",
+          "text_ko": "적응하다(Adapt)"
+        },
+        {
+          "key": "D",
+          "text_en": "Aggressive",
+          "text_ko": "공격적(Aggressive)"
+        },
+        {
+          "key": "E",
+          "text_en": "Empower",
+          "text_ko": "권한 부여(Empower)"
+        }
+      ],
+      "answer": "A,B,C",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "이끌다(Lead): 좋은 PM은 팀이 합의된 인도물을 달성하도록 이끌 수 있어야 합니다. 리더십은 팀 성장과 프로젝트 성공의 기반입니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "윤리적(Ethical): PMI는 윤리 지침을 제시합니다. PM은 윤리, 도덕적 기준, 문화를 잘 알고 있어야 합니다. 윤리 이해는 효과적인 프로젝트 인도에 도움이 됩니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "적응하다(Adapt): PM 관행은 진화하고 있으며 PM은 새로운 조건에 적응하고 PMI 인재 삼각형을 활용하여 새로운 기술을 학습해야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "공격적(Aggressive)은 PM의 바람직한 자질이 아닙니다. 공격성은 팀 사기와 협업에 부정적인 영향을 미칩니다."
+        },
+        "E": {
+          "correct": false,
+          "explanation_ko": "권한 부여(Empower)는 가치 있는 특성이지만 이 문항의 정답에 포함되지 않습니다. Lead, Ethical, Adapt이 PM의 핵심 자질로 선택되었습니다."
+        }
+      },
+      "solution_en": "Lead (achieve deliverables), Ethical (follow PMI standards), and Adapt (evolve with practice) are the three core PM leadership qualities.",
+      "solution_ko": "이끌다(인도물 달성), 윤리적(PMI 기준 준수), 적응하다(관행과 함께 발전)가 PM의 세 가지 핵심 리더십 자질입니다.",
+      "source": "PMI/How Will Citizen Development Impact Leadership",
+      "conceptIds": [
+        "leadership-skills-and-qualities"
+      ]
+    },
+    {
+      "id": 13,
+      "question_en": "A project manager wants to motivate their team members and improve project performance. Which approach is most likely to be effective?",
+      "question_ko": "프로젝트 관리자가 팀원들을 동기부여하고 프로젝트 성과를 개선하고 싶습니다. 어떤 접근법이 가장 효과적일 가능성이 있습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Reward all team members equally with formal awards to publicly recognize their achievements.",
+          "text_ko": "성취를 공개적으로 인정하기 위해 공식 상으로 모든 팀원에게 동등하게 보상합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Implement initiatives based on the project manager's understanding of what motivates others.",
+          "text_ko": "다른 사람들을 동기부여하는 것에 대한 프로젝트 관리자의 이해를 바탕으로 이니셔티브를 구현합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Delegate motivation to team members, assuming they are professionals who self-motivate.",
+          "text_ko": "팀원들이 자기 동기부여 하는 전문가라고 가정하여 동기부여를 팀원에게 위임합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Offer a diverse range of motivational incentives tailored to individual team member needs.",
+          "text_ko": "개별 팀원 필요에 맞게 조정된 다양한 동기부여 인센티브를 제공합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "모든 팀원에게 동등하게 보상하는 것은 다양한 필요와 기여를 고려하지 않아 고성과자를 낙담시키고 특정 개선 영역을 무시할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "PM 자신의 가정에 의존하면 불일치하는 인센티브와 비효과적인 동기부여 전략으로 이어질 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "모든 전문가가 자기 동기부여 한다고 가정하는 것은 개인 차이와 외부 자극의 잠재적 필요성을 무시합니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "PM은 각 팀원을 개인으로 인식해야 합니다. 특히 동기부여 전략을 만들 때 개인의 필요에 맞게 조정된 다양한 인센티브를 제공하는 것이 가장 효과적입니다. 사람마다 삶의 다른 시점에 다른 것들에 의해 동기부여 받기 때문입니다."
+        }
+      },
+      "solution_en": "Motivation is individual — tailoring incentives to each team member's unique needs is the most effective approach.",
+      "solution_ko": "동기부여는 개인적입니다. 각 팀원의 고유한 필요에 맞게 인센티브를 조정하는 것이 가장 효과적인 접근법입니다.",
+      "source": "PMI/successful-motivational-techniques-virtual-teams",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    },
+    {
+      "id": 14,
+      "question_en": "A new project manager is assigned to lead an agile project. The project manager wants to use motivation to encourage the team to perform well throughout the project. What should the project manager do?",
+      "question_ko": "새 프로젝트 관리자가 애자일 프로젝트를 이끌도록 배정되었습니다. 프로젝트 관리자는 프로젝트 전반에 걸쳐 팀이 잘 수행하도록 장려하기 위해 동기부여를 사용하고 싶습니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Implement a reward system aimed to keep the team engaged and motivated.",
+          "text_ko": "팀을 참여시키고 동기부여 된 상태로 유지하는 것을 목표로 하는 보상 시스템을 구현합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Use the management reserves to fund some team-building activities.",
+          "text_ko": "팀 빌딩 활동을 자금 지원하기 위해 관리 예비비를 사용합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Inflate project estimates to provide a financial buffer for team activities.",
+          "text_ko": "팀 활동을 위한 재정 버퍼를 제공하기 위해 프로젝트 추정을 부풀립니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask project sponsor to fund more for team building activities.",
+          "text_ko": "팀 빌딩 활동을 위해 더 많은 자금을 제공하도록 프로젝트 스폰서에게 요청합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM은 팀을 영감을 주고 동기부여 해야 하며 이를 위한 도구 중 하나가 보상 시스템 사용입니다. 애자일 서번트 리더로서 PM은 팀 동기부여를 촉진해야 하며 보상 시스템은 이를 위한 훌륭한 도구입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "관리 예비비는 프로젝트 위험에 대비한 것으로 팀 빌딩 활동을 위한 것이 아닙니다. 이는 예비비의 부적절한 사용입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "프로젝트 추정을 부풀리는 것은 비윤리적이며 PMI 윤리 강령에 위반됩니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "팀 빌딩 활동을 위해 스폰서에게 추가 자금을 요청하기 전에 PM이 먼저 현재 예산 내에서 보상 시스템을 구현하려고 해야 합니다."
+        }
+      },
+      "solution_en": "A reward system is the recommended tool to keep the agile team engaged and motivated throughout the project.",
+      "solution_ko": "보상 시스템은 프로젝트 전반에 걸쳐 애자일 팀을 참여시키고 동기부여 된 상태로 유지하는 권장 도구입니다.",
+      "source": "PMBOK 6th Ed/9/341; Agile Practice Guide PMI/4/33-38",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    },
+    {
+      "id": 15,
+      "question_en": "A project manager is working on a long-term project in a complex environment. The project manager's focus is on maintaining healthy team work and collaboration. What conflict resolution strategy should be used within the project team?",
+      "question_ko": "프로젝트 관리자가 복잡한 환경에서 장기 프로젝트를 진행하고 있습니다. 프로젝트 관리자의 초점은 건강한 팀워크와 협업을 유지하는 것입니다. 프로젝트 팀 내에서 어떤 갈등 해결 전략을 사용해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Problem solving",
+          "text_ko": "문제 해결"
+        },
+        {
+          "key": "B",
+          "text_en": "Compromising",
+          "text_ko": "타협"
+        },
+        {
+          "key": "C",
+          "text_en": "Accommodating",
+          "text_ko": "수용"
+        },
+        {
+          "key": "D",
+          "text_en": "Consultation",
+          "text_ko": "협의"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "문제 해결(Problem Solving)은 갈등이 팀워크와 환경에 영향을 미치는 이슈가 되기 전에 근본 원인을 해결하는 방법입니다. 복잡한 환경에서 장기 프로젝트에서 건강한 팀워크를 유지하려면 갈등을 철저히 해결하는 것이 중요합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "타협은 양측이 일부를 양보하는 방법으로, 양측 모두가 완전히 만족하지 않을 수 있습니다. 장기 프로젝트에서는 완전한 해결이 더 지속 가능합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "수용은 다른 사람의 관점을 받아들이는 것으로, 때로는 자신의 관점을 희생합니다. 이는 장기적으로 팀의 건강한 협업을 유지하는 최선의 방법이 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "협의는 갈등 해결의 표준 용어가 아닙니다. 문제 해결이 복잡한 환경에서 가장 효과적인 접근법입니다."
+        }
+      },
+      "solution_en": "Problem solving (confronting/addressing root causes) is the recommended strategy for maintaining healthy teamwork in long-term complex environments.",
+      "solution_ko": "문제 해결(근본 원인 직접 처리)은 장기 복잡한 환경에서 건강한 팀워크를 유지하기 위한 권장 전략입니다.",
+      "source": "PMI/managing-teams-complex-project-environments; PMI/conflict-resolution-strategies",
+      "conceptIds": [
+        "conflict-resolution-strategies"
+      ]
+    },
+    {
+      "id": 16,
+      "question_en": "A project manager is assigned to a mobile application development project. The project manager realizes that an agile approach is better suited for the project, but most of the team is not experienced in agile approaches. What should the project manager do next if the organization is open to using an agile approach?",
+      "question_ko": "프로젝트 관리자가 모바일 애플리케이션 개발 프로젝트에 배정되었습니다. 프로젝트 관리자는 애자일 접근법이 프로젝트에 더 적합하다는 것을 깨닫지만 팀의 대부분이 애자일 접근법 경험이 없습니다. 조직이 애자일 접근법 사용에 개방적이라면 프로젝트 관리자는 다음에 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Request that the project be reassigned to a project team with agile experience.",
+          "text_ko": "프로젝트를 애자일 경험이 있는 프로젝트 팀에 재배정하도록 요청합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Ask to replace the team members who have never used agile approaches.",
+          "text_ko": "애자일 접근법을 사용한 적 없는 팀원을 교체해달라고 요청합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Arrange training on agile principles and mindset for the existing project team.",
+          "text_ko": "기존 프로젝트 팀을 위해 애자일 원칙과 마인드셋에 대한 훈련을 마련합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Use a predictive approach since the project team is already familiar with that approach.",
+          "text_ko": "프로젝트 팀이 이미 그 접근법에 익숙하므로 예측형 접근법을 사용합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "프로젝트를 애자일 경험 팀에 재배정하는 것은 항상 실현 가능하거나 실용적이지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "팀원 교체는 프로젝트 연속성을 방해하고 실용적이지 않을 수 있습니다. PM은 기존 팀을 개발하는 데 초점을 맞춰야 합니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "조직이 애자일 전환에 개방적이라면 기존 팀을 위해 애자일 원칙 훈련을 마련하는 것이 가장 적절합니다. 이는 팀이 새 접근법을 효과적으로 사용할 수 있는 기술과 지식을 갖추도록 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "PM이 애자일이 더 적합하다고 판단했으므로 단순히 팀의 친숙함 때문에 예측형 접근법을 사용하는 것은 프로젝트 성공을 위한 최선이 아닙니다."
+        }
+      },
+      "solution_en": "Training the existing team on agile principles enables the transition without replacing team members — developing people is a core servant leader responsibility.",
+      "solution_ko": "기존 팀에 애자일 원칙을 교육하면 팀원 교체 없이 전환이 가능합니다. 사람을 개발하는 것은 서번트 리더의 핵심 책임입니다.",
+      "source": "PMBOK 7th Ed/2.2; Agile Practice Guide PMI/4.2.1",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 17,
+      "question_en": "A project manager leads two highly motivated teams who typically work on 3-4 concurrent short projects with tight deadlines. Recently, communication, morale, and project performance have declined across teams and the project manager wants to improve team effectiveness and project success. What should the project manager do first?",
+      "question_ko": "프로젝트 관리자가 일반적으로 촉박한 마감일로 3-4개의 동시 단기 프로젝트를 진행하는 두 개의 고도로 동기부여된 팀을 이끌고 있습니다. 최근 두 팀에서 소통, 사기, 프로젝트 성과가 저하되었으며 프로젝트 관리자는 팀 효과성과 프로젝트 성공을 개선하고 싶습니다. 프로젝트 관리자는 먼저 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Implement a new collaboration tool to facilitate communication between both teams.",
+          "text_ko": "두 팀 간의 소통을 촉진하기 위해 새로운 협업 도구를 구현합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Conduct individual performance reviews to identify and address performance issues within each team.",
+          "text_ko": "각 팀 내의 성과 문제를 파악하고 해결하기 위해 개별 성과 검토를 실시합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Organize team-building activities to increase team cohesion and boost morale.",
+          "text_ko": "팀 응집력을 높이고 사기를 높이기 위해 팀 빌딩 활동을 조직합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Facilitate open communication sessions to identify and address underlying challenges.",
+          "text_ko": "근본적인 과제를 파악하고 해결하기 위해 개방적인 소통 세션을 퍼실리테이션합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "새 협업 도구는 도움이 될 수 있지만 소통 문제의 근본 원인을 해결하지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "개별 성과 검토만으로는 더 광범위한 팀이나 프로젝트 수준의 과제를 무시합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "팀 빌딩 활동은 잠재적으로 유익하지만 근본 문제를 발견하지 않고 사기를 표면적으로만 다룹니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "PM은 두 팀 모두가 우려를 표현하고 불만을 공유하며 근본 원인을 파악하는 데 기여할 수 있도록 개방적인 소통을 퍼실리테이션해야 합니다. 함께 기여 요인을 분석하면 소유감이 형성되고 팀이 해결책을 찾는 데 역량이 강화됩니다."
+        }
+      },
+      "solution_en": "Facilitating open communication first identifies root causes of the decline — this is the prerequisite to any targeted improvement action.",
+      "solution_ko": "개방적인 소통을 먼저 퍼실리테이션하면 저하의 근본 원인을 파악합니다. 이것이 모든 목표화된 개선 조치의 전제 조건입니다.",
+      "source": "PMI-ACP Exam Prep 2nd Ed (Griffiths)/1/56; PMBOK/4.3.5",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 18,
+      "question_en": "An organization is developing a new product. What should the project manager of this development do first to improve the success of the project?",
+      "question_ko": "조직이 새 제품을 개발하고 있습니다. 이 개발의 프로젝트 관리자는 프로젝트 성공을 개선하기 위해 먼저 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Work with the project management office (PMO) to develop a detailed project schedule.",
+          "text_ko": "상세한 프로젝트 일정을 개발하기 위해 프로젝트 관리 사무소(PMO)와 협력합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Work with the marketing team to conduct an impact analysis to identify the target market.",
+          "text_ko": "목표 시장을 파악하기 위해 영향 분석을 실시하도록 마케팅 팀과 협력합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Work with the project sponsor to define the project vision and overall initiative.",
+          "text_ko": "프로젝트 비전과 전체 이니셔티브를 정의하기 위해 프로젝트 스폰서와 협력합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Work with the stakeholders to identify the appropriate project team members.",
+          "text_ko": "적절한 프로젝트 팀원을 파악하기 위해 이해관계자와 협력합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "상세한 프로젝트 일정은 프로젝트 비전과 스코프가 명확히 정의된 후에 개발됩니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "목표 시장 분석은 중요하지만 프로젝트 비전과 전체 이니셔티브 정의 후에 이루어집니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "프로젝트 성공을 위해 먼저 세부 계획에 집중하기 전에 전체 이니셔티브의 비전과 사명을 정의하는 것이 중요합니다. 영향 분석, 상세 일정, 팀원 파악은 모두 프로젝트 비전 정의 후에 이루어집니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "팀원 파악도 중요하지만 비전 정의 후에 해야 할 일입니다. 비전 없이 팀을 구성하면 방향이 불명확합니다."
+        }
+      },
+      "solution_en": "Defining the project vision and overall initiative with the sponsor is the critical first step — all planning activities flow from a clear vision.",
+      "solution_ko": "스폰서와 함께 프로젝트 비전과 전체 이니셔티브를 정의하는 것이 핵심 첫 번째 단계입니다. 모든 계획 활동은 명확한 비전에서 시작됩니다.",
+      "source": "O'Reilly/Agile for Project Managers Ch.2; PMBOK 6th Ed/9/350",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 19,
+      "question_en": "In the company cafeteria, a project manager overhears an unengaged stakeholder mocking the style of language used in the project manager's status report. What should the project manager do?",
+      "question_ko": "회사 구내식당에서 프로젝트 관리자는 참여하지 않는 이해관계자가 프로젝트 관리자의 상태 보고서에 사용된 언어 스타일을 조롱하는 것을 우연히 듣습니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Meet with the stakeholder privately to find out how to make communication more engaging.",
+          "text_ko": "소통을 더 매력적으로 만드는 방법을 알아내기 위해 이해관계자와 비공개로 만납니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Ask the company's public relations officer for tips on how to make written communications more captivating.",
+          "text_ko": "서면 소통을 더 매력적으로 만드는 방법에 대한 팁을 위해 회사의 홍보 담당자에게 문의합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Stop sending the status reports to the stakeholder and use only direct email to communicate with them.",
+          "text_ko": "이해관계자에게 상태 보고서 발송을 중단하고 직접 이메일만 사용하여 소통합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Update the project social contract to prohibit disrespectful communications when referring to project members.",
+          "text_ko": "프로젝트 구성원에 대해 언급할 때 무례한 소통을 금지하도록 프로젝트 사회적 계약을 업데이트합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "리더는 참여하지 않는 또는 적대적인 이해관계자를 다시 참여시키는 방법을 평가해야 합니다. 직접 인터뷰는 입력을 수집하고 참여 전략의 일환으로 소통을 조정하는 가장 좋은 방법입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "홍보 담당자는 외부 소통을 관리합니다. 그들로부터 팁을 얻는 것이 도움이 될 수 있지만 효과적인 전략이 아닙니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "이해관계자에게 상태 보고서 발송을 중단하는 것은 상황을 악화시키고 허용되지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "프로젝트 사회적 계약을 업데이트하는 것은 이해관계자의 우려를 직접 해결하지 않으며 상황을 악화시킬 수 있습니다."
+        }
+      },
+      "solution_en": "A direct, private meeting identifies the stakeholder's communication preferences and re-engages them — direct interviews are the best engagement tool.",
+      "solution_ko": "직접적인 비공개 회의는 이해관계자의 소통 선호도를 파악하고 재참여시킵니다. 직접 인터뷰가 최선의 참여 도구입니다.",
+      "source": "PMI/leadership-competencies (Bristol & Yeatts, 2010); PMBOK/10.1.2.6",
+      "conceptIds": [
+        "stakeholder-engagement-and-management"
+      ]
+    },
+    {
+      "id": 20,
+      "question_en": "You are the project manager in an organization that is implementing agile delivery. You have experience as a scrum master and will perform this role in addition to the project management responsibilities. One of the team members wants to know what the main focus of a servant leader is. What will be your response?",
+      "question_ko": "당신은 애자일 인도를 구현하는 조직의 프로젝트 관리자입니다. 스크럼 마스터로서의 경험이 있으며 프로젝트 관리 책임에 추가하여 이 역할을 수행할 것입니다. 팀원 중 한 명이 서번트 리더의 주요 초점이 무엇인지 알고 싶어합니다. 당신의 응답은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Client satisfaction and value delivered demonstration.",
+          "text_ko": "고객 만족과 인도된 가치 입증."
+        },
+        {
+          "key": "B",
+          "text_en": "Growth and well-being of people and communities they belong to.",
+          "text_ko": "사람들과 그들이 속한 커뮤니티의 성장과 복지."
+        },
+        {
+          "key": "C",
+          "text_en": "Stakeholders expectation management and communication.",
+          "text_ko": "이해관계자 기대 관리와 소통."
+        },
+        {
+          "key": "D",
+          "text_en": "Productivity and efficiency to achieve commitments made.",
+          "text_ko": "약속된 것을 달성하기 위한 생산성과 효율성."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "고객 만족과 가치 인도는 전통적인 리더십에 더 적합한 초점입니다. 서번트 리더십은 팀 구성원의 내부적 필요에 초점을 맞춥니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "서번트 리더는 다른 사람들을 섬기기 위한 리더십 기회를 추구합니다. 그들은 팀 구성원과 그들이 속한 커뮤니티의 성장, 개발, 복지를 통해 성공을 측정합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "이해관계자 기대 관리는 전통적인 리더십에 더 적용되는 것으로 서번트 리더십의 주요 초점이 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "생산성과 효율성 달성은 전통적인 관리에 더 적합한 초점입니다. 서번트 리더십은 사람 중심입니다."
+        }
+      },
+      "solution_en": "Servant leadership's main focus is the growth and well-being of team members and the communities they belong to.",
+      "solution_ko": "서번트 리더십의 주요 초점은 팀 구성원과 그들이 속한 커뮤니티의 성장과 복지입니다.",
+      "source": "PMI/motivation-project-management; PMI/servant-leadership-cures-organization",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 21,
+      "multi": true,
+      "question_en": "In the Project team meeting the team members are complaining of a drop in motivation and that they don't feel that their efforts are appreciated. You decided to build and present the team as a high performance team to the organization. Which of the following attributes of the organizational environment and managerial style will lead to a high performance team? Select 3",
+      "question_ko": "프로젝트 팀 회의에서 팀원들이 동기부여 저하와 노력이 인정받지 못한다고 불평합니다. 당신은 팀을 조직에 고성과 팀으로 구축하고 제시하기로 결정했습니다. 다음 중 고성과 팀으로 이어질 조직 환경과 관리 스타일의 속성은 무엇입니까? 3개 선택",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Personal Driving Forces.",
+          "text_ko": "개인 추진력"
+        },
+        {
+          "key": "B",
+          "text_en": "Work Challenge Dividend.",
+          "text_ko": "업무 도전 배당금"
+        },
+        {
+          "key": "C",
+          "text_en": "Progressive Financial Rewards.",
+          "text_ko": "점진적 재정 보상"
+        },
+        {
+          "key": "D",
+          "text_en": "Stimulating Environment.",
+          "text_ko": "자극적인 환경"
+        },
+        {
+          "key": "E",
+          "text_en": "Problem Solving Techniques",
+          "text_ko": "문제 해결 기법"
+        },
+        {
+          "key": "F",
+          "text_en": "Theory of Constraints",
+          "text_ko": "제약 이론"
+        }
+      ],
+      "answer": "A,B,D",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "개인 추진력(Personal Driving Forces): 프로젝트 성공의 정도는 주로 특정 추진력의 강도에 의해 결정됩니다. 개인 동기부여 요인은 팀 성과의 핵심 동인입니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "업무 도전 배당금(Work Challenge Dividend): 전문적으로 자극적인 팀 환경은 낮은 갈등, 높은 헌신, 높은 업무 및 팀 참여도, 효과적인 리스크 관리, 좋은 소통, 혁신, 전반적인 팀 성과와 호의적으로 연관됩니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "점진적 재정 보상은 장기적으로 지속 가능한 접근 방식이 아닙니다. 재정적 인센티브는 단기적 효과는 있지만 지속적인 동기부여를 만들지 않습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "자극적인 환경(Stimulating Environment): 팀 성과와 프로젝트 성공의 가장 강력한 단일 동인은 흥미롭고 도전적인 업무, 성취의 가시성과 인정, 성장 잠재력, 좋은 프로젝트 리더십이 특징인 전문적으로 자극적인 팀 환경입니다."
+        },
+        "E": {
+          "correct": false,
+          "explanation_ko": "문제 해결 기법은 개인 기술로 필요하지만 고성과 팀을 만드는 조직 환경 또는 관리 스타일 속성이 아닙니다."
+        },
+        "F": {
+          "correct": false,
+          "explanation_ko": "제약 이론은 목표 달성을 방해하는 가장 중요한 제한 요소(제약)를 파악하는 방법론으로, 고성과 팀 구축과 직접적인 관련이 없습니다."
+        }
+      },
+      "solution_en": "High performance teams are built on Personal Driving Forces, Work Challenge Dividend (stimulating work), and a Stimulating Environment — not financial rewards alone.",
+      "solution_ko": "고성과 팀은 개인 추진력, 업무 도전 배당금(자극적인 업무), 자극적인 환경 위에 구축됩니다. 재정적 보상만으로는 부족합니다.",
+      "source": "PMI/managing-teams-complex-project-environments",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 22,
+      "question_en": "During project execution, a team member made a mistake resulting in a 1-week delay to the project schedule. What should the project manager do with regard to this error and delay?",
+      "question_ko": "프로젝트 실행 중, 팀원이 실수를 저질러 프로젝트 일정에 1주 지연이 발생했습니다. 프로젝트 관리자는 이 오류와 지연에 대해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Discuss the issue with the team, look for solutions, and offer to help and support the team.",
+          "text_ko": "팀과 문제를 논의하고 해결책을 찾으며 팀을 돕고 지원하겠다고 제안합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Make sure the impact of this mistake is understood by the team member who made the mistake.",
+          "text_ko": "실수한 팀원이 이 실수의 영향을 이해하도록 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Escalate the issue to senior management to make sure a similar mistake won't happen again.",
+          "text_ko": "비슷한 실수가 다시 발생하지 않도록 시니어 관리팀에 문제를 에스컬레이션합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Find a solution, communicate it to the team, and reinforce that it should be implemented now.",
+          "text_ko": "해결책을 찾고, 팀에 전달하고, 지금 구현해야 한다고 강조합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "지원을 보여주는 것은 좋은 리더의 요건 중 하나입니다. 팀과 함께 문제를 논의하고 해결책을 찾으며 지원을 제공하는 것이 가장 적절한 리더십 반응입니다. 팀이 함께 일하는 것을 배우면서 실수가 발생하는 것은 자연스러운 일입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "실수한 팀원에게 영향을 이해시키는 것은 지원이 아닌 비난에 초점을 맞추며 팀 사기에 부정적 영향을 미칩니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "1주 지연에 대해 시니어 관리팀에 에스컬레이션하는 것은 과도하며 PM이 직접 해결할 수 있는 문제에 적합하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "PM이 단독으로 해결책을 찾고 이를 팀에 지시하는 것은 팀의 참여와 자율성을 배제하므로 서번트 리더십 원칙에 부합하지 않습니다."
+        }
+      },
+      "solution_en": "A good leader shows support — discussing the issue together, finding solutions collaboratively, and offering help is the right response to a team mistake.",
+      "solution_ko": "좋은 리더는 지원을 보여줍니다. 함께 문제를 논의하고 협력하여 해결책을 찾으며 도움을 제공하는 것이 팀 실수에 대한 올바른 대응입니다.",
+      "source": "Effective PM (Wysocki)/Ch.6; PMI/7-ways-to-build-leadership-skills",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 23,
+      "question_en": "A project manager is leading a Scrum team. During Business Acceptance Testing (BAT), the client rejects the deliverable due to poor quality, traced back to a lack of collaboration between team members. What should have the project manager done to prevent this?",
+      "question_ko": "프로젝트 관리자가 스크럼 팀을 이끌고 있습니다. 비즈니스 인수 테스팅(BAT) 중 클라이언트가 팀원 간의 협업 부족으로 추적된 품질 불량으로 인해 인도물을 거부합니다. 이를 예방하기 위해 프로젝트 관리자는 무엇을 했어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Provided detailed instructions on how and when the work should be done.",
+          "text_ko": "작업이 어떻게, 언제 이루어져야 하는지에 대한 상세한 지시를 제공했어야 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Requested detailed documentation and sign-offs between project phases.",
+          "text_ko": "프로젝트 단계 간에 상세한 문서화와 승인을 요청했어야 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Implemented detailed tracking of project progress, productivity, and costs.",
+          "text_ko": "프로젝트 진행 상황, 생산성, 비용에 대한 상세한 추적을 구현했어야 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Provided a detailed vision and empowered the team making them accountable.",
+          "text_ko": "상세한 비전을 제공하고 팀에게 권한을 부여하여 책임지게 했어야 합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "상세한 지시는 마이크로관리로 이어져 창의성을 억제하고 협업을 방해할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "과도한 문서화는 협업에서 벗어나게 할 수 있으며 스크럼 원칙과 충돌합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "상세한 추적은 중요하지만 지표에만 초점을 맞추는 것은 협력적인 팀 환경 조성에서 벗어날 수 있습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "스크럼은 자기 조직화 팀을 촉진하고 책임감과 협업을 장려합니다. PM은 상세한 비전을 공유하고 팀이 효과적으로 협업하여 고품질 결과를 인도할 수 있도록 권한을 부여했어야 합니다."
+        }
+      },
+      "solution_en": "Providing a clear vision and empowering the team with accountability enables self-organization and collaboration — the core of Scrum.",
+      "solution_ko": "명확한 비전을 제공하고 팀에게 책임과 함께 권한을 부여하는 것이 자기 조직화와 협업을 가능하게 합니다. 스크럼의 핵심입니다.",
+      "source": "PMBOK 6th Ed/Ch.9; Scrum Guide; PMI/servant-leadership-cures-organization",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 24,
+      "question_en": "During the execution phase of your project, a Resource Manager informed you that one of the experts allocated to your project had to be motivated in order to perform very well. What would be the recommended actions to address this issue?",
+      "question_ko": "프로젝트 실행 단계에서 자원 관리자가 프로젝트에 배정된 전문가 중 한 명이 매우 잘 수행하기 위해 동기부여 되어야 한다고 알립니다. 이 문제를 해결하기 위한 권장 조치는 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Remind the functional manager that is his duty to motivate his team",
+          "text_ko": "기능 관리자에게 팀을 동기부여 하는 것이 그의 의무임을 상기시킵니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Remind the team member that there are penalties for bad behaviours.",
+          "text_ko": "팀원에게 나쁜 행동에 대한 페널티가 있다고 상기시킵니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Remind the team member that there are financial incentives for the team.",
+          "text_ko": "팀원에게 팀을 위한 재정적 인센티브가 있다고 상기시킵니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Remind the team member their important role and how it will be rewarded.",
+          "text_ko": "팀원에게 그들의 중요한 역할과 그것이 어떻게 보상될 것인지를 상기시킵니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "이 책임을 자원 관리자나 기능 관리자에게 위임하는 것은 적절하지 않습니다. PM이 팀 동기부여의 책임을 직접 져야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "페널티로 전문가를 동기부여 하는 것은 역효과를 낳으며 고도로 숙련된 개인을 동기부여 하는 효과적인 방법이 아닙니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "팀 전체에 대한 재정적 인센티브는 개별 전문가를 직접 동기부여 하는 데 충분하지 않습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "이 상황은 자신의 프로젝트에 대한 중요한 기여를 인정함으로써 더 쉽게 동기부여 될 수 있는 고도로 숙련된 개인에게 정상적입니다. 그들의 중요한 역할과 보상 방법을 설명하여 그들의 참여를 얻는 것이 중요합니다."
+        }
+      },
+      "solution_en": "For skilled experts, the most effective motivation is recognizing their specific contribution and showing how their role matters and will be rewarded.",
+      "solution_ko": "숙련된 전문가에게 가장 효과적인 동기부여는 그들의 구체적인 기여를 인정하고 그들의 역할이 얼마나 중요하며 어떻게 보상될지 보여주는 것입니다.",
+      "source": "PMI/team-building-development-project-management",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    },
+    {
+      "id": 25,
+      "question_en": "A hybrid project has the following characteristics: It is in the early stages. It has a brand new team. The project manager will be very busy executing other projects during the first two weeks of the project. During this early stage, how should the project manager develop the new project team?",
+      "question_ko": "하이브리드 프로젝트의 특성은 다음과 같습니다: 초기 단계에 있습니다. 완전히 새로운 팀이 있습니다. 프로젝트 관리자는 프로젝트 첫 2주 동안 다른 프로젝트를 실행하는 데 매우 바쁠 것입니다. 이 초기 단계에서 프로젝트 관리자는 새 프로젝트 팀을 어떻게 개발해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ensure the team understands self-organizing principles.",
+          "text_ko": "팀이 자기 조직화 원칙을 이해하도록 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Plan and host several team-building events to normalize the team.",
+          "text_ko": "팀을 정상화하기 위해 여러 팀 빌딩 이벤트를 계획하고 주최합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Provide daily project status updates to keep the team informed.",
+          "text_ko": "팀에게 정보를 제공하기 위해 매일 프로젝트 상태 업데이트를 제공합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Get to know each team member through one-on-one conversations.",
+          "text_ko": "일대일 대화를 통해 각 팀원을 알게 됩니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM이 첫 2주 동안 팀에 집중할 수 없으므로 팀이 자기 조직화하고 자기 관리할 수 있도록 해야 합니다. 자기 조직화 팀은 팀의 목표를 달성하기 위해 필요에 따라 리더십을 맡는 교차 기능 팀입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "여러 팀 빌딩 이벤트를 주최하는 것은 PM의 가용 시간을 소모하고 첫 2주 동안 가능하지 않을 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "PM이 일관되게 가용하지 않으므로 매일 업데이트를 제공하는 것은 가능하지 않습니다. 팀이 PM에게 상태 업데이트를 제공할 가능성이 더 높습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "일대일 대화는 더 깊은 관계를 구축할 수 있지만 PM이 팀에 집중할 수 있을 때까지 기다려야 합니다."
+        }
+      },
+      "solution_en": "When the PM is unavailable, ensuring the team understands self-organizing principles is the most important preparation for the early stage.",
+      "solution_ko": "PM이 가용하지 않을 때 팀이 자기 조직화 원칙을 이해하도록 하는 것이 초기 단계를 위한 가장 중요한 준비입니다.",
+      "source": "O'Reilly/5.8; PMBOK 6th Ed/547; PMBOK 7th Ed/2.3",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 26,
+      "question_en": "An executive stakeholder has crucial decision power on the execution and success of a project. How should this stakeholder's importance be reflected in the stakeholder engagement plan?",
+      "question_ko": "경영진 이해관계자가 프로젝트 실행과 성공에 중요한 결정 권한을 가지고 있습니다. 이 이해관계자의 중요성은 이해관계자 참여 계획에 어떻게 반영되어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Describe the executive's support level, expectations, risk threshold, and appropriate communications for various project needs.",
+          "text_ko": "다양한 프로젝트 필요를 위한 경영진의 지지 수준, 기대, 리스크 임계값, 적절한 소통을 설명합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Rank the executive in an organizational chart and illustrate any affinities or hostilities with other stakeholders.",
+          "text_ko": "조직도에서 경영진의 순위를 매기고 다른 이해관계자와의 친밀감이나 적대감을 보여줍니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Label the executive as 'supportive' and ensure that email, phone numbers, and absence/vacation times are up to date.",
+          "text_ko": "경영진을 '지지적'으로 표시하고 이메일, 전화번호, 부재/휴가 시간이 최신 상태인지 확인합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Describe the executive's involvement in similar past projects in order to decide the appropriate engagement level on a case-by-case basis.",
+          "text_ko": "상황별로 적절한 참여 수준을 결정하기 위해 유사한 과거 프로젝트에서의 경영진 참여를 설명합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "이해관계자는 권력/관심도와 지지 수준에 따라 순위가 매겨져야 합니다. 기대와 리스크 임계값 정보도 다양한 프로젝트 상황에 대한 개별 참여 전략을 결정하는 데 도움이 됩니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "조직도에서 경영진의 순위를 매기는 것은 효과적인 참여 전략 개발에 도움이 되지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "경영진을 '지지적'으로만 표시하는 것은 지지 수준의 뉘앙스를 포착하지 못하며 소통 연락처만 업데이트하는 것으로는 충분하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "과거 참여를 설명하는 것은 도움이 될 수 있지만 현재 프로젝트에서의 구체적인 참여 전략을 정의하지 않습니다."
+        }
+      },
+      "solution_en": "The stakeholder engagement plan for a high-power executive should capture support level, expectations, risk threshold, and tailored communication strategies.",
+      "solution_ko": "높은 권력을 가진 경영진을 위한 이해관계자 참여 계획은 지지 수준, 기대, 리스크 임계값, 맞춤형 소통 전략을 포착해야 합니다.",
+      "source": "PMI/stakeholder-management-plan (Forman & Discenza, 2012); PMBOK/13.2.3.1",
+      "conceptIds": [
+        "stakeholder-engagement-and-management"
+      ]
+    },
+    {
+      "id": 27,
+      "question_en": "Following project approval, a project team is assigned and the project management plan is created. What should the project manager do next?",
+      "question_ko": "프로젝트 승인 후 프로젝트 팀이 배정되고 프로젝트 관리 계획이 작성됩니다. 프로젝트 관리자는 다음에 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Hold a kickoff meeting with the project team and stakeholders.",
+          "text_ko": "프로젝트 팀 및 이해관계자와 착수 회의를 개최합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Develop a detailed project schedule.",
+          "text_ko": "상세한 프로젝트 일정을 개발합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Initiate procurement processes for required resources.",
+          "text_ko": "필요한 자원을 위한 조달 프로세스를 시작합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Conduct individual performance reviews.",
+          "text_ko": "개별 성과 검토를 실시합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "착수 회의를 우선시함으로써 PM은 이해관계자를 참여시키고 팀 정렬을 수립하며 프로젝트 목표를 소통하여 프로젝트 성공을 위한 강력한 기반을 마련합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "상세한 프로젝트 일정은 착수 회의를 통해 명확해진 스코프와 자원 배정 위에 구축되어야 합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "조달은 종종 착수 회의 후 이해관계자 우선순위를 이해하고 자원 필요가 확인된 후에 이루어집니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "개별 성과 검토는 중요하지만 일반적으로 프로젝트 주기 후반에 실시되며, 초기 우선순위가 아닙니다."
+        }
+      },
+      "solution_en": "After the project management plan is created, the kickoff meeting aligns all stakeholders and team members on goals — it is the formal start of execution.",
+      "solution_ko": "프로젝트 관리 계획 작성 후, 착수 회의는 모든 이해관계자와 팀원을 목표에 정렬시킵니다. 실행의 공식적인 시작입니다.",
+      "source": "Kerzner/Section 4.8 p.193; PMBOK 6th Ed/4,9; PMBOK 5th Ed/9.2",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 28,
+      "question_en": "After an organization trained and implemented a new mandatory project management software application for all project staff, the project manager noticed that several team members show low levels of commitment to the new software. What is the cause for this?",
+      "question_ko": "조직이 모든 프로젝트 직원을 위해 새로운 필수 프로젝트 관리 소프트웨어 애플리케이션을 훈련하고 구현한 후, 프로젝트 관리자는 여러 팀원이 새 소프트웨어에 낮은 수준의 헌신을 보인다는 것을 알아챕니다. 이것의 원인은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Fear of the unknown",
+          "text_ko": "미지에 대한 두려움"
+        },
+        {
+          "key": "B",
+          "text_en": "Lack of required skills",
+          "text_ko": "필요한 기술 부족"
+        },
+        {
+          "key": "C",
+          "text_en": "Lack of clear project vision",
+          "text_ko": "명확한 프로젝트 비전 부족"
+        },
+        {
+          "key": "D",
+          "text_en": "Too much communication",
+          "text_ko": "너무 많은 소통"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "미지에 대한 두려움은 낮은 헌신의 주요 이유입니다. 관리자는 불안의 잠재성을 조사하고 원인을 파악하며 팀원들이 부정적인 인식으로 인한 불안을 줄이도록 함께 작업해야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "기술 부족도 원인이 될 수 있지만, 필수 소프트웨어에 대한 훈련이 이미 제공되었으므로 낮은 헌신의 가장 가능한 원인은 변화에 대한 두려움입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "명확한 프로젝트 비전 부족은 소프트웨어 헌신과 직접적인 관련이 없습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "너무 많은 소통은 낮은 헌신을 유발하지 않습니다. 오히려 적절한 소통 부재가 두려움과 불확실성을 증가시킬 수 있습니다."
+        }
+      },
+      "solution_en": "Low commitment after mandatory software adoption is typically rooted in fear of the unknown — managers must identify and address these anxieties.",
+      "solution_ko": "필수 소프트웨어 채택 후 낮은 헌신은 일반적으로 미지에 대한 두려움에 뿌리를 두고 있습니다. 관리자는 이러한 불안을 파악하고 해결해야 합니다.",
+      "source": "PMI/managing-teams-complex-project-environments; PMI/building-commitment-project-teams",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    },
+    {
+      "id": 29,
+      "question_en": "During the weekly meeting, team members are reviewing the tasks assigned by the Project Manager. A few team members are complaining that there is not enough information to estimate how long it will take to complete the work. What is the most likely cause for this issue?",
+      "question_ko": "주간 회의에서 팀원들이 프로젝트 관리자가 배정한 작업을 검토하고 있습니다. 일부 팀원들이 작업을 완료하는 데 얼마나 걸릴지 추정하기에 충분한 정보가 없다고 불평합니다. 이 문제의 가장 가능한 원인은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Project objectives are not clearly defined",
+          "text_ko": "프로젝트 목표가 명확하게 정의되지 않음"
+        },
+        {
+          "key": "B",
+          "text_en": "The business environment is very dynamic",
+          "text_ko": "비즈니스 환경이 매우 동적임"
+        },
+        {
+          "key": "C",
+          "text_en": "Internal competition between team members",
+          "text_ko": "팀원 간의 내부 경쟁"
+        },
+        {
+          "key": "D",
+          "text_en": "Roles & Responsibilities are not clearly defined",
+          "text_ko": "역할 및 책임이 명확하게 정의되지 않음"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "프로젝트 목표가 명확하게 정의되지 않으면 팀원들이 추정을 위한 충분한 정보가 없다고 불평할 수 있습니다. 목표의 명확성이 작업 추정의 기반이 됩니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "동적인 비즈니스 환경이 프로젝트 인도에 영향을 미칠 수 있지만, 추정에 충분한 정보가 없다는 직접적인 원인이 아닙니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "팀원 간의 내부 경쟁은 추정 문제보다는 팀 역학에 영향을 미치는 요인입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "역할 및 책임 불명확은 스코프 명확성 부족이 아닌 작업 배정 문제입니다. 시나리오는 스코프/목표 명확성 부족에 관한 것입니다."
+        }
+      },
+      "solution_en": "When team members can't estimate tasks, the root cause is almost always unclear project objectives — scope clarity is the prerequisite for estimation.",
+      "solution_ko": "팀원들이 작업을 추정할 수 없을 때 근본 원인은 거의 항상 불명확한 프로젝트 목표입니다. 스코프 명확성이 추정의 전제 조건입니다.",
+      "source": "PMI/team-building-development-project-management",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 30,
+      "question_en": "A newly formed team has become accustomed to agile practices. The project lead has noticed that while they are performing according to expectations, there is boredom with daily team practices among many of the team members. What should the project lead do in this situation?",
+      "question_ko": "새로 구성된 팀이 애자일 관행에 익숙해졌습니다. 프로젝트 리더는 팀이 기대에 따라 수행하고 있지만 많은 팀원들 사이에서 일상적인 팀 관행에 지루함이 있다는 것을 알아챘습니다. 이 상황에서 프로젝트 리더는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Allow the team to self-organize and have them analyze the situation in their retrospective session and self correct.",
+          "text_ko": "팀이 자기 조직화하도록 허용하고 회고 세션에서 상황을 분석하고 자기 수정하도록 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Challenge the team to find new ways to achieve higher levels of performance to improve the situation.",
+          "text_ko": "상황을 개선하기 위해 더 높은 수준의 성과를 달성하는 새로운 방법을 찾도록 팀에게 도전 과제를 제시합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Speak with individual team members to determine what they would like to do to improve the situation in the team.",
+          "text_ko": "팀 상황을 개선하기 위해 무엇을 하고 싶은지 파악하기 위해 개별 팀원과 대화합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Have the team inform senior management of the situation and ask for recommendations.",
+          "text_ko": "팀이 시니어 관리팀에 상황을 알리고 권장 사항을 요청하도록 합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "팀이 새로 구성되었으므로 프로젝트 리더는 스크럼 마스터의 도움을 받아 팀원들이 스스로 상황을 분석하도록 두는 것이 아니라 팀원들에게 새로운 애자일 관행을 교육해야 합니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "애자일 관행은 항상 팀이 더 높은 성과를 달성하는 새로운 방법을 찾도록 장려합니다. 지루함은 팀이 현재 관행에 너무 익숙해졌다는 신호이며, 새로운 도전이 필요합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "팀이 새로 구성된 만큼 개별 팀원에게 무엇을 하고 싶은지 묻는 것은 부적절합니다. 프로젝트 리더와 스크럼 마스터가 충분한 지도와 동기부여를 제공해야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "시니어 관리팀에 권장 사항을 요청하는 것은 프로젝트 리더가 해결책을 가지고 시니어 관리팀에 접근해야 하므로 적절하지 않습니다."
+        }
+      },
+      "solution_en": "Agile teams should always be challenged to find new ways to achieve higher performance — boredom is a signal to raise the bar, not wait for self-correction.",
+      "solution_ko": "애자일 팀은 항상 더 높은 성과를 달성하는 새로운 방법을 찾도록 도전받아야 합니다. 지루함은 기준을 높여야 한다는 신호이며 자기 수정을 기다리는 것이 아닙니다.",
+      "source": "Coaching Agile Teams (Adkins)/2/21; O'Reilly/Succeeding with Agile Ch.12",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 31,
+      "multi": true,
+      "question_en": "An internal project has delivered its scope on time, within budget, and with the expected quality. The client was satisfied with the result and it enabled them to launch the new product to market. However, the product did not attract the expected interest and did not cover the investment made. The project team is aware of these results and it is impacting their morale to deliver the next project. How should the project manager handle this situation? Choose 2 answers.",
+      "question_ko": "내부 프로젝트가 정시에, 예산 내에서, 기대 품질로 스코프를 인도했습니다. 클라이언트는 결과에 만족했으며 새 제품을 시장에 출시할 수 있었습니다. 그러나 제품이 예상 관심을 끌지 못하고 투자를 회수하지 못했습니다. 프로젝트 팀은 이 결과를 알고 있으며 다음 프로젝트를 인도하려는 사기에 영향을 미치고 있습니다. 프로젝트 관리자는 이 상황을 어떻게 처리해야 합니까? 2개 선택.",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Have a discussion with the team to explain that the product success is not a direct result of the project and it does not reflect their performance",
+          "text_ko": "제품 성공은 프로젝트의 직접적인 결과가 아니며 팀의 성과를 반영하지 않는다고 설명하기 위해 팀과 토론합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Have a meeting with the business to make sure they understand the project met its objectives",
+          "text_ko": "프로젝트가 목표를 충족했음을 비즈니스가 이해하도록 비즈니스와 회의를 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "No action is necessary, as the project manager is only responsible for the project deliverables.",
+          "text_ko": "프로젝트 관리자는 프로젝트 인도물에만 책임이 있으므로 조치가 필요하지 않습니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Have a conversation with the business sponsor to validate the strategy for the new project based on this result.",
+          "text_ko": "이 결과를 바탕으로 새 프로젝트 전략을 검증하기 위해 비즈니스 스폰서와 대화합니다."
+        }
+      ],
+      "answer": "A,D",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM은 팀 동기부여에 대한 책임이 있습니다. 제품 성공이 프로젝트 팀의 직접적인 성과를 반영하지 않는다는 것을 팀에게 설명하여 사기를 유지하는 것이 중요합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "비즈니스가 프로젝트 목표 충족을 이해하도록 하는 것은 필요하지만 팀 사기 문제를 해결하지 않으며 PM의 첫 번째 우선순위가 아닙니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "현대 리더십 원칙에 따르면 PM은 프로젝트 결과물만이 아닌 팀 동기부여와 비즈니스 결과에도 책임이 있습니다. 조치 없이 방치하는 것은 적절하지 않습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "PM은 비즈니스 결과에 대한 책임이 있습니다. 비즈니스 스폰서와 대화하여 이 결과를 바탕으로 새 프로젝트 전략을 검증하는 것은 미래 성공을 위한 중요한 단계입니다."
+        }
+      },
+      "solution_en": "The PM must both address team morale (A) and consult the sponsor on strategy for the next project (D). Product market failure ≠ project failure.",
+      "solution_ko": "PM은 팀 사기를 다루고(A) 다음 프로젝트 전략에 대해 스폰서와 협의해야 합니다(D). 제품 시장 실패 ≠ 프로젝트 실패.",
+      "source": "PMI/be-accountable-for-outcomes; O'Reilly (Wisniewski)/19. Maintaining Morale",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 32,
+      "question_en": "A project manager is leading a hybrid project. Several team members recently exited the project, including the only individual with a specific critical skill. At the beginning of a new sprint, the project manager identifies a task requiring this missing skill. What should the project manager do next?",
+      "question_ko": "프로젝트 관리자가 하이브리드 프로젝트를 이끌고 있습니다. 최근 특정 핵심 기술을 가진 유일한 개인을 포함하여 여러 팀원이 프로젝트를 떠났습니다. 새 스프린트 시작 시 프로젝트 관리자가 이 누락된 기술이 필요한 작업을 파악합니다. 프로젝트 관리자는 다음에 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Rescope the project to remove the task requiring the missing skill.",
+          "text_ko": "누락된 기술이 필요한 작업을 제거하기 위해 프로젝트를 다시 스코프합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Assess the impact of the missing skill on the project.",
+          "text_ko": "누락된 기술이 프로젝트에 미치는 영향을 평가합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Postpone the task until a replacement is recruited.",
+          "text_ko": "교체인력이 충원될 때까지 작업을 연기합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Reassign the task to another project team with the necessary skills.",
+          "text_ko": "필요한 기술을 가진 다른 프로젝트 팀에 작업을 재배정합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "프로젝트 재스코핑은 항상 가능하지 않으며 장기적 영향을 충분히 평가하지 않고 하는 것은 적절하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "PM은 먼저 누락된 기술이 프로젝트에 미치는 영향을 평가해야 합니다. 이를 통해 다른 팀원에서 기술을 얻을 수 있는지, 외부 자원을 도입할 수 있는지, 단기 계약을 협상할 수 있는지 등 적절한 조치를 결정할 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "교체인력 충원까지 작업을 연기하는 것은 프로젝트 일정에 부정적인 영향을 미치며 장기적 영향을 해결하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "다른 팀에 재배정하는 것은 항상 가능하지 않으며 장기적 영향을 충분히 고려하지 않습니다."
+        }
+      },
+      "solution_en": "Before any action, the PM must assess the impact of the missing skill — this informs whether to train, hire, contract, or adjust the plan.",
+      "solution_ko": "어떤 조치 전에 PM은 누락된 기술의 영향을 평가해야 합니다. 이것이 훈련, 채용, 계약 또는 계획 조정 여부를 결정합니다.",
+      "source": "PMBOK 7th Ed/2.4, 2.2; PM Tool Kit/9/Coaching and Mentoring",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 33,
+      "question_en": "Which statement correctly differentiates management from leadership?",
+      "question_ko": "관리와 리더십을 올바르게 구별하는 진술은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Managers ask how and when; leaders ask what and why.",
+          "text_ko": "관리자는 어떻게와 언제를 묻고, 리더는 무엇을과 왜를 묻습니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Managers focus on long-term goals; leaders focus on short-term goals.",
+          "text_ko": "관리자는 장기 목표에 초점을 맞추고, 리더는 단기 목표에 초점을 맞춥니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Managers challenge the status quo; leaders accept the status quo.",
+          "text_ko": "관리자는 현상 유지에 도전하고, 리더는 현상 유지를 수용합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Managers inspire trust; leaders rely on control.",
+          "text_ko": "관리자는 신뢰를 고취시키고, 리더는 통제에 의존합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "관리자는 일반적으로 어떻게와 언제를 묻고(실행과 운영 초점), 리더는 무엇을과 왜를 묻습니다(비전과 방향 초점). 관리자는 단기 목표에 초점을 맞추고 리더는 장기 목표에 초점을 맞춥니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "이것은 반대입니다. 관리자는 단기(근거리) 목표에 초점을 맞추고, 리더는 장기 목표와 비전에 초점을 맞춥니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "이것도 반대입니다. 리더가 현상 유지에 도전하고 관리자는 시스템과 구조를 유지합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "이것도 반대입니다. 리더는 신뢰를 고취시키고 관리자는 통제에 의존합니다."
+        }
+      },
+      "solution_en": "Management = how/when, control, short-term, accept status quo. Leadership = what/why, inspire trust, long-term, challenge status quo.",
+      "solution_ko": "관리 = 어떻게/언제, 통제, 단기, 현상 유지 수용. 리더십 = 무엇을/왜, 신뢰 고취, 장기, 현상 유지 도전.",
+      "source": "PMI/leadership-competencies (Bristol & Yeatts, 2010); PMBOK/3.4.5",
+      "conceptIds": [
+        "leadership-skills-and-qualities"
+      ]
+    },
+    {
+      "id": 34,
+      "question_en": "A project manager is not sure if the team has the critical skills needed to implement a key feature of an upcoming deliverable. In order to mitigate the risk of sprint failure, what should the project manager do?",
+      "question_ko": "프로젝트 관리자가 팀이 곧 있을 인도물의 핵심 기능을 구현하는 데 필요한 핵심 기술을 가지고 있는지 확신하지 못합니다. 스프린트 실패 리스크를 완화하기 위해 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ask for support from the sponsor to replace the low performers with new team members with a specific skill set.",
+          "text_ko": "특정 기술 세트를 가진 새 팀원으로 저성과자를 교체하기 위해 스폰서의 지원을 요청합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Negotiate with the stakeholder to postpone this key feature to a later release while figuring out a better alternative.",
+          "text_ko": "더 나은 대안을 찾는 동안 이 핵심 기능을 나중 출시로 연기하기 위해 이해관계자와 협상합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Identify the potential skill gap and propose a strategy to address the gaps with training, mentoring, or coaching.",
+          "text_ko": "잠재적인 기술 격차를 파악하고 훈련, 멘토링, 또는 코칭으로 격차를 해소하는 전략을 제안합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Embrace the risk, accept the sprint failure, and try to motivate the team toward better performance in the future.",
+          "text_ko": "리스크를 수용하고 스프린트 실패를 받아들이며 팀이 미래에 더 나은 성과를 내도록 동기부여 합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "팀원 교체는 혼란스럽고 PM은 먼저 팀이 핵심 기술을 가지고 있는지 확인한 후에야 교체를 고려해야 합니다. 또한 저성과자를 교체하는 것이 아니라 기술 격차를 해소하는 것이 먼저입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "핵심 기능을 연기하는 것은 문제를 적절히 해결하지 않으며 프로젝트에 부정적인 영향을 미칠 수 있습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "서번트 리더로서 PM의 역할은 고성과 팀을 만드는 것입니다. 기술 격차를 파악하고 훈련, 멘토링, 코칭으로 해소하는 전략을 제안하는 것이 가장 적절한 완화 전략입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "리스크를 수용하고 스프린트 실패를 받아들이는 것은 능동적이지 않으며 프로젝트에 심각한 부정적 영향을 미칠 수 있습니다."
+        }
+      },
+      "solution_en": "A servant leader builds team capability — identify the gap first, then address it proactively with training, mentoring, or coaching.",
+      "solution_ko": "서번트 리더는 팀 역량을 구축합니다. 먼저 격차를 파악하고 훈련, 멘토링, 코칭으로 능동적으로 해소합니다.",
+      "source": "O'Reilly/8.5; Agile Practice Guide PMI/4.3.1/39; PMBOK 7th Ed/2.2.1.2",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 35,
+      "question_en": "What are the four team-building leadership styles?",
+      "question_ko": "네 가지 팀 빌딩 리더십 스타일은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Visionary, affiliative, coaching and participative",
+          "text_ko": "비전형, 친화형, 코칭형, 참여형"
+        },
+        {
+          "key": "B",
+          "text_en": "Visionary, affiliative, coaching and pace setting",
+          "text_ko": "비전형, 친화형, 코칭형, 속도 설정형"
+        },
+        {
+          "key": "C",
+          "text_en": "Visionary, affiliative, coaching and directive",
+          "text_ko": "비전형, 친화형, 코칭형, 지시형"
+        },
+        {
+          "key": "D",
+          "text_en": "Visionary, affiliative, coaching and high waters",
+          "text_ko": "비전형, 친화형, 코칭형, 고수위형"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "비전형, 친화형, 코칭형, 참여형이 모두 팀 빌딩 리더십 스타일과 관련됩니다. 이 네 가지는 관계와 팀 개발에 초점을 맞춥니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "속도 설정형(Pace Setting)은 관계보다 성과와 결과에 초점을 맞추는 비팀 빌딩 스타일입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "지시형(Directive)도 비팀 빌딩 스타일로, 명확한 명령과 지시에 초점을 맞춥니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "'고수위형(High Waters)'은 표준 리더십 스타일 분류에서 인정된 범주가 아닙니다."
+        }
+      },
+      "solution_en": "The four team-building styles are Visionary, Affiliative, Coaching, and Participative — all relationship-focused. Pace-setting, Directive, and Commanding are non-team-building styles.",
+      "solution_ko": "4가지 팀 빌딩 스타일은 비전형, 친화형, 코칭형, 참여형입니다. 모두 관계에 초점을 맞춥니다. 속도 설정형, 지시형, 명령형은 비팀 빌딩 스타일입니다.",
+      "source": "https://www.pmi.org/learning/library/styles-leadership-avoid-mistakes-career-6280",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 36,
+      "question_en": "An organization has decided to implement agile and a project manager with Scrum Master has been selected to coach the project team to understand agile delivery. One of the team members asks the project manager what servant leadership hierarchy means. How should the project manager respond?",
+      "question_ko": "조직이 애자일을 구현하기로 결정했고 스크럼 마스터인 프로젝트 관리자가 프로젝트 팀이 애자일 인도를 이해하도록 코치하기 위해 선발되었습니다. 팀원 중 한 명이 서번트 리더십 계층 구조가 무엇을 의미하는지 프로젝트 관리자에게 묻습니다. 프로젝트 관리자는 어떻게 응답해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Team members are supposed to serve their manager.",
+          "text_ko": "팀원은 관리자를 섬겨야 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Managers are supposed to serve their team members.",
+          "text_ko": "관리자는 팀원을 섬겨야 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Clients are supposed to serve the team members.",
+          "text_ko": "클라이언트는 팀원을 섬겨야 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Team Members are supposed to serve their clients.",
+          "text_ko": "팀원은 클라이언트를 섬겨야 합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "이것은 전통적인(비서번트) 계층 구조의 설명입니다. 서번트 리더십은 역전된 계층 구조입니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "서번트 리더십은 역전된 계층 구조입니다. 애자일에서 관리자는 팀이 성장할 환경을 만들고 장애물을 제거하며 명령이 아닌 퍼실리테이션으로 팀을 섬기는 리더입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "클라이언트가 팀을 섬긴다는 것은 서번트 리더십의 개념이 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "팀이 클라이언트를 섬기는 것은 서비스 제공의 개념이며 서번트 리더십 계층 구조의 정의가 아닙니다."
+        }
+      },
+      "solution_en": "Servant leadership is an inverted hierarchy — managers serve their team by creating the right environment, removing impediments, and facilitating rather than commanding.",
+      "solution_ko": "서번트 리더십은 역전된 계층 구조입니다. 관리자는 올바른 환경 조성, 장애물 제거, 명령이 아닌 퍼실리테이션으로 팀을 섬깁니다.",
+      "source": "PMI/servant-leadership-cures-organization",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 37,
+      "question_en": "A sales manager is overpromising deliverables beyond the contractual scope. In order to resolve the disagreement, the project manager wishes to find someone with a higher ranking in the sales department who is favorable to the project. What project data should the project manager consult?",
+      "question_ko": "영업 관리자가 계약 스코프를 초과하는 인도물을 과도하게 약속하고 있습니다. 이견을 해결하기 위해 프로젝트 관리자는 프로젝트에 우호적인 영업부서에서 더 높은 순위를 가진 사람을 찾고 싶습니다. 프로젝트 관리자는 어떤 프로젝트 데이터를 참조해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Stakeholder power/interest grid",
+          "text_ko": "이해관계자 권력/관심도 그리드"
+        },
+        {
+          "key": "B",
+          "text_en": "Communications management plan",
+          "text_ko": "소통 관리 계획"
+        },
+        {
+          "key": "C",
+          "text_en": "Resource breakdown structure",
+          "text_ko": "자원 분류 체계"
+        },
+        {
+          "key": "D",
+          "text_en": "Organizational process assets",
+          "text_ko": "조직 프로세스 자산"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "이해관계자 권력/관심도 그리드는 영향력 순위와 특정 프로젝트에 대한 태도 및 지지 수준 모두를 제공합니다. PM은 이를 통해 영업부서에서 프로젝트에 우호적인 더 높은 순위의 사람을 파악할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "소통 관리 계획은 소통 채널, 방법, 빈도를 포함하지만 이해관계자의 권력 수준이나 지지 태도는 포함하지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "자원 분류 체계는 자원을 수직적으로 분류하지만 이해관계자 권력이나 영향력 정보를 제공하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "조직 프로세스 자산은 계획, 프로세스, 정책, 절차를 포함하지만 이해관계자 권력/영향력 정보를 제공하지 않습니다."
+        }
+      },
+      "solution_en": "The stakeholder power/interest grid shows both influence ranking and support levels — essential for finding a favorable high-ranking ally in the sales department.",
+      "solution_ko": "이해관계자 권력/관심도 그리드는 영향력 순위와 지지 수준을 모두 보여줍니다. 영업부서에서 우호적인 고위직 동맹을 찾는 데 필수적입니다.",
+      "source": "PMI/stakeholder-management-plan (Forman & Discenza, 2012); PMBOK/13.1.2.4",
+      "conceptIds": [
+        "stakeholder-engagement-and-management"
+      ]
+    },
+    {
+      "id": 38,
+      "question_en": "A project manager is leading a hybrid project with a self-organizing team. The team is unable to agree on the scope for the next increment. How should the project manager resolve this issue?",
+      "question_ko": "프로젝트 관리자가 자기 조직화 팀을 가진 하이브리드 프로젝트를 이끌고 있습니다. 팀이 다음 증분의 스코프에 동의하지 못하고 있습니다. 프로젝트 관리자는 이 문제를 어떻게 해결해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Facilitate a team discussion to understand why the team is unable to agree on the scope for the next increment.",
+          "text_ko": "팀이 다음 증분의 스코프에 동의하지 못하는 이유를 이해하기 위해 팀 토론을 퍼실리테이션합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Escalate the issue to the project sponsor so that the risk posed by the disagreements over scope becomes visible.",
+          "text_ko": "스코프에 대한 이견으로 인한 리스크가 가시적이 되도록 문제를 프로젝트 스폰서에게 에스컬레이션합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Collaborate with a suitable subject matter expert (SME) to determine the scope for the next increment.",
+          "text_ko": "다음 증분의 스코프를 결정하기 위해 적절한 주제 전문가(SME)와 협력합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Request that the team votes on the options and identify the appropriate scope based on a majority vote.",
+          "text_ko": "팀이 옵션에 투표하고 다수결을 기반으로 적절한 스코프를 파악하도록 요청합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "팀 토론을 퍼실리테이션하면 근본적인 문제를 파악하고 상호 합의 가능한 해결책을 찾는 데 도움이 됩니다. PM이 문제 해결을 통해 팀을 지원하면 신뢰와 협력 문화가 구축됩니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "스폰서에게 에스컬레이션하는 것은 섣부르며 필요하지 않을 수 있습니다. PM은 팀과 문제를 해결하지 못한 경우에만 에스컬레이션해야 합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "SME 도움을 구하는 것은 팀이 해결하지 못한 후에 하는 것이 적절하며 팀을 배제하고 외부 도움을 먼저 구하는 것은 근본 문제를 해결하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "다수결에 기반한 결정은 팀 일부의 의견을 무시하는 승패 시나리오를 만들어 낮은 사기와 미래 갈등으로 이어질 수 있습니다."
+        }
+      },
+      "solution_en": "Facilitating the team discussion surfaces underlying issues and builds ownership — escalation and external input should come only if this fails.",
+      "solution_ko": "팀 토론 퍼실리테이션은 근본 문제를 드러내고 소유감을 구축합니다. 에스컬레이션과 외부 도움은 이것이 실패한 경우에만 해야 합니다.",
+      "source": "Essential Scrum (Rubin)/11; Agile Practice Guide PMI/4.2.1.1/35",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 39,
+      "question_en": "A team lead is assigned to an ongoing project. The team members have been working together for a while. How should the team lead start building relationships?",
+      "question_ko": "팀 리더가 진행 중인 프로젝트에 배정됩니다. 팀원들이 한동안 함께 일해왔습니다. 팀 리더는 어떻게 관계 구축을 시작해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Distribute tasks and observe the quality of the deliverables.",
+          "text_ko": "작업을 배분하고 인도물의 품질을 관찰합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Talk about personal preferences and make sure the team understands your approach.",
+          "text_ko": "개인적 선호도에 대해 이야기하고 팀이 당신의 접근법을 이해하도록 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Ask some team members to share information about other members to become familiar with the team.",
+          "text_ko": "팀에 친숙해지기 위해 일부 팀원에게 다른 구성원에 대한 정보를 공유해달라고 요청합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask the team members directly about both personal and work-related matters.",
+          "text_ko": "팀원들에게 개인적 문제와 업무 관련 문제 모두에 대해 직접 묻습니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "작업을 배분하고 품질을 관찰하는 것은 관계 구축이 아닌 작업 관리에 초점을 맞춥니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "자신의 선호도에 대해 이야기하고 팀이 자신의 접근법을 이해하도록 하는 것은 일방적 소통으로 관계 구축의 기반이 되지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "다른 팀원에 대한 정보를 간접적으로 수집하는 것은 신뢰를 구축하지 않으며 오히려 부정적인 인상을 줄 수 있습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "관계와 신뢰를 구축하는 가장 좋은 접근 방법은 다른 당사자에 대한 관심을 보여주는 것입니다. 팀원들에게 개인적 문제와 업무 관련 문제 모두에 대해 직접 묻는 것은 진정한 관심을 나타냅니다."
+        }
+      },
+      "solution_en": "Genuine relationship-building starts with direct, personal interest — asking team members about both personal and work matters shows authentic care.",
+      "solution_ko": "진정한 관계 구축은 직접적인 개인적 관심에서 시작됩니다. 팀원들에게 개인적 문제와 업무 문제 모두에 대해 묻는 것은 진정한 관심을 보여줍니다.",
+      "source": "PMI/motivate-teams-to-achieve-better-outcomes; PMI/partnering-guidelines",
+      "conceptIds": [
+        "stakeholder-engagement-and-management"
+      ]
+    },
+    {
+      "id": 40,
+      "question_en": "A stakeholder has suggested using an off-the-shelf, open-source product to speed up development. The team has analyzed the product and found it feasible and desirable, but it needs to be piloted and requires additional user skills. What should the project manager do?",
+      "question_ko": "이해관계자가 개발을 가속화하기 위해 기성품 오픈 소스 제품 사용을 제안했습니다. 팀이 제품을 분석하여 실현 가능하고 바람직하다는 것을 발견했지만 파일럿이 필요하고 추가 사용자 기술이 필요합니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Initiate a formal change request.",
+          "text_ko": "공식 변경 요청을 시작합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Request training for the project team.",
+          "text_ko": "프로젝트 팀을 위한 훈련을 요청합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Review the cost management plan.",
+          "text_ko": "비용 관리 계획을 검토합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Consult the product manager.",
+          "text_ko": "제품 관리자와 협의합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "기성품 오픈 소스 제품 사용은 프로젝트 계획의 변경을 요구합니다. 공식 변경 요청을 시작함으로써 PM은 제안된 변경이 신중하게 고려되고 모든 이해관계자가 잠재적 영향을 인식하도록 할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "팀 훈련 요청은 필요할 수 있지만 변경 요청이 승인된 후에 해야 합니다. 공식 변경 없이 먼저 훈련을 요청하는 것은 적절하지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "비용 관리 계획 검토도 변경 요청이 승인된 후에 해야 할 일입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "제품 관리자와 협의하는 것은 정보 수집에 유용하지만 공식 변경 요청 프로세스의 대체물이 아닙니다."
+        }
+      },
+      "solution_en": "Any change to the project plan — including adopting a new tool — requires a formal change request to ensure systematic and transparent management.",
+      "solution_ko": "새 도구 채택을 포함한 프로젝트 계획의 모든 변경은 체계적이고 투명한 관리를 보장하기 위해 공식 변경 요청이 필요합니다.",
+      "source": "PMBOK 7th Ed/2.5.7",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 41,
+      "question_en": "Members from an agile team have been consistently tardy for stand-up meetings and are not meeting project target dates. The project leader assumes the issue may be difficulty with self-managing tasks within the team. What action should the project leader take?",
+      "question_ko": "애자일 팀 구성원들이 스탠드업 회의에 지속적으로 지각하고 프로젝트 목표 날짜를 지키지 못하고 있습니다. 프로젝트 리더는 문제가 팀 내 자기 관리 작업의 어려움일 수 있다고 가정합니다. 프로젝트 리더는 어떤 조치를 취해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Aid the team to construct an agreement amongst them that details coveted behavioral norms.",
+          "text_ko": "팀이 탐나는 행동 규범을 상세히 기술한 그들 사이의 합의를 구성하도록 돕습니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Convene with the team to review the issues and detail actions to solve them.",
+          "text_ko": "팀과 회의를 열어 문제를 검토하고 해결 조치를 상세히 설명합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Adopt a higher leadership role and set an example for the behavior needed.",
+          "text_ko": "더 높은 리더십 역할을 채택하고 필요한 행동의 예를 설정합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Assemble agile and time management training for the team to complete.",
+          "text_ko": "팀이 완료할 애자일 및 시간 관리 훈련을 조직합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "프로젝트 리더는 팀이 탐나는 행동 규범을 상세히 기술한 합의를 구성하도록 도와야 합니다. 이는 팀이 행동 규칙을 정의하고 자신과 팀원의 책임을 지도록 합니다. 핵심 애자일 원칙은 자기 주도적이고 자기 관리하는 팀을 촉진합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "PM이 직접 문제를 검토하고 해결 조치를 제시하는 것은 팀의 자기 관리를 촉진하지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "더 높은 리더십 역할을 채택하는 것은 팀의 자율성과 자기 관리를 억제합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "훈련 조직은 팀의 자기 관리 원칙을 강화하지 않는 단기 해결책입니다."
+        }
+      },
+      "solution_en": "Self-directed teams own their behavioral norms — the leader's role is to facilitate the agreement, not to impose rules or actions.",
+      "solution_ko": "자기 주도 팀은 자신의 행동 규범을 소유합니다. 리더의 역할은 합의를 퍼실리테이션하는 것이지 규칙이나 조치를 강요하는 것이 아닙니다.",
+      "source": "Agile Practice Guide PMI/5/50; Succeeding with Agile (Cohn)/18/364",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 42,
+      "question_en": "Which leadership behavior is least likely to boost motivation in an Agile project team?",
+      "question_ko": "애자일 프로젝트 팀의 동기부여를 강화할 가능성이 가장 낮은 리더십 행동은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Instruct the team to immediately use a new productivity tool.",
+          "text_ko": "팀에게 즉시 새로운 생산성 도구를 사용하도록 지시합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Ask the team to vote if a new work method should be adopted.",
+          "text_ko": "새로운 작업 방법을 채택해야 하는지 팀에게 투표를 요청합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Assign individual team members to the tasks in the backlog.",
+          "text_ko": "백로그의 작업에 개별 팀원을 배정합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask for a volunteer to run a customer satisfaction survey.",
+          "text_ko": "고객 만족도 조사를 실시할 자원봉사자를 요청합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "팀에게 즉시 무언가를 지시하거나 명령하는 것이 동기부여를 강화할 가능성이 가장 낮습니다. 서번트 리더십과 애자일 선언은 자율성과 권한 부여가 개인 및 팀 동기부여를 촉진한다고 인정합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "투표 방식은 팀 참여와 권한 부여를 통해 동기부여를 강화합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "팀원들이 우선순위화된 목표나 기능을 기반으로 무엇을 작업할지 결정하도록 허용하는 것은 동기부여를 강화합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "자원봉사자를 요청하는 것은 자율성을 제공하며 동기부여를 강화합니다."
+        }
+      },
+      "solution_en": "Dictating tool adoption removes team autonomy — Agile Manifesto Principle #5 emphasizes building projects around motivated individuals with the environment and trust they need.",
+      "solution_ko": "도구 채택을 강요하는 것은 팀 자율성을 제거합니다. 애자일 선언 원칙 #5는 필요한 환경과 신뢰를 가진 동기부여된 개인들을 중심으로 프로젝트를 구축하는 것을 강조합니다.",
+      "source": "PMI/motivation-project-management (Schmid & Adams, 2008); PMBOK/9.4.2.4",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 43,
+      "question_en": "In your project you need some assistance facilitating meetings, following up on action items, introducing new team members, and mediating conflicts. Who would be the most suitable team member type to assist you with those activities?",
+      "question_ko": "프로젝트에서 회의 퍼실리테이션, 조치 항목 후속 조치, 새 팀원 소개, 갈등 중재에 약간의 도움이 필요합니다. 이러한 활동에 도움이 될 가장 적합한 팀원 유형은 누구입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Power Oriented team member.",
+          "text_ko": "권력 지향 팀원"
+        },
+        {
+          "key": "B",
+          "text_en": "Affiliate Oriented team member.",
+          "text_ko": "친화 지향 팀원"
+        },
+        {
+          "key": "C",
+          "text_en": "Achievement Oriented Team member.",
+          "text_ko": "성취 지향 팀원"
+        },
+        {
+          "key": "D",
+          "text_en": "Delivery Oriented Team member.",
+          "text_ko": "인도 지향 팀원"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "권력 지향 팀원은 의사 결정과 영향력에 초점을 맞추지만 회의 퍼실리테이션이나 갈등 중재에는 적합하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "언급된 모든 활동(회의 퍼실리테이션, 후속 조치, 팀원 소개, 갈등 중재)은 훌륭한 퍼실리테이션 기술을 요구합니다. 친화 지향 팀원은 사람들 간의 연결과 관계 구축에 초점을 맞추어 이러한 활동에 가장 적합합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "성취 지향 팀원은 결과와 성과에 초점을 맞추지만 사람 중심 퍼실리테이션 활동에는 적합하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "인도 지향 팀원은 산출물 인도에 초점을 맞추지만 회의 퍼실리테이션이나 갈등 중재에는 적합하지 않습니다."
+        }
+      },
+      "solution_en": "Facilitation, relationship-building, and conflict mediation are the hallmarks of Affiliate Oriented team members — they thrive on connecting people.",
+      "solution_ko": "퍼실리테이션, 관계 구축, 갈등 중재는 친화 지향 팀원의 특성입니다. 그들은 사람들을 연결하는 데 강점을 가집니다.",
+      "source": "PMI/successful-motivational-techniques-virtual-teams; PMBOK 6th Ed/9/Develop Team",
+      "conceptIds": [
+        "stakeholder-engagement-and-management"
+      ]
+    },
+    {
+      "id": 44,
+      "question_en": "A new graduate recently joined a mature agile R&D team. A mentor, assigned to work with the graduate, is overwhelmed by the extra workload. Team performance and motivation are dropping. How can the project manager help with this situation?",
+      "question_ko": "신입 졸업생이 최근 성숙한 애자일 R&D 팀에 합류했습니다. 졸업생과 함께 일하도록 배정된 멘토가 추가 업무량에 압도되어 있습니다. 팀 성과와 동기부여가 저하되고 있습니다. 프로젝트 관리자는 이 상황에서 어떻게 도울 수 있습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Maintain a laissez-faire leadership style with the team, but use a transactional style to give firm guidance to the graduate.",
+          "text_ko": "팀에게는 자유방임형 리더십 스타일을 유지하되, 졸업생에게 확고한 지도를 제공하기 위해 거래적 스타일을 사용합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Ask the mentor to use a collaborative servant leader approach to perform the usual duties along with the mentor role.",
+          "text_ko": "멘토에게 멘토 역할과 함께 일반 업무를 수행하기 위해 협력적 서번트 리더 접근법을 사용하도록 요청합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Cancel the mentor plan and focus on keeping the graduate motivated by learning through an intensive immersion.",
+          "text_ko": "멘토 계획을 취소하고 집중적인 몰입을 통한 학습으로 졸업생의 동기부여를 유지하는 데 초점을 맞춥니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask three more team members to share the mentor role in order to reduce the individual mentor workload by 75%.",
+          "text_ko": "개별 멘토 업무량을 75%로 줄이기 위해 세 명의 팀원에게 멘토 역할을 공유하도록 요청합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "졸업생은 권위 있고 안정적인 지침과 긍정적인 피드백이 필요하지만 팀은 동기부여를 유지하기 위해 자율성을 잃어서는 안 됩니다. 성숙한 팀에는 자유방임형, 졸업생에게는 거래적 스타일을 유지하는 것이 적절합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "이미 압도된 멘토에게 추가적인 협력적 서번트 리더십 접근법을 요구하는 것은 문제를 악화시킬 것입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "멘토 계획을 취소하는 것은 졸업생의 성장을 방해하며 집중적인 몰입은 지원 없이는 어렵습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "세 명의 팀원에게 멘토 역할을 공유하도록 요청하는 것은 효과적이지 않으며 팀 업무량을 증가시킵니다."
+        }
+      },
+      "solution_en": "The mature team needs autonomy (laissez-faire) while the new graduate needs stable guidance (transactional) — situational leadership uses different styles for different individuals.",
+      "solution_ko": "성숙한 팀에는 자율성(자유방임형)이, 신입 졸업생에게는 안정적인 지도(거래적)가 필요합니다. 상황적 리더십은 다른 개인에게 다른 스타일을 사용합니다.",
+      "source": "PMI/leadership-competencies (Bristol & Yeatts, 2010); PMBOK/3.4.5.1, 9.5",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 45,
+      "question_en": "A functional manager questions whether certain aspects of a project are in compliance with the project's goals. Which document should the project manager review to address the functional manager's concern?",
+      "question_ko": "기능 관리자가 프로젝트의 특정 측면이 프로젝트 목표와 부합하는지 의문을 제기합니다. 프로젝트 관리자는 기능 관리자의 우려를 해결하기 위해 어떤 문서를 검토해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Statement of work (SOW)",
+          "text_ko": "작업 기술서(SOW)"
+        },
+        {
+          "key": "B",
+          "text_en": "Project charter",
+          "text_ko": "프로젝트 헌장"
+        },
+        {
+          "key": "C",
+          "text_en": "Project management plan",
+          "text_ko": "프로젝트 관리 계획"
+        },
+        {
+          "key": "D",
+          "text_en": "Project management information system (PMIS)",
+          "text_ko": "프로젝트 관리 정보 시스템(PMIS)"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "작업 기술서는 수행될 작업을 설명하지만 프로젝트의 공식 목표와 승인된 목표를 정의하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "프로젝트 헌장은 프로젝트를 공식적으로 승인하고 프로젝트 목표와 제약 조건을 정의하는 문서입니다. 특정 측면이 프로젝트 목표와 부합하는지 확인하려면 프로젝트 헌장을 검토하는 것이 가장 적절합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "프로젝트 관리 계획은 프로젝트가 어떻게 실행될지 설명하지만 프로젝트의 공식 목표를 정의하는 문서가 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "PMIS는 정보 수집 및 배포 도구로, 프로젝트 목표를 정의하는 문서가 아닙니다."
+        }
+      },
+      "solution_en": "The project charter defines the official project objectives and constraints — it is the authoritative document for verifying goal compliance.",
+      "solution_ko": "프로젝트 헌장은 공식 프로젝트 목표와 제약 조건을 정의합니다. 목표 준수 여부를 확인하기 위한 권위 있는 문서입니다.",
+      "source": "PMBOK 5th Ed/4/71-72; AMA Handbook of PM 3rd Ed/7/1",
+      "conceptIds": [
+        "leadership-skills-and-qualities"
+      ]
+    },
+    {
+      "id": 46,
+      "question_en": "The project manager of an AI project leads with grace and confidence. They provide support, listen attentively, and allow their team members to work under little supervision. What model of worker behavior does the project manager exhibit?",
+      "question_ko": "AI 프로젝트의 프로젝트 관리자가 우아함과 자신감으로 이끌고 있습니다. 그들은 지원을 제공하고 주의 깊게 듣고 팀원들이 거의 감독 없이 일할 수 있도록 합니다. 프로젝트 관리자는 어떤 근로자 행동 모델을 보여줍니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Expectancy theory",
+          "text_ko": "기대 이론"
+        },
+        {
+          "key": "B",
+          "text_en": "Theory X",
+          "text_ko": "X 이론"
+        },
+        {
+          "key": "C",
+          "text_en": "Theory Y",
+          "text_ko": "Y 이론"
+        },
+        {
+          "key": "D",
+          "text_en": "Theory Z",
+          "text_ko": "Z 이론"
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "기대 이론은 동기부여 이론으로 사람들이 노력, 성과, 결과 간의 연결을 인식할 때 동기부여 받는다는 것입니다. 이것은 X 이론 관리자와 관련이 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "X 이론 관리자는 사람들이 일을 싫어하고 야망이 없으며 지속적인 감독이 필요하다고 믿습니다. 이것은 시나리오와 반대입니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "Y 이론 관리자는 사람들이 올바른 동기부여와 기대가 주어지면 최선을 다해 수행하는 데 관심이 있다고 믿습니다. 지원 제공, 경청, 낮은 감독은 Y 이론의 특성입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "Z 이론은 조직에 대한 직원 충성도 증가와 관련이 있으며 시나리오에서 설명된 관리 스타일과 다릅니다."
+        }
+      },
+      "solution_en": "Theory Y managers believe people want to perform well given the right motivation — they support, listen, and minimize micromanagement.",
+      "solution_ko": "Y 이론 관리자는 사람들이 올바른 동기부여가 주어지면 잘 수행하고 싶어한다고 믿습니다. 그들은 지원하고 경청하며 마이크로관리를 최소화합니다.",
+      "source": "PMP Study Guide 9th Ed (Heldman)/Sybex/8",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    },
+    {
+      "id": 47,
+      "question_en": "Projects using different methodologies with cross-project dependencies must have visibility to each other's plans and deliverables. An agile project manager should use which type of project management approach to ensure that dependent deliverables are available?",
+      "question_ko": "교차 프로젝트 의존성을 가진 다른 방법론을 사용하는 프로젝트들은 서로의 계획과 인도물에 대한 가시성을 가져야 합니다. 애자일 프로젝트 관리자는 의존적인 인도물이 가용하도록 어떤 유형의 프로젝트 관리 접근법을 사용해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Hybrid",
+          "text_ko": "하이브리드"
+        },
+        {
+          "key": "B",
+          "text_en": "Agile",
+          "text_ko": "애자일"
+        },
+        {
+          "key": "C",
+          "text_en": "Predictive",
+          "text_ko": "예측형"
+        },
+        {
+          "key": "D",
+          "text_en": "Iterative",
+          "text_ko": "반복적"
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "하이브리드 접근법은 적응적 접근법과 예측형 접근법의 조합입니다. 다른 방법론을 사용하는 프로젝트 간의 교차 의존성을 관리하는 데 적합합니다. 애자일 프로젝트는 각 프로젝트의 계획과 출시 계획을 기반으로 스프린트를 위해 의존적 인도물이 가용하도록 예측형 프로젝트와 협상할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "순수 애자일은 다른 방법론을 사용하는 프로젝트와의 교차 의존성을 관리하는 데 충분하지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "순수 예측형 접근법은 애자일 프로젝트의 적응적 특성을 무시합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "반복적 접근법은 애자일의 한 형태이지만 다른 방법론 간의 교차 의존성 관리에는 하이브리드가 더 적합합니다."
+        }
+      },
+      "solution_en": "A hybrid approach lets an agile project coordinate with predictive-method projects, ensuring dependent deliverables are available at the right sprint cadence.",
+      "solution_ko": "하이브리드 접근법은 애자일 프로젝트가 예측형 방법 프로젝트와 조율하여 의존적 인도물이 적절한 스프린트 주기에 가용하도록 합니다.",
+      "source": "O'Reilly/Defining Agile Hybrids; PMBOK 7th Ed/2.3.3",
+      "conceptIds": [
+        "servant-leadership-and-agile-leadership"
+      ]
+    },
+    {
+      "id": 48,
+      "question_en": "A project team is working on a regulatory application that has a fixed duration for delivery. The team is using a hybrid approach and has divided development into three sprints. The first two sprints have not produced the required results mainly due to delays from functional units. The finance director is agitated due to the imminent sanctions if the application is not completed, and the project team is demoralized. Who is responsible for inspiring the project team?",
+      "question_ko": "프로젝트 팀이 인도 기간이 고정된 규제 애플리케이션을 작업하고 있습니다. 팀이 하이브리드 접근법을 사용하고 개발을 세 개의 스프린트로 나누었습니다. 첫 두 스프린트가 주로 기능 단위의 지연으로 인해 필요한 결과를 내지 못했습니다. 재무 이사가 애플리케이션이 완료되지 않으면 임박한 제재 때문에 흥분해 있고 프로젝트 팀의 사기가 저하되어 있습니다. 프로젝트 팀에게 영감을 주는 책임은 누구에게 있습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Product Owner",
+          "text_ko": "제품 책임자"
+        },
+        {
+          "key": "B",
+          "text_en": "Financial Director",
+          "text_ko": "재무 이사"
+        },
+        {
+          "key": "C",
+          "text_en": "Functional Manager",
+          "text_ko": "기능 관리자"
+        },
+        {
+          "key": "D",
+          "text_en": "Project Manager",
+          "text_ko": "프로젝트 관리자"
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "제품 책임자는 이해관계자와의 소통 책임이 있습니다. 팀 영감은 PM의 책임입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "재무 이사는 재정과 예산에 초점을 맞춥니다. 팀 사기와 영감은 PM의 책임입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "기능 관리자는 팀 자원을 제공하는 책임이 있습니다. 팀 영감과 사기 부양은 PM의 책임입니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "프로젝트 관리자는 장애물 제거와 프로젝트 팀 동기부여의 책임이 있습니다. 사기가 저하된 팀에게 영감을 주는 것은 PM의 핵심 역할입니다."
+        }
+      },
+      "solution_en": "Inspiring and motivating the project team is the project manager's responsibility — even when external pressure from senior stakeholders is high.",
+      "solution_ko": "프로젝트 팀에게 영감을 주고 동기부여 하는 것은 프로젝트 관리자의 책임입니다. 시니어 이해관계자의 외부 압박이 높을 때도 마찬가지입니다.",
+      "source": "Agile Foundations (Measey)/14.2.2; Agile Practice Guide PMI/Table 4-2/41",
+      "conceptIds": [
+        "leadership-skills-and-qualities"
+      ]
+    },
+    {
+      "id": 49,
+      "question_en": "An expert resource avoids assignments that include working with a foreign contractor. How should the project manager resolve the situation?",
+      "question_ko": "전문 자원이 외국 계약업체와의 작업을 포함하는 배정을 회피합니다. 프로젝트 관리자는 이 상황을 어떻게 해결해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Question the expert privately about their reluctance or biases and insist on an inclusive attitude.",
+          "text_ko": "전문가에게 그들의 거리낌이나 편견에 대해 비공개로 질문하고 포용적인 태도를 강조합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Issue a disciplinary warning to the expert and advise their functional manager to send them to diversity training.",
+          "text_ko": "전문가에게 징계 경고를 발행하고 기능 관리자에게 그들을 다양성 훈련에 보내도록 조언합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Prevent delays and conflicts by hiring a consultant that the expert is willing to work with.",
+          "text_ko": "전문가가 기꺼이 함께 일하는 컨설턴트를 고용하여 지연과 갈등을 방지합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Reprimand the expert about their discriminatory behavior during a team meeting to set the right example.",
+          "text_ko": "올바른 예를 설정하기 위해 팀 회의에서 전문가의 차별적 행동에 대해 질책합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM은 징계 경고나 다른 조치를 취하기 전에 전문가가 배정을 피하는 이유나 근본 원인을 이해해야 합니다. 비공개로 질문하고 포용적인 태도를 강조하는 것이 가장 적절한 첫 번째 단계입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "즉각적인 징계 경고와 다양성 훈련은 근본 원인을 이해하기 전에는 과도하고 효과적이지 않을 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "전문가가 기꺼이 일하는 컨설턴트를 고용하는 것은 근본 문제를 해결하지 않고 행동을 수용하는 것입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "팀 회의에서 공개적으로 질책하는 것은 상황을 악화시키고 팀 역학에 부정적인 영향을 미칩니다."
+        }
+      },
+      "solution_en": "Understand the root cause first — a private conversation is the right first step before any disciplinary action or diversity intervention.",
+      "solution_ko": "먼저 근본 원인을 이해하세요. 비공개 대화가 징계 조치나 다양성 개입 전에 올바른 첫 번째 단계입니다.",
+      "source": "PMI/embracing-diversity (Hicks et al., 2007); PMBOK/9.4",
+      "conceptIds": [
+        "diversity-and-inclusion"
+      ]
+    },
+    {
+      "id": 50,
+      "multi": true,
+      "question_en": "Select three ways to improve and practice leadership skills. (Choose 3)",
+      "question_ko": "리더십 기술을 개선하고 연습하는 세 가지 방법을 선택하세요. (3개 선택)",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Engage the team in the project process.",
+          "text_ko": "프로젝트 프로세스에 팀을 참여시킵니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Be actively involved in the project tasks.",
+          "text_ko": "프로젝트 작업에 적극적으로 참여합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Treat each team member the same way.",
+          "text_ko": "각 팀원을 동일한 방식으로 대합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask for feedback and analyze the results.",
+          "text_ko": "피드백을 요청하고 결과를 분석합니다."
+        },
+        {
+          "key": "E",
+          "text_en": "Use democracy for all team decisions.",
+          "text_ko": "모든 팀 결정에 민주주의를 사용합니다."
+        }
+      ],
+      "answer": "A,B,D",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "프로세스에 팀을 참여시키는 것은 팀의 관점과 아이디어를 얻고 더 강력한 결과를 만드는 협력적 리더십 관행입니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "프로젝트 작업에 적극적으로 참여하면 리더가 팀의 도전을 이해하고 공감하며 더 효과적으로 지원할 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "각 팀원을 동일하게 대하는 것은 리더십 스타일을 개인/팀에 맞게 조정해야 한다는 원칙과 상충됩니다. 효과적인 리더십은 개인 필요에 맞는 차별화된 접근이 필요합니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "피드백을 요청하고 결과를 분석하는 것은 리더가 자신의 접근법의 효과를 평가하고 개선할 기회를 제공하는 핵심 리더십 성장 관행입니다."
+        },
+        "E": {
+          "correct": false,
+          "explanation_ko": "모든 결정에 민주주의를 사용하는 것은 항상 효율적이거나 적절하지 않습니다. 리더는 상황에 따라 다른 의사결정 스타일을 사용해야 합니다."
+        }
+      },
+      "solution_en": "Leadership improves through team engagement (A), active task involvement (B), and feedback analysis (D) — treating everyone identically ignores the need to tailor approaches.",
+      "solution_ko": "리더십은 팀 참여(A), 적극적 작업 참여(B), 피드백 분석(D)을 통해 향상됩니다. 모든 사람을 동일하게 대하는 것은 접근법 조정의 필요성을 무시합니다.",
+      "source": "Effective PM (Wysocki)/Ch.9; PMI/7-ways-to-build-leadership-skills",
+      "conceptIds": [
+        "leadership-skills-and-qualities"
+      ]
+    },
+    {
+      "id": 51,
+      "question_en": "A project manager complains that three engineers from different cultural backgrounds leave project meetings twice a day and assumes that they are 'gossiping and smoking' for 15 minutes. The engineering manager replies that their absence is due to prayer time. What should the project manager do first to rectify their assumption?",
+      "question_ko": "프로젝트 관리자가 다른 문화적 배경을 가진 세 명의 엔지니어가 하루에 두 번 프로젝트 회의를 떠나며 15분 동안 '잡담하고 흡연하고 있다'고 가정한다고 불평합니다. 엔지니어링 관리자는 그들의 부재가 기도 시간 때문이라고 답합니다. 프로젝트 관리자는 자신의 가정을 수정하기 위해 먼저 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Apologize for the unconscious bias.",
+          "text_ko": "무의식적 편견에 대해 사과합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Develop a plan to improve work ethic.",
+          "text_ko": "업무 윤리를 개선하기 위한 계획을 개발합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Set up a meeting to raise cultural awareness.",
+          "text_ko": "문화적 인식을 높이기 위한 회의를 설정합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Follow and watch to make an informed observation.",
+          "text_ko": "정보에 입각한 관찰을 하기 위해 따라가서 지켜봅니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM은 무의식적 편견이 초래한 모욕에 대해 먼저 사과해야 합니다. PM은 자신의 편견을 기반으로 가정을 했으며 잘못되었다는 것을 인정해야 합니다. 더 포용적인 작업 환경을 만들기 위해 노력할 것을 설명해야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "업무 윤리 개선 계획은 무의식적 편견을 다루지 않으며 상황을 악화시킬 것입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "문화적 인식 회의 설정은 사과 후에 할 수 있는 좋은 다음 단계이지만 첫 번째 조치가 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "엔지니어를 따라가며 지켜보는 것은 그들의 종교적 관행에 대한 신뢰 부재를 나타내며 상황을 악화시킵니다."
+        }
+      },
+      "solution_en": "The first action is to apologize for the unconscious bias — acknowledging the mistake before any awareness-building or planning.",
+      "solution_ko": "첫 번째 조치는 무의식적 편견에 대해 사과하는 것입니다. 인식 구축이나 계획 전에 실수를 인정해야 합니다.",
+      "source": "PMI/embracing-diversity (Hicks et al., 2007); PMBOK/X4.6",
+      "conceptIds": [
+        "diversity-and-inclusion"
+      ]
+    },
+    {
+      "id": 52,
+      "question_en": "A project manager is working with a Scrum team that is continually missing deadlines. The steering committee is concerned about the project as it is not clear that it will deliver the expected value. After some analysis, the project manager discovers there is a mismatch of competencies in one of the teams. What should the project manager do?",
+      "question_ko": "프로젝트 관리자가 마감일을 지속적으로 놓치는 스크럼 팀과 함께 작업하고 있습니다. 운영위원회가 프로젝트가 기대 가치를 인도할 것인지 명확하지 않아 프로젝트에 대한 우려를 표명합니다. 분석 후 프로젝트 관리자가 팀 중 하나에 역량 불일치가 있다는 것을 발견합니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Accept the risk of the project missing deadlines due to the mismatch.",
+          "text_ko": "불일치로 인한 프로젝트 마감일 실패 리스크를 수용합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Provide appropriate training to compensate for the mismatch.",
+          "text_ko": "불일치를 보완하기 위해 적절한 훈련을 제공합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Update the project schedule to reflect the delay.",
+          "text_ko": "지연을 반영하기 위해 프로젝트 일정을 업데이트합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Emphasize to the teams the importance of meeting the agreed deadlines.",
+          "text_ko": "팀에게 합의된 마감일 준수의 중요성을 강조합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "PM이 리스크를 수용하는 것은 능동적이지 않으며 운영위원회가 이미 우려를 표명했으므로 적절하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "역량 불일치를 보완하기 위해 적절한 훈련을 제공하는 것이 가장 적절한 대응입니다. 팀 기술을 지속적으로 평가하고 갱신하는 것이 중요하며 훈련은 필요한 지식/기술 불일치를 완화하는 데 도움이 됩니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "일정만 업데이트하는 것은 근본 원인(역량 불일치)을 해결하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "마감일 준수 중요성을 강조하는 것은 역량 불일치라는 근본 문제를 해결하지 않습니다."
+        }
+      },
+      "solution_en": "Competency mismatches are addressed through training — this directly resolves the root cause and enables the team to meet deadlines.",
+      "solution_ko": "역량 불일치는 훈련을 통해 해결됩니다. 이것이 근본 원인을 직접 해결하고 팀이 마감일을 충족할 수 있도록 합니다.",
+      "source": "Choose Your WoW! (Ambler & Lines)/121; PMBOK 6th Ed/9/342",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 53,
+      "question_en": "During the team meeting, two of the team members who worked on the same tasks are arguing about who is at fault for the task being late. None of them want to be perceived as the one who caused the delay. What is the most likely cause of this issue?",
+      "question_ko": "팀 회의에서 같은 작업을 진행한 두 팀원이 작업 지연의 책임이 누구에게 있는지에 대해 다투고 있습니다. 그들 중 누구도 지연을 일으킨 사람으로 인식되기를 원하지 않습니다. 이 문제의 가장 가능한 원인은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Conflicting Priorities",
+          "text_ko": "상충하는 우선순위"
+        },
+        {
+          "key": "B",
+          "text_en": "Unclear Responsibilities",
+          "text_ko": "불명확한 책임"
+        },
+        {
+          "key": "C",
+          "text_en": "Personal Competition",
+          "text_ko": "개인 경쟁"
+        },
+        {
+          "key": "D",
+          "text_en": "Personnel Selection",
+          "text_ko": "인력 선발"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "상충하는 우선순위도 원인이 될 수 있지만, 두 사람이 누가 작업을 담당했는지 명확하지 않을 때 발생하는 갈등의 가장 일반적인 원인은 불명확한 책임입니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "두 팀원이 같은 작업에 대해 누가 책임이 있는지에 대해 다투고 있다면 가장 가능한 원인은 책임 명확성의 부재입니다. 책임이 명확해지면 갈등 가능성이 줄어들 뿐만 아니라 문제가 어디에 있는지도 더 명확해집니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "개인 경쟁이 원인일 수 있지만, 동일한 작업을 진행한 두 사람 간의 갈등에서 가장 일반적인 원인은 불명확한 역할과 책임입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "인력 선발은 이 갈등과 직접적인 관련이 없습니다."
+        }
+      },
+      "solution_en": "When two people fight over who caused a delay on a shared task, the root cause is almost always unclear responsibilities — a RACI matrix would have prevented this.",
+      "solution_ko": "두 사람이 공유 작업의 지연 책임을 두고 다툴 때 근본 원인은 거의 항상 불명확한 책임입니다. RACI 매트릭스가 이를 방지했을 것입니다.",
+      "source": "PMI/team-building-development-project-management",
+      "conceptIds": [
+        "conflict-resolution-strategies"
+      ]
+    },
+    {
+      "id": 54,
+      "question_en": "A project team has successfully completed a project. The same team and three new people start another project led by a new scrum master. How will the new scrum master lead?",
+      "question_ko": "프로젝트 팀이 프로젝트를 성공적으로 완료했습니다. 같은 팀과 세 명의 새로운 사람들이 새 스크럼 마스터가 이끄는 또 다른 프로젝트를 시작합니다. 새 스크럼 마스터는 어떻게 이끌겠습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "High directive, high supportive",
+          "text_ko": "높은 지시, 높은 지원"
+        },
+        {
+          "key": "B",
+          "text_en": "Low directive, high supportive",
+          "text_ko": "낮은 지시, 높은 지원"
+        },
+        {
+          "key": "C",
+          "text_en": "High directive, low supportive",
+          "text_ko": "높은 지시, 낮은 지원"
+        },
+        {
+          "key": "D",
+          "text_en": "Low directive, low supportive",
+          "text_ko": "낮은 지시, 낮은 지원"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "높은 지시 수준은 경험 많은 팀의 자율성과 창의성을 제한할 수 있으며 높은 지시는 경험 부족한 팀에게 적합합니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "팀은 이미 성공적으로 프로젝트를 완료했고 클라이언트 비즈니스 도메인에 대한 강력한 이해를 가지고 있습니다. 낮은 지시 접근법으로 팀에게 권한을 주고 자율성을 장려합니다. 그러나 새 스크럼 마스터는 높은 지원 행동을 제공하여 신뢰를 구축하고 소통을 퍼실리테이션해야 합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "높은 지시와 낮은 지원은 경험 많은 팀에게 가장 비효과적인 조합으로, 팀 역량을 인정하지 않고 성장 지원도 없습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "낮은 지시와 낮은 지원은 새 스크럼 마스터가 아직 팀과 관계를 구축하지 않은 경우에 적합하지 않습니다. 높은 지원이 필요합니다."
+        }
+      },
+      "solution_en": "An experienced, successful team needs low directive (they can self-organize) but high support (the new scrum master builds trust and facilitates).",
+      "solution_ko": "경험 있고 성공적인 팀에는 낮은 지시(자기 조직화 가능)와 높은 지원(새 스크럼 마스터가 신뢰 구축 및 퍼실리테이션)이 필요합니다.",
+      "source": "PMI-ACP Exam Prep 2nd Ed (Griffiths)/4/215",
+      "conceptIds": [
+        "leadership-styles-and-situational-leadership"
+      ]
+    },
+    {
+      "id": 55,
+      "question_en": "A senior team member is having challenges with a new project team member. The senior team member asks the project manager for advice on how to handle the new team member. What should the project manager do?",
+      "question_ko": "시니어 팀원이 새 프로젝트 팀원과 어려움을 겪고 있습니다. 시니어 팀원이 새 팀원을 처리하는 방법에 대한 조언을 프로젝트 관리자에게 요청합니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Check the team member's performance and responsibility assignment matrix to assess the conflict.",
+          "text_ko": "갈등을 평가하기 위해 팀원의 성과 및 책임 배정 매트릭스를 확인합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Instruct the senior team member to confront the new team member at the next daily standup meeting.",
+          "text_ko": "시니어 팀원에게 다음 일일 스탠드업 회의에서 새 팀원과 대면하도록 지시합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Coach the senior team member on conflict resolution models and how they can be applied to this situation.",
+          "text_ko": "갈등 해결 모델과 이 상황에 어떻게 적용할 수 있는지에 대해 시니어 팀원을 코칭합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask for a one-on-one meeting with the new team member and tell them to avoid the senior team member.",
+          "text_ko": "새 팀원과 일대일 회의를 요청하고 시니어 팀원을 피하도록 말합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "갈등이 성과와 관련된 것이라는 표시가 없습니다. 성과 매트릭스 확인은 시니어 팀원에게 갈등 해결 지도를 제공하지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "공개적인 스탠드업 회의에서 새 팀원과 대면하도록 지시하는 것은 방어적으로 느끼게 하고 추가 문제로 이어질 수 있습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "PM은 시니어 팀원이 가장 좋은 갈등 해결 전략을 결정하고 수행하는 방법을 코칭해야 합니다. 이는 시니어 팀원에게 갈등을 효과적으로 처리할 권한을 주고 팀 내 소통 및 갈등 해결을 장려합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "새 팀원에게 시니어 팀원을 피하도록 말하는 것은 갈등을 해결하지 않고 팀에 부정적인 영향을 미칩니다."
+        }
+      },
+      "solution_en": "Coaching the senior team member on conflict resolution empowers them to handle it directly — resolving conflict at the lowest possible level.",
+      "solution_ko": "갈등 해결에 대해 시니어 팀원을 코칭하면 그들이 직접 처리할 수 있도록 권한을 줍니다. 가능한 가장 낮은 수준에서 갈등을 해결하는 것입니다.",
+      "source": "O'Reilly/4/4.6; PMBOK 7th Ed/2.2.4.4, 4.2.7.1",
+      "conceptIds": [
+        "conflict-resolution-strategies"
+      ]
+    },
+    {
+      "id": 56,
+      "question_en": "A team member is hosting an event and invites several colleagues through their work calendars. Another team member, who was not invited to the event, is noticeably distracted during several standup meetings. What should the project manager do?",
+      "question_ko": "팀원이 이벤트를 주최하고 업무 캘린더를 통해 여러 동료를 초대합니다. 이벤트에 초대받지 못한 다른 팀원이 여러 스탠드업 회의에서 눈에 띄게 산만합니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ask the individual who is hosting the event to mark it as private.",
+          "text_ko": "이벤트를 비공개로 표시하도록 이벤트를 주최하는 개인에게 요청합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Set up a meeting with the distracted team member to discuss any issues.",
+          "text_ko": "문제를 논의하기 위해 산만한 팀원과 회의를 설정합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Ask the individual who is hosting the event to use private communication methods.",
+          "text_ko": "이벤트를 주최하는 개인에게 비공개 소통 방법을 사용하도록 요청합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Add a social events section to the charter to handle these situations.",
+          "text_ko": "이러한 상황을 처리하기 위해 헌장에 소셜 이벤트 섹션을 추가합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "이벤트를 비공개로 표시하도록 요청하는 것은 산만한 팀원의 근본 문제를 해결하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "PM은 먼저 산만한 팀원과 미팅을 설정해야 합니다. 이 미팅은 PM이 초대에서 제외된 이유를 파악하고 산만함을 유발하는 다른 문제가 있는지 확인하는 데 도움이 됩니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "비공개 소통 방법을 사용하도록 요청하는 것은 산만한 팀원의 근본 문제를 해결하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "소셜 이벤트는 프로젝트 헌장의 일부가 아닙니다. 헌장에 추가하는 것은 이 상황을 해결하는 적절한 방법이 아닙니다."
+        }
+      },
+      "solution_en": "The first step is to meet privately with the distracted team member — this may reveal both the exclusion issue and any deeper underlying concerns.",
+      "solution_ko": "첫 번째 단계는 산만한 팀원과 비공개로 만나는 것입니다. 이는 제외 문제와 더 깊은 근본 우려를 모두 드러낼 수 있습니다.",
+      "source": "Choose Your WoW! (Ambler & Lines)/7/117; Agile Practice Guide PMI/50",
+      "conceptIds": [
+        "conflict-resolution-strategies"
+      ]
+    },
+    {
+      "id": 57,
+      "question_en": "A project is in the implementation phase. A new project manager discovers that the team members have no previous experience with the technology used for the project. However, there are several functional managers that have experience with the technology. What should the project manager do first to ensure the successful performance of the team?",
+      "question_ko": "프로젝트가 구현 단계에 있습니다. 새 프로젝트 관리자가 팀원들이 프로젝트에 사용된 기술에 대한 이전 경험이 없다는 것을 발견합니다. 그러나 기술에 경험이 있는 여러 기능 관리자가 있습니다. 프로젝트 관리자는 팀의 성공적인 성과를 보장하기 위해 먼저 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ask functional managers to act as mentors or coaches for the team.",
+          "text_ko": "기능 관리자에게 팀을 위한 멘토 또는 코치 역할을 하도록 요청합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Request that the sponsor substitute experienced team members.",
+          "text_ko": "스폰서에게 경험 있는 팀원으로 교체해달라고 요청합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Identify the risks associated with team members' inexperience.",
+          "text_ko": "팀원의 경험 부족과 관련된 리스크를 파악합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Develop status reports to monitor the team's skills and competencies.",
+          "text_ko": "팀의 기술과 역량을 모니터링하기 위해 상태 보고서를 개발합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM은 기술에 경험이 있는 기능 관리자에게 팀을 위한 멘토 또는 코치 역할을 하도록 요청해야 합니다. 이를 통해 팀원들이 프로젝트를 성공적으로 완료하는 데 필요한 지식과 기술을 습득할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "팀원 교체 요청은 구현 단계에서 특히 실현 가능하지 않을 수 있으며 프로젝트 연속성을 방해합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "경험 부족과 관련된 리스크 파악은 중요하지만 팀의 성공적인 성과를 능동적으로 보장하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "기술과 역량을 모니터링하는 상태 보고서 개발은 기술 부족 문제를 해결하지 않습니다."
+        }
+      },
+      "solution_en": "Leveraging functional managers as mentors/coaches enables immediate knowledge transfer without replacing team members — the fastest path to capability.",
+      "solution_ko": "기능 관리자를 멘토/코치로 활용하면 팀원 교체 없이 즉각적인 지식 이전이 가능합니다. 역량 확보를 위한 가장 빠른 경로입니다.",
+      "source": "Choose Your WoW! (Ambler & Lines)/5.22/300; O'Reilly/6/Developing Strengths-Based Project Teams",
+      "conceptIds": [
+        "team-building-and-development"
+      ]
+    },
+    {
+      "id": 58,
+      "question_en": "A project manager wants to establish an incentive and rewards strategy for the project team. What approach should be taken?",
+      "question_ko": "프로젝트 관리자가 프로젝트 팀을 위한 인센티브 및 보상 전략을 수립하고 싶습니다. 어떤 접근법을 취해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ask Human Resources department which incentives should be provided.",
+          "text_ko": "인적자원부서에 어떤 인센티브가 제공되어야 하는지 묻습니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Check on budget availability in order to determine specific reward amounts.",
+          "text_ko": "특정 보상 금액을 결정하기 위해 예산 가용성을 확인합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Provide an opportunity for publicly presenting the outcomes.",
+          "text_ko": "결과를 공개적으로 발표할 기회를 제공합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Identify the specific needs for each team member to determine incentives.",
+          "text_ko": "인센티브를 결정하기 위해 각 팀원의 구체적인 필요를 파악합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "인적자원부서에 어떤 인센티브가 제공되어야 하는지 묻는 것은 개인의 필요에 맞는 맞춤형 접근법이 아닙니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "예산 가용성을 확인하는 것은 필요하지만 각 팀원의 개인적 필요를 이해하는 것보다 먼저 해야 할 일이 아닙니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "공개 발표 기회 제공은 하나의 인센티브 유형이지만 모든 팀원에게 적합하지 않을 수 있습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "모든 보상이 금전적인 것은 아닙니다. 인정하고 동기부여 할 때 개인적 선호도를 이해해야 합니다. 각 팀원의 구체적인 필요를 파악하는 것이 효과적인 인센티브 및 보상 전략의 기반입니다."
+        }
+      },
+      "solution_en": "Rewards are not one-size-fits-all — understanding individual preferences and needs is the foundation of an effective incentive strategy.",
+      "solution_ko": "보상은 모든 사람에게 동일하지 않습니다. 개인적 선호도와 필요를 이해하는 것이 효과적인 인센티브 전략의 기반입니다.",
+      "source": "Effective PM (Wysocki)/Ch.8; PMI/motivate-teams-to-achieve-better-outcomes",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    },
+    {
+      "id": 59,
+      "question_en": "A project manager wants to establish an incentive and rewards strategy for the project team. What approach should be taken?",
+      "question_ko": "프로젝트 관리자가 프로젝트 팀을 위한 인센티브 및 보상 전략을 수립하고 싶습니다. 어떤 접근법을 취해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ask Human Resources department which incentives should be provided.",
+          "text_ko": "인적자원부서에 어떤 인센티브가 제공되어야 하는지 묻습니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Check on budget availability in order to determine specific reward amounts.",
+          "text_ko": "특정 보상 금액을 결정하기 위해 예산 가용성을 확인합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Provide an opportunity for publicly presenting the outcomes.",
+          "text_ko": "결과를 공개적으로 발표할 기회를 제공합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Identify the specific needs for each team member to determine incentives.",
+          "text_ko": "인센티브를 결정하기 위해 각 팀원의 구체적인 필요를 파악합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "인적자원부서에 어떤 인센티브가 제공되어야 하는지 묻는 것은 개인의 필요에 맞는 맞춤형 접근법이 아닙니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "예산 가용성 확인은 필요하지만 각 팀원의 개인적 필요 이해가 우선입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "공개 발표 기회 제공은 하나의 인센티브 유형이지만 모든 팀원에게 적합하지 않습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "모든 보상이 금전적인 것은 아닙니다. 개인 선호도와 필요를 이해하는 것이 효과적인 인센티브 전략의 기반입니다. (Q58과 동일 문항)"
+        }
+      },
+      "solution_en": "Rewards are not one-size-fits-all — understanding individual preferences and needs is the foundation of an effective incentive strategy. (Duplicate of Q58 from source.)",
+      "solution_ko": "보상은 모든 사람에게 동일하지 않습니다. 개인적 선호도와 필요를 이해하는 것이 효과적인 인센티브 전략의 기반입니다. (원본에서 Q58의 중복 문항)",
+      "source": "Effective PM (Wysocki)/Ch.8; PMI/motivate-teams-to-achieve-better-outcomes",
+      "conceptIds": [
+        "motivation-and-recognition"
+      ]
+    }
+  ]
+}
