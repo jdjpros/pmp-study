@@ -1,0 +1,2521 @@
+{
+  "unit": "Evaluate and Deliver Project Benefits and Value",
+  "questions": [
+    {
+      "id": 1,
+      "question_en": "An educational institution raises a complaint after placing an order for a software module from a company using agile practices. The complaint claims that billing for payment of a partial delivery violates the Agile Manifesto if the customer was not involved in progress meetings. The customer's claim is supported by which of the Four Values of the Agile Manifesto?",
+      "question_ko": "교육 기관이 애자일 관행을 사용하는 회사에서 소프트웨어 모듈을 주문한 후 불만을 제기합니다. 불만은 고객이 진행 회의에 참여하지 않은 경우 부분 인도에 대한 청구가 애자일 선언문을 위반한다고 주장합니다. 고객의 주장을 지지하는 애자일 선언문의 4가지 가치 중 어느 것입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Processes maintaining a constant pace indefinitely",
+          "text_ko": "지속적인 일정한 속도를 유지하는 프로세스"
+        },
+        {
+          "key": "B",
+          "text_en": "Software delivery frequently and in short periods",
+          "text_ko": "소프트웨어를 자주, 짧은 기간에 인도"
+        },
+        {
+          "key": "C",
+          "text_en": "Customer collaboration over contract negotiation",
+          "text_ko": "계약 협상보다 고객 협력"
+        },
+        {
+          "key": "D",
+          "text_en": "Working software as a primary measure of progress",
+          "text_ko": "작동하는 소프트웨어를 진행의 주요 척도로"
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "일정한 속도를 유지하는 프로세스는 애자일 원칙(12가지 원칙)에 해당하며, 4가지 핵심 가치 중 하나가 아닙니다. 고객 참여 부족 문제와 직접적으로 관련이 없습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "소프트웨어를 자주 인도하는 것은 애자일 원칙에 해당합니다. 그러나 이 선택지는 고객이 진행 회의에 참여하지 않았다는 불만의 핵심을 다루지 않습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "애자일 선언문의 핵심 가치 중 하나는 '계약 협상보다 고객 협력'입니다. 고객이 진행 회의에 참여하지 못한 것은 이 가치를 위반하는 것입니다. 부분 인도에 대한 청구는 고객과의 협력 없이 이루어졌으므로 이 가치에 어긋납니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "작동하는 소프트웨어를 진행의 주요 척도로 보는 것은 애자일 4가지 가치 중 하나입니다('포괄적인 문서보다 작동하는 소프트웨어'). 그러나 고객 참여 부족 문제는 고객 협력 가치와 더 직접적으로 관련됩니다."
+        }
+      },
+      "solution_en": "Customer collaboration over contract negotiation is the Agile value violated. The customer was not involved in progress meetings, directly contradicting this value.",
+      "solution_ko": "'계약 협상보다 고객 협력'이 위반된 애자일 가치입니다. 고객이 진행 회의에 참여하지 않은 것이 이 가치에 직접 위배됩니다.",
+      "source": "Agile Practice Guide (2017) PMI/2.2; PMI-ACP Exam Prep 2nd Ed (Griffiths)/1/28",
+      "conceptIds": [
+        "agile-manifesto-and-methods"
+      ]
+    },
+    {
+      "id": 2,
+      "question_en": "A project manager has started developing a plan for a new project. During the first planning meeting, the stakeholders ask about the project's value and how it relates to the organization's goals. What should the project manager do next?",
+      "question_ko": "프로젝트 관리자가 새 프로젝트 계획 개발을 시작했습니다. 첫 번째 계획 회의에서, 이해관계자들이 프로젝트의 가치와 그것이 조직의 목표와 어떻게 관련되는지 묻습니다. 프로젝트 관리자는 다음으로 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Refer the stakeholders to the scope management plan.",
+          "text_ko": "이해관계자들을 스코프 관리 계획으로 안내합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Refer the stakeholders to the project charter.",
+          "text_ko": "이해관계자들을 프로젝트 헌장으로 안내합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Invite the project sponsor to join the meeting to address questions.",
+          "text_ko": "질문을 해결하기 위해 프로젝트 스폰서를 회의에 초청합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask the project management office (PMO) to provide the necessary documentation.",
+          "text_ko": "필요한 문서를 제공하도록 프로젝트 관리 사무소(PMO)에 요청합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "스코프 관리 계획은 이 시점에 아직 작성되지 않았으며, 프로젝트의 가치와 조직 목표와의 정렬을 설명하는 문서가 아닙니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "프로젝트 헌장은 프로젝트 팀이 초기 프로젝트 계획의 출발점으로 사용하는 문서입니다. 프로젝트의 가치와 조직 목표와의 정렬에 대한 정보를 포함하고 있어 이해관계자들에게 가장 적합한 참조 자료입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "프로젝트 스폰서가 프로젝트 헌장과 동일한 정보를 제공할 수 있지만, 이는 PM이 직접 제공해야 할 정보를 스폰서에게 위임하는 것으로 비효율적입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "프로젝트의 가치와 목표에 대한 구체적인 정보를 제공하는 것은 PM의 책임이며 PMO의 책임이 아닙니다."
+        }
+      },
+      "solution_en": "The project charter is the starting point for initial planning and contains the project's value and alignment with organizational goals.",
+      "solution_ko": "프로젝트 헌장은 초기 계획의 출발점으로 프로젝트의 가치와 조직 목표와의 정렬 정보를 포함합니다.",
+      "source": "PMBOK 6th Ed PMI/4/83; Project Management Essentials 2nd Ed (Wells & Kloppenborg)",
+      "conceptIds": [
+        "project-charter-and-business-case-alignment"
+      ]
+    },
+    {
+      "id": 3,
+      "question_en": "A project manager is working on launching a minimum viable product (MVP) for a new-to-market product. The team has successfully progressed to the third iteration out of a planned total of six. During the upcoming iteration planning meeting, the customer notifies the team that a competitor intends to beat them to market and release a similar product in the next quarter. How should the project manager address this competitive challenge?",
+      "question_ko": "프로젝트 관리자가 시장에 처음 출시되는 제품의 최소 기능 제품(MVP)을 출시하기 위해 작업 중입니다. 팀은 계획된 총 6회 반복 중 세 번째 반복으로 성공적으로 진행했습니다. 다가오는 반복 계획 회의에서, 고객이 경쟁사가 다음 분기에 유사한 제품을 출시할 것이라고 알립니다. 프로젝트 관리자는 이 경쟁적 도전에 어떻게 대응해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Acknowledge the issue and include comprehensive details in the project's next status report.",
+          "text_ko": "문제를 인정하고 프로젝트의 다음 상태 보고서에 포괄적인 세부 사항을 포함합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Increase the size of the team to expedite product delivery and launch the product before the competitor.",
+          "text_ko": "제품 인도를 신속히 하고 경쟁사보다 먼저 제품을 출시하기 위해 팀 규모를 늘립니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Meet with the customer to discuss reducing the project backlog to help accelerate product delivery.",
+          "text_ko": "제품 인도를 가속화하기 위해 프로젝트 백로그 축소 가능성을 논의하기 위해 고객과 만납니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Work with the team to prioritize core features and redefine the MVP to beat the competitor to the market.",
+          "text_ko": "경쟁사보다 먼저 시장에 진입하기 위해 팀과 협력하여 핵심 기능을 우선시하고 MVP를 재정의합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "문제를 인정하고 보고서에 포함하는 것은 중요하지만, 경쟁적 도전을 해결하기 위한 능동적 조치가 필요합니다. 단순한 문서화는 충분하지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "팀 규모를 늘리는 것은 항상 실현 가능하거나 적절하지 않을 수 있으며, 비효율성과 품질 문제로 이어질 수 있습니다. 또한 범위의 전략적 조정 필요성을 다루지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "고객과 백로그 축소를 논의하는 것만으로는 경쟁이 치열한 시장에서 적시 인도를 보장하기에 충분하지 않습니다. 핵심 기능에 집중하고 MVP를 재정의하는 더 전략적인 접근이 필요합니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "경쟁적 도전에 직면했을 때, PM은 팀과 협력하여 MVP를 재정의하고 경쟁사를 시장에서 앞질러야 합니다. 이는 제품을 차별화하는 핵심 기능을 파악하고 우선시하며 다음 반복에서 해당 기능을 인도하는 데 집중하는 것을 포함합니다."
+        }
+      },
+      "solution_en": "Working with the team to redefine the MVP and prioritize core differentiating features is the most strategic response to the competitive challenge.",
+      "solution_ko": "팀과 협력하여 MVP를 재정의하고 핵심 차별화 기능을 우선시하는 것이 경쟁 도전에 대한 가장 전략적인 대응입니다.",
+      "source": "Agile Practice Guide PMI/3.1.3; PMBOK 7th Ed (2022)/2.4.2",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 4,
+      "question_en": "A project manager is leading a project to implement a process improvement software system that was developed in-house. However, the adoption across the organization was less than 50% due to a misalignment with core processes. Which three of the following actions should the project manager have performed to realize the project benefits? (Choose 3)",
+      "question_ko": "프로젝트 관리자가 내부 개발된 프로세스 개선 소프트웨어 시스템 구현 프로젝트를 이끌고 있습니다. 그러나 핵심 프로세스와의 불일치로 인해 조직 전반의 채택률이 50% 미만이었습니다. 프로젝트 혜택을 실현하기 위해 프로젝트 관리자가 수행했어야 할 세 가지 조치는 무엇입니까? (3개 선택)",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Conducted a full needs assessment in the design phase.",
+          "text_ko": "설계 단계에서 완전한 니즈 평가를 수행했어야 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Launched the pilot in a core business unit and collected feedback.",
+          "text_ko": "핵심 사업 단위에서 파일럿을 시작하고 피드백을 수집했어야 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Ensured wider stakeholder engagement to gain greater buy-in.",
+          "text_ko": "더 큰 지지를 얻기 위해 더 광범위한 이해관계자 참여를 보장했어야 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Instructed the marketing team to collect feedback from customers.",
+          "text_ko": "마케팅 팀에게 고객으로부터 피드백을 수집하도록 지시했어야 합니다."
+        },
+        {
+          "key": "E",
+          "text_en": "Developed a clear change management plan that included training.",
+          "text_ko": "교육을 포함한 명확한 변화 관리 계획을 개발했어야 합니다."
+        }
+      ],
+      "answer": "A,B,C",
+      "multi": true,
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "설계 단계에서 완전한 니즈 평가를 수행하면 소프트웨어 시스템이 조직의 실제 필요를 충족하도록 설계하는 데 도움이 됩니다. 핵심 프로세스와의 불일치 문제를 사전에 파악할 수 있었을 것입니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "핵심 사업 단위에서 파일럿을 시작하고 피드백을 수집하면 실제 사용자 그룹으로 소프트웨어를 테스트하고 개선 방법에 대한 피드백을 받을 수 있습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "광범위한 이해관계자 참여를 보장하면 모든 이해관계자가 프로젝트와 그 혜택을 인식하고 성공에 전념하도록 할 수 있습니다. 50% 미만의 채택률은 불충분한 이해관계자 참여를 시사합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "마케팅 팀에게 고객 피드백을 수집하도록 지시하는 것은 내부 프로세스 개선 소프트웨어 구현에서 프로젝트 혜택 실현에 직접적으로 필수적이지 않습니다."
+        },
+        "E": {
+          "correct": false,
+          "explanation_ko": "변화 관리 계획은 도움이 될 수 있지만, 문제가 소프트웨어가 조직의 핵심 프로세스와 불일치하는 것이므로 니즈 평가, 파일럿, 이해관계자 참여만큼 중요하지 않습니다."
+        }
+      },
+      "solution_en": "Needs assessment (to ensure alignment), pilot launch (to test with real users), and stakeholder engagement (to build buy-in) are the three critical actions for benefits realization.",
+      "solution_ko": "니즈 평가(정렬 보장), 파일럿 실시(실제 사용자 테스트), 이해관계자 참여(지지 확보)가 혜택 실현을 위한 세 가지 핵심 조치입니다.",
+      "source": "O'Reilly Platform/Benefits Realization Management Ch.2/2.2.1; PMBOK 7th Ed/2.7",
+      "conceptIds": [
+        "benefits-realization-and-organizational-change"
+      ]
+    },
+    {
+      "id": 5,
+      "question_en": "During a business status meeting, the project manager acknowledges that several market conditions have recently changed dramatically. As a result, the expected value of the project in progress may be threatened. What should the project manager do next?",
+      "question_ko": "비즈니스 상태 회의에서, 프로젝트 관리자는 여러 시장 조건이 최근 크게 변했다는 것을 인정합니다. 결과적으로 진행 중인 프로젝트의 기대 가치가 위협받을 수 있습니다. 프로젝트 관리자는 다음으로 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Stop the project immediately due to uncertainty that the project will deliver the expected value.",
+          "text_ko": "프로젝트가 기대 가치를 인도할지 불확실하기 때문에 즉시 프로젝트를 중단합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Continue with the project since the project manager has not been formally informed of any change in market conditions.",
+          "text_ko": "프로젝트 관리자가 시장 조건 변화에 대해 공식적으로 통보받지 않았으므로 프로젝트를 계속 진행합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Ask the project team to investigate the evolution of market conditions during the last 6 months.",
+          "text_ko": "지난 6개월 동안의 시장 조건 변화를 조사하도록 프로젝트 팀에게 요청합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Meet with the project sponsor to discuss the information and ask if the organization still supports delivery of the project.",
+          "text_ko": "정보를 논의하고 조직이 여전히 프로젝트 인도를 지원하는지 묻기 위해 프로젝트 스폰서와 만납니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "불확실성 때문에 즉시 프로젝트를 중단하는 것은 성급한 결정입니다. PM은 먼저 스폰서와 상황을 논의하고 조직이 계속 진행할지 결정해야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "시장 조건의 변화를 인식했음에도 공식 통보를 기다리며 계속 진행하는 것은 수동적이고 잠재적으로 위험한 접근입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "팀에게 시장 조건 조사를 요청하는 것은 시간이 걸리며 핵심 의사결정자인 스폰서의 입장을 파악하지 못합니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "프로젝트 가치의 기초가 된 가정과 조건은 언제든지 변할 수 있습니다. PM은 스폰서와 만나 조직이 여전히 프로젝트를 지원하는지 확인하고 프로젝트가 여전히 기대 가치를 인도할 것인지 검토해야 합니다."
+        }
+      },
+      "solution_en": "When market conditions threaten expected project value, the project manager must consult the sponsor to determine if the organization still supports the project.",
+      "solution_ko": "시장 조건이 기대 프로젝트 가치를 위협할 때, PM은 스폰서와 상의하여 조직이 여전히 프로젝트를 지원하는지 확인해야 합니다.",
+      "source": "O'Reilly Platform (Scisco)/Ch.1; PMBOK 6th Ed/1.2.6.2/33",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 6,
+      "question_en": "At the end of a large project, the stakeholders realize that the achieved benefits are not the same as the expected benefits. Which item, if poorly defined at the start of the project, could have led to this issue?",
+      "question_ko": "대형 프로젝트가 끝날 때, 이해관계자들은 달성된 혜택이 기대 혜택과 동일하지 않다는 것을 깨닫습니다. 프로젝트 시작 시 어떤 항목이 잘못 정의되었다면 이 문제로 이어졌을 수 있습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Requirements documentation",
+          "text_ko": "요구사항 문서"
+        },
+        {
+          "key": "B",
+          "text_en": "Project scope",
+          "text_ko": "프로젝트 스코프"
+        },
+        {
+          "key": "C",
+          "text_en": "Business case",
+          "text_ko": "비즈니스 케이스"
+        },
+        {
+          "key": "D",
+          "text_en": "Benefits metrics",
+          "text_ko": "혜택 지표"
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "요구사항 문서가 잘못 정의되면 잘못된 제품이 만들어질 수 있지만, 혜택이 달성되었는지 감지하는 문제는 혜택 지표의 부재와 더 직접적으로 관련됩니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "프로젝트 스코프가 잘못 정의되면 인도물이 잘못될 수 있지만, 기대 혜택과 달성 혜택의 불일치는 측정 지표의 문제입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "비즈니스 케이스는 혜택을 식별하지만, 혜택이 실제로 달성되었는지 추적하고 감지하는 것은 혜택 지표를 통해 이루어집니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "혜택이 달성되고 있는지 감지하려면 프로젝트 생명주기 동안 혜택이 달성되고 있음을 확인하기 위한 지표 모니터링이 필요합니다. 혜택 지표가 잘못 정의되면 혜택이 달성되고 있는지 알 수 없습니다."
+        }
+      },
+      "solution_en": "Benefits metrics must be defined to monitor whether benefits are being achieved throughout the project lifecycle.",
+      "solution_ko": "혜택 지표는 프로젝트 생명주기 동안 혜택이 달성되고 있는지 모니터링하기 위해 반드시 정의되어야 합니다.",
+      "source": "Mastering PM: Time, Cost, Quality (Wilson)/9; PMBOK 6th Ed/1.2.6.2/33",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 7,
+      "question_en": "After nine months, a project concludes its first phase with the release of a new product to the customer. The client is dissatisfied and states that many key features are missing. What should the project manager do first in order to address this issue?",
+      "question_ko": "9개월 후, 프로젝트가 고객에게 새 제품을 출시하며 첫 번째 단계를 마칩니다. 고객이 많은 핵심 기능이 누락되었다며 불만족을 표명합니다. 프로젝트 관리자는 이 문제를 해결하기 위해 먼저 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Evaluate the missing features with the client and develop a plan to include them in the next nine-month project phase.",
+          "text_ko": "고객과 함께 누락된 기능을 평가하고 다음 9개월 프로젝트 단계에 포함할 계획을 개발합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Review the project plan to determine if the missing features were part of the original scope or if they were added later.",
+          "text_ko": "누락된 기능이 원래 스코프의 일부였는지 아니면 나중에 추가되었는지 파악하기 위해 프로젝트 계획을 검토합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Request additional funding in order to reduce the current release cycle timeline so the team can deliver value sooner.",
+          "text_ko": "팀이 더 빨리 가치를 인도할 수 있도록 현재 출시 주기 일정을 줄이기 위해 추가 자금을 요청합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Restart the project by implementing an agile life cycle and incorporate the creation of a minimum viable product (MVP).",
+          "text_ko": "애자일 생명주기를 구현하고 최소 기능 제품(MVP) 생성을 포함하여 프로젝트를 재시작합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "누락된 기능에 대한 포괄적인 이해 없이 다음 단계에 포함할 계획을 세우는 것은 섣부릅니다. 먼저 누락된 기능이 원래 스코프의 일부였는지 파악해야 합니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "PM은 먼저 프로젝트 계획과 스코프를 검토하여 누락된 기능이 원래 스코프의 일부였는지 아니면 나중에 추가되었는지 파악해야 합니다. 이를 통해 누락된 이유를 파악하고 적절한 해결 계획을 수립할 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "추가 자금을 요청하는 것은 상황을 더 잘 이해한 후에 해야 할 일입니다. 근본 원인 파악 없이 자금을 요청하는 것은 정당화하기 어렵습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "프로젝트를 재시작하는 것은 극단적인 조치이며 가능하거나 필요하지 않을 수 있습니다."
+        }
+      },
+      "solution_en": "Reviewing the project plan first determines whether missing features were in scope or added later — a critical distinction before deciding on corrective action.",
+      "solution_ko": "프로젝트 계획을 먼저 검토하면 누락된 기능이 스코프 내에 있었는지 나중에 추가되었는지 파악할 수 있어 시정 조치 결정에 중요한 기반이 됩니다.",
+      "source": "PMBOK 7th Ed (2021)/2.6",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 8,
+      "question_en": "A scrum team is using a hybrid approach with 2-week sprints. The minimum viable product (MVP) release is at the end of the current sprint, and the team has completed the must have and should have features; however, some of the other priority features are still in development. The project manager is preparing the monthly report for the steering committee. What should the project manager recommend?",
+      "question_ko": "스크럼 팀이 2주 스프린트로 혼합 접근법을 사용하고 있습니다. 최소 기능 제품(MVP) 출시가 현재 스프린트 말에 예정되어 있으며, 팀은 필수(must have) 및 권장(should have) 기능을 완성했지만, 일부 다른 우선 기능은 아직 개발 중입니다. 프로젝트 관리자가 운영위원회를 위한 월간 보고서를 준비하고 있습니다. 프로젝트 관리자는 무엇을 권장해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Reschedule the MVP release review until all the agreed-on features have been completed.",
+          "text_ko": "합의된 모든 기능이 완성될 때까지 MVP 출시 검토를 일정 변경합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Update the project management plan to include in the release only the features completed.",
+          "text_ko": "완성된 기능만 출시에 포함하도록 프로젝트 관리 계획을 업데이트합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Complete the sprint review and release the MVP with the completed features.",
+          "text_ko": "스프린트 검토를 완료하고 완성된 기능으로 MVP를 출시합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Estimate the effort required and submit a change request to add more resources to the team.",
+          "text_ko": "필요한 노력을 추정하고 팀에 더 많은 자원을 추가하기 위한 변경 요청을 제출합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "MVP 출시를 연기하면 사용자들의 핵심 기능에 대한 피드백을 받는 것이 지연됩니다. 필수 및 권장 기능이 완성되면 MVP를 출시할 준비가 된 것입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "프로젝트 관리 계획을 업데이트하는 것은 MVP 목표와 일치하지 않습니다. MVP는 핵심 기능이 있는 제품을 출시하기 위한 것입니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "MVP의 목표는 제품 개념을 검증하고 사용자로부터 피드백을 받는 데 필요한 핵심 기능이 있는 제품을 출시하는 것입니다. 팀이 MoSCoW의 필수 및 권장 기능을 완성했으므로, 완성된 기능으로 MVP를 출시하는 것이 올바른 권장 사항입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "팀이 이미 가장 중요한 기능을 완성했으므로 더 많은 자원을 추가하는 것은 이 경우 최선의 해결책이 아닙니다."
+        }
+      },
+      "solution_en": "Since must-have and should-have features are complete (MoSCoW), the MVP should be released as planned to gather user feedback.",
+      "solution_ko": "필수 및 권장 기능이 완성되었으므로(MoSCoW), MVP는 사용자 피드백을 수집하기 위해 계획대로 출시되어야 합니다.",
+      "source": "PMBOK 7th Ed (2022)/2.3",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 9,
+      "question_en": "A new system is being developed to replace an existing manual process. During a sprint demo, business stakeholders expressed the concern that they would not gain any value from using this system. What should the project manager do next?",
+      "question_ko": "기존 수동 프로세스를 대체하기 위해 새로운 시스템이 개발되고 있습니다. 스프린트 데모 중, 비즈니스 이해관계자들이 이 시스템을 사용해도 가치를 얻지 못할 것이라는 우려를 표명합니다. 프로젝트 관리자는 다음으로 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Discuss this with the product manager and identify new user stories to address business concerns.",
+          "text_ko": "제품 관리자와 논의하고 비즈니스 우려를 해결하기 위해 새로운 사용자 스토리를 파악합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Call a steering committee meeting to determine critical success factors for the project.",
+          "text_ko": "프로젝트의 핵심 성공 요인을 파악하기 위해 운영위원회 회의를 소집합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Create a project benefits management plan and review it with the stakeholders.",
+          "text_ko": "프로젝트 혜택 관리 계획을 작성하고 이해관계자들과 함께 검토합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Review the performance metrics with stakeholders to ensure the system accomplished agreed-upon metrics.",
+          "text_ko": "시스템이 합의된 지표를 달성했는지 확인하기 위해 이해관계자들과 성과 지표를 검토합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "새로운 사용자 스토리를 파악하는 것은 성과 지표를 검토하고 이해관계자의 구체적인 우려를 이해한 후에 해야 할 일입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "운영위원회 회의 소집은 이해관계자의 구체적인 우려를 직접 해결하는 가장 효과적인 방법이 아닙니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "혜택 관리 계획을 작성하는 것은 프로젝트 초기에 해야 할 일이며, 이해관계자들이 이미 우려를 표명한 후에는 시기가 늦었습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "PM은 먼저 이해관계자들과 성과 지표를 검토하여 시스템이 합의된 지표를 달성하고 있는지 확인해야 합니다. 이를 통해 이해관계자의 구체적인 우려를 파악하고 시스템이 실제로 그들의 필요를 충족하는지 확인할 수 있습니다."
+        }
+      },
+      "solution_en": "Reviewing performance metrics with stakeholders identifies whether the system meets agreed-upon benchmarks and addresses the root cause of their value concerns.",
+      "solution_ko": "이해관계자들과 성과 지표를 검토하면 시스템이 합의된 벤치마크를 충족하는지 파악하고 가치 우려의 근본 원인을 해결할 수 있습니다.",
+      "source": "Benefits Realization Management Practice Guide/4.1; PMBOK 7th Ed/2.4.8",
+      "conceptIds": [
+        "performance-measurement-and-ev-metrics"
+      ]
+    },
+    {
+      "id": 10,
+      "question_en": "A project manager is tasked with addressing the product owner's concerns about the delivery of the minimum viable product (MVP) in sprint four. Which of the following metrics should the project manager use?",
+      "question_ko": "프로젝트 관리자가 스프린트 4에서 최소 기능 제품(MVP) 인도에 대한 제품 책임자의 우려를 해결해야 합니다. 프로젝트 관리자는 어떤 지표를 사용해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Scheduled Performance Index (SPI)",
+          "text_ko": "일정 성과 지수(SPI)"
+        },
+        {
+          "key": "B",
+          "text_en": "Schedule Cost Index (SCI)",
+          "text_ko": "일정 비용 지수(SCI)"
+        },
+        {
+          "key": "C",
+          "text_en": "Burndown Rate",
+          "text_ko": "번다운 비율"
+        },
+        {
+          "key": "D",
+          "text_en": "Qualitative Risk Analysis",
+          "text_ko": "정성적 리스크 분석"
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "SPI는 전체 프로젝트 일정을 얼마나 잘 충족하고 있는지 측정하지만, 단일 스프린트 내 MVP 인도 진행을 직접 추적하지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "SCI는 프로젝트 수준에서 비용 성과를 평가하며 스프린트 수준의 MVP 인도 진행을 추적하지 않습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "번다운 비율은 스프린트 백로그에 남은 작업량을 보여주는 핵심 애자일 지표입니다. 번다운 비율이 0에 가까워지면 팀이 스프린트 목표를 달성할 가능성이 높음을 나타내므로 MVP 인도에 대한 제품 책임자의 우려를 해결하는 데 적합합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "정성적 리스크 분석은 리스크를 파악하고 평가하는 프로세스로, MVP 인도 진행을 추적하는 지표가 아닙니다."
+        }
+      },
+      "solution_en": "The burndown rate shows remaining work in the sprint backlog and is the key agile metric for tracking sprint progress and MVP delivery.",
+      "solution_ko": "번다운 비율은 스프린트 백로그의 남은 작업량을 보여주며, 스프린트 진행과 MVP 인도를 추적하는 핵심 애자일 지표입니다.",
+      "source": "PMBOK 7th Ed (2022)/2.7",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 11,
+      "question_en": "A business environment has become unstable because a stakeholder has altered the project deliverables and outcomes in the middle of the execution phase. Taking the stakeholder into consideration, how should the project manager ensure the project benefits are delivered?",
+      "question_ko": "이해관계자가 실행 단계 중간에 프로젝트 인도물과 결과를 변경하여 비즈니스 환경이 불안정해졌습니다. 해당 이해관계자를 고려하여, 프로젝트 관리자는 프로젝트 혜택이 인도되도록 어떻게 보장해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ensure the project team agrees to the project management plan and provide the stakeholder with constant updates.",
+          "text_ko": "프로젝트 팀이 프로젝트 관리 계획에 동의하고 이해관계자에게 지속적인 업데이트를 제공합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Combine both agile and predictive approaches and manage changes to the overall scope with minimal deviations.",
+          "text_ko": "애자일과 예측형 접근법을 결합하고 최소한의 편차로 전체 스코프 변경을 관리합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Ensure the project's deliverables and objectives are tailored to the initial requirements.",
+          "text_ko": "프로젝트 인도물과 목표가 초기 요구사항에 맞게 조정되도록 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Engage the stakeholder based on level of impact and ensure their requirements are captured adequately according to change management process.",
+          "text_ko": "영향 수준을 기반으로 이해관계자를 참여시키고 변화 관리 프로세스에 따라 요구사항이 적절히 파악되도록 합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "지속적인 업데이트 제공은 소통의 일부이지만, 근본 문제인 이해관계자의 변경 요구사항을 처리하지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "방법론을 결합하는 것이 도움이 될 수 있지만, 이해관계자를 적절히 참여시키고 변화 관리 프로세스를 따르는 것이 핵심입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "이해관계자가 이미 요구사항을 변경했으므로 초기 요구사항에만 맞추는 것은 이해관계자의 현재 필요를 무시하는 것입니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "PM은 이해관계자를 영향 수준을 기반으로 적절히 참여시키고 변화 관리 프로세스에 따라 요구사항이 파악되도록 해야 합니다. 이는 이해관계자의 필요를 존중하면서 통제된 방식으로 변경을 관리합니다."
+        }
+      },
+      "solution_en": "Engaging the stakeholder based on impact level and processing changes through the change management process respects stakeholder needs while maintaining project control.",
+      "solution_ko": "영향 수준에 따라 이해관계자를 참여시키고 변화 관리 프로세스를 통해 변경사항을 처리하면 이해관계자의 필요를 존중하면서 프로젝트 통제를 유지합니다.",
+      "source": "Making Projects Work (Bourne)/2; PMBOK 6th Ed/13/518",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 12,
+      "question_en": "A project manager is assessing two investment opportunities. Project A is expected to generate cash flows of $100,000 per year for five years, with an initial investment of $350,000. Project B is expected to generate cash flows of $80,000 per year for five years, with an initial investment of $250,000. The company's required rate of return is 10%. What is the Net Present Value (NPV) for each project, and which one should the project manager recommend?",
+      "question_ko": "프로젝트 관리자가 두 가지 투자 기회를 평가하고 있습니다. 프로젝트 A는 초기 투자 $350,000에 5년간 매년 $100,000의 현금 흐름을 창출할 것으로 예상됩니다. 프로젝트 B는 초기 투자 $250,000에 5년간 매년 $80,000의 현금 흐름을 창출할 것으로 예상됩니다. 회사의 요구 수익률은 10%입니다. 각 프로젝트의 순현재가치(NPV)는 얼마이며, 프로젝트 관리자는 어느 프로젝트를 권장해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "NPV for Project A is $29,079, and for Project B is $53,263. Recommend Project A because it generates higher annual cash flows.",
+          "text_ko": "프로젝트 A의 NPV는 $29,079이고 프로젝트 B는 $53,263입니다. 더 높은 연간 현금 흐름을 창출하므로 프로젝트 A를 권장합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "NPV for Project A is –$29,079, and for Project B is –$53,263. Recommend neither project because both have negative NPVs.",
+          "text_ko": "프로젝트 A의 NPV는 –$29,079이고 프로젝트 B는 –$53,263입니다. 두 프로젝트 모두 NPV가 음수이므로 어느 프로젝트도 권장하지 않습니다."
+        },
+        {
+          "key": "C",
+          "text_en": "NPV for Project A is $29,079, and for Project B is $53,263. Recommend neither project because their NPVs are similar.",
+          "text_ko": "프로젝트 A의 NPV는 $29,079이고 프로젝트 B는 $53,263입니다. NPV가 유사하므로 어느 프로젝트도 권장하지 않습니다."
+        },
+        {
+          "key": "D",
+          "text_en": "NPV for Project A is $29,079, and for Project B is $53,263. Recommend Project B because it has the higher NPV.",
+          "text_ko": "프로젝트 A의 NPV는 $29,079이고 프로젝트 B는 $53,263입니다. 더 높은 NPV를 가지므로 프로젝트 B를 권장합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "더 높은 연간 현금 흐름이 더 높은 NPV를 의미하지 않습니다. NPV는 초기 투자를 차감하므로 프로젝트 B의 더 낮은 초기 투자($250,000)로 인해 NPV가 더 높습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "계산 오류입니다. 할인율 10%, 5년 연금 계수 3.79079를 적용하면 두 프로젝트 모두 양의 NPV를 가집니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "NPV가 유사하지 않습니다: 프로젝트 A = $29,079, 프로젝트 B = $53,263으로 상당한 차이가 있습니다. 상호 배타적인 프로젝트 중에서는 NPV가 높은 것을 선택합니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "10% 할인율, 5년 연금 계수 3.79079로 계산: 프로젝트 A: PV=$379,079, NPV=$29,079 / 프로젝트 B: PV=$303,263, NPV=$53,263. 두 NPV가 모두 양수이므로 두 프로젝트 모두 허용 가능하지만, 프로젝트 B가 더 높은 NPV로 더 많은 가치를 창출합니다."
+        }
+      },
+      "solution_en": "Using 10% discount rate and annuity factor 3.79079: Project A NPV=$29,079, Project B NPV=$53,263. Both are positive but Project B adds more value — choose the higher NPV.",
+      "solution_ko": "10% 할인율과 연금 계수 3.79079를 사용: 프로젝트 A NPV=$29,079, 프로젝트 B NPV=$53,263. 둘 다 양수이지만 프로젝트 B가 더 많은 가치를 창출합니다.",
+      "source": "PMBOK 7th Ed (2022)/2.7.2.5",
+      "conceptIds": [
+        "financial-value-analysis-npv-irr"
+      ]
+    },
+    {
+      "id": 13,
+      "question_en": "A project manager seeks to alleviate the IT department's workload while empowering the business to initiate new implementations and lay the groundwork for future solutions. How should the project manager facilitate this transition?",
+      "question_ko": "프로젝트 관리자가 비즈니스가 새로운 구현을 시작하고 미래 솔루션의 기반을 마련할 수 있도록 역량을 강화하면서 IT 부서의 업무 부담을 줄이고자 합니다. 프로젝트 관리자는 이 전환을 어떻게 퍼실리테이션해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Enforce stringent IT governance policies centralized within the IT department, ensuring uniformity and control over all IT endeavors.",
+          "text_ko": "IT 부서 중심의 엄격한 IT 거버넌스 정책을 시행하여 모든 IT 활동의 균일성과 통제를 보장합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Mandate comprehensive IT project proposals to the IT department for assessment and approval before any project can commence.",
+          "text_ko": "프로젝트 시작 전에 IT 부서에 포괄적인 IT 프로젝트 제안서를 의무적으로 제출하여 평가 및 승인을 받도록 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Enable business units to use a simplified IT project management platform to initiate and monitor projects independently.",
+          "text_ko": "비즈니스 단위가 독립적으로 프로젝트를 시작하고 모니터링하기 위해 간소화된 IT 프로젝트 관리 플랫폼을 사용할 수 있도록 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Collaborate with cross-functional IT business teams to jointly plan and execute IT projects, fostering cooperation between stakeholders.",
+          "text_ko": "이해관계자 간 협력을 촉진하기 위해 다기능 IT 비즈니스 팀과 협력하여 IT 프로젝트를 공동으로 계획하고 실행합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "엄격한 IT 거버넌스 정책을 시행하는 것은 관료주의를 증가시키고 IT 부서의 업무 부담을 줄이거나 비즈니스 단위에 자율권을 부여하지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "포괄적인 제안서를 IT 부서에 제출하도록 의무화하는 것은 통제를 중앙화하여 병목 현상을 만들고 IT 부서의 업무 부담을 오히려 증가시킵니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "비즈니스 단위가 간소화된 플랫폼으로 독립적으로 프로젝트를 시작하고 모니터링할 수 있도록 하면 IT 부서의 부담을 줄이면서 투명성과 감독을 유지하고 비즈니스의 자율성을 강화합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "다기능 팀과의 협업은 공동 계획과 실행에 유용하지만, 비즈니스 단위가 독립적으로 프로젝트를 시작하도록 역량을 강화하지는 않습니다."
+        }
+      },
+      "solution_en": "Enabling business units to independently initiate and monitor projects via a simplified platform reduces IT workload while maintaining oversight.",
+      "solution_ko": "비즈니스 단위가 간소화된 플랫폼으로 독립적으로 프로젝트를 시작하고 모니터링할 수 있도록 하면 감독을 유지하면서 IT 업무 부담을 줄입니다.",
+      "source": "PMBOK 7th Ed (2022)/3.12; 4.2.4",
+      "conceptIds": [
+        "benefits-realization-and-organizational-change"
+      ]
+    },
+    {
+      "id": 14,
+      "question_en": "Teams A and B are working on two different agile projects for the same customer. They are using the same method to calculate units of work, and each iteration is 2 weeks long. In the first two iterations, team A completed 150 units of work and team B completed 200 units of work. Both teams' tasks are getting completed as planned. The customer reported 5 errors per unit of work for Team A and 10 errors per unit of work for Team B. What conclusion should the project manager have regarding the teams and their performances?",
+      "question_ko": "팀 A와 팀 B는 동일한 고객을 위해 두 개의 다른 애자일 프로젝트를 진행하고 있습니다. 두 팀은 동일한 방법으로 작업 단위를 계산하며 각 반복은 2주입니다. 처음 두 반복에서 팀 A는 150단위 작업을, 팀 B는 200단위 작업을 완성했습니다. 두 팀의 작업은 계획대로 완성되고 있습니다. 고객은 팀 A의 경우 작업 단위당 5개 오류, 팀 B의 경우 단위당 10개 오류를 보고했습니다. 팀과 성과에 대해 프로젝트 관리자는 어떤 결론을 내려야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Team B is performing better than Team A as they have completed more units of work in the same duration.",
+          "text_ko": "팀 B는 동일한 기간에 더 많은 작업 단위를 완성했으므로 팀 A보다 더 잘 수행하고 있습니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Teams A and B have completed their tasks as planned; therefore, they are both performing equally.",
+          "text_ko": "팀 A와 팀 B 모두 계획대로 작업을 완성했으므로 두 팀 모두 동등하게 수행하고 있습니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Team A is performing better than Team B because there are fewer errors per unit of work.",
+          "text_ko": "팀 A는 작업 단위당 오류가 더 적으므로 팀 B보다 더 잘 수행하고 있습니다."
+        },
+        {
+          "key": "D",
+          "text_en": "The teams have completed just two iterations; therefore, it is too early to assess their performance.",
+          "text_ko": "팀들이 겨우 두 번의 반복을 완료했으므로 성과를 평가하기에 너무 이릅니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "더 많은 작업 단위를 완성하는 것이 더 나은 성과를 의미하지 않습니다. 두 팀 모두 일정대로 진행하고 있으므로 일정은 비교 요소가 아닙니다. 품질(결함 수)이 핵심 비교 요소입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "두 팀이 계획대로 작업을 완성했지만 동등하게 수행하는 것은 아닙니다. 팀 B는 단위당 오류가 두 배 많아 품질이 낮습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "팀 A는 작업 단위당 오류가 더 적기 때문에 팀 B보다 더 잘 수행하고 있습니다. 애자일 개발에서는 각 반복이 끝날 때 작업 증분이 생성되어 고객에게 시연되므로 품질이 중요한 역할을 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "애자일 성과 평가는 결함 데이터가 있는 두 반복 후에도 유효합니다. 품질 지표는 명확한 성과 차이를 보여줍니다."
+        }
+      },
+      "solution_en": "Since both teams are on schedule, quality (errors per unit) is the differentiator. Team A's lower error rate means better performance.",
+      "solution_ko": "두 팀 모두 일정대로 진행하므로 품질(단위당 오류)이 차별화 요소입니다. 팀 A의 낮은 오류율이 더 나은 성과를 의미합니다.",
+      "source": "O'Reilly Platform/Agile Metrics in Action/Ch.1; PMBOK 6th Ed/8/287",
+      "conceptIds": [
+        "agile-manifesto-and-methods"
+      ]
+    },
+    {
+      "id": 15,
+      "question_en": "In the middle of project execution, the main project sponsor leaves, and a new sponsor is assigned. The new sponsor is requesting major revisions to the deliverables. What should the project manager do?",
+      "question_ko": "프로젝트 실행 중간에 주요 프로젝트 스폰서가 떠나고 새 스폰서가 배정됩니다. 새 스폰서가 인도물에 대한 주요 수정을 요청하고 있습니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Implement all the changes to the deliverables.",
+          "text_ko": "인도물에 대한 모든 변경사항을 실행합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Request additional resources to adjust the deliverables.",
+          "text_ko": "인도물을 조정하기 위해 추가 자원을 요청합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Evaluate the possible impacts of the changes.",
+          "text_ko": "변경사항의 가능한 영향을 평가합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Extend the project timeline to include the changes.",
+          "text_ko": "변경사항을 포함하기 위해 프로젝트 일정을 연장합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "영향 평가 없이 모든 변경사항을 즉시 실행하는 것은 프로젝트 일정, 예산, 스코프에 예상치 못한 결과를 초래할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "추가 자원을 요청하는 것은 변경사항의 영향을 먼저 평가한 후에 해야 할 일입니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "PM은 새 스폰서가 요청한 변경사항의 잠재적 영향을 평가해야 합니다. 여기에는 프로젝트 일정, 예산, 스코프, 품질에 대한 영향을 평가하는 것이 포함됩니다. 그런 다음 새 스폰서 및 이해관계자들과 소통하고 최선의 조치를 결정합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "변경사항의 영향을 먼저 파악하지 않고 일정을 연장하는 것은 섣부른 결정입니다."
+        }
+      },
+      "solution_en": "Before acting on any change request, the project manager must evaluate the potential impacts on schedule, budget, scope, and quality.",
+      "solution_ko": "변경 요청에 대한 조치를 취하기 전에, PM은 일정, 예산, 스코프, 품질에 대한 잠재적 영향을 평가해야 합니다.",
+      "source": "Fundamentals of Technology PM 2nd Ed (Garton)/5/182; PMBOK 7th Ed/2.1, 2.5.7",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 16,
+      "question_en": "A project manager is developing a project management plan. The project duration is set for three months due to regulatory compliance and dependency on senior staff. Which two project objectives should be defined well enough to be included in the project management plan? (Choose two)",
+      "question_ko": "프로젝트 관리자가 프로젝트 관리 계획을 개발하고 있습니다. 규제 컴플라이언스와 시니어 직원에 대한 의존성으로 인해 프로젝트 기간이 3개월로 설정되어 있습니다. 프로젝트 관리 계획에 포함될 수 있도록 충분히 잘 정의되어야 할 두 가지 프로젝트 목표는 무엇입니까? (2개 선택)",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Improve the processes and reduce rework by keeping senior staff turnover to a minimum level.",
+          "text_ko": "시니어 직원 이직률을 최소 수준으로 유지함으로써 프로세스를 개선하고 재작업을 줄입니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Develop detailed process maps to align operational activities with the new software system.",
+          "text_ko": "운영 활동을 새 소프트웨어 시스템과 정렬하기 위한 상세한 프로세스 맵을 개발합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Enhance the development process by redesigning new templates for the design documentation.",
+          "text_ko": "설계 문서를 위한 새로운 템플릿을 재설계하여 개발 프로세스를 강화합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Reduce the company's environmental footprint by using detailed recycling guidelines for all employees.",
+          "text_ko": "모든 직원을 위한 상세한 재활용 가이드라인을 사용하여 회사의 환경 발자국을 줄입니다."
+        },
+        {
+          "key": "E",
+          "text_en": "Identify training needs and create a development plan to complete the delivery in three months.",
+          "text_ko": "교육 필요성을 파악하고 3개월 내에 인도를 완료하기 위한 개발 계획을 만듭니다."
+        }
+      ],
+      "answer": "A,C",
+      "multi": true,
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "프로세스를 개선하고 재작업을 줄이는 것은 시니어 직원 이직률과 관련된 잠재적 리스크를 다루며, 프로젝트의 제약(시니어 직원 의존성)에 정렬되어 있습니다. 고정된 3개월 기간 내에 성공적으로 프로젝트를 완성하는 것을 지원합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "프로세스 맵 개발은 고정된 3개월 기간이라는 제약과 명시적으로 연결되지 않습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "설계 문서 템플릿 재설계를 통한 개발 프로세스 강화는 규제 컴플라이언스와 자원 제약 내에서 프로젝트 목표 달성에 직접적으로 기여합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "환경 발자국 감소는 프로젝트의 제약(규제 컴플라이언스, 시니어 직원 의존성, 3개월 기간)과 명시적으로 연결되지 않습니다."
+        },
+        "E": {
+          "correct": false,
+          "explanation_ko": "교육 필요성 파악과 개발 계획 작성은 시나리오에 언급된 고유한 제약(규제 컴플라이언스, 시니어 직원 의존성)을 다루지 않습니다."
+        }
+      },
+      "solution_en": "Objectives A and C directly address the project's specific constraints (regulatory compliance and senior staff dependency) within the three-month timeline.",
+      "solution_ko": "목표 A와 C는 3개월 기간 내에서 프로젝트의 특정 제약(규제 컴플라이언스, 시니어 직원 의존성)을 직접 다룹니다.",
+      "source": "PMBOK 7th Ed (2022)/2.7",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 17,
+      "question_en": "A development project's earned value is US$640,000, and the planned value is US$800,000. What should the project manager do to control this variance?",
+      "question_ko": "개발 프로젝트의 획득 가치는 US$640,000이고 계획 가치는 US$800,000입니다. 프로젝트 관리자는 이 분산을 통제하기 위해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Calculate the earned value and change the project baseline to reflect the latest project status.",
+          "text_ko": "획득 가치를 계산하고 최신 프로젝트 상태를 반영하기 위해 프로젝트 기준선을 변경합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Reallocate US$160,000 to project tasks that are behind schedule.",
+          "text_ko": "일정이 지연된 프로젝트 작업에 US$160,000을 재배분합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Use project performance measurement and decide on corrective actions.",
+          "text_ko": "프로젝트 성과 측정을 사용하여 시정 조치를 결정합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Release US$160,000 to the supplier to fast-track the project.",
+          "text_ko": "프로젝트를 신속 처리하기 위해 공급업체에 US$160,000을 지급합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "프로젝트 기준선은 변경 통제 프로세스를 거치지 않고는 변경할 수 없습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "자금을 재배분하는 것은 프로젝트 스폰서나 상위 관리진의 재량에 따라 이루어지며, 일정 지연 때문에 임의로 할 수 없습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "획득 가치가 계획 가치보다 적으므로 프로젝트는 일정이 지연되고 있습니다(SPI < 1). PM은 성과 측정을 사용하여 시정 조치를 결정해야 합니다. 이는 분산의 원인을 파악하고 프로젝트를 정상 궤도로 되돌리기 위한 적절한 조치를 취하는 것을 포함합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "공급업체에 자금을 지급하여 프로젝트를 신속 처리하는 것은 분석 없이 자금 사용 결정을 내리는 것으로 적절하지 않습니다."
+        }
+      },
+      "solution_en": "EV < PV means the project is behind schedule. The project manager should use performance measurement to identify the cause and decide on corrective actions.",
+      "solution_ko": "EV < PV는 프로젝트가 일정에 뒤처져 있음을 의미합니다. PM은 성과 측정을 사용하여 원인을 파악하고 시정 조치를 결정해야 합니다.",
+      "source": "PMBOK 5th Ed/Variance Analysis/139; PM Portable Handbook 3rd Ed (Cleland)/7/343",
+      "conceptIds": [
+        "performance-measurement-and-ev-metrics"
+      ]
+    },
+    {
+      "id": 18,
+      "question_en": "A project manager is finishing a project and the sponsor is requesting insights on benefits realization. How can the project manager calculate project outcomes value?",
+      "question_ko": "프로젝트 관리자가 프로젝트를 마무리하고 있으며 스폰서가 혜택 실현에 대한 통찰을 요청하고 있습니다. 프로젝트 관리자는 어떻게 프로젝트 결과 가치를 계산할 수 있습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Evaluate qualitative and quantitative project benefits.",
+          "text_ko": "정성적 및 정량적 프로젝트 혜택을 평가합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Price tangible benefits and divide them by expenses.",
+          "text_ko": "유형 혜택의 가격을 책정하고 비용으로 나눕니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Conduct a retrospective financial assessment.",
+          "text_ko": "소급 재무 평가를 실시합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Assess outcomes and compare them to the budget.",
+          "text_ko": "결과를 평가하고 예산과 비교합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "프로젝트 결과 가치를 계산하기 위해 PM은 정성적 혜택(고객 만족도, 평판 향상)과 정량적 혜택(비용 절감, 수익 증가) 모두를 평가해야 합니다. 혜택은 직접 및 간접 측정치를 통해 평가됩니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "유형 혜택만 가격 책정하면 정성적 혜택(고객 만족도, 브랜드 가치 등)이 포함되지 않아 전체 가치를 포착하지 못합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "소급 재무 평가는 재무 투입물에만 초점을 맞추며 전체 혜택 범위를 다루지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "결과를 예산과 비교하는 것은 비용 효율성에 초점을 맞추지만 모든 혜택 유형을 포착하지 못합니다."
+        }
+      },
+      "solution_en": "Project benefits include both qualitative and quantitative dimensions. Only evaluating both provides a complete picture of the project outcomes' value.",
+      "solution_ko": "프로젝트 혜택에는 정성적 및 정량적 두 가지 차원이 포함됩니다. 두 가지를 모두 평가해야만 프로젝트 결과 가치의 완전한 그림을 얻을 수 있습니다.",
+      "source": "O'Reilly Platform/Benefits Realization Management/2.1; PMBOK 7th Ed/2.7",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 19,
+      "question_en": "A project manager works in a matrix organization and manages an internal software development project to improve the company's tracking system. The project is scheduled to be completed in one month. Some benefits will be realized once the system is online, however, full benefits will not be realized for a while. Although the project manager will track benefits through project closure, they are concerned about tracking the benefits of post-project activities. What should the project manager do?",
+      "question_ko": "프로젝트 관리자가 매트릭스 조직에서 회사의 추적 시스템을 개선하기 위한 내부 소프트웨어 개발 프로젝트를 관리합니다. 프로젝트는 한 달 안에 완료될 예정입니다. 일부 혜택은 시스템이 온라인 상태가 되면 실현되지만 전체 혜택은 한동안 실현되지 않을 것입니다. 프로젝트 종료까지 혜택을 추적하겠지만, 프로젝트 사후 활동의 혜택 추적에 대해 우려하고 있습니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Request that a new project be initiated to monitor and report the achievement of benefits.",
+          "text_ko": "혜택 달성을 모니터링하고 보고하기 위해 새 프로젝트를 시작하도록 요청합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Revise the benefits management plan to extend the project until all benefits are realized.",
+          "text_ko": "모든 혜택이 실현될 때까지 프로젝트를 연장하기 위해 혜택 관리 계획을 수정합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Update the work breakdown structure (WBS) and project schedule with tasks to track benefits realization.",
+          "text_ko": "혜택 실현을 추적하는 작업으로 WBS와 프로젝트 일정을 업데이트합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Coordinate with the benefits owner to monitor the achievement of benefits after the project closes.",
+          "text_ko": "프로젝트 종료 후 혜택 달성을 모니터링하기 위해 혜택 소유자와 조율합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "혜택 모니터링을 위해 새 프로젝트를 시작하는 것은 시간이 많이 걸리고 비용이 많이 듭니다. 혜택 소유자와 조율하는 것이 더 효율적입니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "혜택이 모두 실현될 때까지 프로젝트를 연장하는 것은 비용이 많이 들고 필요하지 않습니다. 혜택 실현은 프로젝트 종료 후에도 계속될 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "WBS와 일정을 업데이트하는 것은 혜택 소유자와 조율할 수 있다면 불필요합니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "혜택 소유자는 프로젝트 혜택이 실현되도록 보장하는 책임자입니다. PM이 프로젝트 종료 후 혜택 달성을 모니터링하기 위해 혜택 소유자와 조율하는 것이 가장 효율적이고 효과적인 방법입니다."
+        }
+      },
+      "solution_en": "The benefits owner is responsible for post-project benefits realization. Coordinating with them is the most efficient approach for tracking post-closure benefits.",
+      "solution_ko": "혜택 소유자는 프로젝트 사후 혜택 실현에 책임이 있습니다. 그들과 조율하는 것이 종료 후 혜택을 추적하는 가장 효율적인 방법입니다.",
+      "source": "PMBOK 6th Ed/1.4/546; PMBOK 7th Ed/2.4.8, 2.6.2",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 20,
+      "question_en": "A project manager has just taken over a 5-year project that is at the midpoint. At the steering committee meeting, the CEO asked if the project was on track to deliver the target of a 40% increase in production. The project manager responded that since they only worked on the project for one month, they did not know the status of the project. What should the project manager have done to avoid this situation?",
+      "question_ko": "프로젝트 관리자가 중간 지점에 있는 5년 프로젝트를 막 인수했습니다. 운영위원회 회의에서, CEO가 프로젝트가 생산 40% 증가 목표를 달성하기 위해 정상 궤도에 있는지 물었습니다. 프로젝트 관리자는 한 달만 프로젝트에 참여했으므로 프로젝트 상태를 알지 못한다고 응답했습니다. 프로젝트 관리자는 이 상황을 피하기 위해 무엇을 했어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Reviewed the last status report to understand the project status.",
+          "text_ko": "프로젝트 상태를 이해하기 위해 마지막 상태 보고서를 검토했어야 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Validated the project status with the lead developer.",
+          "text_ko": "수석 개발자와 프로젝트 상태를 검증했어야 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Reviewed the last project status with the project sponsor.",
+          "text_ko": "프로젝트 스폰서와 마지막 프로젝트 상태를 검토했어야 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Checked the project schedule to understand the project status.",
+          "text_ko": "프로젝트 상태를 이해하기 위해 프로젝트 일정을 확인했어야 합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "마지막 상태 보고서는 특정 시점의 스냅샷만 제공합니다. CEO의 질문에 답하기 위한 전략적 통찰을 제공하지 않을 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "수석 개발자와의 확인은 기술적 세부 사항에는 유용하지만, 고수준 목표와의 정렬에 대한 포괄적인 시각을 제공하지 않습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "새 PM이 진행 중인 프로젝트를 인수할 때, 프로젝트 스폰서는 프로젝트의 역사와 현재 상태를 가장 잘 아는 사람입니다. 스폰서와 프로젝트 상태를 검토하면 프로젝트 목표, 진행 상황, 기대치에 대한 중요한 통찰을 얻을 수 있습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "프로젝트 일정 확인만으로는 예산, 스코프와 같은 요소를 고려하지 못하며, CEO의 생산 40% 증가 목표 관련 질문에 필요한 전략적 통찰을 제공하지 않습니다."
+        }
+      },
+      "solution_en": "The project sponsor has the best holistic view of project status and strategic alignment. A new project manager should always start by reviewing status with the sponsor.",
+      "solution_ko": "프로젝트 스폰서는 프로젝트 상태와 전략적 정렬에 대한 가장 전체적인 시각을 가지고 있습니다. 새 PM은 항상 스폰서와 함께 상태를 검토하는 것으로 시작해야 합니다.",
+      "source": "PM Tool Kit: 100 Tips (Amazon)/61; PMBOK 7th Ed/2.6",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 21,
+      "question_en": "During a new technology project, confusion arises due to the lack of a clearly defined and communicated future state of the product. What should the project manager do next?",
+      "question_ko": "새로운 기술 프로젝트에서, 명확하게 정의되고 소통된 제품의 미래 상태가 없어 혼란이 발생합니다. 프로젝트 관리자는 다음으로 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Create and get approval on a benefits management plan.",
+          "text_ko": "혜택 관리 계획을 작성하고 승인을 받습니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Ask the project sponsor what the project outcome should be.",
+          "text_ko": "프로젝트 결과가 어떠해야 하는지 프로젝트 스폰서에게 묻습니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Discuss the scope and objectives with the functional owner.",
+          "text_ko": "기능 소유자와 스코프와 목표를 논의합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Review the project's business case to identify alternatives.",
+          "text_ko": "대안을 파악하기 위해 프로젝트의 비즈니스 케이스를 검토합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM은 프로젝트나 프로그램이 제공하는 혜택을 창출, 극대화, 유지하기 위한 프로세스를 정의하는 혜택 관리 계획을 작성해야 합니다. 제품의 미래 상태가 명확하지 않을 때, 혜택 관리 계획은 장기적 목표를 파악하고 의도된 가치를 인도하도록 보장합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "스폰서에게 물어보는 것은 도움이 될 수 있지만, 혼란과 명확성 부재 문제를 완전히 해결하지 않습니다. 공식적인 혜택 관리 계획이 필요합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "기능 소유자와 논의하는 것은 혜택 관리 계획이 작성된 후에 유용할 수 있습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "비즈니스 케이스를 검토하는 것은 혜택 관리 계획 작성 후에 도움이 될 수 있지만, 미래 상태 명확화와 혼란 해결의 즉각적인 해결책이 아닙니다."
+        }
+      },
+      "solution_en": "A benefits management plan defines the processes for creating and sustaining project benefits, providing the clarity needed when the future product state is undefined.",
+      "solution_ko": "혜택 관리 계획은 프로젝트 혜택을 창출하고 유지하기 위한 프로세스를 정의하여, 제품의 미래 상태가 불분명할 때 필요한 명확성을 제공합니다.",
+      "source": "PMBOK 6th Ed/1/33; PM Portable Handbook 3rd Ed/7",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 22,
+      "question_en": "A project is delivering incremental business value to a customer. The success criteria for the project is a 20% increase in market share for the customer. When should the project be considered a success?",
+      "question_ko": "프로젝트가 고객에게 점진적인 비즈니스 가치를 인도하고 있습니다. 프로젝트의 성공 기준은 고객의 시장 점유율이 20% 증가하는 것입니다. 프로젝트는 언제 성공으로 간주되어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "When the sprint reviews demonstrate that each iteration delivers a 20% increase in market share.",
+          "text_ko": "스프린트 검토에서 각 반복이 시장 점유율 20% 증가를 인도함을 보여줄 때입니다."
+        },
+        {
+          "key": "B",
+          "text_en": "After the project documentation is completed and the project team has been assigned to other projects.",
+          "text_ko": "프로젝트 문서가 완성되고 프로젝트 팀이 다른 프로젝트에 배정된 후입니다."
+        },
+        {
+          "key": "C",
+          "text_en": "At the conclusion of project execution, as part of the project closure report approval process.",
+          "text_ko": "프로젝트 종료 보고서 승인 프로세스의 일환으로 프로젝트 실행이 완료될 때입니다."
+        },
+        {
+          "key": "D",
+          "text_en": "When 75% of the project has been completed and the EVM diagram indicates value is on track.",
+          "text_ko": "프로젝트의 75%가 완료되고 EVM 다이어그램이 가치가 정상 궤도임을 나타낼 때입니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "스프린트 검토는 각 반복에서 인도된 점진적 비즈니스 가치만 측정합니다. 단일 반복이 전체 20% 시장 점유율 증가를 달성할 수 없습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "프로젝트 문서 완성은 신뢰할 수 있는 성공 지표가 아닙니다. 프로젝트가 목표를 달성하지 못해도 문서는 완성될 수 있습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "프로젝트 성공 기준은 20% 시장 점유율 증가이며, 이는 비즈니스 지표로 프로젝트 완료 시에만 정확하게 측정할 수 있습니다. 프로젝트 종료 보고서 승인 프로세스 시 최종 결과 평가가 이루어집니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "특정 완료 백분율과 EVM 지표를 기반으로 성공을 판단하는 것은 20% 시장 점유율 증가라는 정의된 기준과 직접적으로 일치하지 않습니다."
+        }
+      },
+      "solution_en": "A 20% market share increase can only be accurately measured at project completion. Success should be determined at closure against defined criteria.",
+      "solution_ko": "시장 점유율 20% 증가는 프로젝트 완료 시에만 정확하게 측정될 수 있습니다. 성공은 종료 시 정의된 기준에 대해 판단되어야 합니다.",
+      "source": "PMBOK 7th Ed (2022)/2.7",
+      "conceptIds": [
+        "performance-measurement-and-ev-metrics"
+      ]
+    },
+    {
+      "id": 23,
+      "question_en": "A project team meeting is focused on examining if the business value and vision for a project are being delivered by all parties. During the meeting, it was discovered that a few team members were unaware of the project's vision and business value. What should the project manager do to ensure everyone is aware of the vision and business value the project is expected to bring moving forward?",
+      "question_ko": "프로젝트 팀 회의는 프로젝트의 비즈니스 가치와 비전이 모든 당사자에게 인도되고 있는지 검토하는 데 초점을 맞추고 있습니다. 회의 중, 일부 팀원들이 프로젝트의 비전과 비즈니스 가치를 알지 못한다는 것이 발견되었습니다. 프로젝트 관리자는 앞으로 모든 사람이 프로젝트가 가져올 비전과 비즈니스 가치를 알 수 있도록 하기 위해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Schedule regular meetings between the team and senior management to remind them of the vision and business value.",
+          "text_ko": "팀과 상위 경영진 사이에 비전과 비즈니스 가치를 상기시키기 위한 정기 회의를 예약합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Tell the team members to refer to the company vision statement and other high-level strategy documents.",
+          "text_ko": "팀원들에게 회사 비전 선언문 및 기타 고수준 전략 문서를 참조하도록 알립니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Hold the team accountable as they have had ample time to become aware of the project vision and business value.",
+          "text_ko": "팀이 프로젝트 비전과 비즈니스 가치를 인지할 충분한 시간이 있었으므로 팀에게 책임을 물립니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Engage with the team regularly regarding the business case and ensure that all doubts are addressed properly and cleared.",
+          "text_ko": "비즈니스 케이스에 관해 팀과 정기적으로 소통하고 모든 의문이 적절하게 해결되도록 합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "상위 경영진은 일반적으로 PM과 직접 소통하므로 팀과 상위 경영진 사이에 정기 회의를 예약하는 것이 적절하지 않을 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "팀원들에게 문서를 참조하도록 하는 것만으로는 모든 사람이 비전과 비즈니스 가치를 완전히 인식하도록 보장하지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "팀에게 책임을 물리는 것은 도움이 되지 않습니다. PM의 책임은 팀이 비전 및 전략과 정렬되어 있는지 확인하는 것입니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "PM의 책임은 프로젝트 팀이 비전과 비즈니스 가치를 알고 있으며 모든 인도물에 반영되도록 하는 것입니다. 팀과 직접 정기적으로 소통하고 모든 의문을 해결하는 것이 가장 효과적입니다."
+        }
+      },
+      "solution_en": "Regular engagement with the team on the business case, clearing doubts directly, is the PM's responsibility for ensuring vision and value alignment.",
+      "solution_ko": "비즈니스 케이스에 관해 팀과 정기적으로 직접 소통하고 의문을 해결하는 것이 비전과 가치 정렬을 보장하는 PM의 책임입니다.",
+      "source": "PMI.org (2014) Phillipy, M.A./Delivering business value",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 24,
+      "question_en": "During a project planning session, the project manager is trying to define a release plan to achieve consistent value delivery and customer buy-in. A senior stakeholder suggests having a release at the end of the project to make sure the customer sees all of the product features at once. What should the project manager do?",
+      "question_ko": "프로젝트 계획 세션에서, 프로젝트 관리자가 일관된 가치 인도와 고객 지지를 달성하기 위한 출시 계획을 정의하려 합니다. 시니어 이해관계자가 고객이 한 번에 모든 제품 기능을 볼 수 있도록 프로젝트 말에 출시를 제안합니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ask the project team to propose a release schedule based on the complexity of specific product features.",
+          "text_ko": "프로젝트 팀에게 특정 제품 기능의 복잡성을 기반으로 출시 일정을 제안하도록 요청합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Recommend three releases with one at the beginning, one in the middle, and one at the end of the project.",
+          "text_ko": "프로젝트의 시작, 중간, 말에 하나씩 세 번의 출시를 권장합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Create release plans for each time a product feature is delivered to conduct quality testing and reviews.",
+          "text_ko": "품질 테스트와 검토를 수행하기 위해 제품 기능이 인도될 때마다 출시 계획을 만듭니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Propose that the product be delivered over the course of multiple iterations to gather customer feedback.",
+          "text_ko": "고객 피드백을 수집하기 위해 여러 반복에 걸쳐 제품을 인도할 것을 제안합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "출시 일정을 기능 복잡성을 기반으로 개발하면 고객 필요와 비즈니스 가치보다 팀의 선호도에 초점을 맞추게 됩니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "세 번의 출시는 유연성이 부족하고 너무 드물 수 있습니다. 출시가 일정에 기반하여 전략적 인도물과 기대치에 정렬되지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "각 기능 완성 시 출시 계획을 만드는 것은 중복되고 지연을 초래할 수 있으며 고객을 프로세스에서 배제합니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "PM은 여러 반복에 걸쳐 제품을 인도하여 고객 피드백을 수집하도록 제안해야 합니다. 반복적 인도는 고객 입력을 기반으로 제품을 정제하고 개선할 수 있게 하며, 프로젝트 말에 모든 기능을 한 번에 공개하는 것보다 리스크를 완화합니다."
+        }
+      },
+      "solution_en": "Iterative delivery gathers customer feedback throughout the project, allowing refinement and reducing the risk of misaligned final delivery.",
+      "solution_ko": "반복적 인도는 프로젝트 전반에 걸쳐 고객 피드백을 수집하여 정제를 가능하게 하고 최종 인도물의 불일치 리스크를 줄입니다.",
+      "source": "Professional Product Owner (McGreal & Jocham)/3; PMBOK 7th Ed/2.4, 2.6",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 25,
+      "question_en": "A project manager has been assigned to a project to implement an asset health management system. The executive business sponsor has indicated that the system is expected to improve the quality of operations and extend the life span of the assets. What should the project manager do in order to demonstrate the business value once the system is in production?",
+      "question_ko": "프로젝트 관리자가 자산 건강 관리 시스템을 구현하는 프로젝트에 배정되었습니다. 경영 비즈니스 스폰서는 시스템이 운영 품질을 개선하고 자산의 수명을 연장할 것으로 기대한다고 밝혔습니다. 프로젝트 관리자는 시스템이 생산에 들어간 후 비즈니스 가치를 입증하기 위해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Establish critical success criteria, potential cost savings, and ongoing performance metrics for the project.",
+          "text_ko": "프로젝트의 핵심 성공 기준, 잠재적 비용 절감, 지속적인 성과 지표를 수립합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Write test cases to align with the business values and ensure acceptance criteria are clear during UAT.",
+          "text_ko": "비즈니스 가치에 맞게 테스트 케이스를 작성하고 UAT 중 인수 기준이 명확한지 확인합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Verify that all requirements and acceptance criteria are in alignment with the business value and expectations.",
+          "text_ko": "모든 요구사항과 인수 기준이 비즈니스 가치 및 기대치와 일치하는지 확인합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Validate the return on investment (ROI), review the current asset performance, and use it as a benchmark.",
+          "text_ko": "투자 수익률(ROI)을 검증하고 현재 자산 성과를 검토하여 향후 측정의 벤치마크로 사용합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "핵심 성공 기준, 잠재적 비용 절감, 지속적인 성과 지표를 수립하면 시스템이 생산에 들어간 후 실제 비즈니스 가치를 측정할 수 있는 지표를 제공합니다. 이를 통해 PM은 프로젝트 진행을 추적하고 목표 달성 여부를 확인할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "테스트 케이스 작성은 비즈니스 가치와의 테스트 정렬에만 초점을 맞추며 시스템의 비즈니스 가치를 직접 측정하지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "요구사항과 인수 기준을 확인하는 것은 중요하지만, 시스템의 비즈니스 가치를 직접 측정하지는 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "ROI 검증은 가치 있는 지표이지만 시스템의 비즈니스 가치(운영 품질 개선, 자산 수명 연장)를 직접 측정하지 않을 수 있습니다."
+        }
+      },
+      "solution_en": "Establishing success criteria and ongoing performance metrics provides the measurement framework to demonstrate business value after the system goes live.",
+      "solution_ko": "성공 기준과 지속적인 성과 지표를 수립하면 시스템 가동 후 비즈니스 가치를 입증하기 위한 측정 프레임워크를 제공합니다.",
+      "source": "O'Reilly Platform/Benefits Realization Management Ch.3; PMBOK 7th Ed/2.4.8",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 26,
+      "question_en": "A project manager is responsible for leading a product release that has aggressive go-to-market timelines. A total of 600 story points is estimated with a velocity of 60 points per iteration. A team of up to 12 members has been assigned to this project. Which statement about this scenario is true?",
+      "question_ko": "프로젝트 관리자가 공격적인 시장 출시 일정을 가진 제품 출시를 이끌 책임을 맡았습니다. 총 600 스토리 포인트가 추정되었으며 반복당 속도는 60포인트입니다. 이 프로젝트에 최대 12명의 팀이 배정되었습니다. 이 시나리오에 대해 어떤 진술이 맞습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "A velocity of 60 points per iteration represents the minimum work to be done, and 12 team members represent the maximum size of the team.",
+          "text_ko": "반복당 60포인트 속도는 수행해야 할 최소 작업을 나타내고, 12명은 팀의 최대 규모를 나타냅니다."
+        },
+        {
+          "key": "B",
+          "text_en": "A velocity of 60 points per iteration means the project is under control, and 12 team members mean the project is out of control.",
+          "text_ko": "반복당 60포인트 속도는 프로젝트가 통제 중임을 의미하고, 12명은 프로젝트가 통제 불능임을 의미합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "A velocity of 60 points per iteration means the project is under control, and 12 team members represent the maximum size of the team.",
+          "text_ko": "반복당 60포인트 속도는 프로젝트가 통제 중임을 의미하고, 12명은 팀의 최대 규모를 나타냅니다."
+        },
+        {
+          "key": "D",
+          "text_en": "A velocity of 60 points per iteration represents the minimum work to be done, and 12 team members means the project is under control.",
+          "text_ko": "반복당 60포인트 속도는 최소 작업을 나타내고, 12명은 프로젝트가 통제 중임을 의미합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "속도는 각 반복에서 수행되어야 할 최소 작업을 나타냅니다(목표). '최대 12명'은 팀 규모의 상한선을 나타냅니다. 속도와 팀 규모는 프로젝트 통제를 자동으로 나타내지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "속도와 팀 규모는 자동으로 프로젝트 통제 수준을 나타내지 않습니다. 두 번째 부분('12명은 통제 불능')은 근거 없는 주장입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "속도는 프로젝트 통제의 직접적인 지표가 아닙니다. 팀 규모에 대한 두 번째 부분은 맞지만 첫 번째 부분이 틀렸습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "속도 부분은 맞지만, 12명이 프로젝트 통제를 의미한다는 것은 근거 없는 주장입니다."
+        }
+      },
+      "solution_en": "Velocity represents the minimum expected throughput per iteration, and 'up to 12 members' sets the maximum team size — neither guarantees project control alone.",
+      "solution_ko": "속도는 반복당 최소 기대 처리량을 나타내고, '최대 12명'은 팀 최대 규모를 설정합니다. 둘 다 단독으로 프로젝트 통제를 보장하지 않습니다.",
+      "source": "PMBOK 7th Ed/2.4; Agile Practice Guide PMI/5.4.1",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 27,
+      "question_en": "A large-scale, multiyear transformation project was completed as per the defined requirements and within the approved budget and schedule. The requirements were also validated and confirmed by the business. However, the post-delivery analysis of the project revealed that the project did not provide benefits as expected. What should the project manager have done to avoid this?",
+      "question_ko": "대규모 다년간 변환 프로젝트가 정의된 요구사항대로 승인된 예산과 일정 내에 완료되었습니다. 요구사항도 비즈니스에 의해 검증되고 확인되었습니다. 그러나 프로젝트의 사후 인도 분석에서 프로젝트가 예상대로 혜택을 제공하지 않았다는 것이 밝혀졌습니다. 프로젝트 관리자는 이를 피하기 위해 무엇을 했어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Ensured the requirements were properly captured in the product backlog.",
+          "text_ko": "요구사항이 제품 백로그에 적절하게 캡처되었는지 확인했어야 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Created a business strategy to assist with organizational change management.",
+          "text_ko": "조직 변화 관리를 지원하기 위해 비즈니스 전략을 만들었어야 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Improved the status reporting processes to highlight specific project results.",
+          "text_ko": "특정 프로젝트 결과를 강조하기 위해 상태 보고 프로세스를 개선했어야 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Measured and demonstrated business value throughout the project lifecycle.",
+          "text_ko": "프로젝트 생명주기 전반에 걸쳐 비즈니스 가치를 측정하고 입증했어야 합니다."
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "요구사항이 적절히 캡처되었더라도 원하는 비즈니스 가치 실현을 보장하지 않습니다. 요구사항이 비즈니스 혜택으로 직접 전환되지 않을 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "비즈니스 전략 수립은 도움이 될 수 있지만, 생명주기 전반에 걸친 비즈니스 가치의 지속적인 측정이 혜택 실현 보장에 더 핵심적입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "상태 보고 개선은 도움이 되지만 비즈니스 가치를 직접 측정하고 보장하지는 않습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "프로젝트 생명주기 전반에 걸쳐 비즈니스 가치를 측정하고 입증하는 것이 핵심입니다. 이는 단계-게이트 검토에서 프로젝트와 비즈니스 케이스를 주기적으로 검증하여 프로젝트가 조직의 전략적 목표와 정렬되어 있는지 확인하는 것을 포함합니다."
+        }
+      },
+      "solution_en": "Continuously measuring and demonstrating business value throughout the lifecycle ensures alignment with strategic objectives and prevents benefit gaps at closure.",
+      "solution_ko": "생명주기 전반에 걸쳐 지속적으로 비즈니스 가치를 측정하고 입증하면 전략적 목표와의 정렬을 보장하고 종료 시 혜택 격차를 방지합니다.",
+      "source": "O'Reilly/Benefits Realization Management Ch.3.3; PMBOK 7th Ed/2.7",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 28,
+      "question_en": "A new project manager is assigned to a project in the execution phase. The project just completed the deliverables for the first phase. During a workshop to review the scope for the second phase of the project, a couple of stakeholders complain that they were not informed of the benefits already delivered. What should the project manager do to resolve this issue?",
+      "question_ko": "새 프로젝트 관리자가 실행 단계의 프로젝트에 배정됩니다. 프로젝트는 첫 번째 단계의 인도물을 막 완성했습니다. 프로젝트 두 번째 단계의 스코프를 검토하는 워크숍에서, 일부 이해관계자들이 이미 인도된 혜택에 대해 통보받지 못했다고 불평합니다. 프로젝트 관리자는 이 문제를 해결하기 위해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Escalate the issue to the steering committee because the sponsor should have informed stakeholders.",
+          "text_ko": "스폰서가 이해관계자에게 알렸어야 하므로 운영위원회에 문제를 에스컬레이션합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Escalate the issue to the sponsor because the question came from some of the senior stakeholders.",
+          "text_ko": "질문이 일부 시니어 이해관계자들로부터 왔으므로 스폰서에게 문제를 에스컬레이션합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Record the issue in the issue log, discuss it with the change manager, and update the communications management plan.",
+          "text_ko": "이슈 로그에 문제를 기록하고 변화 관리자와 논의하며 소통 관리 계획을 업데이트합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Record the issue in the register, review the stakeholder matrix, and update the risk management plan.",
+          "text_ko": "레지스터에 문제를 기록하고 이해관계자 행렬을 검토하며 리스크 관리 계획을 업데이트합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "이해관계자들에게 혜택을 소통하는 것은 운영위원회가 아닌 PM의 책임입니다. 에스컬레이션은 적절하지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "스폰서에게 에스컬레이션하는 것도 적절하지 않습니다. PM이 이해관계자들과 직접 접근할 수 있으므로 먼저 직접 해결해야 합니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "이해관계자들이 인도된 혜택과 가치를 인식하지 못하는 것은 일반적인 문제이며, 근본 원인은 불충분한 이해관계자 평가 및/또는 소통 계획입니다. PM은 이슈를 로그에 기록하고, 변화 관리자와 논의하며, 소통 관리 계획을 업데이트해야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "리스크 관리 계획을 업데이트하는 것은 이미 발생한 이슈(소통 부재)에 도움이 되지 않습니다. 이는 이슈이며 리스크가 아닙니다."
+        }
+      },
+      "solution_en": "Poor stakeholder communication about benefits is an issue — log it, discuss with the change manager, and fix the communications management plan.",
+      "solution_ko": "혜택에 대한 이해관계자 소통 부재는 이슈입니다. 이슈를 기록하고 변화 관리자와 논의하며 소통 관리 계획을 수정해야 합니다.",
+      "source": "PMBOK 6th Ed/1.4/546; Agile Practice Guide PMI/4",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 29,
+      "question_en": "A project manager has been working on an internal project for the organization's PMO. The project was initially sponsored by a PMO leader who has since been replaced. The new leader does not see much value in the project. What should the project manager do?",
+      "question_ko": "프로젝트 관리자가 조직의 PMO를 위한 내부 프로젝트를 진행해왔습니다. 프로젝트는 처음에 이후 교체된 PMO 리더가 후원했습니다. 새 리더는 프로젝트에서 많은 가치를 보지 못합니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Organize a second project kick-off meeting with the new PMO leader and the project team.",
+          "text_ko": "새 PMO 리더 및 프로젝트 팀과 두 번째 프로젝트 착수 회의를 조직합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Use the previous data to obtain sponsorship from the new PMO leader.",
+          "text_ko": "이전 데이터를 사용하여 새 PMO 리더로부터 후원을 받습니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Use the benefits that the project manager has been tracking throughout the project to prove the project's value.",
+          "text_ko": "프로젝트 가치를 입증하기 위해 프로젝트 전반에 걸쳐 추적해온 혜택을 사용합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Continue the project as planned because it has already been approved and is in progress.",
+          "text_ko": "이미 승인되고 진행 중이므로 계획대로 프로젝트를 계속합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "두 번째 착수 회의는 새 PMO 리더의 가치에 대한 우려를 해결하기에 충분하지 않습니다. 우려를 해결하려면 구체적인 혜택 데이터가 필요합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "이전 데이터는 현재 및 미래 가치에 대한 우려를 해결하지 못하며 지속적인 혜택을 보여주지 않습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "PM은 프로젝트 전반에 걸쳐 추적해온 혜택을 사용하여 새 PMO 리더에게 프로젝트 가치를 입증해야 합니다. 지속적인 혜택 추적이 중요한 이유입니다. 이를 통해 PM은 스폰서 교체에도 프로젝트의 지속적 가치와 조직 목표와의 정렬을 보여줄 수 있습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "새 PMO 리더의 우려를 해결하지 않고 계속 진행하면 프로젝트 지원 및 자원 확보에 문제가 발생할 수 있습니다."
+        }
+      },
+      "solution_en": "Tracked benefits provide concrete evidence of value to justify continued support from the new sponsor.",
+      "solution_ko": "추적된 혜택은 새 스폰서의 지속적인 지원을 정당화하기 위한 가치의 구체적인 증거를 제공합니다.",
+      "source": "PMBOK 7th Ed/2.7; DNA of Strategy Execution (Duggal)/4",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 30,
+      "question_en": "A company is considering adopting the agile methodology for future projects. The project manager is leading a discussion focused on the benefits associated with the agile methodology. Which of the following points should the project manager highlight?",
+      "question_ko": "회사가 향후 프로젝트에 애자일 방법론 채택을 고려하고 있습니다. 프로젝트 관리자가 애자일 방법론과 관련된 혜택에 초점을 맞춘 토론을 이끌고 있습니다. 프로젝트 관리자는 다음 중 어느 사항을 강조해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Transparency is central, early and reliable delivery, methodology embraces change.",
+          "text_ko": "투명성이 핵심이며, 조기하고 신뢰할 수 있는 인도, 방법론이 변화를 수용합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Product based method, divides projects into valuable phases, focuses on business justification.",
+          "text_ko": "제품 기반 방법, 프로젝트를 가치 있는 단계로 분할, 비즈니스 정당화에 초점을 맞춥니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Clear documentation exists, single point of responsibility, effective collaboration.",
+          "text_ko": "명확한 문서가 존재하며, 단일 책임 지점, 효과적인 협업입니다."
+        },
+        {
+          "key": "D",
+          "text_en": "No overtime if possible, face-to-face contact and constantly looking back to move forward.",
+          "text_ko": "가능하면 초과 근무 없음, 대면 접촉, 앞으로 나아가기 위해 지속적으로 돌아봅니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "투명성, 조기하고 신뢰할 수 있는 인도, 변화 수용은 애자일 방법론의 세 가지 핵심 요소입니다. 애자일은 고객 협업, 작동하는 소프트웨어, 개인과 상호작용을 중시합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "제품 기반 방법, 단계 분할, 비즈니스 정당화는 PRINCE2와 같은 다른 방법론의 특성입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "명확한 문서와 단일 책임 지점은 예측형/폭포수 방법론의 특성입니다. 애자일은 '포괄적인 문서보다 작동하는 소프트웨어'를 강조합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "이는 다양한 방법론의 원칙들을 혼합한 것입니다. 특히 '앞으로 나아가기 위해 지속적으로 돌아본다'는 표현은 애자일의 핵심 특성이 아닙니다."
+        }
+      },
+      "solution_en": "Transparency, early and reliable delivery, and embracing change are the three core agile benefits that distinguish it from other methodologies.",
+      "solution_ko": "투명성, 조기하고 신뢰할 수 있는 인도, 변화 수용은 애자일을 다른 방법론과 구분하는 세 가지 핵심 혜택입니다.",
+      "source": "PMI.org (2014) Houston Jr./Beyond project success: Benefits realization",
+      "conceptIds": [
+        "agile-manifesto-and-methods"
+      ]
+    },
+    {
+      "id": 31,
+      "question_en": "A project to create a new product is completed and introduced into the market, but sales are much lower than expected. Analysis determines that the product is misaligned with the organization's core competencies. During what activity should this have been discovered?",
+      "question_ko": "새 제품을 만드는 프로젝트가 완료되어 시장에 출시되었지만 판매가 예상보다 훨씬 낮습니다. 분석에 따르면 제품이 조직의 핵심 역량과 불일치합니다. 이것은 어떤 활동에서 발견되었어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "What-if scenario analysis",
+          "text_ko": "가정 시나리오 분석"
+        },
+        {
+          "key": "B",
+          "text_en": "Business case review",
+          "text_ko": "비즈니스 케이스 검토"
+        },
+        {
+          "key": "C",
+          "text_en": "Strategic performance evaluation",
+          "text_ko": "전략적 성과 평가"
+        },
+        {
+          "key": "D",
+          "text_en": "Scope definition",
+          "text_ko": "스코프 정의"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "가정 시나리오 분석은 다양한 결과를 탐색하는 데 사용되지만, 프로젝트 착수 전 조직의 핵심 역량과의 정렬을 평가하는 주요 활동이 아닙니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "비즈니스 케이스 검토는 프로젝트가 조직의 전략적 목표, 목표, 핵심 역량과 정렬되어 있는지 확인하는 활동입니다. 제품이 핵심 역량과 불일치한다는 것은 비즈니스 케이스 검토에서 발견되었어야 했습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "전략적 성과 평가는 프로젝트 시작 전 체계적인 비즈니스 케이스 검토 과정이 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "스코프 정의는 프로젝트에서 무엇을 할 것인지 정의하지만, 조직의 전략 및 핵심 역량과의 정렬을 평가하지 않습니다."
+        }
+      },
+      "solution_en": "The business case review evaluates whether a project aligns with organizational strategy and core competencies — misalignment should have been caught here.",
+      "solution_ko": "비즈니스 케이스 검토는 프로젝트가 조직 전략 및 핵심 역량과 정렬되어 있는지 평가합니다. 불일치는 여기서 발견되었어야 했습니다.",
+      "source": "PMBOK 6th Ed/1/68; PMBOK 5th Ed/4.1.1/69",
+      "conceptIds": [
+        "project-charter-and-business-case-alignment"
+      ]
+    },
+    {
+      "id": 32,
+      "question_en": "An agile project team has been successfully releasing updated deliverables each sprint that consistently provide an increased value to users. However, the project is running over the initially allocated budget, and there are still many items in the project backlog. Stakeholders have expressed increasing concerns, and the project manager needs to decide on the best course of action to address the situation and manage stakeholder expectations. What should the project manager do?",
+      "question_ko": "애자일 프로젝트 팀이 각 스프린트마다 사용자에게 지속적으로 증가된 가치를 제공하는 업데이트된 인도물을 성공적으로 출시해왔습니다. 그러나 프로젝트가 처음 배정된 예산을 초과하고 있으며 프로젝트 백로그에 아직 많은 항목이 있습니다. 이해관계자들이 점점 더 우려를 표명하고 있으며 프로젝트 관리자는 상황을 해결하고 이해관계자 기대를 관리하기 위한 최선의 조치를 결정해야 합니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Measure user satisfaction and present the results to the steering committee.",
+          "text_ko": "사용자 만족도를 측정하고 운영위원회에 결과를 제시합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Remove the deliverables from the backlog that were not part of the project charter.",
+          "text_ko": "프로젝트 헌장의 일부가 아닌 인도물을 백로그에서 제거합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Request additional budget based on an updated estimation of the remaining backlog items.",
+          "text_ko": "남은 백로그 항목의 업데이트된 추정을 기반으로 추가 예산을 요청합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Emphasize the expectation that the committed work must be finished on time.",
+          "text_ko": "약속된 작업이 정시에 완료되어야 한다는 기대를 강조합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM은 사용자 만족도를 측정하고 운영위원회에 결과를 제시해야 합니다. 이는 프로젝트가 예산 초과에도 불구하고 사용자에게 가치를 인도하고 있음을 보여줍니다. 또한 애자일 프로세스의 반복적이고 점진적인 가치 인도 방식과 일치합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "백로그에서 인도물을 제거하는 것은 피드백 루프를 기반으로 반복하고 조정하는 애자일 원칙과 반대입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "분석 없이 추가 예산을 요청하는 것은 섣부르며 필요하지 않을 수 있습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "정시 완료를 강조하는 것은 인도되는 가치를 고려하지 않으며 애자일 마인드셋과 일치하지 않습니다."
+        }
+      },
+      "solution_en": "Measuring and presenting user satisfaction data demonstrates the value being delivered despite the budget overrun, which is the key message for stakeholders.",
+      "solution_ko": "사용자 만족도를 측정하고 제시하면 예산 초과에도 불구하고 인도되는 가치를 보여주며, 이것이 이해관계자들에게 핵심 메시지입니다.",
+      "source": "Lean-Agile Software Development (Shalloway)/2; Agile Practice Guide PMI/5.4.1",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 33,
+      "question_en": "During sign-off for a strategic project that resulted in additional costs, a project manager was unable to justify the additional expense in relation to the business value realized with the successful implementation. What should the project manager have done to avoid this situation?",
+      "question_ko": "추가 비용이 발생한 전략적 프로젝트의 최종 승인 중, 프로젝트 관리자가 성공적인 구현으로 실현된 비즈니스 가치와 관련하여 추가 비용을 정당화할 수 없었습니다. 프로젝트 관리자는 이 상황을 피하기 위해 무엇을 했어야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Presented an evaluation of the potential benefits identified in the initial business case.",
+          "text_ko": "초기 비즈니스 케이스에서 파악된 잠재적 혜택의 평가를 제시했어야 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Measured and tracked the project benefits identified in the business case throughout the project lifecycle.",
+          "text_ko": "프로젝트 생명주기 전반에 걸쳐 비즈니스 케이스에서 파악된 프로젝트 혜택을 측정하고 추적했어야 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Performed a reassessment of the current state of the organization after project implementation.",
+          "text_ko": "프로젝트 구현 후 조직의 현재 상태를 재평가했어야 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Shared nonfinancial or intangible benefits as indicators for showing the value realized.",
+          "text_ko": "실현된 가치를 보여주기 위한 지표로 비재무적 또는 무형 혜택을 공유했어야 합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "처음에 잠재적 혜택을 평가하는 것만으로는 충분하지 않습니다. 시나리오가 변화하면서 지속적인 추적이 필요합니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "비즈니스 케이스에서 파악된 혜택을 처음부터 측정하고 추적하는 것만으로는 충분하지 않습니다. 생명주기 전반에 걸쳐 측정하고 추적해야 합니다. 예상치 못한 변화가 혜택에 영향을 미칠 수 있으므로 지속적인 추적이 필수입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "사후에 조직 상태를 재평가하는 것은 최종 승인 중 추가 비용 정당화에 충분하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "무형 혜택을 공유하는 것은 도움이 될 수 있지만, 생명주기 전반에 걸친 추적 데이터가 없으면 추가 비용을 정당화하기에 충분하지 않습니다."
+        }
+      },
+      "solution_en": "Benefits must be measured and tracked continuously throughout the lifecycle — initial identification alone does not justify costs at project closure.",
+      "solution_ko": "혜택은 생명주기 전반에 걸쳐 지속적으로 측정하고 추적해야 합니다. 초기 파악만으로는 프로젝트 종료 시 비용을 정당화하기에 충분하지 않습니다.",
+      "source": "PMBOK 6th Ed/29; DNA of Strategy Execution (Duggal)",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 34,
+      "question_en": "A project team uses the Internal Rate of Return (IRR) occasionally to select the project projected to be most beneficial to the company. On one such occasion the IRR figures for the four projects were: Project A = 5%, Project B = 0%, Project C = 3%, Project D = 10%. Which of these projects should be selected based on these IRR figures?",
+      "question_ko": "프로젝트 팀이 회사에 가장 유익한 프로젝트를 선택하기 위해 내부 수익률(IRR)을 가끔 사용합니다. 한 경우에 네 개 프로젝트의 IRR 수치는 다음과 같습니다: 프로젝트 A = 5%, 프로젝트 B = 0%, 프로젝트 C = 3%, 프로젝트 D = 10%. 이 IRR 수치를 기반으로 어떤 프로젝트를 선택해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Project A",
+          "text_ko": "프로젝트 A"
+        },
+        {
+          "key": "B",
+          "text_en": "Project B",
+          "text_ko": "프로젝트 B"
+        },
+        {
+          "key": "C",
+          "text_en": "Project C",
+          "text_ko": "프로젝트 C"
+        },
+        {
+          "key": "D",
+          "text_en": "Project D",
+          "text_ko": "프로젝트 D"
+        }
+      ],
+      "answer": "D",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "프로젝트 A의 IRR은 5%로 프로젝트 D(10%)보다 낮습니다. IRR이 높을수록 더 나은 잠재 수익을 의미합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "프로젝트 B의 IRR은 0%로 수익이 없음을 나타냅니다. IRR이 0% 이하이면 투자가 수익을 창출하지 않습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "프로젝트 C의 IRR은 3%로 프로젝트 D(10%)보다 낮습니다."
+        },
+        "D": {
+          "correct": true,
+          "explanation_ko": "프로젝트 D의 IRR이 10%로 가장 높습니다. 높은 IRR은 큰 잠재 수익을 나타냅니다. 프로젝트를 비교할 때 IRR이 가장 높은 프로젝트를 선택하는 것이 원칙입니다."
+        }
+      },
+      "solution_en": "IRR represents the expected return rate. Select the project with the highest IRR — Project D at 10%.",
+      "solution_ko": "IRR은 기대 수익률을 나타냅니다. 가장 높은 IRR을 가진 프로젝트(D, 10%)를 선택합니다.",
+      "source": "PMI.org (2014) Houston Jr./Beyond project success: Benefits realization",
+      "conceptIds": [
+        "financial-value-analysis-npv-irr"
+      ]
+    },
+    {
+      "id": 35,
+      "question_en": "What approach should a project manager employ to encourage collaboration among developers in an agile development model?",
+      "question_ko": "프로젝트 관리자는 애자일 개발 모델에서 개발자 간의 협업을 장려하기 위해 어떤 접근법을 사용해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Acceptance testing",
+          "text_ko": "인수 테스팅"
+        },
+        {
+          "key": "B",
+          "text_en": "Behavior-driven development",
+          "text_ko": "행동 주도 개발"
+        },
+        {
+          "key": "C",
+          "text_en": "Joint application development",
+          "text_ko": "공동 애플리케이션 개발"
+        },
+        {
+          "key": "D",
+          "text_en": "Rapid application development",
+          "text_ko": "신속 애플리케이션 개발"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "인수 테스팅은 제품이 요구사항을 충족하는지 확인하기 위한 것으로, 개발자 간의 협업을 구체적으로 장려하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "행동 주도 개발(BDD)은 테스트 주도 관행을 바탕으로 하며, 팀 내에서 더 긴밀한 협업과 이해를 장려하기 위해 공유 도메인 언어를 사용합니다. BDD는 개발자, 테스터, 비즈니스 이해관계자 간의 소통을 개선합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "공동 애플리케이션 개발(JAD)은 사용자와 개발자를 함께 모으는 방법론이지만, 팀 내 개발자 간의 협업에 특화된 방법이 아닙니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "신속 애플리케이션 개발(RAD)은 빠른 개발을 위한 방법론이지만, 개발자 간의 협업을 구체적으로 장려하지 않습니다."
+        }
+      },
+      "solution_en": "BDD builds on test-driven practices and uses a shared domain language to encourage closer collaboration among developers.",
+      "solution_ko": "BDD는 테스트 주도 관행을 바탕으로 하며 공유 도메인 언어를 사용하여 개발자 간의 더 긴밀한 협업을 장려합니다.",
+      "source": "O'Reilly Platform/BDD in Action Ch.10",
+      "conceptIds": [
+        "agile-manifesto-and-methods"
+      ]
+    },
+    {
+      "id": 36,
+      "question_en": "A complex technology project is in the execution phase. New technologies are added to the backlog based on customer requirements, which will involve significant changes to the deliverable. What should the project manager do to satisfy the customer?",
+      "question_ko": "복잡한 기술 프로젝트가 실행 단계에 있습니다. 고객 요구사항을 기반으로 새로운 기술들이 백로그에 추가되고 있으며, 이는 인도물에 중요한 변경을 수반할 것입니다. 프로젝트 관리자는 고객을 만족시키기 위해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Replan the sprints and releases to meet every expectation of the customer.",
+          "text_ko": "고객의 모든 기대를 충족하기 위해 스프린트와 출시를 재계획합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Manage customer expectations based on the organization's business needs.",
+          "text_ko": "조직의 비즈니스 필요에 기반하여 고객 기대를 관리합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Accept the new requirements and schedule meetings to plan a new release schedule.",
+          "text_ko": "새 요구사항을 받아들이고 새 출시 일정을 계획하기 위해 회의를 예약합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Push the project team to increase flexibility and accept the new challenge.",
+          "text_ko": "프로젝트 팀이 유연성을 높이고 새로운 도전을 수용하도록 압박합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "고객의 모든 기대를 충족하기 위해 재계획하는 것은 불가능합니다. PM은 고객 기대를 조직의 비즈니스 필요에 맞게 관리해야 합니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "PM은 조직의 비즈니스 필요에 기반하여 고객 기대를 관리해야 합니다. 프로젝트 리더는 프로젝트 선택에 있어 조직의 요구사항에 의존합니다. 새 요구사항의 잠재적 영향을 소통하는 것이 핵심입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "새 요구사항을 수락하고 출시 일정을 재계획하는 것은 고객 기대를 관리하는 것보다 덜 중요합니다. 잠재적 영향을 소통하지 않고 단순히 수락하는 것은 적절하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "팀을 압박하는 것은 충분하지 않습니다. PM은 고객 기대를 관리하고 새 요구사항과 관련된 잠재적 리스크와 도전을 소통해야 합니다."
+        }
+      },
+      "solution_en": "The project manager must manage customer expectations based on organizational business needs, communicating the impact of new requirements on scope and schedule.",
+      "solution_ko": "PM은 조직의 비즈니스 필요에 기반하여 고객 기대를 관리하고, 새 요구사항이 스코프와 일정에 미치는 영향을 소통해야 합니다.",
+      "source": "Agile Estimating and Planning (Cohn)/Conditions of satisfaction/29; Agile Practice Guide PMI/6/75",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 37,
+      "question_en": "A senior stakeholder was invited to a sprint review meeting and asked a project team member to describe the final product that the project will deliver. The team member was unable to respond and deferred the question to a more senior member of the team. What should have been done differently in this situation?",
+      "question_ko": "시니어 이해관계자가 스프린트 검토 회의에 초대되어 프로젝트가 인도할 최종 제품을 설명해달라고 팀원에게 요청했습니다. 팀원이 응답할 수 없었고 더 시니어 팀원에게 질문을 미루었습니다. 이 상황에서 다르게 해야 했던 것은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "The team member should have advised the stakeholder to ask the scrum master.",
+          "text_ko": "팀원이 이해관계자에게 스크럼 마스터에게 물어보도록 안내했어야 합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "The team member should have advised the stakeholder to ask the product owner.",
+          "text_ko": "팀원이 이해관계자에게 제품 책임자에게 물어보도록 안내했어야 합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "The stakeholder should have held their questions until the next sprint review meeting.",
+          "text_ko": "이해관계자가 다음 스프린트 검토 회의까지 질문을 보류했어야 합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "The stakeholder should have directed their questions to the project manager.",
+          "text_ko": "이해관계자가 질문을 프로젝트 관리자에게 했어야 합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "스크럼 마스터는 팀이 스크럼 프로세스를 따르도록 하는 역할을 하지만, 최종 제품과 그 특성에 대한 책임은 제품 책임자에게 있습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "제품 책임자는 제품의 가치를 극대화하고 최종 제품에 대한 책임을 집니다. 프로젝트가 인도할 최종 제품을 설명하는 데 가장 적합한 사람은 제품 책임자입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "질문을 연기하는 것은 이해관계자에게 불편을 주며 불필요한 지연을 초래합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "PM이 스코프 정의나 관리에 관여할 수 있지만, 최종 제품에 대한 전반적인 책임은 제품 책임자에게 있습니다."
+        }
+      },
+      "solution_en": "The product owner is accountable for the end product and is the best person to describe it to stakeholders.",
+      "solution_ko": "제품 책임자는 최종 제품에 대한 책임을 지며 이해관계자에게 설명하기에 가장 적합한 사람입니다.",
+      "source": "Essential Scrum (Rubin)/Part II Ch.10; Agile Practice Guide PMI/4/33",
+      "conceptIds": [
+        "agile-manifesto-and-methods"
+      ]
+    },
+    {
+      "id": 38,
+      "question_en": "In an agile project, the project status indicates that the project is 95% completed. During an iteration review, the stakeholders were concerned about the business value being delivered. What should the project manager do to ensure the project is properly aligned?",
+      "question_ko": "애자일 프로젝트에서, 프로젝트 상태가 95% 완료되었음을 나타냅니다. 반복 검토 중, 이해관계자들이 인도되는 비즈니스 가치에 대해 우려를 표명합니다. 프로젝트 관리자는 프로젝트가 적절히 정렬되어 있도록 보장하기 위해 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Communicate with the stakeholders to mitigate their concerns.",
+          "text_ko": "우려를 완화하기 위해 이해관계자들과 소통합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Instruct the project sponsor to review the project goals and work completed.",
+          "text_ko": "프로젝트 스폰서에게 프로젝트 목표와 완성된 작업을 검토하도록 지시합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Meet with the product owner to re-evaluate the project's scope and deliverables.",
+          "text_ko": "프로젝트의 스코프와 인도물을 재평가하기 위해 제품 책임자와 만납니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Request that the business analyst adjust the project goals accordingly.",
+          "text_ko": "비즈니스 분석가에게 그에 따라 프로젝트 목표를 조정하도록 요청합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "이해관계자들과 소통하는 것은 중요하지만, PM은 먼저 프로젝트를 평가하여 이해관계자들의 우려에 적절히 응답할 수 있어야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "스폰서에게 프로젝트 목표 검토를 지시하는 것은 이해관계자의 우려를 해결하지 않으며 가치 인도를 검증하지 않습니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "애자일 프로젝트에서 이해관계자들이 비즈니스 가치에 대해 우려할 때, PM은 제품 책임자와 함께 프로젝트의 스코프와 인도물을 재평가해야 합니다. 제품 책임자는 제품 가치를 극대화할 책임이 있으며 비즈니스 목표와의 정렬을 확인하기 위한 최적의 파트너입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "비즈니스 분석가에게 프로젝트 목표 조정을 요청하는 것은 부적절합니다. 프로젝트 목표는 프로젝트에 맞게 조정되는 것이 아니라 프로젝트가 비즈니스 목표에 맞게 정렬되어야 합니다."
+        }
+      },
+      "solution_en": "The product owner is responsible for product value alignment. Meeting with them to re-evaluate scope and deliverables is the correct response to value concerns.",
+      "solution_ko": "제품 책임자는 제품 가치 정렬에 책임이 있습니다. 스코프와 인도물을 재평가하기 위해 그들과 만나는 것이 가치 우려에 대한 올바른 대응입니다.",
+      "source": "Agile Practice Guide PMI/4.3, 5.4; PMBOK 7th Ed/2.6",
+      "conceptIds": [
+        "mvp-and-iterative-value-delivery"
+      ]
+    },
+    {
+      "id": 39,
+      "question_en": "A project team is in the process of identifying the benefits associated with two projects in order to choose the one that will deliver more business value. The task involves analyzing which project best helps the company meet its compliance and regulatory requirements, as well as improve customer satisfaction. Which of the following best describes the category of the benefits being analyzed in this task?",
+      "question_ko": "프로젝트 팀이 더 많은 비즈니스 가치를 인도할 것을 선택하기 위해 두 프로젝트와 관련된 혜택을 파악하는 과정에 있습니다. 작업은 어느 프로젝트가 회사가 컴플라이언스 및 규제 요건을 충족하고 고객 만족도를 개선하는 데 가장 잘 도움이 되는지 분석하는 것을 포함합니다. 이 작업에서 분석되는 혜택의 범주를 가장 잘 설명하는 것은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Quantitative benefit",
+          "text_ko": "정량적 혜택"
+        },
+        {
+          "key": "B",
+          "text_en": "Qualitative benefit",
+          "text_ko": "정성적 혜택"
+        },
+        {
+          "key": "C",
+          "text_en": "Quality benefit",
+          "text_ko": "품질 혜택"
+        },
+        {
+          "key": "D",
+          "text_en": "Real benefit",
+          "text_ko": "실질 혜택"
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "정량적 혜택은 수치로 측정됩니다(예: 비용 절감 금액, 수익 증가 백분율). 컴플라이언스 충족과 고객 만족도는 수치가 아닙니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "정성적 혜택은 수치적 입력 및 출력이 없는 혜택을 포함합니다. 고객 만족도와 컴플라이언스 충족은 모두 수치적이지 않은 혜택이므로 정성적 혜택입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "'품질 혜택'은 혜택 분류에서 표준 용어가 아닙니다. 혜택은 일반적으로 정성적 또는 정량적으로 분류됩니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "'실질 혜택'도 혜택 분류에서 표준 용어가 아닙니다."
+        }
+      },
+      "solution_en": "Compliance and customer satisfaction are non-numerical outcomes — both are qualitative benefits.",
+      "solution_ko": "컴플라이언스와 고객 만족도는 수치적이지 않은 결과로, 둘 다 정성적 혜택입니다.",
+      "source": "PMI.org (2014) Houston Jr./Beyond project success: Benefits realization",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 40,
+      "question_en": "A project manager is currently overseeing a project from its inception and is aware that there are several assumptions and dependencies integral to the project's success. What action should the project manager take in this situation?",
+      "question_ko": "프로젝트 관리자가 현재 착수부터 프로젝트를 감독하고 있으며 프로젝트 성공에 필수적인 여러 가정과 의존성이 있음을 알고 있습니다. 이 상황에서 프로젝트 관리자는 어떤 조치를 취해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Seek support from the project sponsor to allocate a dedicated resource to monitor benefits realization.",
+          "text_ko": "혜택 실현을 모니터링하기 위해 전담 자원을 배정하도록 프로젝트 스폰서로부터 지원을 구합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Instruct the project team to record all the assumptions and track all the changes.",
+          "text_ko": "프로젝트 팀에게 모든 가정을 기록하고 모든 변경사항을 추적하도록 지시합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Facilitate a brainstorming session to formulate a comprehensive risk mitigation plan.",
+          "text_ko": "포괄적인 리스크 완화 계획을 수립하기 위해 브레인스토밍 세션을 퍼실리테이션합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Ask the PMO to implement a benefits measurement system to verify benefit metrics.",
+          "text_ko": "혜택 지표를 검증하기 위해 PMO에게 혜택 측정 시스템 구현을 요청합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "혜택 실현 모니터링을 위한 전담 자원을 프로젝트 착수 시점에 요청하는 것은 너무 이릅니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "가정은 증거 없이 사실로 받아들여지는 요소로 프로젝트 성공에 중요한 영향을 미칠 수 있습니다. PM은 팀에게 모든 가정을 기록하고 모든 변경사항을 추적하도록 지시해야 합니다. 이를 통해 잠재적 리스크를 파악하고 가정의 변화를 추적할 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "브레인스토밍 세션은 가정이 기록된 후에 리스크 완화 계획을 수립하기 위해 하는 것이 더 적절합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "PMO에게 혜택 측정 시스템 구현을 요청하는 것은 프로젝트가 매우 크거나 복잡한 경우가 아니면 필요하지 않습니다."
+        }
+      },
+      "solution_en": "Recording all assumptions and tracking changes allows the project team to identify risks and ensure the project remains aligned with its intended value.",
+      "solution_ko": "모든 가정을 기록하고 변경사항을 추적하면 프로젝트 팀이 리스크를 파악하고 프로젝트가 의도된 가치와 정렬되어 있는지 확인할 수 있습니다.",
+      "source": "O'Reilly/PM Planning and Control 6th Ed/Ch.22; PMBOK 7th Ed/4.4.1",
+      "conceptIds": [
+        "stakeholder-engagement-and-value-alignment"
+      ]
+    },
+    {
+      "id": 41,
+      "question_en": "A team is working on a complex and fast-changing new product development project. After a recent process evaluation, the team decides to add an agile toolkit to the predictive approach they are using. This addition is intended to improve the overall project delivery, success, and productivity. Which of the following describes how this change is intended to add value to the overall delivery, success, and productivity?",
+      "question_ko": "팀이 복잡하고 빠르게 변화하는 새 제품 개발 프로젝트를 진행하고 있습니다. 최근 프로세스 평가 후, 팀은 사용 중인 예측형 접근법에 애자일 툴킷을 추가하기로 결정합니다. 이 추가는 전반적인 프로젝트 인도, 성공, 생산성을 개선하기 위한 것입니다. 이 변경이 전반적인 인도, 성공, 생산성에 가치를 추가하기 위한 방법을 가장 잘 설명하는 것은 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Use the agile toolkit to leverage agile methods' ability to respond effectively to change, while maintaining the benefits of a predictive approach.",
+          "text_ko": "예측형 접근법의 혜택을 유지하면서 변화에 효과적으로 대응하는 애자일 방법의 능력을 활용하기 위해 애자일 툴킷을 사용합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Use the agile toolkit to replace all predictive methods with new agile methods, reducing poor productivity.",
+          "text_ko": "낮은 생산성을 줄이기 위해 애자일 툴킷을 사용하여 모든 예측형 방법을 새로운 애자일 방법으로 교체합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Use the agile toolkit to compare agile against predictive methods, then choose the best approach for future projects.",
+          "text_ko": "애자일과 예측형 방법을 비교한 다음 향후 프로젝트를 위한 최선의 접근법을 선택하기 위해 애자일 툴킷을 사용합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Use the agile toolkit and ask team members to choose between agile and predictive methods for effectiveness.",
+          "text_ko": "애자일 툴킷을 사용하고 팀원들에게 효과를 위해 애자일과 예측형 방법 중에서 선택하도록 요청합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "이 시나리오는 하이브리드 생명주기의 예입니다. 예측형 방법의 구조화된 개발과 애자일 방법의 적응성을 모두 활용하려고 합니다. 교체나 비교는 두 접근법의 강점을 모두 사용하는 하이브리드 개념의 목적을 훼손합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "모든 예측형 방법을 교체하는 것은 하이브리드 접근의 목적을 훼손합니다. 목표는 예측형 방법과 애자일 방법의 장점을 결합하는 것입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "두 방법론을 비교하는 것은 하이브리드 접근의 목적이 아닙니다. 목표는 두 방법론을 함께 사용하는 것입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "개별 팀원이 방법론을 선택하는 것은 일관성이 없고 비효율적입니다."
+        }
+      },
+      "solution_en": "A hybrid lifecycle combines agile adaptability with predictive structure — the agile toolkit adds change-response capability without abandoning predictive benefits.",
+      "solution_ko": "하이브리드 생명주기는 애자일 적응성과 예측형 구조를 결합합니다. 애자일 툴킷은 예측형 혜택을 포기하지 않고 변화 대응 능력을 추가합니다.",
+      "source": "PMI.org (2010) Byatt/Delivering project benefits",
+      "conceptIds": [
+        "agile-manifesto-and-methods"
+      ]
+    },
+    {
+      "id": 42,
+      "question_en": "In the middle of a three-year-long project, the company committee overseeing the project becomes uncertain about whether the final outcome will meet their expectations and provide the anticipated value. As the project manager, what proactive step can you take to address the committee's concerns and ensure that the project delivers the expected value?",
+      "question_ko": "3년 프로젝트 중간에, 프로젝트를 감독하는 회사 위원회가 최종 결과가 기대를 충족하고 예상 가치를 제공할지에 대해 불확실해집니다. 프로젝트 관리자로서, 위원회의 우려를 해결하고 프로젝트가 기대 가치를 인도하도록 보장하기 위해 어떤 능동적 단계를 취할 수 있습니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Extend the project timeline to allow for more thorough testing.",
+          "text_ko": "더 철저한 테스팅을 위해 프로젝트 일정을 연장합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Develop a prototype to present to the committee.",
+          "text_ko": "위원회에 제시하기 위한 프로토타입을 개발합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Increase the project budget to accommodate potential changes.",
+          "text_ko": "잠재적 변경을 수용하기 위해 프로젝트 예산을 늘립니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Update the project schedule with detailed milestones.",
+          "text_ko": "상세한 마일스톤으로 프로젝트 일정을 업데이트합니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "일정 연장은 더 많은 테스팅 시간을 제공하지만 위원회의 가치 인도에 대한 우려를 직접 해결하지 않습니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "프로토타입을 개발하여 위원회에 제시하는 것은 최종 프로젝트 결과의 가치 인도를 예측하고 입증하는 효과적인 방법입니다. 프로토타입은 제품의 실체적인 표현을 제공하여 위원회가 기능성, 사용자 경험, 기대치와의 정렬을 시각화할 수 있습니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "예산 증가는 재정적 유연성을 제공하지만 위원회의 가치 인도에 대한 우려를 직접 해결하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "상세한 마일스톤으로 일정을 업데이트하는 것은 위원회의 가치 인도에 대한 우려를 능동적으로 해결하지 않습니다."
+        }
+      },
+      "solution_en": "A prototype gives the committee a tangible representation of the product to visualize, allowing early feedback and demonstrating value before full completion.",
+      "solution_ko": "프로토타입은 위원회에게 제품의 실체적인 표현을 제공하여 시각화하게 하며, 완전한 완성 전에 조기 피드백을 허용하고 가치를 입증합니다.",
+      "source": "PMBOK 6th Ed/5.2.2.8/147; PMBOK 7th Ed/2.4.2",
+      "conceptIds": [
+        "benefits-realization-and-organizational-change"
+      ]
+    },
+    {
+      "id": 43,
+      "question_en": "An international company is implementing an innovative technology at one of its production plants. The technology has already demonstrated positive returns at another site. What should the project manager consider as a key aspect of the successful implementation of this technology?",
+      "question_ko": "국제 회사가 생산 공장 중 하나에 혁신적인 기술을 구현하고 있습니다. 이 기술은 이미 다른 사이트에서 긍정적인 수익을 보여주었습니다. 프로젝트 관리자는 이 기술의 성공적인 구현을 위한 핵심 측면으로 무엇을 고려해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Assess the business case to ensure ROI meets or exceeds the performance indicators of the first site.",
+          "text_ko": "ROI가 첫 번째 사이트의 성과 지표를 충족하거나 초과하는지 확인하기 위해 비즈니스 케이스를 평가합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Consult with the technology manager to ensure the technology can fit in the new site.",
+          "text_ko": "기술이 새 사이트에 맞을 수 있는지 확인하기 위해 기술 관리자와 상담합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Conduct an information-sharing workshop to present the new technology and its benefits to the new site's stakeholders.",
+          "text_ko": "새 기술과 그 혜택을 새 사이트의 이해관계자들에게 제시하기 위해 정보 공유 워크숍을 실시합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Develop the project charter for implementation at the new site using the lessons learned from the first site.",
+          "text_ko": "첫 번째 사이트의 교훈을 사용하여 새 사이트에서의 구현을 위한 프로젝트 헌장을 개발합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "ROI를 평가하는 것은 중요하지만, 글로벌 기업은 지역 수준에서 변화(조직 문화)의 영향을 고려해야 합니다. ROI는 현지 채택에 영향을 미치는 문화적 요소를 다루지 않습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "기술 관리자와 상담하는 것은 기술적 측면을 다루지만, 성공적인 구현의 핵심은 이해관계자들의 수용과 지지입니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "글로벌 기업은 지역 수준에서 변화의 영향(조직 문화)을 고려해야 합니다. 이는 모든 변화 관리 이니셔티브의 성공에 중요합니다. 정보 공유 워크숍을 통해 새 기술과 그 혜택을 이해관계자들에게 소통하고 변화에 대한 지지를 구축하는 것이 성공의 핵심입니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "이전 사이트의 교훈을 사용하는 것은 가치 있지만, 이해관계자 수용과 지지 구축이라는 더 중요한 측면을 해결하지 않습니다."
+        }
+      },
+      "solution_en": "Organizational culture at the new site can derail the implementation. An information-sharing workshop builds stakeholder buy-in — critical for change management success.",
+      "solution_ko": "새 사이트의 조직 문화가 구현을 방해할 수 있습니다. 정보 공유 워크숍은 이해관계자 지지를 구축하며 이는 변화 관리 성공에 필수적입니다.",
+      "source": "PM: Systems Approach (Kerzner)/2.19; PMBOK 7th Ed/3.12",
+      "conceptIds": [
+        "benefits-realization-and-organizational-change"
+      ]
+    },
+    {
+      "id": 44,
+      "question_en": "A project is close to completion, and the customer wants to celebrate the success by sharing a business case about the benefits created by the project. The project manager and team feel apprehensive about sharing a business case at this stage. What is the most appropriate action for the project manager to take?",
+      "question_ko": "프로젝트가 완료에 가깝고 고객이 프로젝트가 만들어낸 혜택에 대한 비즈니스 케이스를 공유하여 성공을 축하하고 싶어합니다. 프로젝트 관리자와 팀은 이 단계에서 비즈니스 케이스를 공유하는 것에 불안함을 느낍니다. 프로젝트 관리자가 취해야 할 가장 적절한 조치는 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Collaborate with the customer to create a business case highlighting project benefits.",
+          "text_ko": "프로젝트 혜택을 강조하는 비즈니스 케이스를 만들기 위해 고객과 협력합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Acknowledge the request but emphasize the limitations of a business case at this stage.",
+          "text_ko": "요청을 인정하지만 이 단계에서 비즈니스 케이스의 한계를 강조합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Refer the customer to the project team for details on the benefits created by the project.",
+          "text_ko": "프로젝트가 만들어낸 혜택에 대한 세부 사항을 위해 고객을 프로젝트 팀에게 안내합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Inform the customer that a business case would require additional work and resources.",
+          "text_ko": "비즈니스 케이스는 추가 작업과 자원이 필요하다고 고객에게 알립니다."
+        }
+      ],
+      "answer": "B",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "이 단계에서 비즈니스 케이스를 만드는 것은 시기상조이며 부정확하거나 불완전한 정보로 이어질 수 있습니다. 모든 혜택이 실현되고 측정된 후에 비즈니스 케이스를 만드는 것이 더 정확합니다."
+        },
+        "B": {
+          "correct": true,
+          "explanation_ko": "PM은 고객의 요청을 인정하되, 프로젝트가 아직 완료되지 않았으므로 모든 혜택이 실현되고 측정되기를 기다리는 것이 중요하다고 설명해야 합니다. 이를 통해 비즈니스 케이스가 정확하고 포괄적임을 보장합니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "고객을 프로젝트 팀에게 안내하는 것은 PM의 책임을 위임하는 것으로 고객의 요청에 직접적으로 대응하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "추가 작업과 자원의 필요성에 초점을 맞추는 것은 비즈니스 케이스를 이 단계에서 작성하는 것의 실질적인 이유를 설명하지 않습니다."
+        }
+      },
+      "solution_en": "Business benefits should be measured and confirmed only after full realization. The project manager should acknowledge the request while explaining that timing matters for accuracy.",
+      "solution_ko": "비즈니스 혜택은 완전한 실현 후에만 측정되고 확인되어야 합니다. PM은 요청을 인정하면서도 정확성을 위해 타이밍이 중요하다고 설명해야 합니다.",
+      "source": "Effective PM 8th Ed (Wysocki)/Ch.6; PMBOK 7th Ed/2.6, 2.7",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    },
+    {
+      "id": 45,
+      "question_en": "A project is currently in progress. The project manager has been notified of a new process that may be helpful if it is incorporated into the project. What should the project manager do?",
+      "question_ko": "프로젝트가 현재 진행 중입니다. 프로젝트 관리자는 프로젝트에 통합되면 도움이 될 수 있는 새로운 프로세스에 대해 통보받았습니다. 프로젝트 관리자는 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Evaluate how the new process can be incorporated.",
+          "text_ko": "새로운 프로세스를 어떻게 통합할 수 있는지 평가합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Issue a priority order for the change.",
+          "text_ko": "변경에 대한 우선순위 명령을 발행합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Determine the benefit of the change.",
+          "text_ko": "변경의 혜택을 파악합니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Modify the requirements document for the change.",
+          "text_ko": "변경을 위해 요구사항 문서를 수정합니다."
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "새 프로세스를 어떻게 통합할 수 있는지 평가하는 것은 변경의 혜택을 파악한 후에 해야 할 일입니다. 잠재적 혜택을 이해한 후에야 통합 방법을 평가할 수 있습니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "변경에 대한 우선순위를 정하는 것은 혜택을 파악하고 통합 방법을 평가한 후에 해야 할 일입니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "새로운 프로세스를 프로젝트에 통합하는 첫 번째 단계는 변경의 혜택을 이해하는 것입니다. 이를 통해 PM은 변경이 필요한 노력과 자원을 투자할 가치가 있는지 결정할 수 있습니다. 또한 프로젝트 일정, 예산, 스코프에 대한 영향도 고려해야 합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "요구사항 문서를 수정하는 것은 변경의 혜택이 파악되고 통합 결정이 내려진 후에 해야 할 일입니다."
+        }
+      },
+      "solution_en": "Before any change is incorporated, the project manager must first determine its benefit — only then can integration, prioritization, and documentation follow.",
+      "solution_ko": "어떤 변경이 통합되기 전에, PM은 먼저 혜택을 파악해야 합니다. 그래야만 통합, 우선순위화, 문서화가 뒤따를 수 있습니다.",
+      "source": "Effective PM (Wysocki)/Ch.12; PMBOK 7th Ed/2.7",
+      "conceptIds": [
+        "benefits-realization-and-organizational-change"
+      ]
+    },
+    {
+      "id": 46,
+      "question_en": "The headquarters of a multinational company is in Europe, with many regional offices in other countries around the world. The operations director of a regional office decides to establish a project management office (PMO). A project manager has been selected to manage the project, which is in its initial phase. The project manager needs to align stakeholder expectations with the benefits of the project process and the business strategy. Which document should the project manager develop for this purpose?",
+      "question_ko": "다국적 회사의 본사가 유럽에 있으며 전 세계 다른 국가에 많은 지역 사무소가 있습니다. 지역 사무소의 운영 이사가 프로젝트 관리 사무소(PMO) 설립을 결정합니다. 초기 단계의 이 프로젝트를 관리하기 위해 프로젝트 관리자가 선발되었습니다. 프로젝트 관리자는 이해관계자 기대를 프로젝트 프로세스의 혜택 및 비즈니스 전략과 정렬해야 합니다. 이 목적으로 프로젝트 관리자는 어떤 문서를 개발해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Business case",
+          "text_ko": "비즈니스 케이스"
+        },
+        {
+          "key": "B",
+          "text_en": "Benefits management plan",
+          "text_ko": "혜택 관리 계획"
+        },
+        {
+          "key": "C",
+          "text_en": "Project charter",
+          "text_ko": "프로젝트 헌장"
+        },
+        {
+          "key": "D",
+          "text_en": "Project management plan",
+          "text_ko": "프로젝트 관리 계획"
+        }
+      ],
+      "answer": "C",
+      "choice_explanations": {
+        "A": {
+          "correct": false,
+          "explanation_ko": "비즈니스 케이스는 프로젝트 비용이 정당화되는지 결정하는 데 사용됩니다. 이해관계자 기대를 비즈니스 전략과 정렬하는 주요 도구가 아닙니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "혜택 관리 계획은 혜택이 실현되고 측정되는 방법을 상세히 설명합니다. 이는 중요하지만 이해관계자 기대를 정렬하는 첫 번째 문서가 아닙니다."
+        },
+        "C": {
+          "correct": true,
+          "explanation_ko": "프로젝트 헌장은 프로젝트를 공식적으로 승인하고 초기 요구사항과 스코프를 정의하는 문서입니다. 프로젝트의 목표, 이해관계자, 비즈니스 전략과의 정렬을 포함합니다. 이해관계자 기대를 프로젝트 프로세스의 혜택 및 비즈니스 전략과 정렬하는 데 가장 적합합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "프로젝트 관리 계획은 프로젝트가 어떻게 실행, 모니터링, 종료될 것인지 설명합니다. 이는 초기 단계에서 이해관계자 기대와 비즈니스 전략을 정렬하는 데 사용되는 문서가 아닙니다."
+        }
+      },
+      "solution_en": "The project charter formally authorizes the project, defines objectives and stakeholder expectations, and aligns them with business strategy.",
+      "solution_ko": "프로젝트 헌장은 프로젝트를 공식적으로 승인하고 목표 및 이해관계자 기대를 정의하며 비즈니스 전략과 정렬시킵니다.",
+      "source": "PMBOK 7th Ed/2.4; PM Portable Handbook 3rd Ed/7/281",
+      "conceptIds": [
+        "project-charter-and-business-case-alignment"
+      ]
+    },
+    {
+      "id": 47,
+      "question_en": "During the daily standup meeting, one of the team members informs the team that a user story that was initially part of the sprint planning has become invalid due to a recently announced policy change. What should the project manager do in response to this situation?",
+      "question_ko": "일일 스탠드업 회의에서, 팀원 중 한 명이 스프린트 계획의 일부였던 사용자 스토리가 최근 발표된 정책 변경으로 인해 무효가 되었다고 팀에 알립니다. 프로젝트 관리자는 이 상황에 대응하여 무엇을 해야 합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "Close the user story related to the policy change and explain that it is no longer valid.",
+          "text_ko": "정책 변경과 관련된 사용자 스토리를 종료하고 더 이상 유효하지 않다고 설명합니다."
+        },
+        {
+          "key": "B",
+          "text_en": "Remove the user story from the current sprint and schedule it for the next sprint.",
+          "text_ko": "현재 스프린트에서 사용자 스토리를 제거하고 다음 스프린트를 위해 예약합니다."
+        },
+        {
+          "key": "C",
+          "text_en": "Notify the stakeholders that user stories committed for a sprint cannot be modified.",
+          "text_ko": "스프린트에 약속된 사용자 스토리는 수정할 수 없다고 이해관계자들에게 알립니다."
+        },
+        {
+          "key": "D",
+          "text_en": "Remove the user story from the sprint and ask the team to expedite the current sprint completion.",
+          "text_ko": "스프린트에서 사용자 스토리를 제거하고 팀에게 현재 스프린트를 신속히 완료하도록 요청합니다."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "무효 사용자 스토리를 종료하는 것이 가장 적절한 대응입니다. 스프린트 백로그를 최신 상태로 유지하는 것이 중요하며, 사용자 스토리를 종료하면 팀이 그것에 작업하지 않도록 보장합니다. PM은 팀과 이해관계자들에게 이유도 설명해야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "다음 스프린트로 이동하는 것은 적절하지 않습니다. 사용자 스토리가 정책 변경으로 무효가 되었으므로 다음 스프린트에서도 유효하지 않을 것입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "스프린트에 약속된 사용자 스토리는 수정할 수 없다는 것은 현실적이지 않습니다. 정책 변경으로 인해 사용자 스토리가 무효가 된 경우 종료하는 것이 더 적절합니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "무효 사용자 스토리 문제를 단순히 제거하고 신속히 완료하도록 요청하는 것은 팀과 이해관계자들에게 왜 변경이 필요한지 설명하지 않습니다."
+        }
+      },
+      "solution_en": "An invalid user story should be closed with explanation, keeping the sprint backlog accurate and ensuring the team doesn't continue working on it.",
+      "solution_ko": "무효 사용자 스토리는 설명과 함께 종료하여 스프린트 백로그를 정확하게 유지하고 팀이 계속 작업하지 않도록 해야 합니다.",
+      "source": "Patton, J. (2014) User Story Mapping; PMBOK 7th Ed/2.4.2",
+      "conceptIds": [
+        "benefits-realization-and-organizational-change"
+      ]
+    },
+    {
+      "id": 48,
+      "question_en": "A project team has completed project deliverables, but the project manager would like to evaluate whether the project has delivered the intended value to the sponsor. What is the most appropriate factor for the project manager to evaluate?",
+      "question_ko": "프로젝트 팀이 프로젝트 인도물을 완성했지만, 프로젝트 관리자는 프로젝트가 스폰서에게 의도된 가치를 인도했는지 평가하고 싶습니다. 프로젝트 관리자가 평가해야 할 가장 적절한 요소는 무엇입니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text_en": "The alignment of the achieved deliverable against the sponsor's expectations.",
+          "text_ko": "달성된 인도물과 스폰서 기대치의 정렬."
+        },
+        {
+          "key": "B",
+          "text_en": "Whether the project's deliverables maximized potential income for the sponsor.",
+          "text_ko": "프로젝트 인도물이 스폰서를 위한 잠재적 수입을 극대화했는지 여부."
+        },
+        {
+          "key": "C",
+          "text_en": "Whether delivery performance variances were within the sponsor's thresholds.",
+          "text_ko": "인도 성과 분산이 스폰서의 임계값 내에 있었는지 여부."
+        },
+        {
+          "key": "D",
+          "text_en": "The project's overall adherence to scope, time, and budget constraints.",
+          "text_ko": "스코프, 시간, 예산 제약에 대한 프로젝트의 전반적인 준수."
+        }
+      ],
+      "answer": "A",
+      "choice_explanations": {
+        "A": {
+          "correct": true,
+          "explanation_ko": "PM이 평가해야 할 가장 적절한 요소는 달성된 인도물과 스폰서 기대치의 정렬입니다. 이는 프로젝트가 스폰서의 기대를 충족하고 의도된 가치를 인도했는지 확인합니다. PM은 작업이 혜택 달성에 최적으로 정렬되어 있는지 지속적으로 모니터링해야 합니다."
+        },
+        "B": {
+          "correct": false,
+          "explanation_ko": "잠재적 수입 극대화는 가치 인도의 한 측면일 수 있지만, 가치를 항상 재무적 이익만으로 측정하지 않으며 스폰서 기대와의 정렬이 더 포괄적인 지표입니다."
+        },
+        "C": {
+          "correct": false,
+          "explanation_ko": "성과 분산이 임계값 내에 있었는지는 분산 관리에 초점을 맞추며, 스폰서에게 인도된 가치를 직접 평가하지 않습니다."
+        },
+        "D": {
+          "correct": false,
+          "explanation_ko": "스코프, 시간, 예산에 대한 준수는 중요하지만 스폰서에 대한 가치의 주요 척도가 아닐 수 있습니다. 프로젝트가 삼중 제약 내에 완료되어도 스폰서가 기대했던 가치를 제공하지 못할 수 있습니다."
+        }
+      },
+      "solution_en": "Value delivery is best measured by comparing achieved deliverables against the sponsor's original expectations — alignment is the core criterion.",
+      "solution_ko": "가치 인도는 달성된 인도물과 스폰서의 원래 기대치를 비교하여 가장 잘 측정됩니다. 정렬이 핵심 기준입니다.",
+      "source": "O'Reilly/PM Portfolio Management (Levine, Wideman)/Purpose and Types of Projects; PMBOK 7th Ed/2.7",
+      "conceptIds": [
+        "benefits-management-plan-and-metrics"
+      ]
+    }
+  ]
+}
