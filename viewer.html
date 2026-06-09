@@ -206,6 +206,48 @@
   .c-td-r { color: var(--wrong); font-weight: 600; }
   .c-td-b { color: var(--accent); font-weight: 600; }
 
+  /* ── 모바일: c-table → 카드형 변환 (480px 이하) ── */
+  @media (max-width: 480px) {
+    .c-table-wrap { overflow-x: visible; }
+    .c-table, .c-table tbody { display: block; width: 100%; }
+    .c-table thead { display: none; }           /* 헤더 행 숨김 */
+    .c-table tbody tr {
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .c-table tbody td {
+      display: block;
+      padding: 8px 12px;
+      border-top: none;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      word-break: keep-all;                     /* 한글 단어 단위 줄바꿈 */
+      line-height: 1.6;
+    }
+    .c-table tbody td:last-child { border-bottom: none; }
+    /* 첫 번째 열(기법명) → 카드 타이틀처럼 강조 */
+    .c-table tbody td:first-child {
+      background: #dde5f5;
+      font-weight: 700;
+      color: var(--accent2);
+      font-size: 0.88rem;
+    }
+    /* 두 번째 열 이후 → data-label을 회색 소제목으로 표시 */
+    .c-table tbody td:not(:first-child)[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 4px;
+    }
+  }
+
   .c-flow { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
   .c-flow-step { color: #fff; padding: 7px 13px; font-size: 0.74rem; font-weight: 700; border-radius: 6px; white-space: nowrap; }
   .c-flow-arrow { color: var(--accent2); font-size: 1rem; }
@@ -958,6 +1000,17 @@ function buildConceptModule(q) {
     });
     html += `</div>`;
     wrap.innerHTML = html;
+
+    // 모바일 카드형 변환용: <th> 텍스트를 각 <td>의 data-label로 복사
+    // CSS ::before { content: attr(data-label) } 로 열 이름을 카드 안에 표시
+    wrap.querySelectorAll('.c-table').forEach(table => {
+      const headers = [...table.querySelectorAll('thead th')].map(th => th.textContent.trim());
+      table.querySelectorAll('tbody tr').forEach(tr => {
+        [...tr.querySelectorAll('td')].forEach((td, i) => {
+          if (headers[i]) td.dataset.label = headers[i];
+        });
+      });
+    });
   }
   return wrap;
 }
