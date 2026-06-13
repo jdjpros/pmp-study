@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMP Study — 대시보드</title>
+<style>
+:root {
+  --bg: #e6ebf5; --card: #fff; --border: #c3cce2;
+  --accent: #3b6fd4; --accent2: #6c5ce7;
+  --correct: #16a34a; --wrong: #dc2626; --warn: #d97706;
+  --text: #1e2433; --muted: #6b7280;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.6; }
+
+/* ── 헤더 ── */
+.app-header { background: linear-gradient(120deg, var(--accent), var(--accent2)); color: #fff;
+              padding: 12px 20px; display: flex; align-items: center; gap: 10px; }
+.app-title  { font-size: 1.05rem; font-weight: 800; flex: 1; }
+.header-nav a { color: rgba(255,255,255,.85); font-size: 0.8rem; text-decoration: none;
+                border: 1px solid rgba(255,255,255,.35); border-radius: 7px; padding: 4px 10px;
+                transition: .15s; }
+.header-nav a:hover { background: rgba(255,255,255,.18); color: #fff; }
+
+/* ── 전체 레이아웃 ── */
+.wrap { max-width: min(1200px, 96vw); margin: 0 auto; padding: 24px 16px 80px; }
+
+/* ── 전체 요약 카드 ── */
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.sum-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+.sum-card .num { font-size: 1.8rem; font-weight: 800; line-height: 1.1; }
+.sum-card .lbl { font-size: 0.75rem; color: var(--muted); margin-top: 3px; }
+.sum-card.total  .num { color: var(--accent); }
+.sum-card.done   .num { color: var(--correct); }
+.sum-card.remain .num { color: var(--warn); }
+.sum-card.bkmark .num { color: var(--accent2); }
+
+/* ── 전체 진행률 바 ── */
+.overall-bar-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+                    padding: 16px 20px; margin-bottom: 24px; }
+.overall-bar-label { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; display: flex; justify-content: space-between; }
+.overall-bar-label strong { color: var(--text); }
+.bar-track { background: #dde5f5; border-radius: 8px; height: 18px; overflow: hidden; }
+.bar-fill   { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2));
+              display: flex; align-items: center; justify-content: flex-end;
+              padding-right: 8px; color: #fff; font-size: 0.7rem; font-weight: 700;
+              transition: width .5s ease; min-width: 0; }
+
+/* ── 단원 카드 그리드 ── */
+.section-title { font-size: 0.8rem; font-weight: 700; color: var(--muted); text-transform: uppercase;
+                 letter-spacing: .06em; margin: 20px 0 10px; }
+.unit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+
+.unit-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+             padding: 14px 16px; display: flex; flex-direction: column; gap: 10px;
+             transition: box-shadow .15s, border-color .15s; cursor: pointer; text-decoration: none; color: inherit; }
+.unit-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(59,111,212,.14); }
+
+.unit-card-header { display: flex; align-items: flex-start; gap: 10px; }
+.unit-num { background: var(--accent2); color: #fff; font-size: 0.7rem; font-weight: 700;
+            border-radius: 5px; padding: 2px 7px; white-space: nowrap; flex: 0 0 auto; margin-top: 2px; }
+.unit-name { font-size: 0.85rem; font-weight: 700; line-height: 1.4; flex: 1; }
+
+.unit-meta { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--muted); }
+.unit-meta .q-count { font-weight: 600; color: var(--text); }
+.unit-meta .done-count { color: var(--correct); font-weight: 700; }
+.unit-meta .pct-badge { margin-left: auto; background: rgba(59,111,212,.1); color: var(--accent);
+                         font-weight: 700; border-radius: 20px; padding: 2px 10px; font-size: 0.72rem; }
+.unit-meta .pct-badge.full { background: rgba(22,163,74,.12); color: var(--correct); }
+
+.unit-bar-track { background: #dde5f5; border-radius: 4px; height: 6px; overflow: hidden; }
+.unit-bar-fill  { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2));
+                  border-radius: 4px; transition: width .4s ease; }
+.unit-bar-fill.full { background: linear-gradient(90deg, var(--correct), #22c55e); }
+
+/* ── 북마크 배지 ── */
+.bk-badge { font-size: 0.68rem; color: var(--accent2); }
+
+/* ── 정렬 버튼 ── */
+.toolbar { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.sort-btn { background: transparent; border: 1px solid var(--border); border-radius: 7px;
+            padding: 5px 12px; font-size: 0.75rem; color: var(--muted); cursor: pointer; transition: .15s; }
+.sort-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+.sort-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+.toolbar-label { font-size: 0.75rem; color: var(--muted); margin-right: 4px; }
+
+/* ── 모바일 ── */
+@media (max-width: 480px) {
+  .unit-grid { grid-template-columns: 1fr; }
+  .summary-grid { grid-template-columns: repeat(2, 1fr); }
+  .wrap { padding: 16px 12px 60px; }
+}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <span class="app-title">📘 PMP Study — 학습 대시보드</span>
+  <nav class="header-nav">
+    <a href="viewer.html">→ 문제 풀기</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- 전체 요약 -->
+  <div class="summary-grid" id="summaryGrid"></div>
+
+  <!-- 전체 진행률 바 -->
+  <div class="overall-bar-wrap">
+    <div class="overall-bar-label">
+      <span>전체 문제 진행률</span>
+      <strong id="overallText"></strong>
+    </div>
+    <div class="bar-track">
+      <div class="bar-fill" id="overallFill"></div>
+    </div>
+  </div>
+
+  <!-- 정렬 툴바 -->
+  <div class="toolbar">
+    <span class="toolbar-label">정렬:</span>
+    <button class="sort-btn active" data-sort="order">단원 순서</button>
+    <button class="sort-btn" data-sort="progress-asc">진행률 낮은 순</button>
+    <button class="sort-btn" data-sort="progress-desc">진행률 높은 순</button>
+    <button class="sort-btn" data-sort="bookmark">북마크 많은 순</button>
+  </div>
+
+  <div class="section-title">전체 단원 (30개)</div>
+  <div class="unit-grid" id="unitGrid"></div>
+
+</div>
+
+<script>
+const STORAGE_PREFIX = 'pmpViewerState::';
+
+const UNITS = [
+  { num:  1, name: 'Assess and Manage Risks', total: 30 },
+  { num:  2, name: 'Establish Project Governance Structure', total: 1 },
+  { num:  3, name: 'Manage Project Artifacts', total: 3 },
+  { num:  4, name: 'Define Team Ground Rules', total: 5 },
+  { num:  5, name: 'Ensure Knowledge Transfer for Project Continuity', total: 5 },
+  { num:  6, name: 'Promote Team Performance Through the Application of Emotional Intelligence', total: 7 },
+  { num:  7, name: 'Support Organizational Change', total: 15 },
+  { num:  8, name: 'Negotiate Project Agreements', total: 16 },
+  { num:  9, name: 'Plan and Manage Budget and Resources', total: 16 },
+  { num: 10, name: 'Plan and Manage Scope', total: 16 },
+  { num: 11, name: 'Integrate Project Planning Activities', total: 18 },
+  { num: 12, name: 'Plan and Manage Procurement', total: 19 },
+  { num: 13, name: 'Determine Appropriate Project Methodology/methods and Practices', total: 21 },
+  { num: 14, name: 'Engage and Support Virtual Teams', total: 21 },
+  { num: 15, name: 'Manage Project Issues', total: 21 },
+  { num: 16, name: 'Evaluate and Address External Business Environment Changes for Impact on Scope', total: 24 },
+  { num: 17, name: 'Plan and Manage Quality of Products/deliverables', total: 24 },
+  { num: 18, name: 'Manage communications', total: 25 },
+  { num: 19, name: 'Engage Stakeholders and Build Shared Understanding', total: 26 },
+  { num: 20, name: 'Plan and Manage Project/phase Closure or Transitions', total: 26 },
+  { num: 21, name: 'Support Team Performance by Providing Adequate Training', total: 27 },
+  { num: 22, name: 'Address and Remove Impediments, Obstacles, and Blockers for the Team', total: 29 },
+  { num: 23, name: 'Empower Team Members and Stakeholders', total: 29 },
+  { num: 24, name: 'Plan and Manage Schedule', total: 30 },
+  { num: 25, name: 'Mentor and Collaborate With Stakeholders', total: 34 },
+  { num: 26, name: 'Execute Project With the Urgency Required to Deliver Business Value', total: 40 },
+  { num: 27, name: 'Manage Conflict', total: 40 },
+  { num: 28, name: 'Plan and Manage Project Compliance', total: 42 },
+  { num: 29, name: 'Evaluate and Deliver Project Benefits and Value', total: 48 },
+  { num: 30, name: 'Build and Lead a Team', total: 59 },
+];
+
+// localStorage에서 단원별 진행 현황 읽기
+function readProgress(unitName) {
+  try {
+    const raw = localStorage.getItem(STORAGE_PREFIX + unitName);
+    if (!raw) return { done: 0, bookmarks: 0 };
+    const { data } = JSON.parse(raw);
+    let done = 0, bookmarks = 0;
+    Object.values(data || {}).forEach(st => {
+      if (st.done) done++;
+      if (st.bookmarked) bookmarks++;
+    });
+    return { done, bookmarks };
+  } catch { return { done: 0, bookmarks: 0 }; }
+}
+
+// 단원별 진행 현황 계산
+const unitsWithProgress = UNITS.map(u => {
+  const { done, bookmarks } = readProgress(u.name);
+  const pct = u.total > 0 ? Math.round((done / u.total) * 100) : 0;
+  return { ...u, done, bookmarks, pct };
+});
+
+// 전체 합계
+const totalQ    = unitsWithProgress.reduce((s, u) => s + u.total, 0);
+const totalDone = unitsWithProgress.reduce((s, u) => s + u.done, 0);
+const totalBk   = unitsWithProgress.reduce((s, u) => s + u.bookmarks, 0);
+const totalPct  = Math.round((totalDone / totalQ) * 100);
+const totalRemain = totalQ - totalDone;
+
+// 전체 요약 렌더
+document.getElementById('summaryGrid').innerHTML = `
+  <div class="sum-card total"><div class="num">${totalQ}</div><div class="lbl">전체 문항</div></div>
+  <div class="sum-card done"><div class="num">${totalDone}</div><div class="lbl">완료한 문항</div></div>
+  <div class="sum-card remain"><div class="num">${totalRemain}</div><div class="lbl">남은 문항</div></div>
+  <div class="sum-card bkmark"><div class="num">${totalBk}</div><div class="lbl">북마크</div></div>
+`;
+
+// 전체 진행률 바
+const fill = document.getElementById('overallFill');
+fill.style.width = Math.max(totalPct, 0) + '%';
+fill.textContent = totalPct > 5 ? totalPct + '%' : '';
+document.getElementById('overallText').textContent = `${totalDone} / ${totalQ} 문항 (${totalPct}%)`;
+
+// 단원 카드 렌더
+let currentSort = 'order';
+
+function renderGrid(sort) {
+  currentSort = sort;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === sort));
+
+  let list = [...unitsWithProgress];
+  if (sort === 'progress-asc')  list.sort((a, b) => a.pct - b.pct);
+  if (sort === 'progress-desc') list.sort((a, b) => b.pct - a.pct);
+  if (sort === 'bookmark')      list.sort((a, b) => b.bookmarks - a.bookmarks);
+
+  document.getElementById('unitGrid').innerHTML = list.map(u => {
+    const full = u.pct === 100;
+    return `
+    <a class="unit-card" href="viewer.html#${encodeURIComponent(u.name)}" title="${u.name} 풀기">
+      <div class="unit-card-header">
+        <span class="unit-num">${u.num}</span>
+        <span class="unit-name">${u.name}</span>
+      </div>
+      <div class="unit-meta">
+        <span class="q-count">${u.total}문항</span>
+        <span>·</span>
+        <span class="done-count">✓ ${u.done}</span>
+        ${u.bookmarks > 0 ? `<span class="bk-badge">⭐ ${u.bookmarks}</span>` : ''}
+        <span class="pct-badge ${full ? 'full' : ''}">${u.pct}%</span>
+      </div>
+      <div class="unit-bar-track">
+        <div class="unit-bar-fill ${full ? 'full' : ''}" style="width:${u.pct}%"></div>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+renderGrid('order');
+
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => renderGrid(btn.dataset.sort));
+});
+</script>
+</body>
+</html>
