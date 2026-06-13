@@ -226,7 +226,7 @@ function renderGrid(sort) {
   document.getElementById('unitGrid').innerHTML = list.map(u => {
     const full = u.pct === 100;
     return `
-    <a class="unit-card" href="viewer.html#${encodeURIComponent(u.name)}" title="${u.name} 풀기">
+    <a class="unit-card" href="viewer.html?unit=${encodeURIComponent(u.name)}" title="${u.name} 풀기">
       <div class="unit-card-header">
         <span class="unit-num">${u.num}</span>
         <span class="unit-name">${u.name}</span>
