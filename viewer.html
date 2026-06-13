@@ -79,6 +79,18 @@
   .progress-bar { flex: 1; height: 6px; background: #d3dbed; border-radius: 4px; overflow: hidden; }
   .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); width: 0%; transition: width .3s; }
 
+  /* ── 언어 모드 토글 버튼 ── */
+  .lang-btn-wrap { display: flex; border: 1px solid var(--border); border-radius: 7px; overflow: hidden; flex: 0 0 auto; }
+  .lang-btn { background: transparent; border: none; padding: 3px 9px; font-size: 0.7rem; color: var(--muted);
+              cursor: pointer; transition: .15s; white-space: nowrap; }
+  .lang-btn.active { background: var(--accent); color: #fff; font-weight: 700; }
+  .lang-btn:not(.active):hover { background: rgba(91,141,238,.1); color: var(--accent); }
+
+  /* 한글 전용 모드: 영어 지문/선지/원문해설 숨김 */
+  body.ko-only .bilingual .en,
+  body.ko-only .choice-text .en,
+  body.ko-only .solution-box .original-en { display: none; }
+
   /* ── 문제 점프 인덱스 (F10) ──
      세로 폭을 줄이기 위해 한 줄로 표시한다. (.sticky-head가 통째로 고정되므로 별도 sticky는 불필요)
      좌우 끝에 마우스를 올리면 자동으로 스크롤되는 "엣지 호버" 방식 — 스크롤바는 숨김 */
@@ -312,6 +324,7 @@
     .study-mode-btn  { padding: 3px 7px; font-size: 0.68rem; }
     .sticky-toggle-btn { padding: 3px 7px; }
     .mode-text { display: none; }             /* 학습 모드 버튼 텍스트 숨김 → 이모지만 표시 */
+    .lang-btn { padding: 3px 6px; font-size: 0.66rem; }  /* 언어 버튼 소형화 */
   }
 </style>
 </head>
@@ -521,6 +534,22 @@ let currentUnit = null;
 let unitData = null;
 let conceptMap = {};   // conceptId -> concept object
 let stateStore = {};   // qid -> { revealed: [choiceId,...], bookmarked: bool, done: bool }
+
+// ── 언어 표시 모드 ('ko' = 한글만, 'both' = 한글+영어) ─────────────────
+let langMode = localStorage.getItem('pmp_lang_mode') || 'both';
+
+function applyLangMode() {
+  document.body.classList.toggle('ko-only', langMode === 'ko');
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === langMode);
+  });
+}
+
+function setLangMode(mode) {
+  langMode = mode;
+  localStorage.setItem('pmp_lang_mode', mode);
+  applyLangMode();
+}
 
 // ── 학습 모드 (개념을 선지 위에 미리 표시) ──────────────────────────
 let studyMode = localStorage.getItem('pmp_study_mode') === '1';
@@ -825,11 +854,23 @@ function render() {
   studyBtn.addEventListener('click', toggleStudyMode);
   progressWrap.appendChild(studyBtn);
 
+  // 언어 토글 버튼 (한글 / 한글+영어)
+  const langWrap = document.createElement('div');
+  langWrap.className = 'lang-btn-wrap';
+  langWrap.innerHTML = `
+    <button class="lang-btn" data-lang="ko" title="한국어만 표시">한글</button>
+    <button class="lang-btn" data-lang="both" title="한국어 + 영어 표시">한글+영어</button>`;
+  langWrap.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLangMode(btn.dataset.lang));
+  });
+  progressWrap.appendChild(langWrap);
+
   stickyHead.appendChild(progressWrap);
   document.getElementById('resetAllBtn').addEventListener('click', resetAllQuestions);
 
-  // 학습 모드 상태 즉시 반영
+  // 학습 모드 + 언어 모드 상태 즉시 반영
   applyStudyMode();
+  applyLangMode();
 
   // F10: 점프 인덱스 — 좌우 끝에 마우스를 올리면 자동으로 스크롤되는 방식
   const jumpWrap = document.createElement('div');
