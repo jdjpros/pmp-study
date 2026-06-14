@@ -127,8 +127,11 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-
     <button class="sort-btn" data-sort="bookmark">북마크 많은 순</button>
   </div>
 
-  <div class="section-title">전체 단원 (30개)</div>
+  <div class="section-title">단원별 학습 (30개)</div>
   <div class="unit-grid" id="unitGrid"></div>
+
+  <div class="section-title" style="margin-top:32px">미니 모의고사 (15회 · 225문항)</div>
+  <div class="unit-grid" id="miniGrid"></div>
 
 </div>
 
@@ -168,6 +171,24 @@ const UNITS = [
   { num: 30, name: 'Build and Lead a Team', total: 59 },
 ];
 
+const MINI_EXAMS = [
+  { num:  1, name: 'Mini Exam 1',                               total: 15 },
+  { num:  2, name: 'Mini Exam 2_ Predictive',                   total: 15 },
+  { num:  3, name: 'Mini Exam 3_ Hybrid',                       total: 15 },
+  { num:  4, name: 'Mini Exam 4_ Agile',                        total: 15 },
+  { num:  5, name: 'Mini Exam 5_ Hybrid',                       total: 15 },
+  { num:  6, name: 'Mini Exam 6_ Predictive',                   total: 15 },
+  { num:  7, name: 'Mini Exam 7',                               total: 15 },
+  { num:  8, name: 'Mini Exam 8_ Agile',                        total: 15 },
+  { num:  9, name: 'Mini Exam 9_ People Domain',                total: 15 },
+  { num: 10, name: 'Mini Exam 10_ Process Domain',              total: 15 },
+  { num: 11, name: 'Mini Exam 11_ Business Environment Domain', total: 15 },
+  { num: 12, name: 'Mini Exam 12_ Hybrid',                      total: 15 },
+  { num: 13, name: 'Mini Exam 13_ Predictive',                  total: 15 },
+  { num: 14, name: 'Mini Exam 14',                              total: 15 },
+  { num: 15, name: 'Mini Exam 15_ Agile',                       total: 15 },
+];
+
 // localStorage에서 단원별 진행 현황 읽기
 function readProgress(unitName) {
   try {
@@ -190,10 +211,16 @@ const unitsWithProgress = UNITS.map(u => {
   return { ...u, done, bookmarks, pct };
 });
 
-// 전체 합계
-const totalQ    = unitsWithProgress.reduce((s, u) => s + u.total, 0);
-const totalDone = unitsWithProgress.reduce((s, u) => s + u.done, 0);
-const totalBk   = unitsWithProgress.reduce((s, u) => s + u.bookmarks, 0);
+const miniWithProgress = MINI_EXAMS.map(u => {
+  const { done, bookmarks } = readProgress(u.name);
+  const pct = u.total > 0 ? Math.round((done / u.total) * 100) : 0;
+  return { ...u, done, bookmarks, pct };
+});
+
+// 전체 합계 (단원 + 미니모의고사)
+const totalQ    = unitsWithProgress.reduce((s, u) => s + u.total, 0) + miniWithProgress.reduce((s, u) => s + u.total, 0);
+const totalDone = unitsWithProgress.reduce((s, u) => s + u.done, 0)  + miniWithProgress.reduce((s, u) => s + u.done, 0);
+const totalBk   = unitsWithProgress.reduce((s, u) => s + u.bookmarks, 0) + miniWithProgress.reduce((s, u) => s + u.bookmarks, 0);
 const totalPct  = Math.round((totalDone / totalQ) * 100);
 const totalRemain = totalQ - totalDone;
 
@@ -250,6 +277,28 @@ renderGrid('order');
 document.querySelectorAll('.sort-btn').forEach(btn => {
   btn.addEventListener('click', () => renderGrid(btn.dataset.sort));
 });
+
+// 미니모의고사 그리드 렌더 (고정 순서)
+document.getElementById('miniGrid').innerHTML = miniWithProgress.map(u => {
+  const full = u.pct === 100;
+  return `
+  <a class="unit-card" href="viewer.html?unit=${encodeURIComponent(u.name)}" title="${u.name} 풀기">
+    <div class="unit-card-header">
+      <span class="unit-num" style="background:#e84393">M${u.num}</span>
+      <span class="unit-name">${u.name}</span>
+    </div>
+    <div class="unit-meta">
+      <span class="q-count">${u.total}문항</span>
+      <span>·</span>
+      <span class="done-count">✓ ${u.done}</span>
+      ${u.bookmarks > 0 ? `<span class="bk-badge">⭐ ${u.bookmarks}</span>` : ''}
+      <span class="pct-badge ${full ? 'full' : ''}">${u.pct}%</span>
+    </div>
+    <div class="unit-bar-track">
+      <div class="unit-bar-fill ${full ? 'full' : ''}" style="width:${u.pct}%"></div>
+    </div>
+  </a>`;
+}).join('');
 </script>
 </body>
 </html>
