@@ -1,1 +1,1 @@
-{"v":"20260615-7","note":"UNITS 배열에 Mini Exam 15개 추가 + Mini Exam 접근 시 시험 모드 자동 전환"}
+{"v":"20260615-8","note":"마지막 위치 저장 기능: Firestore lastPosition 저장/복원, 대시보드 이어서 학습하기 카드"}

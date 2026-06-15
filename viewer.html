@@ -309,6 +309,12 @@
   .tool-btn.reset:hover { border-color: var(--wrong); color: var(--wrong); }
 
   /* ── 위로 가기 버튼 (요구사항 7) ── */
+  /* ── 이어서 풀기 배너 ── */
+  #resumeBanner { display:none; background:#fff8e1; border-bottom:2px solid #f9a825; padding:10px 20px; font-size:0.88rem; color:#5d4037; display:flex; align-items:center; gap:10px; }
+  #resumeBanner.show { display:flex; }
+  #resumeBtn { background:#f9a825; color:#fff; border:none; border-radius:6px; padding:5px 14px; font-size:0.84rem; font-weight:700; cursor:pointer; white-space:nowrap; }
+  #resumeBtn:hover { background:#f57f17; }
+  #resumeDismiss { background:none; border:none; color:#a0897a; font-size:1.1rem; cursor:pointer; margin-left:auto; padding:0 4px; }
   .scroll-top-btn { position: fixed; right: 24px; bottom: 28px; width: 46px; height: 46px; border-radius: 50%;
                     background: var(--accent2); color: #fff; border: none; font-size: 1.2rem; cursor: pointer;
                     box-shadow: 0 4px 14px rgba(0,0,0,.4); display: none; align-items: center; justify-content: center;
@@ -385,6 +391,13 @@
   <select class="unit-select" id="unitSelect"><!-- JS가 동적으로 채움 --></select>
   <span class="unit-select-current" id="unitSelectCurrent"></span>
 </nav>
+
+<!-- 이어서 풀기 배너 -->
+<div id="resumeBanner">
+  <span id="resumeText"></span>
+  <button id="resumeBtn">이어서 풀기 →</button>
+  <button id="resumeDismiss" title="닫기">✕</button>
+</div>
 
 <div class="wrap">
   <!-- 단원 제목/부제 — 스크롤하면 자연스럽게 올라가는 일반 콘텐츠 영역 -->
@@ -468,6 +481,9 @@ const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 let currentUser = null;          // 로그인 사용자 (없으면 null → localStorage만 사용)
 let cloudSyncTimer = null;       // saveState 호출이 잦으므로 디바운스하여 Firestore에 씀
+let positionSaveTimer = null;    // lastPosition 저장 디바운스
+let currentVisibleQIdx = 0;      // 현재 화면에 보이는 문항 인덱스
+let resumePos = null;            // 로드된 lastPosition
 
 function setSyncBadge(mode) {
   // mode: 'syncing' | 'synced' | 'offline' | ''
@@ -507,9 +523,6 @@ auth.onAuthStateChanged(async (user) => {
   }
 
   // 로그인/로그아웃 시점에 현재 단원을 다시 불러온다.
-  //  - 문제 데이터 자체가 Firestore에 있어 로그인해야 비로소 불러올 수 있으므로,
-  //    로그인 전에는 "로그인이 필요합니다" 안내만 보이다가, 로그인되는 순간 정식으로 데이터를 로드한다.
-  //  - 이미 데이터를 불러온 상태에서 로그인/로그아웃이 일어나면, 풀이 상태(stateStore)만 다시 불러와 화면에 반영한다.
   if (currentUnit) {
     if (user && !unitData) {
       await loadUnit(currentUnit);
@@ -519,11 +532,75 @@ auth.onAuthStateChanged(async (user) => {
       updateGlobalProgress();
     }
   }
+
+  // 로그인 시 lastPosition 배너 표시 (URL에 unit 파라미터 없이 접근한 경우)
+  if (user) {
+    const params = new URLSearchParams(window.location.search);
+    if (!params.get('unit')) {
+      resumePos = await loadLastPosition();
+      if (resumePos && resumePos.unit) showResumeBanner(resumePos);
+    }
+  }
 });
 
 // Firestore 문서 경로: users/{uid}/unitStates/{unitName}
 function unitDocRef(unitName) {
   return db.collection('users').doc(currentUser.uid).collection('unitStates').doc(unitName);
+}
+
+// ── 마지막 위치 저장/복원 ──
+function lastPosRef() {
+  return db.collection('users').doc(currentUser.uid).collection('meta').doc('lastPosition');
+}
+
+function saveLastPosition() {
+  if (!currentUser) return;
+  if (positionSaveTimer) clearTimeout(positionSaveTimer);
+  positionSaveTimer = setTimeout(() => {
+    lastPosRef().set({
+      unit: currentUnit,
+      qIdx: currentVisibleQIdx,
+      updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+    }).catch(() => {});
+  }, 1500);
+}
+
+async function loadLastPosition() {
+  if (!currentUser) return null;
+  try {
+    const snap = await lastPosRef().get();
+    return snap.exists ? snap.data() : null;
+  } catch(e) { return null; }
+}
+
+function showResumeBanner(pos) {
+  if (!pos || !pos.unit) return;
+  const banner = document.getElementById('resumeBanner');
+  const text = document.getElementById('resumeText');
+  const btn = document.getElementById('resumeBtn');
+  const dismiss = document.getElementById('resumeDismiss');
+  const qNum = (pos.qIdx || 0) + 1;
+  text.textContent = `📌 마지막으로 "${pos.unit}" Q${qNum}을 풀었습니다.`;
+  btn.onclick = () => {
+    banner.classList.remove('show');
+    if (pos.unit !== currentUnit) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('unit', pos.unit);
+      window.history.pushState({}, '', url);
+      currentUnit = pos.unit;
+      updateUnitSelectCurrent();
+      loadUnit(pos.unit).then(() => scrollToQIdx(pos.qIdx || 0));
+    } else {
+      scrollToQIdx(pos.qIdx || 0);
+    }
+  };
+  dismiss.onclick = () => banner.classList.remove('show');
+  banner.classList.add('show');
+}
+
+function scrollToQIdx(qIdx) {
+  const cards = document.querySelectorAll('.q-card');
+  if (cards[qIdx]) cards[qIdx].scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // 전체 단원 목록 (단원 이동 네비게이션용). 파일명은 "[단원명].json" 형태로 data/ 폴더에 위치.
@@ -637,7 +714,13 @@ function init() {
   }
 
   buildUnitNav();
-  loadUnit(currentUnit);
+  // dashboard에서 resumeQ 파라미터로 진입 시 해당 문항으로 자동 스크롤
+  const resumeQParam = parseInt(params.get('resumeQ') || '-1');
+  loadUnit(currentUnit).then(() => {
+    if (resumeQParam >= 0) {
+      setTimeout(() => scrollToQIdx(resumeQParam), 400);
+    }
+  });
 
   window.addEventListener('scroll', () => {
     const btn = document.getElementById('scrollTopBtn');
@@ -988,6 +1071,27 @@ function render() {
 
   // sticky-head 높이가 단원마다 달라질 수 있으므로 다시 측정해 동기화
   syncNavHeight();
+
+  // 현재 보이는 문항을 tracking하여 lastPosition 자동 저장
+  const qCards = document.querySelectorAll('.q-card');
+  const posObserver = new IntersectionObserver(entries => {
+    let topIdx = null;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = parseInt(entry.target.dataset.qorder);
+        if (topIdx === null || idx < topIdx) topIdx = idx;
+      }
+    });
+    if (topIdx !== null && topIdx !== currentVisibleQIdx) {
+      currentVisibleQIdx = topIdx;
+      saveLastPosition();
+    }
+  }, { threshold: 0.2, rootMargin: '-80px 0px 0px 0px' });
+
+  qCards.forEach((card, i) => {
+    card.dataset.qorder = i;
+    posObserver.observe(card);
+  });
 }
 
 // ── 문제 카드 생성 ──
@@ -1148,6 +1252,7 @@ function revealChoice(card, q, el, choice) {
 
   saveState();
   updateGlobalProgress();
+  saveLastPosition();
 }
 
 // F10: 문제 번호 클릭 시 해당 문제로 스크롤 이동

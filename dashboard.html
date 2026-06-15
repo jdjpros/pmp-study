@@ -85,11 +85,26 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-
 .sort-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
 .toolbar-label { font-size: 0.75rem; color: var(--muted); margin-right: 4px; }
 
+/* ── 이어서 학습하기 카드 ── */
+.resume-card { background: linear-gradient(120deg, #fff8e1, #fff3cd); border: 1.5px solid #f9a825;
+               border-radius: 14px; padding: 16px 20px; margin-bottom: 20px;
+               display: flex; align-items: center; gap: 14px; }
+.resume-card .resume-icon { font-size: 1.8rem; flex: 0 0 auto; }
+.resume-card .resume-body { flex: 1; min-width: 0; }
+.resume-card .resume-label { font-size: 0.72rem; font-weight: 700; color: #a0897a; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+.resume-card .resume-unit { font-size: 0.92rem; font-weight: 800; color: #3b2f00; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.resume-card .resume-q { font-size: 0.78rem; color: #6d4c00; margin-top: 2px; }
+.resume-card .resume-btn { background: #f9a825; color: #fff; border: none; border-radius: 8px;
+                            padding: 8px 18px; font-size: 0.85rem; font-weight: 700; cursor: pointer;
+                            white-space: nowrap; text-decoration: none; }
+.resume-card .resume-btn:hover { background: #f57f17; }
+
 /* ── 모바일 ── */
 @media (max-width: 480px) {
   .unit-grid { grid-template-columns: 1fr; }
   .summary-grid { grid-template-columns: repeat(2, 1fr); }
   .wrap { padding: 16px 12px 60px; }
+  .resume-card { flex-wrap: wrap; }
 }
 </style>
 </head>
@@ -103,6 +118,17 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-
 </header>
 
 <div class="wrap">
+
+  <!-- 이어서 학습하기 (로그인 시 표시) -->
+  <div class="resume-card" id="resumeCard" style="display:none">
+    <div class="resume-icon">📌</div>
+    <div class="resume-body">
+      <div class="resume-label">이어서 학습하기</div>
+      <div class="resume-unit" id="resumeUnit"></div>
+      <div class="resume-q" id="resumeQ"></div>
+    </div>
+    <a class="resume-btn" id="resumeLink" href="#">이어서 풀기 →</a>
+  </div>
 
   <!-- 전체 요약 -->
   <div class="summary-grid" id="summaryGrid"></div>
@@ -299,6 +325,41 @@ document.getElementById('miniGrid').innerHTML = miniWithProgress.map(u => {
     </div>
   </a>`;
 }).join('');
+</script>
+
+<!-- Firebase: lastPosition 읽어서 이어서 학습하기 카드 표시 -->
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyD4biKSWL-oMwDGWXkI_xT0qZRxhB7jQ08",
+  authDomain: "pmp-study-f6fb9.firebaseapp.com",
+  projectId: "pmp-study-f6fb9",
+  storageBucket: "pmp-study-f6fb9.firebasestorage.app",
+  messagingSenderId: "359132313524",
+  appId: "1:359132313524:web:207982a27422b371eba4e1"
+});
+const _auth = firebase.auth();
+const _db   = firebase.firestore();
+
+_auth.onAuthStateChanged(async (user) => {
+  if (!user) return;
+  try {
+    const snap = await _db.collection('users').doc(user.uid)
+                          .collection('meta').doc('lastPosition').get();
+    if (!snap.exists) return;
+    const pos = snap.data();
+    if (!pos || !pos.unit) return;
+
+    const qNum = (pos.qIdx || 0) + 1;
+    document.getElementById('resumeUnit').textContent = pos.unit;
+    document.getElementById('resumeQ').textContent = `Q${qNum}번 문항`;
+    document.getElementById('resumeLink').href =
+      `viewer.html?unit=${encodeURIComponent(pos.unit)}&resumeQ=${pos.qIdx || 0}`;
+    document.getElementById('resumeCard').style.display = 'flex';
+  } catch(e) {}
+});
 </script>
 </body>
 </html>
