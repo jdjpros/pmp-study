@@ -315,6 +315,9 @@
   #resumeBtn { background:#f9a825; color:#fff; border:none; border-radius:6px; padding:5px 14px; font-size:0.84rem; font-weight:700; cursor:pointer; white-space:nowrap; }
   #resumeBtn:hover { background:#f57f17; }
   #resumeDismiss { background:none; border:none; color:#a0897a; font-size:1.1rem; cursor:pointer; margin-left:auto; padding:0 4px; }
+  .dashboard-footer { text-align: center; padding: 40px 0 20px; }
+  .dashboard-footer a { display: inline-block; background: linear-gradient(120deg, var(--accent), var(--accent2)); color: #fff; text-decoration: none; border-radius: 12px; padding: 13px 32px; font-size: 0.95rem; font-weight: 700; letter-spacing: .02em; box-shadow: 0 4px 16px rgba(59,111,212,.25); transition: .15s; }
+  .dashboard-footer a:hover { opacity: .88; box-shadow: 0 6px 20px rgba(59,111,212,.35); }
   .scroll-top-btn { position: fixed; right: 24px; bottom: 28px; width: 46px; height: 46px; border-radius: 50%;
                     background: var(--accent2); color: #fff; border: none; font-size: 1.2rem; cursor: pointer;
                     box-shadow: 0 4px 14px rgba(0,0,0,.4); display: none; align-items: center; justify-content: center;
@@ -1064,6 +1067,12 @@ function render() {
 
   // 문제 카드들
   unitData.questions.forEach(q => content.appendChild(buildQuestionCard(q)));
+
+  // 맨 하단 대시보드 이동 버튼
+  const footer = document.createElement('div');
+  footer.className = 'dashboard-footer';
+  footer.innerHTML = '<a href="dashboard.html">📊 대시보드로 이동</a>';
+  content.appendChild(footer);
 
   // 저장된 상태 복원 (새로고침 후에도 유지)
   restoreAllStates();
