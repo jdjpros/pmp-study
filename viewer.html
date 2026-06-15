@@ -557,8 +557,22 @@ const UNITS = [
   "Manage Conflict",
   "Plan and Manage Project Compliance",
   "Evaluate and Deliver Project Benefits and Value",
-  "Build and Lead a Team"
-  // TODO: 나머지 단원들이 추가되는 대로 이 배열에 추가하면 상단 네비게이션에 자동 반영됨
+  "Build and Lead a Team",
+  "Mini Exam 1",
+  "Mini Exam 2_ Predictive",
+  "Mini Exam 3_ Hybrid",
+  "Mini Exam 4_ Agile",
+  "Mini Exam 5_ Hybrid",
+  "Mini Exam 6_ Predictive",
+  "Mini Exam 7",
+  "Mini Exam 8_ Agile",
+  "Mini Exam 9_ People Domain",
+  "Mini Exam 10_ Process Domain",
+  "Mini Exam 11_ Business Environment Domain",
+  "Mini Exam 12_ Hybrid",
+  "Mini Exam 13_ Predictive",
+  "Mini Exam 14",
+  "Mini Exam 15_ Agile"
 ];
 
 const STORAGE_PREFIX = "pmpViewerState::";
@@ -615,6 +629,12 @@ function init() {
   const params = new URLSearchParams(window.location.search);
   const requested = params.get('unit');
   currentUnit = (requested && UNITS.includes(requested)) ? requested : UNITS[0];
+
+  // Mini Exam 단원은 시험 모드(studyMode OFF)로 자동 진입
+  if (currentUnit.startsWith('Mini Exam')) {
+    studyMode = false;
+    localStorage.setItem('pmp_study_mode', '0');
+  }
 
   buildUnitNav();
   loadUnit(currentUnit);
