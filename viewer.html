@@ -847,13 +847,16 @@ async function loadUnit(unitName) {
 
     // 개념 모듈은 선택 사항 — 없어도 뷰어는 정상 동작
     // 구버전: doc.concepts = { concepts:[...] }  /  신버전: doc.concepts = [...]
-    // 신버전 개념 모듈은 html 대신 content 필드를 사용하므로 html로 매핑
+    // html 필드를 다양한 과거 필드명(content, body_html, body, description)에서도 읽음
     conceptMap = {};
     const conceptData = doc.concepts;
     if (conceptData) {
-      const list = Array.isArray(conceptData) ? conceptData : (conceptData.concepts || []);
+      const list = Array.isArray(conceptData) ? conceptData
+                 : (Array.isArray(conceptData.concepts) ? conceptData.concepts
+                 : Object.values(conceptData).filter(v => v && typeof v === 'object' && v.id));
       list.forEach(c => {
-        conceptMap[c.id] = Object.assign({}, c, { html: c.html || c.content || null });
+        const html = c.html || c.content || c.body_html || null;
+        conceptMap[c.id] = Object.assign({}, c, { html });
       });
     }
 
@@ -1076,7 +1079,7 @@ function buildConceptModule(q) {
       if (c.html) {
         html += `<div class="concept-block"><div class="concept-block-title">${escapeHtml(c.title || c.id)}</div>${c.html}</div>`;
       } else {
-        html += `<div class="concept-block"><div class="concept-block-title">${escapeHtml(c.title || c.id)}</div><p class="c-p">${escapeHtml(c.summary || c.body || '')}</p></div>`;
+        html += `<div class="concept-block"><div class="concept-block-title">${escapeHtml(c.title || c.id)}</div><p class="c-p">${escapeHtml(c.summary || c.body || c.description || '')}</p></div>`;
       }
     });
     html += `</div>`;
