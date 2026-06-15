@@ -777,16 +777,23 @@ function normalizeUnitDoc(doc) {
     const ko = q.ko || q.question_ko || '';
 
     // choices 정규화
+    // choice_explanations: 배열([{key,explanation_ko}]) 또는 객체({A:{...}}) 모두 지원
+    const _expLookup = (() => {
+      const ce = q.choice_explanations;
+      if (!ce) return null;
+      if (Array.isArray(ce)) return Object.fromEntries(ce.map(e => [e.key, e]));
+      return ce;
+    })();
     const choices = (q.choices || []).map(c => {
       const key    = c.key || c.id || '';
-      const expObj = q.choice_explanations && q.choice_explanations[key];
+      const expObj = _expLookup && _expLookup[key];
       return {
         id          : key,
         en          : c.text_en  || c.en  || '',
         ko          : c.text_ko  || c.ko  || '',
         correct     : answers.includes(key),
         explanation : expObj
-                      ? (expObj.explanation_ko || '')
+                      ? (expObj.explanation_ko || expObj.explanation || '')
                       : (c.explanation || c.explanation_ko || '')
       };
     });
