@@ -793,7 +793,7 @@ function normalizeUnitDoc(doc) {
         ko          : c.text_ko  || c.ko  || '',
         correct     : answers.includes(key),
         explanation : expObj
-                      ? (expObj.explanation_ko || expObj.explanation || '')
+                      ? (expObj.explanation_ko || expObj.explanation || expObj.text || '')
                       : (c.explanation || c.explanation_ko || '')
       };
     });

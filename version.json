@@ -1,1 +1,1 @@
-{"v":"20260615-3","note":"뷰어 버그수정: choice_explanations 배열 인덱스 오류 수정 (16개 단원 선지해설 표시)"}
+{"v":"20260615-4","note":"뷰어 버그수정: choice_explanations.text 필드 지원 추가 (Execute Project, Mentor 해설 복원)"}
