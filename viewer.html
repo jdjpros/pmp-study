@@ -10,7 +10,7 @@
     --correct: #16a34a; --wrong: #dc2626; --warn: #d97706; --text: #1e2433; --muted: #6b7280;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; font-size: 15px; line-height: 1.7; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; font-size: var(--fs-base, 15px); line-height: 1.7; }
 
   /* ── 어플리케이션 타이틀 ── */
   .app-header { background: linear-gradient(120deg, var(--accent), var(--accent2)); color: #fff;
@@ -315,6 +315,10 @@
   #resumeBtn { background:#f9a825; color:#fff; border:none; border-radius:6px; padding:5px 14px; font-size:0.84rem; font-weight:700; cursor:pointer; white-space:nowrap; }
   #resumeBtn:hover { background:#f57f17; }
   #resumeDismiss { background:none; border:none; color:#a0897a; font-size:1.1rem; cursor:pointer; margin-left:auto; padding:0 4px; }
+  .font-size-wrap { display: flex; align-items: center; gap: 4px; margin-left: 4px; }
+  .fs-btn { background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--text); cursor: pointer; padding: 3px 7px; line-height: 1; transition: .15s; }
+  .fs-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .fs-label { font-size: 0.7rem; color: var(--muted); min-width: 26px; text-align: center; }
   .dashboard-footer { text-align: center; padding: 40px 0 20px; }
   .dashboard-footer a { display: inline-block; background: linear-gradient(120deg, var(--accent), var(--accent2)); color: #fff; text-decoration: none; border-radius: 12px; padding: 13px 32px; font-size: 0.95rem; font-weight: 700; letter-spacing: .02em; box-shadow: 0 4px 16px rgba(59,111,212,.25); transition: .15s; }
   .dashboard-footer a:hover { opacity: .88; box-shadow: 0 6px 20px rgba(59,111,212,.35); }
@@ -485,8 +489,21 @@ const googleProvider = new firebase.auth.GoogleAuthProvider();
 let currentUser = null;          // 로그인 사용자 (없으면 null → localStorage만 사용)
 let cloudSyncTimer = null;       // saveState 호출이 잦으므로 디바운스하여 Firestore에 씀
 let positionSaveTimer = null;    // lastPosition 저장 디바운스
+let fontSize = parseInt(localStorage.getItem('pmp_font_size') || '15');
 let currentVisibleQIdx = 0;      // 현재 화면에 보이는 문항 인덱스
 let resumePos = null;            // 로드된 lastPosition
+
+function applyFontSize() {
+  document.documentElement.style.setProperty('--fs-base', fontSize + 'px');
+  const lbl = document.getElementById('fsLabel');
+  if (lbl) lbl.textContent = fontSize + 'px';
+}
+
+function changeFontSize(delta) {
+  fontSize = Math.max(12, Math.min(22, fontSize + delta));
+  localStorage.setItem('pmp_font_size', fontSize);
+  applyFontSize();
+}
 
 function setSyncBadge(mode) {
   // mode: 'syncing' | 'synced' | 'offline' | ''
@@ -716,6 +733,7 @@ function init() {
     localStorage.setItem('pmp_study_mode', '0');
   }
 
+  applyFontSize();
   buildUnitNav();
   // dashboard에서 resumeQ 파라미터로 진입 시 해당 문항으로 자동 스크롤
   const resumeQParam = parseInt(params.get('resumeQ') || '-1');
@@ -1013,6 +1031,17 @@ function render() {
     btn.addEventListener('click', () => setLangMode(btn.dataset.lang));
   });
   progressWrap.appendChild(langWrap);
+
+  // 글자 크기 조절 버튼
+  const fsWrap = document.createElement('div');
+  fsWrap.className = 'font-size-wrap';
+  fsWrap.innerHTML = `
+    <button class="fs-btn" id="fsBtnMinus" title="글자 작게">A−</button>
+    <span class="fs-label" id="fsLabel">${fontSize}px</span>
+    <button class="fs-btn" id="fsBtnPlus" title="글자 크게">A+</button>`;
+  fsWrap.querySelector('#fsBtnMinus').addEventListener('click', () => changeFontSize(-1));
+  fsWrap.querySelector('#fsBtnPlus').addEventListener('click', () => changeFontSize(1));
+  progressWrap.appendChild(fsWrap);
 
   stickyHead.appendChild(progressWrap);
   document.getElementById('resetAllBtn').addEventListener('click', resetAllQuestions);
