@@ -498,6 +498,8 @@ let currentVisibleQIdx = 0;      // 현재 화면에 보이는 문항 인덱스
 let resumePos = null;            // 로드된 lastPosition
 
 function applyFontSize() {
+  // rem 단위 전체에 적용되도록 html font-size를 직접 변경
+  document.documentElement.style.fontSize = fontSize + 'px';
   document.documentElement.style.setProperty('--fs-base', fontSize + 'px');
   const lbl = document.getElementById('fsLabel');
   if (lbl) lbl.textContent = fontSize + 'px';
