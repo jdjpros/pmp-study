@@ -308,6 +308,17 @@
   .tool-btn.bookmark.active { border-color: var(--warn); color: var(--warn); background: rgba(245,158,11,.1); }
   .tool-btn.reset:hover { border-color: var(--wrong); color: var(--wrong); }
 
+  /* ── 북마크 하단 영역 ── */
+  .bookmark-footer {
+    padding: 10px 18px 14px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    background: var(--card);
+  }
+  .bk-footer-btn { font-size: 0.85rem; padding: 7px 22px; }
+  .bk-footer-btn.active { font-size: 0.85rem; padding: 7px 22px; }
+
   /* ── 위로 가기 버튼 (요구사항 7) ── */
   /* ── 이어서 풀기 배너 ── */
   #resumeBanner { display:none; background:#fff8e1; border-bottom:2px solid #f9a825; padding:10px 20px; font-size:0.88rem; color:#5d4037; display:flex; align-items:center; gap:10px; }
@@ -1152,7 +1163,6 @@ function buildQuestionCard(q) {
     ${q.multi ? `<span class="multi-tag">복수선택 ${q.answerCount || q.answer.length}개</span>` : ''}
     <span class="q-status" data-status>0/${q.choices.length} 선택지 확인됨</span>
     <div class="q-tools">
-      <button class="tool-btn bookmark" data-bookmark title="복습할 문제로 표시">☆ 북마크</button>
       <button class="tool-btn reset" data-reset title="클릭 상태 초기화 후 다시 풀기">↺ 다시풀기</button>
     </div>
   `;
@@ -1215,8 +1225,14 @@ function buildQuestionCard(q) {
   // 추가 개념정리 모듈 (요구사항 5)
   card.appendChild(buildConceptModule(q));
 
+  // 북마크 버튼 (카드 최하단 — 해설·개념정리를 모두 읽은 뒤 결정)
+  const bookmarkFooter = document.createElement('div');
+  bookmarkFooter.className = 'bookmark-footer';
+  bookmarkFooter.innerHTML = `<button class="tool-btn bookmark bk-footer-btn" data-bookmark title="복습할 문제로 표시">☆ 북마크</button>`;
+  card.appendChild(bookmarkFooter);
+
   // 도구 버튼 이벤트 연결
-  header.querySelector('[data-bookmark]').addEventListener('click', (e) => toggleBookmark(card, q, e.currentTarget));
+  card.querySelector('[data-bookmark]').addEventListener('click', (e) => toggleBookmark(card, q, e.currentTarget));
   header.querySelector('[data-reset]').addEventListener('click', () => resetQuestion(card, q));
 
   return card;
