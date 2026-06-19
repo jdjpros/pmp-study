@@ -99,24 +99,80 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-
                             white-space: nowrap; text-decoration: none; }
 .resume-card .resume-btn:hover { background: #f57f17; }
 
+/* ── 탭 네비게이션 ── */
+.main-tabs {
+  display: flex;
+  background: rgba(0,0,0,.15);
+  border-radius: 0;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.main-tab {
+  flex: 1;
+  padding: 10px 8px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.65);
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  border-bottom: 3px solid transparent;
+  transition: all .2s;
+  letter-spacing: .01em;
+}
+.main-tab:hover { color: rgba(255,255,255,.9); background: rgba(255,255,255,.07); }
+.main-tab.active { color: #fff; border-bottom-color: #fff; background: rgba(255,255,255,.1); }
+
+/* ── 시나리오 탭 iframe ── */
+.scenario-wrap {
+  display: none;
+  height: calc(100vh - 94px);
+}
+.scenario-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 /* ── 모바일 ── */
 @media (max-width: 480px) {
   .unit-grid { grid-template-columns: 1fr; }
   .summary-grid { grid-template-columns: repeat(2, 1fr); }
   .wrap { padding: 16px 12px 60px; }
   .resume-card { flex-wrap: wrap; }
+  .scenario-wrap { height: calc(100vh - 88px); }
 }
 </style>
 </head>
 <body>
 
 <header class="app-header">
-  <span class="app-title">📘 PMP Study — 학습 대시보드</span>
+  <span class="app-title">📘 PMP Study</span>
   <nav class="header-nav">
     <a href="viewer.html">→ 문제 풀기</a>
   </nav>
 </header>
 
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showMainTab('dashboard', this)">📊 학습 현황</button>
+  <button class="main-tab" onclick="showMainTab('scenarios', this)">📋 시나리오 학습</button>
+  <button class="main-tab" onclick="showMainTab('cheatsheet', this)">📄 치트시트</button>
+</div>
+
+<!-- 시나리오 탭 -->
+<div class="scenario-wrap" id="tab-scenarios">
+  <iframe src="scenarios.html" id="scenarioFrame" loading="lazy"></iframe>
+</div>
+
+<!-- 치트시트 탭 -->
+<div class="scenario-wrap" id="tab-cheatsheet">
+  <iframe src="cheatsheet_v2.html" id="cheatsheetFrame" loading="lazy"></iframe>
+</div>
+
+<!-- 학습 현황 탭 -->
+<div id="tab-dashboard">
 <div class="wrap">
 
   <!-- 이어서 학습하기 (로그인 시 표시) -->
@@ -159,7 +215,20 @@ body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-
   <div class="section-title" style="margin-top:32px">미니 모의고사 (15회 · 225문항)</div>
   <div class="unit-grid" id="miniGrid"></div>
 
-</div>
+</div><!-- /wrap -->
+</div><!-- /tab-dashboard -->
+
+<script>
+function showMainTab(tabName, btn) {
+  // 탭 콘텐츠 전환
+  document.getElementById('tab-dashboard').style.display  = tabName === 'dashboard'  ? 'block' : 'none';
+  document.getElementById('tab-scenarios').style.display  = tabName === 'scenarios'  ? 'block' : 'none';
+  document.getElementById('tab-cheatsheet').style.display = tabName === 'cheatsheet' ? 'block' : 'none';
+  // 탭 버튼 active
+  document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
 
 <script>
 const STORAGE_PREFIX = 'pmpViewerState::';

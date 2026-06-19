@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMP 핵심 치트시트 v2 — 30단원 상세 요약</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
+    font-size: 11px;
+    background: #f0f2f5;
+    color: #2d3436;
+    line-height: 1.45;
+  }
+
+  /* ── 페이지 헤더 ── */
+  .page-header {
+    background: linear-gradient(135deg, #0984e3 0%, #6c5ce7 100%);
+    color: white;
+    text-align: center;
+    padding: 20px 20px 16px;
+  }
+  .page-header h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+  .page-header p { font-size: 11px; opacity: 0.85; margin-top: 5px; }
+
+  /* ── PMI 공통 패턴 박스 ── */
+  .pmi-box {
+    background: #fff;
+    margin: 14px 14px 10px;
+    border-radius: 10px;
+    padding: 12px 16px;
+    border: 2px solid #0984e3;
+  }
+  .pmi-box .pmi-title {
+    font-size: 12px; font-weight: 800; color: #0984e3; margin-bottom: 8px;
+  }
+  .pmi-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pmi-item {
+    background: #e8f4fd;
+    border-radius: 7px;
+    padding: 7px 11px;
+    flex: 1;
+    min-width: 130px;
+  }
+  .pmi-item b { color: #0984e3; display: block; margin-bottom: 2px; font-size: 11px; }
+  .pmi-item span { color: #555; font-size: 10px; }
+
+  /* ── 카드 그리드 ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+    padding: 10px 14px 24px;
+  }
+
+  /* ── 카드 ── */
+  .card {
+    background: white;
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    break-inside: avoid;
+  }
+  .card-header {
+    background: #0984e3;
+    color: white;
+    padding: 8px 11px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .num {
+    background: rgba(255,255,255,0.28);
+    border-radius: 50%;
+    min-width: 22px; height: 22px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+  }
+  .title-wrap { flex: 1; }
+  .title { font-size: 11.5px; font-weight: 700; line-height: 1.4; }
+
+  /* ── 카드 바디 ── */
+  .card-body { padding: 9px 11px 10px; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .col {}
+
+  .section-label {
+    font-size: 9px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.6px; margin-bottom: 4px;
+  }
+  .concept-label { color: #00b894; }
+  .trap-label    { color: #d63031; }
+  .scenario-label{ color: #6c5ce7; margin-top: 6px; margin-bottom: 4px; }
+
+  ul { padding-left: 14px; }
+  ul.concepts li { margin-bottom: 3px; color: #2d3436; }
+  ul.concepts li b { color: #0984e3; }
+  ul.traps { padding-left: 0; }
+  ul.traps li {
+    color: #c0392b;
+    margin-bottom: 3px;
+    list-style: none;
+    border-left: 2px solid #fab1a0;
+    padding-left: 6px;
+    font-size: 10.5px;
+  }
+
+  /* ── 시나리오 ── */
+  .scenarios { margin-bottom: 8px; }
+  .scenario-row {
+    display: flex;
+    flex-direction: column;
+    background: #f8f0ff;
+    border-left: 3px solid #a29bfe;
+    border-radius: 0 5px 5px 0;
+    padding: 4px 7px;
+    margin-bottom: 3px;
+  }
+  .sc-sit { color: #6c5ce7; font-size: 10px; font-weight: 600; margin-bottom: 1px; }
+  .sc-ans { color: #2d3436; font-size: 10.5px; }
+
+  /* ── 핵심 원칙 ── */
+  .principle {
+    background: #fffbee;
+    border-left: 3px solid #fdcb6e;
+    padding: 6px 9px;
+    font-size: 10.5px;
+    line-height: 1.55;
+    color: #2d3436;
+    border-radius: 0 5px 5px 0;
+    margin-bottom: 8px;
+  }
+
+  /* ── 키워드 ── */
+  .keywords { display: flex; flex-wrap: wrap; gap: 4px; }
+  .kw {
+    background: #f0f0f0;
+    color: #555;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 9.5px;
+    font-weight: 700;
+  }
+
+  /* ── 인쇄 ── */
+  @media print {
+    body { background: white; font-size: 10px; }
+    .page-header { padding: 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page-header h1 { font-size: 17px; }
+    .pmi-box { margin: 10px 0 8px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .grid { padding: 8px 0 0; gap: 8px; }
+    .card { box-shadow: none; border: 1px solid #ddd; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { margin: 10mm; size: A4; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>📋 PMP 핵심 치트시트 — 30단원 상세 요약</h1>
+  <p>2026-06-19 생성 · 시험일 2026-07-03 · D-14</p>
+</div>
+
+<div class="pmi-box">
+  <div class="pmi-title">📌 PMI 5대 답변 패턴 (모든 단원 공통)</div>
+  <div class="pmi-row">
+    <div class="pmi-item"><b>① 정보 수집 먼저</b><span>행동 전 영향 평가·분석 우선; "먼저 할 일은?" = 분석이 정답</span></div>
+    <div class="pmi-item"><b>② 에스컬레이션 순서</b><span>팀 자체 해결 → PM 개입 → 스폰서 에스컬레이션 (스폰서는 마지막)</span></div>
+    <div class="pmi-item"><b>③ 근본 원인 해결</b><span>증상(지연·품질)만 처리 말고 원인 제거; 근본 원인 분석 먼저</span></div>
+    <div class="pmi-item"><b>④ 애자일 변경 경로</b><span>PO → 백로그에 추가 (CCB·공식 변경요청·범위 기술서 개정은 오답)</span></div>
+    <div class="pmi-item"><b>⑤ 직접 소통 우선</b><span>서면 보고·에스컬레이션보다 대면·직접 대화가 PMI 선호 방식</span></div>
+  </div>
+</div>
+
+<div class="grid">
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">1</span>
+    <div class="title-wrap">
+      <span class="title">리스크 평가 및 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>Risk vs Issue</b> — 리스크=미래·불확실 → 레지스터; 이슈=현재·확실 → 이슈 로그·즉시 해결</li><li><b>위협 대응 전략</b> — 회피·전가·완화·수락(+에스컬레이션); 전가=소유권 이전, 완화=확률/영향 감소</li><li><b>기회 대응 전략</b> — 활용·공유·강화·수락; Exploit·Enhance는 기회 전용, 위협에 사용 불가</li><li><b>레지스터 최소 요소</b> — 식별된 리스크 + 리스크 소유자 + 잠재적 대응 — 3가지 모두 필수</li><li><b>예비비 두 종류</b> — 우발사태(Known-unknown·PMB 포함·PM 사용); 관리(Unknown-unknown·PMB 미포함·경영진 승인)</li><li><b>리스크 태도</b> — 회피적·중립적·허용적·추구적 — 대응 전략(행동)이 아닌 마음가짐·성향</li><li><b>에스컬레이션 시점</b> — PM 권한 초과 시 마지막 수단; 먼저 팀 자체 해결 → PM 조치 → 그 다음 에스컬레이션</li><li><b>애자일 리스크 주기</b> — 각 이터레이션 시작 전 리스크 분석 반복; 데일리 스탠드업·회고는 대상 아님</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 제3자 활용=전가 오답 / 소유권(책임) 이전=전가, 작업 위탁으로 확률 감소=완화가 정답</li><li>❌ 이미 발생한 오류를 리스크 레지스터에 등록 오답 / 이슈이므로 QA 전문가 만나 근본 원인 해결이 정답</li><li>❌ 위협 문제에서 Enhance·Exploit 선택 오답 / 이 둘은 기회(Opportunity) 전용 전략</li><li>❌ 새 리스크 발견 즉시 에스컬레이션 오답 / 먼저 레지스터에 기록 후 팀 논의, 에스컬레이션은 최후 수단</li><li>❌ 리스크 레지스터 최소 요소에 트리거·카테고리 포함 오답 / 식별된 리스크+소유자+잠재 대응 3가지만 필수</li><li>❌ 이미 계획된 리스크 발생 시 새 공급자 즉시 수배 오답 / 리스크 대응 계획과 SOW를 먼저 검토가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀원이 테스트 일부 제거로 패스트트래킹 제안</span>
+      <span class="sc-ans">→ 제안 거절; 계획대로 진행, 품질이 일정보다 우선</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이미 계획된 리스크가 실제로 발생함</span>
+      <span class="sc-ans">→ 리스크 대응 계획과 SOW 먼저 검토 후 계획 실행</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 핵심 시니어 매니저가 프로젝트 미참여</span>
+      <span class="sc-ans">→ PM 권한 밖 문제이므로 시니어 매니지먼트에 에스컬레이션</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 계약자가 승인 프로세스가 지연 유발 우려 제기</span>
+      <span class="sc-ans">→ 리스크 레지스터에 먼저 기록 후 팀과 완화 방안 논의</span>
+    </div></div>
+    <div class="principle">PMI는 리스크 관리를 프로젝트 착수 시 한 번으로 끝내는 것이 아니라, 프로젝트 전 생애주기에 걸쳐 지속적·반복적으로 수행해야 하는 활동으로 본다. 새로운 리스크는 즉각 레지스터에 공식 기록하는 것이 모든 후속 행동의 출발점이며, 이미 계획된 대응이 있다면 즉흥적 결정보다 합의된 계획을 먼저 따르는 것이 PMI의 기본 원칙이다. 어떤 제안이나 변경이 들어왔을 때도 수락·거절 전에 반드시 평가(Evaluate)를 먼저 수행하는 '데이터 기반 의사결정'이 PMI의 핵심 철학이다.</div>
+    <div class="keywords"><span class="kw">리스크 레지스터에 기록</span><span class="kw">평가한다(Evaluate)</span><span class="kw">대응 계획 검토</span><span class="kw">에스컬레이션(최후 수단)</span><span class="kw">이터레이션 시작 전</span><span class="kw">소유권 이전=전가</span><span class="kw">확률/영향 감소=완화</span><span class="kw">Known-unknown=우발사태</span><span class="kw">Unknown-unknown=관리</span><span class="kw">기회 전용(Exploit/Enhance)</span><span class="kw">즉시 거절=오답</span><span class="kw">근본 원인 해결</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">2</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 거버넌스 구조 수립</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>프로젝트 거버넌스</b> — 의사결정·역할·책임·정책을 정의하는 틀. 조직 거버넌스의 하위 구조</li><li><b>역할 경계</b> — 역할 명칭이 아닌 실제 전문성·권한·자원 보유 여부로 책임 배분</li><li><b>선제적 대응</b> — 리스크 발생 전 예측하여 적합한 인력을 사전 배정하는 PMI 핵심 태도</li><li><b>프로덕트 오너</b> — 백로그 우선순위·제품 비전 담당. 규제 준수 검증 전문성 보장 없음</li><li><b>스크럼 마스터</b> — 프로세스 촉진·장애 제거·팀 코칭 역할. 법적 준수 단독 책임 부적합</li><li><b>스폰서</b> — 프로젝트 승인·자금·조직 지원 역할. 논의만으로 실질 검증 불가</li><li><b>전문성 기반 배분</b> — right person, right task — 전문성 있는 팀원에게 직접 검증 책임 부여</li><li><b>반응적 vs 선제적</b> — 사후 수습(reactive)이 아닌 사전 예방(proactive)이 PMI 정답 패턴</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 프로덕트 오너=무엇을 만들지 결정자. 규제 준수 검증 전문성 없으므로 오답</li><li>❌ 스크럼 마스터에게 단독 책임 부여는 역할 범위 초과 → 오답. 전문 팀원 배정이 정답</li><li>❌ 스폰서와 논의=인식 공유에 불과. 구체적 검증 행동 아니므로 오답</li><li>❌ 역할 이름이 그럴듯해도 실제 전문성·자원 없으면 위임 불가 → 오답</li><li>❌ "논의하라" "보고하라" 형태 선택지는 행동 없는 수동적 대응 → 대부분 오답</li><li>❌ 이미 발생한 문제 수습 vs 예방 질문 구분 필수. "피하려면?" = 사전 선제 행동 묻는 것</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 규제 비준수로 납품 거절 통보 후 "피하려면?"</span>
+      <span class="sc-ans">→ 경험 있는 팀원을 초기에 배정해 사전 검증 수행</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ PO에게 규정 준수 처리 요청 선택지 등장</span>
+      <span class="sc-ans">→ PO는 비전·우선순위 역할. 전문성 없으므로 오답 제거</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 스크럼 마스터를 단독 책임자로 지정 선택지</span>
+      <span class="sc-ans">→ 서번트 리더 역할 초과. 오답 제거 후 전문 팀원 선택</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 스폰서와 중요성 논의 선택지 등장</span>
+      <span class="sc-ans">→ 논의는 행동이 아님. 실질 검증 조치 선택지가 정답</span>
+    </div></div>
+    <div class="principle">PMI는 알려진 리스크에 대해 실제 전문성과 자원을 갖춘 인원을 선제적으로 배정하는 것을 거버넌스의 핵심으로 본다. 역할 명칭이 아닌 실질 역량이 책임 배분의 기준이며, 논의·보고·위임만으로는 리스크 해소가 불가능하다. 문제가 발생하기 전에 예측하고 조치하는 proactive 태도가 PMI 정답의 공통 패턴이다.</div>
+    <div class="keywords"><span class="kw">선제적 배정</span><span class="kw">경험 있는 팀 멤버</span><span class="kw">전문성</span><span class="kw">규제 준수 검증</span><span class="kw">역할 경계</span><span class="kw">proactive</span><span class="kw">right person right task</span><span class="kw">프로덕트 오너 오답</span><span class="kw">논의=오답</span><span class="kw">사전 예방</span><span class="kw">거버넌스 구조</span><span class="kw">책임 배분</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">3</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 산출물 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>완료의 정의(DoD)</b> — 작업이 '완료'로 인정받기 위한 모두가 합의한 구체적 기준 목록</li><li><b>애자일 헌장</b> — 프로젝트 비전·목표·기대치를 이해관계자와 함께 합의하는 시작 문서</li><li><b>프로젝트 헌장</b> — 프로젝트를 공식 승인하고 PM에게 자원 투입 권한을 부여하는 문서</li><li><b>범위 기술서</b> — 인도물·목표·인수 기준을 명확히 규정하는 '무엇을 만드는가' 문서</li><li><b>비즈니스 케이스</b> — 프로젝트의 '왜'를 답하는 편익·비용·리스크 정당성 문서</li><li><b>킥오프 회의</b> — 기획 막바지·실행 직전에 여는 출발 신호 행사, 착수 단계 아님</li><li><b>헌장 승인</b> — 착수 완료 조건; 승인 없이는 기획(WBS·리스크 등) 시작 불가</li><li><b>범위 크리프</b> — 목표·DoD 합의 부재로 스폰서가 기능을 계속 추가 요구하는 현상</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 인도물 설명 문서 → 비즈니스케이스/협약/일정은 오답, 범위 기술서가 정답</li><li>❌ 헌장 발송 후 WBS 작성 → 오답; 반드시 헌장 승인 획득이 먼저</li><li>❌ 헌장 발송 후 킥오프 회의 → 오답; 킥오프는 기획 완료 후 실행 직전</li><li>❌ DoD 부재 문제 → 품질전문가 투입·작업목록 보완은 증상 완화, 근본원인 미해결</li><li>❌ 프로덕트오너에게 목표 정의 위임 → PM 책임 회피; PM도 함께 참여해야 정답</li><li>❌ 리스크 레지스터 조기 작성 → 헌장 미승인 시 범위 변경으로 전면 수정 필요</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 애자일 프로젝트 범위 크리프 발생</span>
+      <span class="sc-ans">→ 핵심 이해관계자와 애자일 헌장·DoD를 함께 수립</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 핵심 인도물을 설명하는 문서 선택</span>
+      <span class="sc-ans">→ 프로젝트 범위 기술서 선택 (비즈니스케이스·협약·일정 제외)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 헌장 작성 후 기획 시작 전 행동</span>
+      <span class="sc-ans">→ 이해관계자로부터 헌장 승인을 먼저 획득</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ DoD 없어 프로젝트가 끝나지 않는 상황</span>
+      <span class="sc-ans">→ 근본원인 해결: 이해관계자와 기대치·완료기준 명확히 합의</span>
+    </div></div>
+    <div class="principle">PMI는 모든 프로젝트 작업의 토대가 되는 산출물(헌장, DoD, 범위 기술서)을 착수 단계에서 이해관계자와 함께 명확히 합의해야 한다고 강조한다. 산출물 간 역할 차이를 정확히 알고 '무엇을(범위 기술서)', '왜(비즈니스케이스)', '어떤 조건으로(협약)', '언제(일정)'를 구분해야 한다. 헌장 승인은 착수 완료의 필수 조건으로, 승인 없이는 기획 단계의 어떤 산출물도 시작해서는 안 된다.</div>
+    <div class="keywords"><span class="kw">완료의 정의(DoD)</span><span class="kw">애자일 프로젝트 헌장</span><span class="kw">범위 기술서</span><span class="kw">인도물</span><span class="kw">헌장 승인</span><span class="kw">핵심 이해관계자</span><span class="kw">기대치 설정</span><span class="kw">범위 크리프 예방</span><span class="kw">근본 원인</span><span class="kw">착수 완료</span><span class="kw">비즈니스케이스=왜</span><span class="kw">킥오프=기획완료후</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">4</span>
+    <div class="title-wrap">
+      <span class="title">팀 그라운드 룰 정의</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>그라운드 룰</b> — 팀이 합의한 구체적 행동 기준 — 회의 예절·발언 규칙 등 눈에 보이는 약속</li><li><b>팀 헌장</b> — 가치·합의·운영 지침을 포괄하는 더 큰 문서; 그라운드 룰을 담는 그릇</li><li><b>대응의 사다리</b> — 문제 성격에 따라 시행→직접대화→재교육→헌장재평가 순으로 단계 선택</li><li><b>서번트 리더십</b> — 애자일 PM은 징계보다 먼저 팀을 안내·교육하는 서번트 리더 역할 수행</li><li><b>반복 검토</b> — 매 이터레이션 종료 시 이해관계자 피드백 수집 — 재작업 감소가 핵심 목적</li><li><b>갈등의 조기해결</b> — 갈등은 가능한 빨리, 비공개로, 직접·협력적으로 당사자와 먼저 다룬다</li><li><b>가치관 충돌</b> — 규칙 위반이 아닌 문화·가치관 차이일 때는 팀 헌장 재평가가 필요</li><li><b>에스컬레이션 기준</b> — PM 권한 범위 내 문제는 PM이 직접 해결; 외부 개입은 마지막 수단</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 특정 인물의 룰 위반 → 제거·교체는 오답 / 기존 그라운드 룰 시행이 정답</li><li>❌ 일반적 흐트러짐(특정 인물 없음) → 개인 징계는 오답 / 팀 전체 재교육 회의가 정답</li><li>❌ 국가 간 가치관 충돌 → 그라운드 룰 시행은 오답 / 팀 헌장 재평가가 정답</li><li>❌ 이해관계자 불만 → 즉각 양보·계획 규정 제시는 오답 / 이점 설명·대화가 정답</li><li>❌ 팀 내 행동 문제 → HR·기능관리자·스폰서에 징계 요청은 오답 / PM이 직접 처리</li><li>❌ 이해관계자 질문 → 이슈 로그 기록·에스컬레이션은 오답 / 대화로 먼저 해결</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 시니어가 회의에서 발언 독점·비판 반복</span>
+      <span class="sc-ans">→ 기존 그라운드 룰을 그 자리에서 시행한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 두 국가 팀 간 일하는 방식·가치관 충돌</span>
+      <span class="sc-ans">→ 팀 멤버들과 함께 팀 헌장을 재평가한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 12 이터레이션 후 팀 전반적으로 룰 흐트러짐</span>
+      <span class="sc-ans">→ 팀 전체와 회의를 열어 그라운드 룰을 재교육한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이해관계자가 반복 검토가 너무 잦다고 불만</span>
+      <span class="sc-ans">→ 잦은 검토의 가치(재작업 감소)를 이해관계자와 논의한다</span>
+    </div></div>
+    <div class="principle">PMI는 팀 내 행동 문제를 PM이 직접, 가능한 한 가볍고 협력적인 방식으로 다루기를 기대한다. 징계·에스컬레이션·외부 개입은 모두 마지막 수단이며, 그 전에 대화·교육·합의 재정렬이 먼저다. 또한 문제의 성격(개인 일탈 vs 전반적 흐트러짐 vs 가치관 충돌)을 먼저 구분하는 것이 정답 선택의 핵심 열쇠다.</div>
+    <div class="keywords"><span class="kw">그라운드 룰 시행(enforce)</span><span class="kw">팀 헌장 재평가</span><span class="kw">서번트 리더</span><span class="kw">직접·협력적 대화</span><span class="kw">비공개 처리</span><span class="kw">재작업 감소</span><span class="kw">먼저(first)</span><span class="kw">재교육·재정렬</span><span class="kw">에스컬레이션=마지막 수단</span><span class="kw">가치·운영 지침</span><span class="kw">이터레이션 검토 가치</span><span class="kw">PM이 직접 해결</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">5</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 연속성을 위한 지식 이전 보장</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>지식 이전</b> — 한 팀·개인의 경험·노하우를 다른 팀·개인이 활용할 수 있도록 의도적으로 옮기는 활동</li><li><b>지식이전 장애물</b> — 개인적 실수 처리, 문서화 동기 부족, 리더십 관여 부재 — 세 가지가 핵심 장애물</li><li><b>동료 멘토링</b> — 시니어-신규 팀원을 짝지어 노하우가 직접 흐르게 하는 가장 직접적 지식 이전 수단</li><li><b>지식 격차 메우기</b> — 새 PM 투입 시: 문서 검토 + 이해관계자 면담 + 팀원 인터뷰, 세 가지로 격차 해소</li><li><b>RFP</b> — 기능·비기능 요구사항·인수기준을 모두 담은 가장 공식적·포괄적 조달 요청 문서</li><li><b>RFI / RFQ / RFC</b> — RFI=정보요청, RFQ=가격견적, RFC=계약조건 — 각각 좁은 범위, RFP보다 간략</li><li><b>서번트 리더십</b> — 명령·대립 아닌 소통·지지로 팀을 이끎 — 인수인계 미이행 팀에도 대화가 정답</li><li><b>인수인계 대화</b> — 중요성과 영향을 함께 논의하여 자발적 행동을 이끄는 PM의 책임 있는 개입 방식</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 체계적 검토를 장애물로 착각 → 검토는 지식이전 수단, 장애물이 아님이 정답</li><li>❌ 전임 PM이 떠난 상황에서 전임자에게 재연락 요청 → 비현실적 가정, 오답</li><li>❌ 지식격차 상황에서 job shadowing만으로 충분하다 선택 → 포괄적 이해 부족, 오답</li><li>❌ 신규-시니어 지식격차 시 이해관계자 회의 마련 → 내부 문제를 외부로 해결 시도, 오답</li><li>❌ 인수인계 미이행 팀에게 대립·즉각 요구 → 서번트 리더십 위반, 위임·방관도 오답</li><li>❌ 새 벤더에게 RFI·RFQ·RFC 제시 → RFP만이 모든 요구사항·인수기준 포함, 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀이 지식이전 기대치 부재, 장애물이 아닌 것은?</span>
+      <span class="sc-ans">→ 체계적 검토 — 지식이전 수단이므로 장애물 아님</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 신규 팀원이 시니어 결과 이해 못 함</span>
+      <span class="sc-ans">→ 동료 멘토링 장려·촉진으로 직접 연결</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 전임 PM 갑작스러운 퇴사, 인수인계 無</span>
+      <span class="sc-ans">→ 문서 검토 + 이해관계자 면담 + 팀원 인터뷰 (3가지)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 실행 단계에서 벤더 교체, 새 벤더에게 최선의 문서</span>
+      <span class="sc-ans">→ RFP — 기능·비기능 요구사항·인수기준 모두 포함</span>
+    </div></div>
+    <div class="principle">PMI에서 지식 이전은 저절로 일어나지 않으며, 반드시 의도적으로 설계하고 촉진해야 한다. 지식 격차가 발생했을 때 PM은 현재 접근 가능한 원천(문서·이해관계자·팀원)을 적극 활용하며, 팀의 비협조에는 대립이 아닌 대화와 이해로 자발적 행동을 이끄는 서번트 리더십을 적용한다.</div>
+    <div class="keywords"><span class="kw">동료 멘토링</span><span class="kw">체계적 검토</span><span class="kw">지식 격차</span><span class="kw">프로젝트 문서 검토</span><span class="kw">이해관계자 면담</span><span class="kw">팀원 인터뷰</span><span class="kw">RFP</span><span class="kw">서번트 리더십</span><span class="kw">인수인계 대화</span><span class="kw">장애물 아님</span><span class="kw">현실적 접근</span><span class="kw">의도적 설계</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">6</span>
+    <div class="title-wrap">
+      <span class="title">감성지능을 활용한 팀 성과 향상</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>근본원인 진단</b> — 사람 문제는 당사자와 직접 대화로 시작해 진짜 이유를 먼저 파악</li><li><b>감성지능(EI)</b> — 자신·타인의 감정을 인식·이해·관리하는 역량; 사실보다 감정을 먼저</li><li><b>서번트 리더십</b> — 팀 위에서 지시하지 않고 팀 아래에서 필요를 채워 미션에 집중케 함</li><li><b>문화적 인식</b> — 다국적 팀 지침 발급 전 각국 문화 규범·가치관을 먼저 평가</li><li><b>비밀 설문</b> — 심리적 안전감 보장 시 팀원이 솔직한 의견 제공 → 근본원인 파악 가능</li><li><b>일대일 회의</b> — 민감한 개인 동기 문제는 공개 회의 아닌 사적 피드백 세션으로 다룸</li><li><b>협력적 계획</b> — 반복 갈등 해결 시 PM이 답을 주는 것이 아니라 팀과 함께 만들어감</li><li><b>비공식 네트워크</b> — 공식 조직 구조보다 개인 관계·소프트스킬 기반 네트워크가 더 중요</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 작업 재배정은 함정 / 당사자를 참여시켜 저조한 성과 이유를 먼저 파악이 정답</li><li>❌ 팀 전체 메시지 발송은 함정 / 특정 개인 문제는 그 개인과 직접 대화가 정답</li><li>❌ 회식 아이디어 재수집은 함정 / 비밀 설문으로 상호작용 부족 근본원인 파악이 정답</li><li>❌ 누구 책임인지 가려내기는 함정 / 감정을 먼저 인정하고 다루는 것이 정답</li><li>❌ 기능 관리자에게 위임은 함정 / PM이 직접 일대일로 팀원 동기 문제 다뤄야 정답</li><li>❌ 문화적 예외를 경영진에 요청은 함정 / 지침 발급 전 문화 규범 먼저 평가가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀원이 계획대로 작업 미완료</span>
+      <span class="sc-ans">→ 당사자를 직접 참여시켜 저조 원인을 함께 파악</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀 상호작용 부족, 회식도 효과 없음</span>
+      <span class="sc-ans">→ 비밀 보장 설문으로 근본원인 식별</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 예측형 → 하이브리드 환경 전환</span>
+      <span class="sc-ans">→ 서번트 리더십 채택으로 팀 미션 집중 지원</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 다국적 팀에 일괄 지침 발급 후 반발</span>
+      <span class="sc-ans">→ 지침 발급 전 각국 문화적·개인적 특성 먼저 평가</span>
+    </div></div>
+    <div class="principle">PMI는 PM을 지시자가 아닌 '이해하고 함께 해결하는 조력자'로 본다. 사람 관련 문제는 반드시 당사자를 직접 참여시켜 근본 원인을 파악한 뒤 함께 해결책을 만들어야 하며, 갈등 상황에서는 사실보다 감정을 먼저 다루는 것이 신뢰 구축의 출발점이다. 다국적 환경에서는 어떤 행동보다 문화적 다양성 인식이 선행되어야 한다.</div>
+    <div class="keywords"><span class="kw">engage(참여시키다)</span><span class="kw">root cause(근본 원인)</span><span class="kw">confidential poll(비밀 설문)</span><span class="kw">one-on-one meeting(일대일 회의)</span><span class="kw">servant leadership(서번트 리더십)</span><span class="kw">cultural norms(문화 규범)</span><span class="kw">recognize emotions(감정 인식)</span><span class="kw">address emotions first(감정 먼저)</span><span class="kw">work with the team(팀과 함께)</span><span class="kw">soft skills(소프트 스킬)</span><span class="kw">blame=오답</span><span class="kw">escalate=시기상조</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">7</span>
+    <div class="title-wrap">
+      <span class="title">조직 변화 지원</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>매트릭스 조직</b> — 이중 보고 체계: 업무→PM, 경력→라인 매니저. 두 상사가 핵심 단서</li><li><b>제품 백로그</b> — 애자일 변경 요청의 필수 관문. 백로그 진입 후 우선순위화·규모산정</li><li><b>영향 분석</b> — CCB 제출 전 선행 필수 작업. 변경이 프로젝트에 미치는 영향 파악</li><li><b>변경관리계획</b> — 지속적 변화의 유일한 틀. 교육·소통·모니터링은 이 틀 안의 부품</li><li><b>전환 전략</b> — 첫 애자일 프로젝트 시 최우선 과제. 현재→목표 상태 로드맵 제공</li><li><b>자유방임 리더십</b> — 의사결정을 팀원 각자에게 위임. Laissez-faire=Free rein 동의어</li><li><b>격차 평가</b> — 구조 부적합 발견 시 첫 행동. 현 구조↔기대 편익 간 격차 분석</li><li><b>영향력 식별 도구</b> — 이해관계자 매트릭스·맵이 정답. 분석(활동)≠도구·기법</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 교차기능적(Cross-functional)을 조직 구조로 고르면 오답 / 매트릭스가 정답</li><li>❌ 애자일 변경 요청에 CCB 구성하면 오답 / 제품 백로그 추가가 정답</li><li>❌ 조직 변화 발생 시 즉시 팀에 설명·실행하면 오답 / 영향 평가 먼저가 정답</li><li>❌ 실행 중 핵심 프로젝트에 SAFe 전환하면 오답 / 기존 예측형 유지가 정답</li><li>❌ 이해관계자 영향력 도구로 이해관계자 분석 고르면 오답 / 매트릭스·맵이 정답</li><li>❌ 스무딩(Smoothing)을 리더십 스타일로 고르면 오답 / 자원 조정 기법임</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 애자일 팀에 새 변경 요청 접수</span>
+      <span class="sc-ans">→ 제품 백로그에 추가 후 우선순위화·규모산정</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 새 상사가 상황 파악 없이 비판</span>
+      <span class="sc-ans">→ 조직 변화가 프로젝트에 미치는 영향을 먼저 평가</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ CEO가 새 전략 방향 발표</span>
+      <span class="sc-ans">→ 기존 프로젝트가 새 조직 비전과 부합하는지 명확히</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 마일스톤 달성 후 팀 보상 결정</span>
+      <span class="sc-ans">→ 프로젝트 참여 전원에게 팀 보상 제공</span>
+    </div></div>
+    <div class="principle">PMI는 변화 앞에서 성급한 행동보다 먼저 이해하고 평가하는 PM을 요구한다. 영향 평가(assess) → 이해(understand) → 명확화(clarify) 순서가 모든 변화 대응의 기본 원칙이다. 애자일 전환도 순서가 핵심이며, 전환 전략이나 시작 기준처럼 토대가 되는 것을 항상 먼저 수행해야 하고, 실행 중인 핵심 프로젝트에는 불필요한 프레임워크 변경을 강제하지 않는다.</div>
+    <div class="keywords"><span class="kw">평가하다(assess)</span><span class="kw">이해하다(understand)</span><span class="kw">명확히 하다(clarify)</span><span class="kw">제품 백로그</span><span class="kw">영향 분석</span><span class="kw">전환 전략</span><span class="kw">변경관리계획</span><span class="kw">격차(gap)</span><span class="kw">팀 보상</span><span class="kw">이해관계자 매트릭스</span><span class="kw">이해관계자 맵</span><span class="kw">자유방임(Free rein)</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">8</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 협약 협상</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>이해관계자 정렬</b> — 인도물 문서화+승인 서명으로 합의 기록, 변경 시 변경관리 프로세스 필수</li><li><b>원칙 기반 협상</b> — 사람과 문제 분리 + 입장 아닌 이해관계 집중 — 하버드 협상 4원칙</li><li><b>설득의 6법칙</b> — 권위·일관성·호혜성·희소성·호감·사회적 증거, 항상 프로젝트 이익 위해서만</li><li><b>조달 관리 계획</b> — PM 협상 권한·한계·절차 명시, 계약 체결 권한은 PM에게 없음</li><li><b>준비도 검토</b> — SME가 수행, 주요 인계 시점+파일럿 시작 직전 — 모니터링 아닌 검증</li><li><b>성공 기준 우선</b> — 협상 전 가장 먼저 성공 기준 정의 — 이후 리스크·브레인스토밍·면담 수행</li><li><b>DoD vs 인도물평가</b> — DoD=스프린트 품질 이슈 해결, 인도물 평가=프로젝트 종료 전 최종 QA</li><li><b>팀 가치·지속속도</b> — 지속 가능한 속도+핵심 근무 시간=팀 가치, DoD·타임박스는 팀 가치 아님</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ PMO 지원 요청·PM 단독 주도·애자일 전환 → 오답 / 인도물 문서화+승인 서명이 정답</li><li>❌ 법률·규제 요구사항 미확정 → 제품책임자에게만 연락 오답 / 제품책임자+법무부서 함께가 정답</li><li>❌ 권위의 법칙(전문가 인용) vs 일관성 법칙(작은 예→큰 예) 혼동 주의 — 시나리오 행동 정확히 대응</li><li>❌ 준비도 검토 수행자 → QC·QA·제품책임자 오답 / SME(주제 전문가)가 정답</li><li>❌ 협상 준비 → 의사소통 계획·리스크 계획은 협상의 결과물 / 팀 관계+이해관계자 정치 이해가 정답</li><li>❌ 협상 전 첫 번째 행동 → 리스크 레지스터·브레인스토밍·개별 면담 오답 / 성공 기준 정의가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이해관계자 충돌 우선순위, 갈등 줄이기</span>
+      <span class="sc-ans">→ 인도물 문서화 + 승인 서명 받기</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 정치적 프로젝트, 잡음 없이 신뢰 구축</span>
+      <span class="sc-ans">→ 권위의 법칙: 업계 전문가 의견 인용</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 협상 전략 두 가지 원칙 선택</span>
+      <span class="sc-ans">→ 사람·문제 분리 + 입장 아닌 이해관계 집중</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 공급업체 가격 인상, 협상 권한 불확실</span>
+      <span class="sc-ans">→ 조달 관리 계획 참조</span>
+    </div></div>
+    <div class="principle">PMI에서 협상은 언제나 개인적 이익이 아닌 프로젝트의 이익을 위해 수행되며, 입장(Position)이 아닌 이해관계(Interest)에 집중하고 사람과 문제를 분리하는 것이 핵심 원칙이다. 협상 전에는 반드시 성공 기준을 먼저 정의하고, 합의는 문서화+승인 서명으로 공식화해야 변경 관리 프로세스를 통해 보호받을 수 있다.</div>
+    <div class="keywords"><span class="kw">인도물 문서화</span><span class="kw">승인 서명(Sign-off)</span><span class="kw">이해관계(Interest)</span><span class="kw">사람과 문제 분리</span><span class="kw">권위의 법칙</span><span class="kw">일관성의 법칙</span><span class="kw">조달 관리 계획</span><span class="kw">SME(주제 전문가)</span><span class="kw">성공 기준</span><span class="kw">지속 가능한 속도</span><span class="kw">상호 이해관계</span><span class="kw">준비도 검토</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">9</span>
+    <div class="title-wrap">
+      <span class="title">예산 및 자원 계획·관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>크래싱</b> — 추가 자원 투입으로 일정 단축 → 비용·리스크 증가(재작업은 직접 결과 아님)</li><li><b>컨틴전시 예비비</b> — 식별된 리스크(Known Unknowns) 대응, 원가 기준선 포함, PM 승인</li><li><b>매니지먼트 예비비</b> — 예기치 못한 리스크(Unknown Unknowns) 대응, 원가 기준선 미포함, 고위 경영진 승인</li><li><b>자원분류체계(RBS)</b> — 자원을 계층·범주·유형별로 표현, 프로젝트 전반 지속 업데이트</li><li><b>삼점 추정</b> — O·M·P 세 값 사용, PERT: (O+4M+P)÷6, 불확실성 높은 신규 프로젝트에 최적</li><li><b>EVM 핵심 지표</b> — CPI=EV/AC, SPI=EV/PV, EAC=BAC/CPI; 1보다 크면 양호, 작으면 이상</li><li><b>자원 관리 계획</b> — 자원 분류·배정·관리·해제 지침, 비근무일 포함, 기능 부서장 협상 근거</li><li><b>자원 히스토그램</b> — 시간 흐름에 따른 자원 수·유형·기간을 막대그래프로 시각화</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 크래싱 결과 '재작업'→오답 / '비용과 리스크 증가'가 정답</li><li>❌ 컨틴전시 예비비를 모든 활동에 일률 % 적용→오답 / 식별된 리스크 기반 재계산이 정답</li><li>❌ '예기치 못한(unforeseen)' 문제→컨틴전시 예비비 오답 / 매니지먼트 예비비가 정답</li><li>❌ 자원 갈등 시 즉시 스폰서·CCB 에스컬레이션→오답 / 자원 관리 계획 검토 후 협상이 정답</li><li>❌ RBS를 '출처(source)별'·'성(last name)별' 조직→오답 / 계층·범주·유형만 정답</li><li>❌ PM 선발 시 '즉시 가용' 또는 '경험 多'→오답 / 프로젝트 접근법 적합성+SME 네트워크가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 핵심 장비 미납, 대체 조달 필요</span>
+      <span class="sc-ans">→ 자원 가용성 확인 책임은 제품 책임자(PO)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 하이브리드 프로젝트, 환율 급등으로 예산 위협</span>
+      <span class="sc-ans">→ 이해관계자와 점증적 예산 책정 접근법 공동 개발</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 공휴일과 중요 실행 단계 겹쳐 사기 저하</span>
+      <span class="sc-ans">→ 계획 단계에서 자원 관리 계획에 비근무일 사전 반영</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 추가 투자 다음 회계연도까지 제한된 상황</span>
+      <span class="sc-ans">→ 릴리스 계획 기반 예산 추적, 비즈니스 가치를 보여줌</span>
+    </div></div>
+    <div class="principle">PMI는 문제 발생 시 즉각 에스컬레이션이 아니라 계획 문서(자원 관리 계획, RBS 등)를 먼저 검토하고 직접 협상하는 PM을 원한다. 예산과 자원 관리의 핵심은 '얼마나 썼는가'가 아니라 '리스크 기반으로 계획하고, 가치 기반으로 추적하는가'이다. 예비비는 반드시 식별된 리스크(컨틴전시)와 예측 불가 사태(매니지먼트)를 엄격히 구분해 운용해야 한다.</div>
+    <div class="keywords"><span class="kw">비용과 리스크 증가</span><span class="kw">식별된 리스크 기반 재계산</span><span class="kw">점증적 예산 책정</span><span class="kw">릴리스 계획 기반 추적</span><span class="kw">자원 관리 계획 검토 후 협상</span><span class="kw">삼점 추정(PERT)</span><span class="kw">계층·범주·유형</span><span class="kw">자원 히스토그램</span><span class="kw">CPI=EV/AC</span><span class="kw">SPI=EV/PV</span><span class="kw">EAC>BAC→CPI<1</span><span class="kw">접근법 적합성+SME 네트워크</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">10</span>
+    <div class="title-wrap">
+      <span class="title">범위 계획 및 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>요구사항 수집</b> — 브레인스토밍·친화도·마인드 매핑이 핵심 집단 창의성 기법; WBS는 수집 도구 아님</li><li><b>요구사항 분류</b> — 고객 요구사항(추상적·일상 언어) vs 기술적 요구사항(수치·용어·구현 가능)</li><li><b>요구사항 관리 계획</b> — 기획 단계 수립; 핵심 성과는 리스크 감소(비용·품질·일정 아님)</li><li><b>범위 관리 계획</b> — 범위 공백 예방의 핵심 도구; 프로젝트 헌장 분석과 함께 수립</li><li><b>프로젝트 헌장</b> — WBS 작성의 출발점; 높은 수준 범위 정의 포함; 세부기획 전 승인 필수</li><li><b>WBS 특성</b> — 인도물 지향적·계층적·100% 규칙이 핵심; 고객 중심적은 WBS 특성 아님</li><li><b>통합 변경 통제</b> — 좋은 의도 포함 모든 변경은 문서화·승인 필수; 예방·시정·결함수정·업데이트 4유형</li><li><b>애자일 범위 대응</b> — 변화하는 요구사항 → 제품 책임자와 정기 교류 + 인도물 기반 승인 요청</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ WBS는 요구사항 수집 도구 → 오답 / 브레인스토밍·친화도·마인드 매핑이 정답</li><li>❌ 요구사항 관리 기대 성과로 비용절감·품질향상 선택 → 오답 / 리스크 감소가 정답</li><li>❌ 요구사항 관리 계획 시행 시점을 프로젝트 시작·계약 후로 선택 → 오답 / 기획 단계가 정답</li><li>❌ WBS 특성 문제에서 고객 중심적 선택 → 오답 / WBS는 내부 문서, 고객 미제공</li><li>❌ 인수 후 기능 불만 시 에스컬레이션 먼저 → 오답 / 범위 검증 프로세스 검토가 정답</li><li>❌ 범위 공백 예방 질문에서 변경관리계획·교훈 참고 선택 → 오답 / 헌장분석+범위관리계획이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 요구사항 변화가 끊임없는 프로젝트</span>
+      <span class="sc-ans">→ 제품 책임자에게 정기 업데이트 + 인도물 기반 승인 요청</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이해관계자 간 인도물 의견 불일치 발생</span>
+      <span class="sc-ans">→ 이해관계자들과 회의 소집(문서 검토는 그 이후)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 인수 후 기능 누락 불만 접수</span>
+      <span class="sc-ans">→ 범위 검증 프로세스 검토 후 근본 원인 파악</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 범위 기술서 완성 후 팀이 다음 단계 불명확</span>
+      <span class="sc-ans">→ 팀과 함께 범위를 WBS·작업 패키지로 분해</span>
+    </div></div>
+    <div class="principle">PMI는 범위 관리의 핵심을 '사후 수습'이 아닌 '사전 예방'에 둔다. 범위 관리 계획과 프로젝트 헌장 분석을 기획 단계에서 먼저 수행해야 범위 공백을 막을 수 있다. 모든 변경은 좋은 의도라도 반드시 통합 변경 통제를 통해 문서화·승인되어야 하며, 에스컬레이션은 항상 근본 원인 파악 이후에 실행한다.</div>
+    <div class="keywords"><span class="kw">브레인스토밍</span><span class="kw">친화도</span><span class="kw">마인드 매핑</span><span class="kw">기획 단계</span><span class="kw">리스크 감소</span><span class="kw">프로젝트 헌장</span><span class="kw">범위 관리 계획</span><span class="kw">통합 변경 통제</span><span class="kw">인도물 기반 승인</span><span class="kw">제품 책임자</span><span class="kw">100% 규칙</span><span class="kw">범위 검증 프로세스 검토</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">11</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 기획 활동 통합</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>발생확률·영향도 매트릭스</b> — 리스크의 확률·영향 두 축으로 우선순위를 결정하는 정성적 분석 도구</li><li><b>DISC 행동 모델</b> — 주도(D)·영향(I)·안정(S)·신중(C) 4유형으로 팀 응집력을 높이는 행동 분류</li><li><b>컴플라이언스 요구사항</b> — 비기능적 요구사항으로 착수 단계 헌장에 문서화하고 팀이 직접 관리</li><li><b>롤링 웨이브 기획</b> — 가까운 작업은 상세하게, 먼 작업은 대략적으로 계획 후 점진적으로 정교화</li><li><b>의사결정 매트릭스</b> — 대안 식별→기준 식별→가중치 부여→점수 매기기→총점 계산→최고 총점 선택</li><li><b>EMV(기댓값)</b> — EMV = Σ(확률 × 결과값), 음수 시나리오도 포함해 가장 높은 전략 선택</li><li><b>비즈니스 가치 책임</b> — 스폰서가 Accountable, 정의는 PM·비즈니스분석가·고객대표가 핵심 역할</li><li><b>정보 수집 우선 원칙</b> — 새 상황에서 에스컬레이션·즉시 행동 전 반드시 관련자를 만나 먼저 파악</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 리스크를 더 잘 이해할 때 SWOT·브레인스토밍 선택 → 오답 / 발생확률·영향도 매트릭스가 정답</li><li>❌ DISC에서 외향적·열정적=영향(I) vs 수용적·인내심=안정(S) 혼동하면 오답</li><li>❌ 컴플라이언스 목표를 기획 단계에 문서화 → 오답 / 착수 단계(프로젝트 헌장)가 정답</li><li>❌ 의사결정 매트릭스에서 가중치 부여 다음에 투표로 결정 → 오답 / 각 대안에 점수 매기기가 정답</li><li>❌ EMV에서 숫자는 맞지만 더 낮은 전략 선택 → 오답 / 반드시 직접 계산 후 최고 EMV 전략 선택</li><li>❌ 스폰서가 활동 건너뛰기 요청 시 즉시 경고·에스컬레이션 → 오답 / 먼저 스폰서와 만나 이유 이해가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀 협업 부진·품질 낮은 결과물 발생</span>
+      <span class="sc-ans">→ 팀 회의를 소집해 근본 원인 집단 식별</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 애자일에서 사용자 스토리 인도 지연</span>
+      <span class="sc-ans">→ 팀과 회고를 진행해 병목 현상 스스로 식별</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 신임 PM이 일정 지연 프로젝트 인수</span>
+      <span class="sc-ans">→ 전임 PM을 먼저 만나 상황 전반 파악</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 3년 장기 프로젝트 기획 방법 결정</span>
+      <span class="sc-ans">→ 요구사항 검증 후 롤링 웨이브 기획 수행</span>
+    </div></div>
+    <div class="principle">PMI는 행동 전 먼저 이해하고, 문제는 팀과 함께 집단적으로 해결하며, 비즈니스 가치 인도를 프로젝트의 궁극적 목표로 본다. 컴플라이언스·의존 관계 등 제약은 착수 단계에서 식별·문서화해야 이후 모든 결정의 기준이 된다. 에스컬레이션·역할 재배정·범위 축소는 항상 근본 원인 파악 이후의 최후 수단이다.</div>
+    <div class="keywords"><span class="kw">발생확률·영향도 매트릭스</span><span class="kw">롤링 웨이브 기획</span><span class="kw">점진적 정교화</span><span class="kw">회고(Retrospective)</span><span class="kw">비기능적 요구사항</span><span class="kw">프로젝트 헌장(착수 단계)</span><span class="kw">EMV = 확률×결과값</span><span class="kw">스폰서=Accountable</span><span class="kw">팀 회의 소집(첫 번째 단계)</span><span class="kw">먼저 이해하라</span><span class="kw">의존 관계 식별·문서화</span><span class="kw">투표=오답</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">12</span>
+    <div class="title-wrap">
+      <span class="title">조달 계획 수립 및 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>조달관리 계획서</b> — 재화·서비스 획득 방식, Build vs Buy, 자격 요건, 법규 모두 담는 단일 진실 공급원</li><li><b>계약 유형 선택</b> — FFP(단기·명확), FPEPA(장기·인플레이션), CPIF(고불확실), T&M(범위 불명확) 상황별 매칭</li><li><b>벤더 리스크 완화</b> — 벤더 활용 시 재정·일정·정치적 리스크 완화 가능, 범위·기술적 리스크는 완화 불가</li><li><b>애자일 벤더 신뢰</b> — 기술적 우수성·인내심이 신뢰 기준; 프로세스/도구·기획 능력은 애자일 기준 부적합</li><li><b>벤더 정렬 전략</b> — 프로세스·도구 차이 시 양측 정렬 전략 개발; 시간대 차이 시 공통 근무 시간대 합의</li><li><b>PM 책임 원칙</b> — 벤더 위임 후에도 PM이 궁극적 책임; 단일 계획서 + 전적인 책임이 정답</li><li><b>오프쇼어 리스크</b> — 감독 증가(시간·문화), 예산 관리 어려움(환율), 온보딩 증가(지정학)가 오프쇼어 특유 리스크</li><li><b>공급자 인접성</b> — 고가·부서지기 쉬운 자재·재작업 잦을 때 인접성이 가격보다 우선시됨</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 기술적·범위 리스크 완화에 벤더 쓴다 → 오답 / 재정·일정·정치적 리스크만 완화 가능</li><li>❌ 장기+고인플레이션 환경에서 FFP 선택 → 오답 / FPEPA가 정답</li><li>❌ 애자일 벤더 신뢰 기준으로 프로세스·도구 또는 기획 능력 선택 → 오답 / 기술적 우수성+인내심이 정답</li><li>❌ 계약 분쟁 시 계약서 확인 전 지불 거부·반품 → 오답 / 계약서 검토 후 법률 고문 통보가 정답</li><li>❌ PM이 두 계획서 개발하거나 책임 분담·위임 → 오답 / 단일 계획서+전적인 책임이 정답</li><li>❌ 오프쇼어 리스크로 도메인 지식 부족·문서화 필요 선택 → 오답 / 벤더 교체 일반 리스크이지 오프쇼어 특유 리스크 아님</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 내부 자원 없고 일정이 결정적으로 중요</span>
+      <span class="sc-ans">→ 외부 자원(벤더) 확보로 리스크 완화</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 벤더 인도 지연 후 청구서 제출</span>
+      <span class="sc-ans">→ 계약서 인도 지연 조항 확인 후 법률 고문 통보</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 벤더-내부팀 프로세스·도구 차이 발생</span>
+      <span class="sc-ans">→ 양측 정렬 전략 개발(어느 한쪽 강요 금지)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 고인플레이션 환경 2년 장기 계약</span>
+      <span class="sc-ans">→ FPEPA 계약 선택(FFP 아님)</span>
+    </div></div>
+    <div class="principle">PMI는 조달에서 PM이 벤더에게 작업을 위임하더라도 프로젝트 성공의 궁극적 책임을 결코 나눌 수 없다고 본다. 조달관리 계획서는 조달과 관련된 모든 결정(Build vs Buy, 자격 요건, 법규, 계약 유형)의 단일 진실 공급원이며, 계약 분쟁에서는 반드시 계약서라는 근거 위에서 행동해야 한다.</div>
+    <div class="keywords"><span class="kw">외부 자원 확보</span><span class="kw">조달관리 계획서</span><span class="kw">FPEPA</span><span class="kw">단일 계획서</span><span class="kw">전적인 책임</span><span class="kw">신뢰 구축</span><span class="kw">기술적 우수성</span><span class="kw">인내심</span><span class="kw">정렬 전략</span><span class="kw">법률 고문</span><span class="kw">공급자 인접성</span><span class="kw">규제된 벤더 목록</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">13</span>
+    <div class="title-wrap">
+      <span class="title">Determine Appropriate Project Methodology/methods and Practices</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"></ul>
+      </div>
+    </div>
+    
+    <div class="principle"></div>
+    <div class="keywords"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">14</span>
+    <div class="title-wrap">
+      <span class="title">가상 팀 참여 및 지원</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>시간대 설계</b> — 겹치는 시간대를 의도적으로 찾아 회의를 잡아 소통을 보장</li><li><b>팀 합의서</b> — 휴일·근무 방식 등 행동·작업 규범을 프로젝트 초기에 수립</li><li><b>커뮤니케이션 지침</b> — 새 팀 구성 시 가장 먼저 할 일은 소통 방법·빈도·채널 지침 확립</li><li><b>공유 리더십</b> — 리더십을 팀 전체에 분산; 과도한 자기 확신·대체 공포가 이를 방해</li><li><b>신뢰 vs 마이크로매니지먼트</b> — 잦은 점검은 신뢰를 갉아먹음; 권한 부여·자율성이 신뢰 구축 핵심</li><li><b>합의된 프로세스</b> — 다양성 자체가 아닌 합의된 프로세스 부재가 복잡성을 만들어냄</li><li><b>동기 부여 3요소</b> — 목표 설정·작업 구조·보상 체계로 가상 팀 참여와 동기를 달성</li><li><b>3대 경계</b> — 대인관계 자본 개발, 작업 관행, 지식 다양성을 헤쳐나가야 성공</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 근무 외 시간 헌신 칭찬 → 번아웃 유발 오답 / 겹치는 시간대 온라인 회의가 정답</li><li>❌ 감정적 메시지에 즉각 응답 → 이메일 예절 목록에 없음 / 신중하게 대응이 정답</li><li>❌ 잦은 점검(시간·일·주 단위) → 마이크로매니지먼트로 신뢰 파괴 / 권한 부여가 정답</li><li>❌ 신뢰·자율성 부여·역량 존중 → 공유 리더십 방해 요소가 아님 / 과신·대체 공포가 방해 요소</li><li>❌ 다양성(시간대·문화·사무실)이 복잡성 감소 → 오답 / 합의된 프로세스가 복잡성 줄임</li><li>❌ 회고 중 새 팀원 질문 수용 → 흐름 방해 / 다른 자리로 정중히 안내가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 시차로 소통이 어려운 두 현장</span>
+      <span class="sc-ans">→ 겹치는 시간대에 온라인 회의 일정을 잡는다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 언어 오해로 결함 목록 급증(애자일)</span>
+      <span class="sc-ans">→ 전체 팀과 작업 목록·설명 검토 세션을 준비한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 국경일 갈등 — 미리 예방하려면?</span>
+      <span class="sc-ans">→ 프로젝트 초기에 팀 합의서를 수립해 기대치를 공유한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 원격 팀원들이 독립적으로 행동, 협력 필요</span>
+      <span class="sc-ans">→ 화상 회의를 활용한 정기적인 회의를 촉진한다</span>
+    </div></div>
+    <div class="principle">PMI는 가상 팀에서 발생하는 모든 문제를 '의도적 설계'로 해결한다. 시간대·커뮤니케이션·참여·신뢰는 모두 저절로 생기는 것이 아니라, 먼저 지침을 세우고 합의를 만들고 반복적인 리듬을 구축해야 한다. 다양성 그 자체는 문제가 아니며, 다양성을 다루는 합의된 프로세스와 공유된 목표 이해가 복잡성을 줄이고 성과를 만든다.</div>
+    <div class="keywords"><span class="kw">겹치는 시간대</span><span class="kw">팀 합의서</span><span class="kw">커뮤니케이션 지침 확립</span><span class="kw">공유 리더십</span><span class="kw">합의된 프로세스</span><span class="kw">정기적인 반복 점검</span><span class="kw">권한 부여</span><span class="kw">공유된 목표 이해</span><span class="kw">마이크로매니지먼트=오답</span><span class="kw">백로그 그루밍</span><span class="kw">비효율적 협력=오답</span><span class="kw">자연스러운 거리감=피해야 함</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">15</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 이슈 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>이슈 로그</b> — 프로젝트 이슈를 기록·추적하는 살아있는 문서; 신임 PM의 첫 번째 확인처</li><li><b>이슈 vs 리스크</b> — 리스크=발생 가능 위협; 이슈=이미 발생한 실제 문제; 이슈는 로그에 기록</li><li><b>커뮤니케이션 증가</b> — 이슈 발생 시 PMI 첫 번째 대응 = 커뮤니케이션 빈도를 올리고 이해관계자 참여</li><li><b>근본 원인 분석</b> — 증상(일정·빈도)이 아닌 원인(요구사항 혼란·우선순위 충돌)을 먼저 다루기</li><li><b>영향 분석 우선</b> — 팀원 퇴사·요구사항 누락 발견 시 에스컬레이션 전에 반드시 영향 평가 선행</li><li><b>제품 책임자 권한</b> — 애자일에서 백로그 우선순위·완료 기준·자원 결정은 제품 책임자와 협의</li><li><b>기능 관리자 역할</b> — 공유 자원의 가용성 확인 책임자; PM은 통제 아닌 협상으로 자원을 확보</li><li><b>공식 변경 요청</b> — 스폰서 포함 누구의 요구라도 계획 외 변경은 반드시 공식 변경 요청 채널 통과</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 이슈 발생 → 다음 회고까지 기다린다 X / 즉시 커뮤니케이션 늘리고 이해관계자 참여가 정답</li><li>❌ 이미 시작된 스프린트에 백로그 항목 추가 X / 스프린트 범위 보호 원칙 위반</li><li>❌ 팀원 퇴사·요구사항 미충족 발견 → 곧바로 에스컬레이션 X / 영향 분석(impact analysis)이 먼저</li><li>❌ 불분명한 요구사항 → 일정 리베이스라인·스탠드업 횟수 증가 X / PO·팀과 백로그 검토가 정답</li><li>❌ 공유 자원 가용성 책임 → 스폰서·HR·PO X / 기능 관리자(Functional Manager)가 정답</li><li>❌ 중대한 조달 일탈 발견 → 이전 PM 연락·서비스 제공자 압박·윤리위 신고 X / 고위 경영진 보고가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 리스크가 이슈로 전환되어 진행이 중단됨</span>
+      <span class="sc-ans">→ 이슈 로그 기록 후 커뮤니케이션 증가 + 이해관계자 참여</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 신임 PM이 이슈 보고를 처음 접함</span>
+      <span class="sc-ans">→ 이슈 로그 먼저 검토하여 기존 추적 여부 확인</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 애자일에서 핵심 팀원이 사직하여 기능 영향 예상</span>
+      <span class="sc-ans">→ 제품 책임자와 논의하여 자원 추가 여부 공동 결정</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 스폰서가 계획에 없던 변경을 강하게 요구</span>
+      <span class="sc-ans">→ 공식 변경 요청을 제출하도록 스폰서에게 제안</span>
+    </div></div>
+    <div class="principle">PMI는 이슈가 발생하면 조용히 처리하지 말고 커뮤니케이션을 늘리고 이해관계자를 참여시켜 함께 해결하도록 요구한다. 어떤 행동을 취하기 전에 반드시 영향을 먼저 평가하고, 변경은 공식 채널을 통과시키며, 과거 기록(PMIS 아카이브·교훈 관리대장)을 등불로 활용해야 한다.</div>
+    <div class="keywords"><span class="kw">이슈 로그</span><span class="kw">커뮤니케이션 증가</span><span class="kw">이해관계자 참여</span><span class="kw">영향 분석</span><span class="kw">근본 원인</span><span class="kw">제품 책임자</span><span class="kw">기능 관리자</span><span class="kw">공식 변경 요청</span><span class="kw">PMIS 아카이브</span><span class="kw">스프린트 범위 보호</span><span class="kw">하이브리드 접근</span><span class="kw">교훈 관리대장</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">16</span>
+    <div class="title-wrap">
+      <span class="title">외부 비즈니스 환경 변화의 범위 영향 평가 및 대응</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>영향 평가 우선</b> — 외부 변화 발생 시 어떤 행동보다 먼저 프로젝트 범위·일정·비용 영향을 분석</li><li><b>리스크 레지스터</b> — 미확정 외부 위협도 즉시 등록·문서화하여 이해관계자와 대응 계획 수립</li><li><b>PESTLE 분석</b> — 정치·경제·사회·기술·법률·환경 6개 차원으로 외부 환경 스캔하는 틀</li><li><b>시스템 사고</b> — 방해 요인들의 상호 연결성·피드백 루프를 파악하는 사고 방식(파레토≠시스템사고)</li><li><b>관리 예비비</b> — Unknown-Unknown(예상 불가 사건)용 경영진 통제 예산 → PM 단독 사용 불가</li><li><b>우발사태 예비비</b> — Known-Unknown(식별된 리스크)용 예산 → PM이 사용 권한 보유</li><li><b>에스컬레이션</b> — 예산·일정 모두에 중대 영향이면 스폰서에게 상향 보고; 분석 전 에스컬레이션은 오답</li><li><b>회고(Retrospective)</b> — 반복 종료 후 잘된 것·안 된 것·개선 계획 논의; 반복계획(앞)과 구별</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ "법안 미확정이니 기다린다" → 수동적 대기는 오답 / 리스크 레지스터 등록 + 이해관계자 대응 계획이 정답</li><li>❌ "즉시 계약 수정·일정 연장·예산 요청"→ 영향 평가 전 즉각 행동은 모두 오답</li><li>❌ 시장발 예상 불가 범위 변경 → 우발사태 예비비(오답) / 관리 예비비(정답)</li><li>❌ 환경 스캔 요인에 세미나·저널·웨비나 포함 → 채널(출처)이지 PESTLE 요인 아님, 오답</li><li>❌ 방법론 전환 요청 시 PMO 전달·스폰서 승인이 첫 행동 → 오답 / 요구사항 분석 먼저가 정답</li><li>❌ 반복 끝 개선 논의 회의 → 반복 계획·데일리 스탠드업·백로그 정제 모두 오답 / 회고(Retrospective)가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 법안 계류 중, 프로젝트 범위에 잠재 영향</span>
+      <span class="sc-ans">→ 리스크 레지스터 업데이트 + 스폰서·고객과 대응 계획 수립</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 시장 환경 변화로 승인된 대규모 범위 변경, 비용 급증</span>
+      <span class="sc-ans">→ 관리 예비비(Management Reserve) 사용으로 비용 처리</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 외부 위협이 예산·일정 모두에 심각한 영향</span>
+      <span class="sc-ans">→ 즉시 프로젝트 스폰서에게 에스컬레이션</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 시장 출시 시기 중요 + 신기술 변경 요청 승인</span>
+      <span class="sc-ans">→ 점증적 전달 채택, 핵심 기능 먼저 출시 후 신기술 통합</span>
+    </div></div>
+    <div class="principle">PMI는 외부 비즈니스 환경 변화에 대해 항상 '영향 평가 우선, 행동 나중'의 순서를 강조한다. 불확실한 위협도 수동적으로 기다리는 대신 리스크 레지스터에 즉시 등록하고 이해관계자와 함께 대응 계획을 세워야 하며, PM의 권한을 초과하는 중대한 위협은 스폰서에게 에스컬레이션해야 한다. 시장 변화로 전달 방식 전환이 필요할 때는 하이브리드·점증적 접근으로 가장 높은 비즈니스 가치를 먼저 전달하는 것이 핵심 원칙이다.</div>
+    <div class="keywords"><span class="kw">영향 평가</span><span class="kw">리스크 레지스터</span><span class="kw">관리 예비비</span><span class="kw">PESTLE</span><span class="kw">시스템 사고</span><span class="kw">에스컬레이션</span><span class="kw">점증적 전달</span><span class="kw">회고(Retrospective)</span><span class="kw">맞춤화(Tailoring)</span><span class="kw">요구사항 분석 먼저</span><span class="kw">비즈니스 가치 우선</span><span class="kw">지속적 모니터링</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">17</span>
+    <div class="title-wrap">
+      <span class="title">Plan and Manage Quality of Products/deliverables</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"></ul>
+      </div>
+    </div>
+    
+    <div class="principle"></div>
+    <div class="keywords"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">18</span>
+    <div class="title-wrap">
+      <span class="title">의사소통 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>이해관계자 요구사항</b> — 의사소통 방법·빈도·채널 결정의 출발점. 누가·무엇을·왜 필요로 하는지 먼저 파악해야 하류 결정이 의미를 가진다.</li><li><b>푸시·풀·인터랙티브</b> — 푸시=이메일(발신 확인, 수신 미보장). 풀=웹사이트(수신자가 가져옴). 인터랙티브=회의·전화(실시간 양방향).</li><li><b>회의 목적 보호</b> — 범위 외 질문은 정중히 별도 자리로 이관. 회고 중 온보딩 질문 → 회의 후 별도 미팅 약속이 정답.</li><li><b>근원 접근 원칙</b> — 반복되는 불만·마찰은 근본 원인 신호. 연락 담당자·이메일 대신 당사자와 직접 대화.</li><li><b>자원 배정 계획서</b> — 공유 자원의 프로젝트 간 배정을 미래 지향으로 보여줌. RACI·타임시트·자원 캘린더와 구별.</li><li><b>사전 참여</b> — CCB 제출 등 공식 프로세스 전에 이해관계자와 먼저 비공식 상의. 갑작스러운 통보가 저항을 만든다.</li><li><b>맞춤형 의사소통</b> — 청중(경영진·기술팀·구매팀)마다 관심사·언어가 다름. 단일 메시지를 모두에게 동일 배포 = 실패.</li><li><b>투명성 원칙</b> — 나쁜 소식도 이해관계자와 함께 마주해야 한다. 조용히 해결하면 이슈뿐 아니라 PM 신뢰도가 무너진다.</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 연락 담당자(Liaison) 배치 → 오답. PM이 직접 핵심 이해관계자 관계를 관리해야 한다.</li><li>❌ 이메일로 의사소통 방법 변경 요청 → 오답. 문제가 된 얕은 채널로 해결 시도는 모순.</li><li>❌ RACI 참조로 자원 가용성 확인 → 오답. RACI는 역할만 정의, 배정 수준 정보 없음. 자원 배정 계획서가 정답.</li><li>❌ 타임시트 참조로 미래 충돌 예방 → 오답. 타임시트는 과거 기록. 미래 예방엔 자원 배정 계획서.</li><li>❌ 회고 중 온보딩 질문에 즉시 답변 → 오답. 회의 목적 훼손. 별도 미팅 약속이 정답.</li><li>❌ 연령 다양성을 의사소통 계획 핵심 기준으로 선택 → 오답. 개인·문화·역량 다양성이 정답 3개.</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이해관계자가 임시 연락을 반복</span>
+      <span class="sc-ans">→ 직접 만나 소통 필요·기대 파악 후 계획 업데이트</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ CCB 구성원이 일정 연장을 뒤늦게 알게 됨</span>
+      <span class="sc-ans">→ 공식 변경 프로세스 전 이해관계자와 먼저 상의</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 11시간 시차의 글로벌 이해관계자 회의 시간 결정</span>
+      <span class="sc-ans">→ 세계 시계 사용해 가능한 공통 시간 시각화 확인</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 심각한 품질 이슈 발생, 지연 예상</span>
+      <span class="sc-ans">→ 팀·이해관계자 모아 이슈와 해결책 함께 논의</span>
+    </div></div>
+    <div class="principle">PMI에서 의사소통의 출발점은 항상 이해관계자 요구사항이다. 누가 무엇을 왜 필요로 하는지를 먼저 파악해야 채널·빈도·형식이 의미를 가진다. 반복되는 문제는 증상이 아닌 근본 원인을 직접 당사자에게 가서 해결하며, 나쁜 소식도 숨기지 않고 이해관계자와 함께 투명하게 마주한다. 행동하기 전 반드시 상의하고, 정보를 보내는 것과 효과적으로 의사소통하는 것은 다르다.</div>
+    <div class="keywords"><span class="kw">이해관계자 요구사항</span><span class="kw">근본 원인 식별</span><span class="kw">사전 참여</span><span class="kw">설문지(통계 분석)</span><span class="kw">세계 시계</span><span class="kw">자원 배정 계획서</span><span class="kw">대면 대화(애자일)</span><span class="kw">투명성</span><span class="kw">맞춤화</span><span class="kw">풀(Pull)</span><span class="kw">푸시(Push)</span><span class="kw">전략 목표 연계</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">19</span>
+    <div class="title-wrap">
+      <span class="title">이해관계자 참여와 공유된 이해 구축</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>공유된 이해</b> — 팀·이해관계자가 목표·범위·기대에 대해 공통 인식을 갖는 상태. 출발점은 필요와 기대 식별</li><li><b>효과적 의사소통</b> — 이해관계자 지지·헌신 유지의 핵심 구성요소. 정직·투명·신뢰성 자체가 아닌 전달 수단</li><li><b>이해관계자 레지스터</b> — 이해관계자 식별 프로세스의 주요 산출물. 이름·관심영역·영향력 수준 포함</li><li><b>권력-관심 그리드</b> — 계층적 조직·내부 이해관계자·단기 워크숍에 최적. 4사분면별 관리 전략 도출</li><li><b>살리언스 모델</b> — 권력·긴급성·정당성 3속성으로 7유형 분류. 3개 모두 보유=Definitive(최우선)</li><li><b>이해관계자 유형</b> — 챔피언(적극 지지)·중립·스토익(수동 무관심)·안타고니스트(정치력으로 능동 방해)</li><li><b>참여 평가 매트릭스</b> — 이해관계자 현재(C)/목표(D) 참여 수준 추적 도구. 태도 변화 기록 전용</li><li><b>변경 관리 도구</b> — 이해관계자의 변화 저항 식별·대응 특화 도구. 이해관계자 관리보다 좁고 정밀</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 핵심 구성요소를 정직·투명·신뢰성으로 선택하면 오답 / 효과적인 의사소통이 정답</li><li>❌ 헌장에 이해관계자 정보가 없을 때 헌장 재검토=오답 / 이전 프로젝트 교훈 기록부가 정답</li><li>❌ 낮은 권력·낮은 관심에 만족유지나 정보제공=오답 / 최소한의 관리 노력(모니터링)이 정답</li><li>❌ 이해관계자 태도 변화(지지→저항)를 RACI·리스크 레지스터에 기록=오답 / 참여 평가 매트릭스가 정답</li><li>❌ 저항적 이해관계자에 즉각 에스컬레이션=오답 / 우려사항 다루는 참여 계획서 개발이 정답</li><li>❌ 스폰서 부재 시 PMO 격상이나 단일 자질 요구=오답 / 영향 분석 후 스폰서와 함께 대체자 선정이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 계획 단계에서 공유된 이해 구축</span>
+      <span class="sc-ans">→ 이해관계자들의 필요와 기대 식별이 최우선</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 핵심 이해관계자가 의사결정에 계속 늦음</span>
+      <span class="sc-ans">→ 직접 만나 지연 이유를 먼저 이해한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 착수 회의에서 이해관계자들이 격렬 논쟁</span>
+      <span class="sc-ans">→ 구조화된 논의 진행으로 관점 이해·공통점 탐색</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이해관계자가 의사소통 빈도 변경 요청</span>
+      <span class="sc-ans">→ 의사소통 관리 계획서 즉시 개정</span>
+    </div></div>
+    <div class="principle">PMI는 모든 이해관계자 활동의 출발점이 '그들의 필요와 기대 식별'임을 강조한다. 도구(레지스터·회의·계획서)보다 이해가 먼저다. 저항·갈등·부재 등 어떤 도전이 발생해도 먼저 이해하고 직접 다루는 것이 원칙이며, 에스컬레이션은 직접 해결 시도가 실패한 후의 최후 수단이다. 모든 계획 문서는 이해관계자 변화에 따라 지속 갱신되는 살아있는 문서여야 한다.</div>
+    <div class="keywords"><span class="kw">필요와 기대 식별</span><span class="kw">효과적인 의사소통</span><span class="kw">이해관계자 레지스터</span><span class="kw">교훈 기록부</span><span class="kw">Definitive(결정적인)</span><span class="kw">권력-관심 그리드</span><span class="kw">안타고니스트</span><span class="kw">표현적 스타일</span><span class="kw">참여 평가 매트릭스</span><span class="kw">변경 관리</span><span class="kw">구조화된 논의 진행</span><span class="kw">초기 반복 계획</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">20</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트/단계 종료 및 전환 계획과 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>종료 활동 분류</b> — 종료 활동은 '되돌아보거나 마무리·이전'이 목적. 착수·실행 중 활동(킥오프, CCB, 현황보고)은 종료 ❌</li><li><b>운영 준비성</b> — BAU 전환 시 공식 교육+문서 접근+공식 책임 이전 세 가지 필수. 치트시트+자가학습은 최저 기준 미달</li><li><b>교훈 지식 베이스</b> — 수집→이해관계자와 분석·정리→문서화·공유→지식 베이스 갱신 순서. 원데이터 그대로 저장 금지</li><li><b>종료 기준·진단 우선</b> — 기준 미충족 주장 시 가장 먼저 철저한 분석 수행. 확언·기준 삭제·무확인 종료는 모두 비윤리적</li><li><b>스프린트 회고</b> — 잘된 것 강화+잘 안된 것 시정+최우선 개선 영역의 3목표. 인도물 추적은 백로그 관리 영역</li><li><b>완료의 정의(DoD)</b> — 팀 전체가 합의로 충족 여부 판단. 스크럼 마스터·PO·관리자 단독 결정 불가</li><li><b>기준선 갱신 원칙</b> — 변경이 닿는 특정 기준선만 갱신. 인센티브 추가=원가 기준선, 일정·범위는 변경 없으면 미갱신</li><li><b>PDCA 사이클</b> — 변경 영향을 반복 순환으로 파악하는 도구. 파레토·피쉬본·인과관계는 이미 발생한 문제의 원인 분석용</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ Fast-tracking이 종료 활동이라고 혼동 → 종료 단계엔 압축할 일정 없음. 교훈 회의가 정답</li><li>❌ 치트시트+자가학습을 운영 준비성으로 착각 → 공식 교육+문서 접근+공식 책임 이전이 정답</li><li>❌ 교훈 데이터 수집 후 바로 저장 → 이해관계자와 분석·정제 후 저장이 정답</li><li>❌ 종료 기준 미충족 시 '기준 삭제' 또는 '충족됐다 확언' → 먼저 철저한 분석이 정답</li><li>❌ 성공 기준 분쟁 시 범위 기술서·품질 관리 계획서 참조 → 프로젝트 헌장이 정답</li><li>❌ 인센티브 추가 시 일정·범위 기준선 갱신 → 원가 기준선만 갱신. 프로젝트 관리 계획서 전체 갱신도 오답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 종료 단계에서 수행하는 활동은?</span>
+      <span class="sc-ans">→ 교훈 회의 진행, 지식 이전, 팀 축하, 테일러링 영향 기록</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 공급업체 교체 시 인계 활동</span>
+      <span class="sc-ans">→ 기존 업체가 신규 업체 교육, 신규 업체가 기존 업체 섀도잉(shadowing)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 스프린트 중 갈등·동기 저하 발생</span>
+      <span class="sc-ans">→ 스프린트 회고 수행. 1:1 면담·스프린트 리뷰는 부적합</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 착수 단계 프로젝트 취소 시 PM이 할 일</span>
+      <span class="sc-ans">→ 회사의 프로젝트 종료 지침 참조 (팀 배정·예산 미존재 상태)</span>
+    </div></div>
+    <div class="principle">PMI는 종료 단계에서 '되돌아보고·마무리하고·이전하는' 활동만을 종료 활동으로 인정하며, 착수·실행 중 활동을 종료 체크리스트에 넣는 것을 함정으로 출제한다. 문제 발생 시 즉각 행동이 아니라 '분석(진단) 우선' 원칙이 PMI의 일관된 철학이며, 교훈은 수집 후 이해관계자와 함께 분석·정제해야만 조직 자산으로서 가치를 갖는다. 전환(Transition)에서는 공식 교육·문서 접근·책임 이전이 운영 준비성의 필수 3요소이고, 애자일 종료에서는 DoD 충족 여부를 팀 전체가 합의로 판단한다.</div>
+    <div class="keywords"><span class="kw">교훈 관리대장</span><span class="kw">교훈 지식 베이스</span><span class="kw">운영 준비성</span><span class="kw">완료의 정의(DoD)</span><span class="kw">스프린트 회고</span><span class="kw">원가 기준선</span><span class="kw">PDCA 사이클</span><span class="kw">프로젝트 헌장</span><span class="kw">철저한 분석</span><span class="kw">지식 이전</span><span class="kw">섀도잉(shadowing)</span><span class="kw">테일러링 영향 기록</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">21</span>
+    <div class="title-wrap">
+      <span class="title">적절한 교육 제공으로 팀 성과 지원</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>팀 자체 평가</b> — 팀원이 스스로 성찰하여 자율성·책임감을 높이는 메커니즘, 기대 표현의 토대</li><li><b>스킬 평가</b> — 개발 계획 설계 전 반드시 거치는 진단 단계; 강점·격차를 파악해야 처방 가능</li><li><b>교차 교육</b> — 특정 인원 부재 시 품질 비용만 급등 → 지식 편중 해소를 위한 cross-training</li><li><b>현장 교육</b> — 기존 팀원이 직접 신규 팀원을 가르치는 OJT; 외부 전문가보다 맥락 맞춤형</li><li><b>임원 교육</b> — 애자일 전환 시 임원 미이해가 갈등 원인; 협상보다 교육이 선결 조건</li><li><b>자원 관리 계획서</b> — 교육 시행 후 반드시 갱신해야 하는 살아있는 문서; 계획과 현실의 일치 유지</li><li><b>권한 부여/코칭/멘토링</b> — 고성과 팀→권한 부여, 성과 저하→멘토링, 범위 이탈→코칭으로 성숙도별 리더십</li><li><b>성과 측정 프레임워크</b> — KPI는 사전 정의·팀 공유 필수; 스토리 포인트≠품질, 결함 수가 진짜 성과 지표</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 팀 구성 직후 계획서·헌장 배포 → 오답 / 환영 이벤트로 인간 연결 먼저 만드는 것이 정답</li><li>❌ 개발 계획 먼저 배포 → 오답 / 스킬 평가가 모든 개발 계획의 선결 조건</li><li>❌ 팀원 부재 시 품질 비용 상승 → 자원 추가·테스트 확대 오답 / 교차 교육이 정답</li><li>❌ 애자일 전환 임원 갈등 → 협상·회고 참여·요청 오답 / 임원 교육이 먼저</li><li>❌ 교육 시행 후 다음 할 일 → 교육 프로그램 재도입 오답 / 자원 관리 계획서 갱신이 정답</li><li>❌ 성과 저하 팀원 처리 → HR 위임·선임 대리인·전체 공개 오답 / PM이 직접 일대일 대화</li><li>❌ 스토리 포인트 많은 팀이 더 나은 성과 → 오답 / 결함 가장 적은 팀이 정답</li><li>❌ 단기 프로젝트 전문가 지원 요청 → 역량 강화 프로그램 등록 오답 / 정기 페어링이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀 구성 직후 PM 첫 번째 행동</span>
+      <span class="sc-ans">→ 환영 이벤트로 팀원 간 인간적 연결 먼저 형성</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 특정 인원 부재 시에만 품질 비용 급등, 속도는 안정적</span>
+      <span class="sc-ans">→ 교차 교육(cross-training)으로 지식 분산</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 마감 임박 성과 저하 팀원 발견</span>
+      <span class="sc-ans">→ PM이 직접 일대일 멘토링으로 근본 원인 파악 후 지원</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 애자일 전환 중 임원과 프로세스 갈등 발생</span>
+      <span class="sc-ans">→ 임원에게 애자일 실무 교육을 먼저 실시</span>
+    </div></div>
+    <div class="principle">PMI는 팀 역량 격차를 발견했을 때 항상 사전 예방적(proactive) 교육으로 근본 원인을 해결하며, 팀원 교체·외주·사후 대응은 문제를 회피하는 오답 패턴이다. 개인 문제는 PM이 직접 일대일로, 팀 전체 문제는 팀과 함께 논의하는 것이 소통 원칙이다. 교육을 포함한 모든 팀 개발 활동이 실행된 후에는 자원 관리 계획서를 갱신하여 계획과 현실의 일치를 유지해야 한다.</div>
+    <div class="keywords"><span class="kw">스킬 평가</span><span class="kw">교차 교육</span><span class="kw">현장 교육</span><span class="kw">페어링</span><span class="kw">임원 교육</span><span class="kw">자원 관리 계획서 갱신</span><span class="kw">일대일 대화</span><span class="kw">팀 자체 평가</span><span class="kw">권한 부여</span><span class="kw">멘토링</span><span class="kw">비핵심 활동 배치</span><span class="kw">결함 수(품질 KPI)</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">22</span>
+    <div class="title-wrap">
+      <span class="title">팀의 장애요인·방해물·차단요소 식별 및 제거</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>내부재배정 우선</b> — 자원 손실 발생 시 외부 투입 전 팀 내 재배정 가능 작업 먼저 식별</li><li><b>장애요인 로그</b> — 포착→우선순위화→제거→통보 순서로 운영되는 스크럼 핵심 문서</li><li><b>근본원인 분석</b> — 증상 완화가 아닌 재발 방지를 위해 RCA로 근본 원인을 먼저 식별</li><li><b>스프린트 보호</b> — 반복 중 새 요청은 현재 스프린트에 추가 금지, 백로그에 추가 후 다음 반복 처리</li><li><b>변경통제 프로세스</b> — CCB는 모든 변경을 예외 없이 검토; 우회 불가, 선택적 적용도 불가</li><li><b>WSJF 우선순위화</b> — 경제적 가치÷작업기간으로 산출하는 수학적 객관 모델; 주관성 배제</li><li><b>스크럼 마스터 역할</b> — 장애요인 제거·팀 보호 담당; 이해관계자와 요구사항 협상 권한 없음</li><li><b>서번트 리더십</b> — 팀원 문제 시 직접 대화·지원 제공이 우선; 처벌·위임은 PMI 오답 패턴</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 자원 이탈 시 즉시 외부 자원 투입 = 오답 / 팀 내 재배정 가능 작업 식별이 정답</li><li>❌ 장애요인 기록 후 즉시 제거 시작 = 오답 / 반드시 우선순위화 먼저가 정답</li><li>❌ 간접 정보로 스폰서에 에스컬레이션 = 오답 / 당사자와 직접 만나 사실 확인이 정답</li><li>❌ CCB 필요 여부 판단 = 오답 / CCB는 항상 모든 변경 검토, 예외 없음이 정답</li><li>❌ 스프린트 중 새 요청을 현재 반복에 반영 = 오답 / 백로그에 추가해 다음 반복 처리가 정답</li><li>❌ 팀원 문제를 기능 매니저에게 위임 = 오답 / PM이 직접 대화하고 지원 제공이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 스프린트 중 핵심 팀원 이탈</span>
+      <span class="sc-ans">→ 팀 내 재배정 가능 작업 먼저 식별 (내부 탐색 우선)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 벤더 폐업 발생</span>
+      <span class="sc-ans">→ 리스크 레지스터 검토 + 이슈 로그 갱신이 첫 단계</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀 권한 밖 이슈로 반복 지연</span>
+      <span class="sc-ans">→ 프로젝트 스폰서에게 에스컬레이션하여 다음 단계 결정</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이해관계자가 팀원에게 직접 변경 요청</span>
+      <span class="sc-ans">→ 팀원이 생산성 영향 포함해 스크럼 마스터에게 보고</span>
+    </div></div>
+    <div class="principle">PMI는 장애요인 발생 시 항상 '내부 탐색 먼저, 에스컬레이션 나중' 원칙을 적용하며, 증상 완화가 아닌 근본 원인 제거를 통한 재발 방지를 최우선 목표로 삼는다. 팀원 문제에는 처벌이나 제3자 위임 대신 직접적·지지적 개입(서번트 리더십)을 요구하며, 합의된 프로세스(변경통제, 스프린트 범위)는 어떤 상황에서도 협상 대상이 아니다.</div>
+    <div class="keywords"><span class="kw">내부 재배정</span><span class="kw">근본 원인 분석</span><span class="kw">이슈 로그</span><span class="kw">리스크 레지스터</span><span class="kw">우선순위화</span><span class="kw">백로그 추가</span><span class="kw">스폰서 에스컬레이션</span><span class="kw">스크럼 마스터 보고</span><span class="kw">변경통제 프로세스</span><span class="kw">WSJF</span><span class="kw">자기 조직화</span><span class="kw">서번트 리더십</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">23</span>
+    <div class="title-wrap">
+      <span class="title">팀원 및 이해관계자 역량 강화</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>서번트 리더십</b> — 팀 위에 군림하지 않고 장애물을 제거·지원하는 리더십. 행정적 문제는 PM이 직접 흡수</li><li><b>장애요인 제거</b> — 행정·기술·조직 층위별로 올바른 주체가 처리. 팀에 돌려보내지 않는 것이 핵심</li><li><b>팀 역량 강화</b> — 숙련된 팀에게 의사결정 소유권 이양. PM은 통제자가 아닌 촉진자(Facilitator)</li><li><b>그라운드 룰</b> — 팀 상호작용 규범. 갈등·비난·방어적 행동을 사전에 예방하는 팀 헌장의 핵심</li><li><b>회고</b> — 각 스프린트 종료 후 프로세스·협업을 팀 스스로 점검·개선하는 세레모니</li><li><b>인지 편향</b> — 편향·잘못된 가정·논리오류는 의사결정을 망가뜨림. 해결책은 타인에게 확인</li><li><b>이해관계자 정렬</b> — 팀의 현재 이해를 가시화 → 이해관계자 공유 → 피드백 수신 → 팀 공유의 양방향 소통</li><li><b>자원 역량 평가</b> — 배경·경험·역량 먼저 평가 후 작업 배정. 균등분배·직급기반 배정은 오답</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 소프트웨어 툴 오류 시 팀원 선발·리스크 등록 → 오답 / PM이 독자적으로 직접 해결이 정답</li><li>❌ 팀이 결정을 원할 때 스폰서·운영위원회 승인 요청 → 오답 / 팀에게 의사결정 책임 이양이 정답</li><li>❌ 비난·방어적 행동 사후 중재 → 오답 / 사전 그라운드 룰 수립으로 예방이 정답</li><li>❌ 원인이 명확(비효율적 협업)한데 RCA 재수행·서번트 리더십 집중 → 오답 / 커뮤니케이션 직접 개선이 정답</li><li>❌ 이해관계자 필요 불명확 시 상세 분석 후 서명 요구 → 오답 / 팀 이해 문서화→피드백 수신이 정답</li><li>❌ 예측형→애자일 전환 팀이 기다릴 때 단순 공지·프로덕트 오너 위임 → 오답 / 코칭이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 소프트웨어 툴이 업데이트를 허용하지 않음</span>
+      <span class="sc-ans">→ PM이 팀원 개입 없이 독자적으로 이슈 해결</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 숙련된 팀이 점증적 인도 후 결정권 요청</span>
+      <span class="sc-ans">→ 팀의 결정을 지지하고 의사결정 책임 이양</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 마일스톤 압박 중 팀원이 방어적·비난 행동</span>
+      <span class="sc-ans">→ 초기에 그라운드 룰 수립으로 예방했어야 함</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 이해관계자 요구사항이 여러 수집 후에도 불명확</span>
+      <span class="sc-ans">→ 팀 이해 문서화 후 이해관계자에게 공유·피드백 수신</span>
+    </div></div>
+    <div class="principle">PMI는 PM을 팀 위의 통제자가 아닌 서번트 리더로 본다. 행정·운영적 장애물은 PM이 직접 흡수하고, 숙련된 팀의 의사결정 권한은 적극적으로 이양해야 한다. 원인이 명확한 문제는 재분석 없이 직접 해결하고, 이해관계자 정렬은 양방향 소통(가시화→피드백)으로 이루어야 한다.</div>
+    <div class="keywords"><span class="kw">서번트 리더십</span><span class="kw">독자적으로 해결</span><span class="kw">의사결정 이양</span><span class="kw">코칭</span><span class="kw">그라운드 룰</span><span class="kw">작업 합의서</span><span class="kw">팀 역량 강화</span><span class="kw">커뮤니케이션 개선</span><span class="kw">투명성</span><span class="kw">피드백</span><span class="kw">배경·경험·역량 평가</span><span class="kw">에스컬레이션 금지</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">24</span>
+    <div class="title-wrap">
+      <span class="title">일정 계획 및 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>속도(Velocity)</b> — 팀이 반복당 완료한 스토리 포인트 합계. 완료 예측 공식: 남은 포인트 ÷ 속도 × 반복 기간</li><li><b>크래싱 vs 패스트트래킹</b> — 크래싱=자원 추가·비용 증가 / 패스트트래킹=병렬 수행·비용 없음·리스크 증가</li><li><b>여유시간(Float)</b> — 비핵심 활동에만 존재. 2주 지연도 Float 내면 전체 완료일 무영향</li><li><b>EVM 지수</b> — SPI=EV÷PV(1=계획대로, <1=지연), CPI=EV÷AC(>1=예산절감)</li><li><b>추정 기법 4가지</b> — 유사<모수<상대<상향식 순으로 정확도 증가. 약간 다른 요구사항=상향식</li><li><b>FS 종속관계</b> — 선행 완료 후 후속 시작. 프로젝트에서 가장 일반적. FS·SS·FF·SF 4유형</li><li><b>릴리스 번다운 차트</b> — 남은 스토리 포인트를 반복별로 시각화. 운영위원회에 완료 예측 제공 최적 도구</li><li><b>계획 접근법 구분</b> — 예측형=전체 사전 계획 / 롤링웨이브=근거리 상세·원거리 개략 / 스틸스레드=하이브리드</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 비용 제약 있을 때 크래싱 선택 시 오답 / 패스트트래킹이 정답(비용 없는 압축)</li><li>❌ 비핵심 활동 지연 즉시 자원 투입 시 오답 / Float 확인이 우선(평가 후 행동)</li><li>❌ SPI=1을 '앞서 있음'으로 해석 시 오답 / SPI>1이 앞섬, =1은 정확히 계획대로</li><li>❌ 반복 실패 시 타임박스(반복 기간) 변경 선택 시 오답 / 스프린트 규모 조정이 정답</li><li>❌ 종속관계 관리 첫 행동으로 스폰서 전달 선택 시 오답 / 평가·문서화가 최우선</li><li>❌ 규정 미준수 가장 광범위한 영향이 벌금·고객불만이면 오답 / 사업 생존과 지속성이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 추가 비용 없이 일정 만회 필요</span>
+      <span class="sc-ans">→ 패스트트래킹(순차 활동 병렬 수행, 비용 없음)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 공급업체 지연 발생, 첫 행동은?</span>
+      <span class="sc-ans">→ 프로젝트 기준선 대비 성과 검토(영향 평가 우선)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 애자일 팀 반복 실패 반복</span>
+      <span class="sc-ans">→ 스프린트 규모 적정화(타임박스는 고정, 규모만 조정)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 운영위원회가 남은 시간 지표 요청</span>
+      <span class="sc-ans">→ 릴리스 번다운 차트 제공(스토리 포인트만으로는 불충분)</span>
+    </div></div>
+    <div class="principle">PMI는 "행동하기 전에 먼저 영향을 평가하라"는 원칙을 일정 관리 전반에 적용한다. 일정 압축은 비용 제약이 있으면 패스트트래킹, 예산 여유가 있으면 크래싱을 선택하며, 비핵심 활동의 지연은 Float 확인이 우선이다. 애자일에서는 타임박스를 불변으로 두고 속도(velocity) 데이터로 계획을 자기수정하는 경험적 접근이 핵심이다.</div>
+    <div class="keywords"><span class="kw">패스트트래킹</span><span class="kw">크래싱</span><span class="kw">여유시간(Float)</span><span class="kw">속도(Velocity)</span><span class="kw">릴리스 번다운 차트</span><span class="kw">상향식 추정</span><span class="kw">기준선 검토</span><span class="kw">스프린트 규모</span><span class="kw">종속관계 문서화</span><span class="kw">SPI=1 일정대로</span><span class="kw">CPI>1 예산절감</span><span class="kw">사업 생존과 지속성</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">25</span>
+    <div class="title-wrap">
+      <span class="title">이해관계자 멘토링과 협업</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>이해관계자 등록부</b> — 이해관계자 식별 즉시 작성, 프로젝트 전반 지속 갱신하는 공식 문서</li><li><b>권력/관심 격자</b> — 높은권한+높은관심=긴밀관리, 낮은권한+높은관심=정보제공</li><li><b>영향력/몰입도 매트릭스</b> — 낮은영향력+높은몰입도 그룹에 초기성공 소식 전달로 지지 유지</li><li><b>이해관계자 참여 계획서</b> — 이해관계자별 세부정보 제공 수준·참여 전략 정의; 등록부 완성 후 작성</li><li><b>공통 이해 구축</b> — 충돌 기대치는 프로젝트 헌장 기반 촉진 회의로 협력적 해결</li><li><b>프로덕트 오너</b> — 애자일에서 이해관계자-팀 간 공식 창구; 백로그 변경 결정권 보유</li><li><b>자원 교체 요청</b> — 핵심 인력 이탈 시 멘토링 대신 경험 있는 대체 인력 요청이 PMI 예방적 대응</li><li><b>메가프로젝트 권력</b> — 외부 이해관계자: 설득·위임·주고받기 유효; 엄격한 명령·직접통제는 오답</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 미식별 이해관계자 등장 → CCB 제출·회의 소집 오답 / 이해관계자 식별 후 등록부 업데이트가 정답</li><li>❌ 낮은권한+높은관심 → 긴밀관리 오답 / Keep Informed(정보 제공)이 정답</li><li>❌ 저항 이해관계자 즉시 스폰서 에스컬레이션 오답 / SOW·헌장 기반 직접 대화로 먼저 해결</li><li>❌ 스프린트 중 이해관계자 변경 요청 → 팀 즉시 변경 지시 오답 / PO에게 전달 후 백로그 조정이 정답</li><li>❌ 핵심 인력 이탈 → 멘토 지정 오답 / 경험 있는 대체 자원 요청이 PMI 예방적 대응</li><li>❌ 이해관계자별 세부정보 수준 결정 → 의사소통 관리 계획서 오답 / 이해관계자 참여 계획서가 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 미식별 이해관계자가 범위 변경 요청</span>
+      <span class="sc-ans">→ 이해관계자 식별 후 등록부를 즉시 업데이트한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 기능 관리자가 인원감축 우려로 협력 거부</span>
+      <span class="sc-ans">→ 기능 관리자와 함께 SOW(작업기술서)를 검토한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 애자일 이해관계자가 인도물 거부 후 재작업 발생</span>
+      <span class="sc-ans">→ PO와 이해관계자 간 촉진 회의로 인도물 합의를 도출한다</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 조직 변경으로 핵심 이해관계자 교체, 다음 회의 한 달 후</span>
+      <span class="sc-ans">→ 새 이해관계자와 별도 회의를 예약하여 즉시 브리핑한다</span>
+    </div></div>
+    <div class="principle">PMI는 이해관계자를 권력·관심·영향력 기반으로 분류하고 차별화된 전략을 적용하며, 저항과 충돌은 에스컬레이션보다 직접 대화와 협상으로 먼저 해결할 것을 요구한다. 애자일 환경에서 이해관계자 변경 요청은 반드시 프로덕트 오너를 통해 처리하며, 스프린트 중 직접 팀에 지시하는 것은 원칙 위반이다. 새로운 이해관계자 발견 시 첫 행동은 항상 '식별 후 등록부 업데이트'이며, 이것이 모든 후속 관리 활동의 공식 기반이 된다.</div>
+    <div class="keywords"><span class="kw">이해관계자 등록부 업데이트</span><span class="kw">Keep Informed(정보 제공)</span><span class="kw">SOW 검토</span><span class="kw">프로젝트 헌장 기반 역할·책임</span><span class="kw">프로덕트 오너에게 전달</span><span class="kw">촉진 회의</span><span class="kw">공통 이해 구축</span><span class="kw">이해관계자 참여 계획서</span><span class="kw">회고 세션</span><span class="kw">에스컬레이션=오답</span><span class="kw">엄격한 명령=오답</span><span class="kw">초기 성공 소식</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">26</span>
+    <div class="title-wrap">
+      <span class="title">비즈니스 가치 납품을 위한 긴박감 있는 프로젝트 실행</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>변경 영향 평가</b> — 모든 변경 요청 시 범위·일정·비용·리스크 영향을 먼저 분석. 평가→승인→실행 순서 불변</li><li><b>통합 변경 통제</b> — 기준선에 영향을 주는 모든 변경은 CCB를 통한 공식 프로세스 필수. 예외 없음</li><li><b>CCB(변경 통제 위원회)</b> — 변경 요청서를 공식 검토·승인·보류·거부하는 기관. CCB 전 실행은 무단 변경</li><li><b>MVP(최소 기능 제품)</b> — 자원·시간 제약 시 비즈니스 필수 항목만 납품하는 범위 관리 패러다임</li><li><b>코터 8단계 모델</b> — 긴박감→연합→비전→전달→권한→단기성과→가속→정착. 대규모 조직 변화 프레임워크</li><li><b>변경 관리 vs 변경 통제</b> — 변경 관리=사람의 변화 수용 지원, 변경 통제=기준선 보호 공식 프로세스. 완전히 다른 개념</li><li><b>엔비저닝 3산출물</b> — 애자일 제품 수준 계획의 산출물: 제품 비전+제품 로드맵+고수준 제품 백로그</li><li><b>LeSS(대규모 스크럼)</b> — 수백 개 팀·다중 위치에서 고객 집중·협력 극대화하는 스케일링 프레임워크</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 비용 절감·스폰서 요청이라도 영향 평가 없이 즉시 반영하면 오답 / 평가 먼저가 정답</li><li>❌ 회의 전 준비=신속 추진 절차 시작이 오답 / 변경 영향 평가 보고서 준비가 정답</li><li>❌ 자원 부족 시 추가 채용·초과 근무 요청이 오답 / MVP 위한 주경로 분석이 정답</li><li>❌ 대규모 인원 영향 프로젝트의 핵심 성공 요인=품질·UI가 오답 / 변경 관리 계획·실행이 정답</li><li>❌ CCB=예측형 거버넌스, 경쟁사 대응 유연성 필요 시 CCB 설치가 오답 / 프로덕트 오너 코칭이 정답</li><li>❌ EVM·SPI·예측 공식은 리스크 이해 이후 도구, 시장 변화 시 먼저 적용하면 오답 / 리스크 식별·분석이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 자원 부족으로 전체 납품 불가</span>
+      <span class="sc-ans">→ MVP 납품 위한 주경로(Critical Path) 분석</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 스폰서가 범위 확장 요청</span>
+      <span class="sc-ans">→ 통합 변경 통제 프로세스 즉시 시작</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 예상치 못한 시장 변화로 판매 급감</span>
+      <span class="sc-ans">→ 시장 변화 관련 리스크 식별·분석 후 대응 계획 개발</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 대규모 변환에서 이해관계자가 일괄 납품 압박</span>
+      <span class="sc-ans">→ 이해관계자 우려 이해 + 점진적 납품 이점 동시 전달</span>
+    </div></div>
+    <div class="principle">PMI는 모든 변경에 대해 반드시 영향 평가→공식 승인(통합 변경 통제)→실행 순서를 요구하며, 이 순서를 건너뛰는 선택지는 항상 오답이다. 자원·일정 제약 시에는 MVP와 주경로 분석으로 가장 높은 비즈니스 가치를 먼저 납품하고, 리스크나 시장 변화에는 EVM 등 도구보다 식별·분석이 선행되어야 한다.</div>
+    <div class="keywords"><span class="kw">영향 평가</span><span class="kw">통합 변경 통제</span><span class="kw">CCB</span><span class="kw">MVP</span><span class="kw">주경로</span><span class="kw">변경 요청서</span><span class="kw">리스크 식별</span><span class="kw">코터 8단계</span><span class="kw">변경 관리</span><span class="kw">프로덕트 오너 코칭</span><span class="kw">점진적 납품</span><span class="kw">기준선 보호</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">27</span>
+    <div class="title-wrap">
+      <span class="title">갈등 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>서번트 리더십</b> — PM은 팀 위에 군림하지 않고 역량 강화(Empower)·코칭으로 팀 자율성을 지원</li><li><b>갈등 해결 5기법</b> — 협력(윈윈)·강압(윈루즈)·수용(루즈윈)·타협(루즈루즈)·회피(루즈루즈) 상황별 선택</li><li><b>회고(Retrospective)</b> — 반복 종료 후 팀이 근본 원인을 집단 분석하고 개선 행동을 합의하는 전용 세션</li><li><b>갈등 불가피성</b> — 갈등은 모든 프로젝트에서 불가피—회피·재앙 아닌 조기·능동 관리가 PMI 원칙</li><li><b>갈등 분류</b> — 구조적 갈등(외부 요인: 마감·역할 불명확)과 대인관계 갈등(성격·스타일 차이) 구분</li><li><b>기본 규칙(Ground Rules)</b> — 프로젝트 착수 시 팀이 협력적으로 합의한 소통·행동 규범—갈등 예방 1차 방어선</li><li><b>에스컬레이션 순서</b> — ①팀 자체 해결 → ②PM 퍼실리테이션 → ③기능관리자/고객 → ④스폰서/경영진</li><li><b>교육 필요성 평가</b> — 교육 계획·일정 수립 전 반드시 먼저 수행—어떤 역량 격차가 있는지 파악이 선행</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 협력 vs 타협 혼동: '희생·양보' 키워드 → 타협(루즈루즈), '함께 새 해결책·윈윈' → 협력</li><li>❌ 갈등 즉시 에스컬레이션 → 오답 / PM이 먼저 직접 대화 시도 후 에스컬레이션이 정답</li><li>❌ 갈등 해결 절차가 프로젝트 헌장에 있다 → 오답 / 헌장에는 목적·권한만, 절차 없음</li><li>❌ 친화성 코칭 결과=외향성(사교적) → 오답 / 친화성=비대립적 소통, 외향성은 별개 특성</li><li>❌ 재무팀 ROI 미승인을 리스크 레지스터 등록 → 오답 / 이미 발생한 이슈는 즉각 해결 행동</li><li>❌ 교육 필요 확인 → 즉시 계획·일정 수립 → 오답 / 교육 필요성 평가(assessment)가 반드시 선행</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀원 간 갈등, 영향력 낮은 이해관계자가 사소한 불평</span>
+      <span class="sc-ans">→ 철회/회피 기법 적용—중요하지 않은 갈등에 에너지 낭비 불필요</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀원이 스탠드업에서 스토리 완료를 허위 보고</span>
+      <span class="sc-ans">→ 해당 팀원과 개인적(privately)으로 먼저 대화—공개 비난 금지</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 기능 관리자가 핵심 팀원을 예고 없이 차출</span>
+      <span class="sc-ans">→ 기능 관리자와 직접 소통하여 프로젝트 영향 설명 후 복귀 요청</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 팀 성과 저하, 사기 저하(새 PM 부임 직후)</span>
+      <span class="sc-ans">→ 팀과 직접 만나 근본 원인 논의—에스컬레이션·팀 교체 아님</span>
+    </div></div>
+    <div class="principle">PMI는 갈등을 불가피한 현상으로 보고, 가능한 한 빨리(At the earliest time possible) 능동적으로 관리하는 것을 원칙으로 한다. PM은 서번트 리더로서 팀이 스스로 해결하도록 역량을 강화(Empower)하고, 팀 내 해결이 어려울 때 협력/문제 해결(Collaborate) 기법으로 윈-윈 결과를 추구하며, 에스컬레이션은 반드시 최후의 수단으로 남겨둔다.</div>
+    <div class="keywords"><span class="kw">협력/문제 해결</span><span class="kw">윈-윈</span><span class="kw">에스컬레이션 최후 수단</span><span class="kw">가능한 한 빨리</span><span class="kw">역량 강화(Empower)</span><span class="kw">코칭(Coaching)</span><span class="kw">회고(Retrospective)</span><span class="kw">근본 원인 파악</span><span class="kw">기본 규칙(Ground Rules)</span><span class="kw">구조적/대인관계 분류</span><span class="kw">개인적으로(Privately)</span><span class="kw">교육 필요성 평가</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">28</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 컴플라이언스 계획 및 관리</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>규제 비협상성</b> — 법적 규제는 비용·일정 불리해도 반드시 준수. 벌금 예산화·협상 시도 모두 오답</li><li><b>영향 평가 우선</b> — 새 컴플라이언스 요건 등장 시 첫 행동은 항상 영향 평가. 팀 통보·계획 수정은 그 다음</li><li><b>프로젝트 헌장</b> — PM에게 자원 사용 권한 부여하는 공식 문서. 착수 회의 전 반드시 개발 완료</li><li><b>거버넌스 회의</b> — 고객 가시성 불만 해결책. 일방적 일일 보고서 대신 정기 쌍방향 거버넌스 회의 수립</li><li><b>품질 지표 수립</b> — 품질 개선 관리의 첫 단계. 지표 없는 감사·결함 추적은 기준 없는 검사와 동일</li><li><b>RTM·가정 기록부</b> — 요건 추적=RTM, 불확실 지침=가정 기록부. 리스크 레지스터·비즈니스 케이스와 혼동 금지</li><li><b>명목집단기법</b> — 그룹 내 순위 의견 불일치 해결 도구. 브레인스토밍(아이디어 생성)과 구별 필수</li><li><b>애자일 PM 역할</b> — 조율자·서번트 리더. PO 백로그 권한 침해 금지, 지시 대신 퍼실리테이션</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 벌금이 허가 비용보다 저렴 → 오답 / 법적 의무이므로 허가 취득이 정답</li><li>❌ 새 HSE 규정 → 스폰서에게 먼저 가면 오답 / HSE 전문팀과 만나 영향 파악이 정답</li><li>❌ 컴플라이언스 동기부여 → 감사 강화·보너스 오답 / 팀 워크숍 퍼실리테이션이 정답</li><li>❌ MVP 규제 누락 → 팀에 직접 지시·스폰서 에스컬레이션 오답 / PO에게 우선순위 검토 요청이 정답</li><li>❌ 컴플라이언스 지침 없을 때 → 리스크 레지스터 기록·작업 중단 오답 / 가정 기록부 문서화 후 계속 진행이 정답</li><li>❌ PO vs 법무 갈등 → 어느 한쪽 편 들거나 즉시 에스컬레이션 오답 / 토론 퍼실리테이션이 정답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 허가증 없이 진행 시 벌금이 더 싼 상황</span>
+      <span class="sc-ans">→ 벌금·일정 무관하게 허가증 취득(법적 의무 우선)</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 실행 중 새 컴플라이언스 요건 도입</span>
+      <span class="sc-ans">→ 즉시 영향 평가 후 리스크 레지스터·일정 업데이트</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 고객이 품질 가시성 부족 지속 불평</span>
+      <span class="sc-ans">→ 정기 거버넌스 회의 수립 + 공유 폴더 데이터 게시</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 컴플라이언스 기준 미정의 신규 산업</span>
+      <span class="sc-ans">→ 글로벌 모범 사례 지침으로 사용 + 기준 지속 모니터링</span>
+    </div></div>
+    <div class="principle">PMI는 규제 컴플라이언스를 비용·일정보다 상위의 법적·윤리적 의무로 규정하며, 어떤 상황에서도 타협 대상이 아니다. 새로운 요건이 등장했을 때는 반드시 영향 평가를 먼저 수행하고, 팀이 자발적으로 준수하도록 '이유'를 소통하는 것이 강제·감시보다 지속 가능한 컴플라이언스 문화를 형성한다. 애자일 환경에서 PM은 지시자가 아닌 조율자·퍼실리테이터로서 서번트 리더십을 통해 컴플라이언스를 지원한다.</div>
+    <div class="keywords"><span class="kw">영향 평가</span><span class="kw">비협상적 의무</span><span class="kw">가정 기록부</span><span class="kw">요구사항 추적 행렬(RTM)</span><span class="kw">명목집단기법(NGT)</span><span class="kw">거버넌스 회의</span><span class="kw">서번트 리더십</span><span class="kw">글로벌 모범 사례</span><span class="kw">품질 지표</span><span class="kw">제품 책임자(PO)</span><span class="kw">퍼실리테이션</span><span class="kw">교훈 검토</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">29</span>
+    <div class="title-wrap">
+      <span class="title">프로젝트 편익 평가 및 가치 인도</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>편익 관리 계획서</b> — 편익 정의·측정·실현·유지 방법 문서화. KPI·편익 담당자·실현 시점 포함</li><li><b>편익 실현(OCM)</b> — 산출물→결과→편익→전략목표 흐름. 조직변화관리 병행 없으면 편익 미실현</li><li><b>편익 지표(KPI)</b> — 달성·미달성 판단 기준. 처음부터 명확히 정의해야 생애주기 동안 추적 가능</li><li><b>편익 담당자</b> — 프로젝트 종료 후에도 편익 지속 책임자. 보통 스폰서가 겸함</li><li><b>NPV / IRR</b> — 프로젝트 선택 시 NPV 최고값 우선. NPV>0이면 투자 가치, 음수면 거부</li><li><b>EVM(획득가치)</b> — CV=EV-AC, SV=EV-PV. 음수=초과/지연. CPI·SPI 예측형 전용 지표</li><li><b>MVP / 번다운</b> — Must+Should 완성 시 즉시 출시. 스프린트 진도 추적은 번다운 비율 사용</li><li><b>PO / SM 역할</b> — PO=백로그 우선순위·비즈니스가치 책임. SM=장애제거·팀보호·이벤트 퍼실리테이션</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 애자일 지표 혼동: 스프린트 진도 확인 시 SPI·CPI 선택 → 오답. 번다운 비율이 정답</li><li>❌ 팀 증원으로 지연 해결 → 오답(브룩스 법칙). 핵심 기능 재우선순위 및 MVP 재정의가 정답</li><li>❌ 기준선 변경으로 EV<PV 상황 모면 → 오답. 성과 측정 후 시정 조치 결정이 정답</li><li>❌ 편익 지표 미정의: 요구사항·스코프 잘못 정의 → 오답. 혜택 지표 미정의가 실제 원인</li><li>❌ 프로젝트 종료 후 편익 추적 = PM 역할 → 오답. 편익 담당자(스폰서)와 조율이 정답</li><li>❌ SM이 이해관계자에게 제품 설명 → 오답. 제품 비전·이해관계자 설명은 PO 역할</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 경쟁사가 다음 분기 유사 제품 출시 예정</span>
+      <span class="sc-ans">→ 팀과 협력하여 핵심 기능 우선순위 재조정 및 MVP 재정의</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 시장 조건 변화로 프로젝트 가치 위협</span>
+      <span class="sc-ans">→ 스폰서와 만나 조직이 프로젝트를 계속 지원하는지 확인</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ Must·Should 기능 완성, 일부 기능 개발 중 MVP 출시일</span>
+      <span class="sc-ans">→ 스프린트 검토 완료 후 완성된 기능으로 MVP 즉시 출시</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 프로젝트 완료 후 약속된 편익 미실현</span>
+      <span class="sc-ans">→ 편익 담당자와 조율하여 사후 편익 모니터링 계획 수립</span>
+    </div></div>
+    <div class="principle">PMI는 프로젝트 성공을 인도물 완성이 아닌 편익 실현로 정의하므로, PM은 프로젝트 생애주기 전반에 걸쳐 편익 지표를 추적하고 이해관계자와 가치를 정렬해야 한다. 변화 발생 시 즉각 실행 전에 반드시 영향을 평가하고, 애자일 환경에서는 조기에 핵심 가치를 인도하는 MVP 전략과 적절한 성과 지표(번다운, Velocity)를 활용해야 한다.</div>
+    <div class="keywords"><span class="kw">편익 관리 계획서</span><span class="kw">편익 담당자</span><span class="kw">혜택 지표</span><span class="kw">NPV 최고값</span><span class="kw">번다운 비율</span><span class="kw">MVP 재정의</span><span class="kw">OCM(조직변화관리)</span><span class="kw">시정 조치</span><span class="kw">영향 평가 우선</span><span class="kw">스폰서 조율</span><span class="kw">PO=백로그 소유</span><span class="kw">Must+Should=즉시 출시</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span class="num">30</span>
+    <div class="title-wrap">
+      <span class="title">팀 구축과 리더십</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="two-col">
+      <div class="col">
+        <div class="section-label concept-label">핵심 개념</div>
+        <ul class="concepts"><li><b>상황적 리더십</b> — 팀 역량·헌신도에 따라 지시적/지원적 행동 비율 조절</li><li><b>리더십 7유형</b> — 팀 빌딩형(비전·친화·코칭·참여·협력) vs 비팀빌딩형(지시·속도설정)</li><li><b>터크만 5단계</b> — 형성→격동→규범→성과→해산; 동기부여 집중은 형성기</li><li><b>서번트 리더십</b> — 팀·커뮤니티의 성장·복지 측정; 역전된 계층; 모든 방법론 적용</li><li><b>동기부여 이론</b> — X(통제)·Y(지원/경청/낮은감독)·기대이론; 개인 맞춤 인센티브가 핵심</li><li><b>갈등 해결 5전략</b> — 문제해결(Win-Win·최선)>타협>수용>강요>회피(최악)</li><li><b>인정(Recognition)</b> — 고성과자를 전략적 작업에 재배정; 비금전적 동기부여 수단</li><li><b>PM 핵심 자질</b> — Lead(이끌다)·Ethical(윤리적)·Adapt(적응); Aggressive는 해당 없음</li></ul>
+      </div>
+      <div class="col">
+        <div class="section-label trap-label">시험 함정</div>
+        <ul class="traps"><li>❌ 비전형=장기방향+팀참여 유도 / 자기조직화 지원은 참여형이 정답</li><li>❌ 서번트 리더십 초점=팀·커뮤니티 성장·복지 / 고객 만족·생산성은 오답</li><li>❌ 서번트 리더십=애자일 전용 아님 / 모든 규모·방법론 프로젝트에 적용이 정답</li><li>❌ 고성과 팀 속성=개인추진력·업무도전·자극환경 / 재정보상·문제해결기법은 오답</li><li>❌ PM 단독 프로젝트 중단 불가 / 스폰서와 투명 논의 후 전략 평가 지원이 정답</li><li>❌ 역량 격차 해결=훈련 제공 / HR 위임·팀원 교체·스폰서 보고는 오답</li></ul>
+      </div>
+    </div>
+    <div class="section-label scenario-label">자주 나오는 시나리오</div><div class="scenarios">
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 원격 팀·처음 만나는 팀 연결</span>
+      <span class="sc-ans">→ 친화형(Affiliative) 리더십 적용</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 변화·불확실 환경에서 팀 동기부여</span>
+      <span class="sc-ans">→ 협력형(Collaborative) 리더십 적용</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 사기·소통 저하된 두 팀 첫 조치</span>
+      <span class="sc-ans">→ 개방적 소통 세션 퍼실리테이션으로 근본 원인 파악</span>
+    </div>
+    <div class="scenario-row">
+      <span class="sc-sit">▸ 참여 안 하는 이해관계자 재참여</span>
+      <span class="sc-ans">→ 직접 비공개 인터뷰로 불만 파악 후 소통 조정</span>
+    </div></div>
+    <div class="principle">PMI는 PM이 단순한 관리자를 넘어 팀을 섬기는 서번트 리더이자, 비즈니스 렌즈 역할을 하는 전략적 파트너여야 한다고 강조한다. 동기부여는 획일적 보상이 아닌 개인 필요에 맞게 조정되어야 하며, 갈등은 회피가 아닌 근본 원인을 해결하는 문제 해결(Problem Solving) 방식으로 접근해야 한다. 팀 구축의 출발점은 프로젝트 비전 정의이며, 팀 배정과 계획 수립 후에는 착수 회의를 개최하여 이해관계자를 정렬시키는 것이 올바른 순서이다.</div>
+    <div class="keywords"><span class="kw">서번트 리더십</span><span class="kw">개인 맞춤 인센티브</span><span class="kw">문제 해결(Problem Solving)</span><span class="kw">자기 조직화</span><span class="kw">비전 정의</span><span class="kw">착수 회의</span><span class="kw">비즈니스 렌즈</span><span class="kw">개방적 소통 세션</span><span class="kw">직접 인터뷰</span><span class="kw">권한 부여(Empower)</span><span class="kw">형성기 동기부여</span><span class="kw">친화형 리더십</span></div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
