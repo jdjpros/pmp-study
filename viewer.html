@@ -1201,6 +1201,12 @@ function buildQuestionCard(q) {
   });
   body.appendChild(choicesWrap);
 
+  // 북마크 버튼 (선지 바로 아래 — 선지 확인 후 즉시 결정)
+  const bookmarkFooter = document.createElement('div');
+  bookmarkFooter.className = 'bookmark-footer';
+  bookmarkFooter.innerHTML = `<button class="tool-btn bookmark bk-footer-btn" data-bookmark title="복습할 문제로 표시">☆ 북마크</button>`;
+  body.appendChild(bookmarkFooter);
+
   // 정답 표시줄 (요구사항 2)
   const answerBar = document.createElement('div');
   answerBar.className = 'answer-bar';
@@ -1224,12 +1230,6 @@ function buildQuestionCard(q) {
 
   // 추가 개념정리 모듈 (요구사항 5)
   card.appendChild(buildConceptModule(q));
-
-  // 북마크 버튼 (카드 최하단 — 해설·개념정리를 모두 읽은 뒤 결정)
-  const bookmarkFooter = document.createElement('div');
-  bookmarkFooter.className = 'bookmark-footer';
-  bookmarkFooter.innerHTML = `<button class="tool-btn bookmark bk-footer-btn" data-bookmark title="복습할 문제로 표시">☆ 북마크</button>`;
-  card.appendChild(bookmarkFooter);
 
   // 도구 버튼 이벤트 연결
   card.querySelector('[data-bookmark]').addEventListener('click', (e) => toggleBookmark(card, q, e.currentTarget));
