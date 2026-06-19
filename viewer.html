@@ -362,7 +362,7 @@
     .wrap       { padding: 16px 12px 80px; }
 
     /* ── progress-wrap 모바일 압축 ──────────────────────────── */
-    .progress-wrap { gap: 5px; }
+    .progress-wrap { gap: 5px; flex-wrap: wrap; }
     .prog-label-text { display: none; }        /* "진행률" 레이블 숨김 */
     .prog-suffix     { display: none; }        /* "선택지 확인" 숨김 → "12/124"만 표시 */
     .btn-text        { display: none; }        /* "전체 문제 다시 풀기" 숨김 → "↺"만 표시 */
@@ -371,6 +371,10 @@
     .sticky-toggle-btn { padding: 3px 7px; }
     .mode-text { display: none; }             /* 학습 모드 버튼 텍스트 숨김 → 이모지만 표시 */
     .lang-btn { padding: 3px 6px; font-size: 0.66rem; }  /* 언어 버튼 소형화 */
+    /* ── 글자 크기 버튼: 두 번째 줄 · 가운데 · 터치 타겟 확대 ── */
+    .font-size-wrap { width: 100%; justify-content: center; margin-left: 0; margin-top: 2px; gap: 10px; }
+    .fs-btn { padding: 8px 20px; font-size: 1rem; min-height: 40px; border-radius: 8px; }
+    .fs-label { font-size: 0.9rem; min-width: 36px; }
   }
 </style>
 </head>
