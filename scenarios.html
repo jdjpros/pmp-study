@@ -2288,7 +2288,8 @@ const COMPARE_DATA = [
 function buildCompareBox(data, dayIdx) {
   const colors = ['#0984e3', '#00b894', '#6c5ce7'];
   const color = colors[dayIdx];
-  const pairsHtml = data.pairs.map((pair, pi) => '<div class="compare-pair">' +
+  const pairsHtml = data.pairs.map((pair, pi) =>
+    '<div class="compare-pair">' +
     (pi > 0 ? '<hr class="compare-divider">' : '') +
     '<div class="compare-pair-title">' + pair.title + '</div>' +
     '<div class="compare-row">' +
@@ -2296,10 +2297,27 @@ function buildCompareBox(data, dayIdx) {
       '<div class="compare-vs">VS</div>' +
       '<div class="compare-col b"><div class="compare-col-label">' + pair.b.label + '</div><div class="compare-col-desc">' + pair.b.desc + '</div><div class="compare-col-action">→ ' + pair.b.action + '</div><div class="compare-col-kw">' + pair.b.kw + '</div></div>' +
     '</div>' +
-    '<div class="compare-tip">💡 ' + pair.tip + '</div></div>').join('');
+    '<div class="compare-tip">💡 ' + pair.tip + '</div></div>'
+  ).join('');
+
   const box = document.createElement('div');
   box.className = 'compare-section';
-  box.innerHTML = '<button class="compare-toggle" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '▲' : '▼'"><span style="color:' + color + '">⚡</span> 헷갈리는 유형 구분 보기<span class="arrow">▼</span></button><div class="compare-body">' + pairsHtml + '</div>';
+
+  const btn = document.createElement('button');
+  btn.className = 'compare-toggle';
+  btn.innerHTML = '<span style="color:' + color + '">⚡</span> 헤깔리는 유형 구분 보기<span class="arrow">▼</span>';
+
+  const body = document.createElement('div');
+  body.className = 'compare-body';
+  body.innerHTML = pairsHtml;
+
+  btn.addEventListener('click', function() {
+    body.classList.toggle('open');
+    btn.querySelector('.arrow').textContent = body.classList.contains('open') ? '▲' : '▼';
+  });
+
+  box.appendChild(btn);
+  box.appendChild(body);
   return box;
 }
 
