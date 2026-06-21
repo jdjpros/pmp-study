@@ -1989,64 +1989,135 @@
 </div>
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
 <script>
 const LS_PREFIX = 'pmp_sc_';
+const FS_PATH = 'meta';
+const FS_DOC  = 'scenarioProgress';
 
+// ── Firebase 초기화 ──────────────────────────────────────
+firebase.initializeApp({
+  apiKey: "AIzaSyD4biKSWL-oMwDGWXkI_xT0qZRxhB7jQ08",
+  authDomain: "pmp-study-f6fb9.firebaseapp.com",
+  projectId: "pmp-study-f6fb9",
+  storageBucket: "pmp-study-f6fb9.firebasestorage.app",
+  messagingSenderId: "359132313524",
+  appId: "1:359132313524:web:207982a27422b371eba4e1"
+}, 'scenarios');
+const auth = firebase.app('scenarios').auth();
+const db   = firebase.app('scenarios').firestore();
+
+let currentUser = null;
+let syncTimer   = null;
+let openedIds   = new Set(); // 현재 열람한 시나리오 ID 메모리 캐시
+
+// ── 로그인 상태 감지 → Firestore 복원 ───────────────────
+auth.onAuthStateChanged(async user => {
+  currentUser = user;
+  openedIds   = new Set();
+
+  if (user) {
+    // Firestore에서 먼저 불러오기
+    try {
+      const snap = await db.collection('users').doc(user.uid)
+                           .collection(FS_PATH).doc(FS_DOC).get();
+      if (snap.exists) {
+        (snap.data().opened || []).forEach(id => openedIds.add(id));
+      }
+    } catch(e) {}
+    // 이 기기의 localStorage도 병합 (오프라인 중 열람한 것 보존)
+    Object.keys(localStorage).forEach(k => {
+      if (k.startsWith(LS_PREFIX)) openedIds.add(k.slice(LS_PREFIX.length));
+    });
+    // 병합된 상태를 Firestore에 다시 저장 (양방향 동기화)
+    scheduleSync();
+  } else {
+    // 비로그인: localStorage만 사용
+    Object.keys(localStorage).forEach(k => {
+      if (k.startsWith(LS_PREFIX)) openedIds.add(k.slice(LS_PREFIX.length));
+    });
+  }
+
+  applyOpenedState();
+});
+
+// ── DOM에 열람 상태 반영 ─────────────────────────────────
+function applyOpenedState() {
+  document.querySelectorAll('.sc-item').forEach(item => {
+    if (!item.dataset.scId) return;
+    const opened = openedIds.has(item.dataset.scId);
+    item.querySelector('.sc-back').classList.toggle('hidden', !opened);
+    item.querySelector('.sc-btn').textContent = opened ? '정답 닫기 ▲' : '정답 보기 ▼';
+  });
+}
+
+// ── localStorage + Firestore 저장 ───────────────────────
+function persist(id, opened) {
+  if (opened) {
+    openedIds.add(id);
+    localStorage.setItem(LS_PREFIX + id, '1');
+  } else {
+    openedIds.delete(id);
+    localStorage.removeItem(LS_PREFIX + id);
+  }
+  scheduleSync();
+}
+
+function scheduleSync() {
+  if (!currentUser) return;
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(() => {
+    db.collection('users').doc(currentUser.uid)
+      .collection(FS_PATH).doc(FS_DOC)
+      .set({ opened: Array.from(openedIds) })
+      .catch(() => {});
+  }, 1500);
+}
+
+// ── 초기화: ID 부여 + 일괄접기 버튼 ────────────────────
 function initScenarios() {
-  // 각 sc-item에 전역 고유 ID 부여 후 localStorage 상태 복원
   document.querySelectorAll('.type-card').forEach(typeCard => {
     typeCard.querySelectorAll('.sc-item').forEach((item, idx) => {
-      const scId = typeCard.id + '-sc-' + idx;
-      item.dataset.scId = scId;
-      if (localStorage.getItem(LS_PREFIX + scId) === '1') {
-        item.querySelector('.sc-back').classList.remove('hidden');
-        item.querySelector('.sc-btn').textContent = '정답 닫기 ▲';
-      }
+      item.dataset.scId = typeCard.id + '-sc-' + idx;
     });
   });
 
-  // 각 day-section 하단에 일괄접기 버튼 동적 추가
   document.querySelectorAll('.day-section').forEach((daySection, i) => {
     const bar = document.createElement('div');
     bar.className = 'collapse-bar';
     bar.innerHTML = '<button class="collapse-btn" onclick="collapseDay(' + i + ')">📂 정답 모두 접기</button>';
     daySection.appendChild(bar);
   });
+  // auth.onAuthStateChanged가 비동기이므로 초기 상태는 거기서 반영됨
 }
 
+// ── 탭 전환 ─────────────────────────────────────────────
 function showDay(idx, tab) {
   document.querySelectorAll('.day-section').forEach((s, i) => {
     s.style.display = i === idx ? 'block' : 'none';
   });
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   tab.classList.add('active');
-  // 탭 전환 시 정답 상태 유지 (닫지 않음)
 }
 
+// ── 정답 토글 ────────────────────────────────────────────
 function toggleAnswer(btn) {
-  const item = btn.closest('.sc-item');
-  const back = item.querySelector('.sc-back');
+  const item    = btn.closest('.sc-item');
+  const back    = item.querySelector('.sc-back');
   const opening = back.classList.contains('hidden');
   back.classList.toggle('hidden');
   btn.textContent = opening ? '정답 닫기 ▲' : '정답 보기 ▼';
-  // localStorage에 열람 상태 저장
-  if (item.dataset.scId) {
-    if (opening) {
-      localStorage.setItem(LS_PREFIX + item.dataset.scId, '1');
-    } else {
-      localStorage.removeItem(LS_PREFIX + item.dataset.scId);
-    }
-  }
+  if (item.dataset.scId) persist(item.dataset.scId, opening);
 }
 
+// ── Day 일괄 접기 ────────────────────────────────────────
 function collapseDay(dayIdx) {
-  const daySection = document.getElementById('day-' + dayIdx);
-  daySection.querySelectorAll('.sc-item').forEach(item => {
+  document.getElementById('day-' + dayIdx).querySelectorAll('.sc-item').forEach(item => {
     item.querySelector('.sc-back').classList.add('hidden');
     item.querySelector('.sc-btn').textContent = '정답 보기 ▼';
-    if (item.dataset.scId) {
-      localStorage.removeItem(LS_PREFIX + item.dataset.scId);
-    }
+    if (item.dataset.scId) persist(item.dataset.scId, false);
   });
 }
 
