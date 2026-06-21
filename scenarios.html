@@ -185,6 +185,25 @@
   .progress-bar  { height: 4px; background: #dfe6e9; border-radius: 2px; overflow: hidden; }
   .progress-fill { height: 100%; border-radius: 2px; transition: width 0.3s; }
 
+  /* ── 일괄접기 버튼 ── */
+  .collapse-bar {
+    text-align: center;
+    padding: 16px 14px 24px;
+  }
+  .collapse-btn {
+    background: #636e72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+  }
+  .collapse-btn:hover { background: #2d3436; }
+
   /* ── 인쇄 ── */
   @media print {
     .tabs, .stats-bar, .sc-btn { display: none !important; }
@@ -1971,23 +1990,67 @@
 </div>
 
 <script>
+const LS_PREFIX = 'pmp_sc_';
+
+function initScenarios() {
+  // 각 sc-item에 전역 고유 ID 부여 후 localStorage 상태 복원
+  document.querySelectorAll('.type-card').forEach(typeCard => {
+    typeCard.querySelectorAll('.sc-item').forEach((item, idx) => {
+      const scId = typeCard.id + '-sc-' + idx;
+      item.dataset.scId = scId;
+      if (localStorage.getItem(LS_PREFIX + scId) === '1') {
+        item.querySelector('.sc-back').classList.remove('hidden');
+        item.querySelector('.sc-btn').textContent = '정답 닫기 ▲';
+      }
+    });
+  });
+
+  // 각 day-section 하단에 일괄접기 버튼 동적 추가
+  document.querySelectorAll('.day-section').forEach((daySection, i) => {
+    const bar = document.createElement('div');
+    bar.className = 'collapse-bar';
+    bar.innerHTML = '<button class="collapse-btn" onclick="collapseDay(' + i + ')">📂 정답 모두 접기</button>';
+    daySection.appendChild(bar);
+  });
+}
+
 function showDay(idx, tab) {
   document.querySelectorAll('.day-section').forEach((s, i) => {
     s.style.display = i === idx ? 'block' : 'none';
   });
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   tab.classList.add('active');
-  // 탭 전환 시 모든 정답 닫기
-  document.querySelectorAll('.sc-back').forEach(b => b.classList.add('hidden'));
-  document.querySelectorAll('.sc-btn').forEach(b => { b.textContent = '정답 보기 ▼'; });
+  // 탭 전환 시 정답 상태 유지 (닫지 않음)
 }
 
 function toggleAnswer(btn) {
-  const back = btn.closest('.sc-item').querySelector('.sc-back');
-  const hidden = back.classList.contains('hidden');
+  const item = btn.closest('.sc-item');
+  const back = item.querySelector('.sc-back');
+  const opening = back.classList.contains('hidden');
   back.classList.toggle('hidden');
-  btn.textContent = hidden ? '정답 닫기 ▲' : '정답 보기 ▼';
+  btn.textContent = opening ? '정답 닫기 ▲' : '정답 보기 ▼';
+  // localStorage에 열람 상태 저장
+  if (item.dataset.scId) {
+    if (opening) {
+      localStorage.setItem(LS_PREFIX + item.dataset.scId, '1');
+    } else {
+      localStorage.removeItem(LS_PREFIX + item.dataset.scId);
+    }
+  }
 }
+
+function collapseDay(dayIdx) {
+  const daySection = document.getElementById('day-' + dayIdx);
+  daySection.querySelectorAll('.sc-item').forEach(item => {
+    item.querySelector('.sc-back').classList.add('hidden');
+    item.querySelector('.sc-btn').textContent = '정답 보기 ▼';
+    if (item.dataset.scId) {
+      localStorage.removeItem(LS_PREFIX + item.dataset.scId);
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initScenarios);
 </script>
 
 </body>
