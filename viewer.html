@@ -162,7 +162,9 @@
   .solution-box { margin-top: 18px; background: #eef1fb; border: 1px solid #c7cfe6; border-radius: 8px; padding: 14px 16px;
                   font-size: 0.87rem; display: none; animation: fadeIn .3s ease; }
   .solution-box.show { display: block; }
-  .solution-box .stitle { font-weight: 700; color: var(--accent); font-size: 0.8rem; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 8px; }
+  .solution-box .stitle { font-weight: 700; color: var(--accent); font-size: 0.8rem; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 0; cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center; }
+  .solution-box .sbody { display: none; margin-top: 10px; }
+  .solution-box.open .sbody { display: block; }
   .solution-box .original-en { color: var(--muted); margin-bottom: 8px; }
   .solution-box .original-ko { color: var(--text); margin-bottom: 10px; }
   .source { font-size: 0.78rem; color: var(--accent2); }
@@ -171,8 +173,9 @@
   .concept-module { margin: 0 18px 18px; border: 1px dashed var(--accent2); border-radius: 10px; padding: 16px 18px; background: rgba(124,106,245,.05);
                     display: none; }
   .concept-module.show { display: block; animation: fadeIn .3s ease; }
-  .concept-module .ctitle { font-weight: 700; color: var(--accent2); font-size: 0.85rem; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
-  .concept-module .cbody { font-size: 0.85rem; color: #3a4358; }
+  .concept-module .ctitle { font-weight: 700; color: var(--accent2); font-size: 0.85rem; margin-bottom: 0; display: flex; align-items: center; justify-content: space-between; gap: 6px; cursor: pointer; user-select: none; }
+  .concept-module .cbody { font-size: 0.85rem; color: #3a4358; display: none; margin-top: 10px; }
+  .concept-module.open .cbody { display: block; }
   .concept-module .cbody > *:last-child { margin-bottom: 0; }
   .concept-placeholder { font-size: 0.8rem; color: var(--muted); font-style: italic; }
   .concept-block { margin-bottom: 18px; }
@@ -1219,11 +1222,17 @@ function buildQuestionCard(q) {
   solutionBox.className = 'solution-box';
   solutionBox.dataset.solution = '';
   solutionBox.innerHTML = `
-    <div class="stitle">📌 원문 해설 요약</div>
-    <div class="original-en">${escapeHtml(q.solution_en || '')}</div>
-    <div class="original-ko">${escapeHtml(q.solution_ko || '')}</div>
-    <div class="source">출처: ${escapeHtml(q.source || '')}</div>
+    <div class="stitle">📌 원문 해설 요약 <span class="sarrow">▼</span></div>
+    <div class="sbody">
+      <div class="original-en">${escapeHtml(q.solution_en || '')}</div>
+      <div class="original-ko">${escapeHtml(q.solution_ko || '')}</div>
+      <div class="source">출처: ${escapeHtml(q.source || '')}</div>
+    </div>
   `;
+  solutionBox.querySelector('.stitle').addEventListener('click', () => {
+    solutionBox.classList.toggle('open');
+    solutionBox.querySelector('.sarrow').textContent = solutionBox.classList.contains('open') ? '▲' : '▼';
+  });
   body.appendChild(solutionBox);
 
   card.appendChild(body);
@@ -1268,7 +1277,19 @@ function buildConceptModule(q) {
     });
     html += `</div>`;
     wrap.innerHTML = html;
+  }
 
+  // ctitle 클릭 → 내용 토글
+  const ctitle = wrap.querySelector('.ctitle');
+  if (ctitle) {
+    ctitle.innerHTML += ' <span class="carrow">▼</span>';
+    ctitle.addEventListener('click', () => {
+      wrap.classList.toggle('open');
+      ctitle.querySelector('.carrow').textContent = wrap.classList.contains('open') ? '▲' : '▼';
+    });
+  }
+
+  if (matched.length > 0) {
     // 모바일 카드형 변환용: <th> 텍스트를 각 <td>의 data-label로 복사
     // CSS ::before { content: attr(data-label) } 로 열 이름을 카드 안에 표시
     wrap.querySelectorAll('.c-table').forEach(table => {
