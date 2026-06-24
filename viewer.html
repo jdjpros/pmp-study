@@ -1324,8 +1324,6 @@ function revealChoice(card, q, el, choice) {
     card.querySelector('[data-answerbar]').classList.add('show');
     card.querySelector('[data-solution]').classList.add('show');
     card.querySelector('[data-concept]').classList.add('show');
-    card.querySelector('[data-solution]').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
     st.done = true;
     const jumpBtn = document.querySelector(`.jump-btn[data-jump="${q.id}"]`);
     if (jumpBtn) jumpBtn.classList.add('done');
