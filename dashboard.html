@@ -299,48 +299,74 @@ function readProgress(unitName) {
   } catch { return { done: 0, bookmarks: 0 }; }
 }
 
-// 단원별 진행 현황 계산
-const unitsWithProgress = UNITS.map(u => {
-  const { done, bookmarks } = readProgress(u.name);
-  const pct = u.total > 0 ? Math.round((done / u.total) * 100) : 0;
-  return { ...u, done, bookmarks, pct };
-});
+// 단원별 진행 현황 계산 + 렌더링 (재호출 가능하도록 함수화)
+function calcAndRender() {
+  const unitsWithProgress = UNITS.map(u => {
+    const { done, bookmarks } = readProgress(u.name);
+    const pct = u.total > 0 ? Math.round((done / u.total) * 100) : 0;
+    return { ...u, done, bookmarks, pct };
+  });
 
-const miniWithProgress = MINI_EXAMS.map(u => {
-  const { done, bookmarks } = readProgress(u.name);
-  const pct = u.total > 0 ? Math.round((done / u.total) * 100) : 0;
-  return { ...u, done, bookmarks, pct };
-});
+  const miniWithProgress = MINI_EXAMS.map(u => {
+    const { done, bookmarks } = readProgress(u.name);
+    const pct = u.total > 0 ? Math.round((done / u.total) * 100) : 0;
+    return { ...u, done, bookmarks, pct };
+  });
 
-// 전체 합계 (단원 + 미니모의고사)
-const totalQ    = unitsWithProgress.reduce((s, u) => s + u.total, 0) + miniWithProgress.reduce((s, u) => s + u.total, 0);
-const totalDone = unitsWithProgress.reduce((s, u) => s + u.done, 0)  + miniWithProgress.reduce((s, u) => s + u.done, 0);
-const totalBk   = unitsWithProgress.reduce((s, u) => s + u.bookmarks, 0) + miniWithProgress.reduce((s, u) => s + u.bookmarks, 0);
-const totalPct  = Math.round((totalDone / totalQ) * 100);
-const totalRemain = totalQ - totalDone;
+  const totalQ    = unitsWithProgress.reduce((s, u) => s + u.total, 0) + miniWithProgress.reduce((s, u) => s + u.total, 0);
+  const totalDone = unitsWithProgress.reduce((s, u) => s + u.done, 0)  + miniWithProgress.reduce((s, u) => s + u.done, 0);
+  const totalBk   = unitsWithProgress.reduce((s, u) => s + u.bookmarks, 0) + miniWithProgress.reduce((s, u) => s + u.bookmarks, 0);
+  const totalPct  = Math.round((totalDone / totalQ) * 100);
+  const totalRemain = totalQ - totalDone;
 
-// 전체 요약 렌더
-document.getElementById('summaryGrid').innerHTML = `
-  <div class="sum-card total"><div class="num">${totalQ}</div><div class="lbl">전체 문항</div></div>
-  <div class="sum-card done"><div class="num">${totalDone}</div><div class="lbl">완료한 문항</div></div>
-  <div class="sum-card remain"><div class="num">${totalRemain}</div><div class="lbl">남은 문항</div></div>
-  <div class="sum-card bkmark"><div class="num">${totalBk}</div><div class="lbl">북마크</div></div>
-`;
+  document.getElementById('summaryGrid').innerHTML = `
+    <div class="sum-card total"><div class="num">${totalQ}</div><div class="lbl">전체 문항</div></div>
+    <div class="sum-card done"><div class="num">${totalDone}</div><div class="lbl">완료한 문항</div></div>
+    <div class="sum-card remain"><div class="num">${totalRemain}</div><div class="lbl">남은 문항</div></div>
+    <div class="sum-card bkmark"><div class="num">${totalBk}</div><div class="lbl">북마크</div></div>
+  `;
 
-// 전체 진행률 바
-const fill = document.getElementById('overallFill');
-fill.style.width = Math.max(totalPct, 0) + '%';
-fill.textContent = totalPct > 5 ? totalPct + '%' : '';
-document.getElementById('overallText').textContent = `${totalDone} / ${totalQ} 문항 (${totalPct}%)`;
+  const fill = document.getElementById('overallFill');
+  fill.style.width = Math.max(totalPct, 0) + '%';
+  fill.textContent = totalPct > 5 ? totalPct + '%' : '';
+  document.getElementById('overallText').textContent = `${totalDone} / ${totalQ} 문항 (${totalPct}%)`;
+
+  renderGrid(currentSort, unitsWithProgress);
+
+  document.getElementById('miniGrid').innerHTML = miniWithProgress.map(u => {
+    const full = u.pct === 100;
+    return `
+    <a class="unit-card" href="viewer.html?unit=${encodeURIComponent(u.name)}" title="${u.name} 풀기">
+      <div class="unit-card-header">
+        <span class="unit-num" style="background:#e84393">M${u.num}</span>
+        <span class="unit-name">${u.name}</span>
+      </div>
+      <div class="unit-meta">
+        <span class="q-count">${u.total}문항</span>
+        <span>·</span>
+        <span class="done-count">✓ ${u.done}</span>
+        ${u.bookmarks > 0 ? `<span class="bk-badge">⭐ ${u.bookmarks}</span>` : ''}
+        <span class="pct-badge ${full ? 'full' : ''}">${u.pct}%</span>
+      </div>
+      <div class="unit-bar-track">
+        <div class="unit-bar-fill ${full ? 'full' : ''}" style="width:${u.pct}%"></div>
+      </div>
+    </a>`;
+  }).join('');
+
+  return unitsWithProgress;
+}
 
 // 단원 카드 렌더
 let currentSort = 'order';
+let _cachedUnits = [];
 
-function renderGrid(sort) {
+function renderGrid(sort, units) {
   currentSort = sort;
+  if (units) _cachedUnits = units;
   document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === sort));
 
-  let list = [...unitsWithProgress];
+  let list = [..._cachedUnits];
   if (sort === 'progress-asc')  list.sort((a, b) => a.pct - b.pct);
   if (sort === 'progress-desc') list.sort((a, b) => b.pct - a.pct);
   if (sort === 'bookmark')      list.sort((a, b) => b.bookmarks - a.bookmarks);
@@ -367,33 +393,11 @@ function renderGrid(sort) {
   }).join('');
 }
 
-renderGrid('order');
+calcAndRender();
 
 document.querySelectorAll('.sort-btn').forEach(btn => {
   btn.addEventListener('click', () => renderGrid(btn.dataset.sort));
 });
-
-// 미니모의고사 그리드 렌더 (고정 순서)
-document.getElementById('miniGrid').innerHTML = miniWithProgress.map(u => {
-  const full = u.pct === 100;
-  return `
-  <a class="unit-card" href="viewer.html?unit=${encodeURIComponent(u.name)}" title="${u.name} 풀기">
-    <div class="unit-card-header">
-      <span class="unit-num" style="background:#e84393">M${u.num}</span>
-      <span class="unit-name">${u.name}</span>
-    </div>
-    <div class="unit-meta">
-      <span class="q-count">${u.total}문항</span>
-      <span>·</span>
-      <span class="done-count">✓ ${u.done}</span>
-      ${u.bookmarks > 0 ? `<span class="bk-badge">⭐ ${u.bookmarks}</span>` : ''}
-      <span class="pct-badge ${full ? 'full' : ''}">${u.pct}%</span>
-    </div>
-    <div class="unit-bar-track">
-      <div class="unit-bar-fill ${full ? 'full' : ''}" style="width:${u.pct}%"></div>
-    </div>
-  </a>`;
-}).join('');
 </script>
 
 <!-- Firebase: lastPosition 읽어서 이어서 학습하기 카드 표시 -->
@@ -415,19 +419,41 @@ const _db   = firebase.firestore();
 _auth.onAuthStateChanged(async (user) => {
   if (!user) return;
   try {
-    const snap = await _db.collection('users').doc(user.uid)
-                          .collection('meta').doc('lastPosition').get();
-    if (!snap.exists) return;
-    const pos = snap.data();
-    if (!pos || !pos.unit) return;
+    // 이어서 학습하기 카드
+    const posSnap = await _db.collection('users').doc(user.uid)
+                             .collection('meta').doc('lastPosition').get();
+    if (posSnap.exists) {
+      const pos = posSnap.data();
+      if (pos && pos.unit) {
+        const qNum = (pos.qIdx || 0) + 1;
+        document.getElementById('resumeUnit').textContent = pos.unit;
+        document.getElementById('resumeQ').textContent = `Q${qNum}번 문항`;
+        document.getElementById('resumeLink').href =
+          `viewer.html?unit=${encodeURIComponent(pos.unit)}&resumeQ=${pos.qIdx || 0}`;
+        document.getElementById('resumeCard').style.display = 'flex';
+      }
+    }
 
-    const qNum = (pos.qIdx || 0) + 1;
-    document.getElementById('resumeUnit').textContent = pos.unit;
-    document.getElementById('resumeQ').textContent = `Q${qNum}번 문항`;
-    document.getElementById('resumeLink').href =
-      `viewer.html?unit=${encodeURIComponent(pos.unit)}&resumeQ=${pos.qIdx || 0}`;
-    document.getElementById('resumeCard').style.display = 'flex';
-  } catch(e) {}
+    // Firestore에서 전체 단원 진도 가져와 localStorage 갱신 후 재렌더
+    const unitStatesSnap = await _db.collection('users').doc(user.uid)
+                                    .collection('unitStates').get();
+    let changed = false;
+    unitStatesSnap.forEach(doc => {
+      const cloud = doc.data() || {};
+      const cloudAt = (cloud.updatedAt && cloud.updatedAt.toMillis)
+        ? cloud.updatedAt.toMillis() : (cloud.updatedAtMs || 0);
+      const key = STORAGE_PREFIX + doc.id;
+      try {
+        const local = JSON.parse(localStorage.getItem(key) || '{}');
+        const localAt = local.updatedAt || 0;
+        if (cloudAt > localAt) {
+          localStorage.setItem(key, JSON.stringify({ data: cloud.data || {}, updatedAt: cloudAt }));
+          changed = true;
+        }
+      } catch { }
+    });
+    if (changed) calcAndRender();
+  } catch(e) { console.warn('Firestore 진도 동기화 실패', e); }
 });
 </script>
 </body>
